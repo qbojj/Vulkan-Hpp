@@ -1,4 +1,4 @@
-  template <typename OwnerType, typename PoolType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename PoolType, typename Dispatch>
   class PoolFree
   {
     public:

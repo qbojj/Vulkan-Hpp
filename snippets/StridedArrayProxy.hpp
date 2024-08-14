@@ -1,4 +1,4 @@
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   class StridedArrayProxy : protected ArrayProxy<T>
   {
   public:

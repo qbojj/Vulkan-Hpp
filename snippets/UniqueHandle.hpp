@@ -1,8 +1,8 @@
 #if !defined( VULKAN_HPP_NO_SMART_HANDLE )
-template <typename Type, typename Dispatch>
+VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
 class UniqueHandleTraits;
 
-template <typename Type, typename Dispatch>
+VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
 class UniqueHandle : public UniqueHandleTraits<Type, Dispatch>::deleter
 {
 private:

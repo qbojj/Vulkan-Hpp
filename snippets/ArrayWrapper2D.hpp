@@ -1,4 +1,4 @@
-  template <typename T, size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <typename T, size_t N, size_t M>
   class ArrayWrapper2D : public std::array<ArrayWrapper1D<T, M>, N>
   {
   public:

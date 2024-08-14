@@ -1,4 +1,4 @@
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   struct ResultValue
   {
 #ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -26,7 +26,7 @@
   };
 
 #if !defined( VULKAN_HPP_NO_SMART_HANDLE )
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   struct ResultValue<UniqueHandle<Type, Dispatch>>
   {
 #ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -55,7 +55,7 @@
     UniqueHandle<Type, Dispatch>  value;
   };
 
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   struct ResultValue<std::vector<UniqueHandle<Type, Dispatch>>>
   {
 #  ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -85,7 +85,7 @@
   };
 #endif
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   struct ResultValueType
   {
 #ifdef VULKAN_HPP_NO_EXCEPTIONS
@@ -95,7 +95,7 @@
 #endif
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct ResultValueType<void>
   {
 #ifdef VULKAN_HPP_NO_EXCEPTIONS

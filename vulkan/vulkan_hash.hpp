@@ -16,7 +16,7 @@ namespace std
   //=== HASH structures for Flags types ===
   //=======================================
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   struct hash<VULKAN_HPP_NAMESPACE::Flags<BitType>>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Flags<BitType> const & flags ) const VULKAN_HPP_NOEXCEPT
@@ -31,7 +31,7 @@ namespace std
 
   //=== VK_VERSION_1_0 ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Instance>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Instance const & instance ) const VULKAN_HPP_NOEXCEPT
@@ -40,7 +40,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevice>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevice const & physicalDevice ) const VULKAN_HPP_NOEXCEPT
@@ -49,7 +49,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Device>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Device const & device ) const VULKAN_HPP_NOEXCEPT
@@ -58,7 +58,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Queue>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Queue const & queue ) const VULKAN_HPP_NOEXCEPT
@@ -67,7 +67,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceMemory>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceMemory const & deviceMemory ) const VULKAN_HPP_NOEXCEPT
@@ -76,7 +76,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Fence>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Fence const & fence ) const VULKAN_HPP_NOEXCEPT
@@ -85,7 +85,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Semaphore>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Semaphore const & semaphore ) const VULKAN_HPP_NOEXCEPT
@@ -94,7 +94,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Event>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Event const & event ) const VULKAN_HPP_NOEXCEPT
@@ -103,7 +103,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryPool>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueryPool const & queryPool ) const VULKAN_HPP_NOEXCEPT
@@ -112,7 +112,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Buffer>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Buffer const & buffer ) const VULKAN_HPP_NOEXCEPT
@@ -121,7 +121,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferView>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferView const & bufferView ) const VULKAN_HPP_NOEXCEPT
@@ -130,7 +130,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Image>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Image const & image ) const VULKAN_HPP_NOEXCEPT
@@ -139,7 +139,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageView>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageView const & imageView ) const VULKAN_HPP_NOEXCEPT
@@ -148,7 +148,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderModule>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderModule const & shaderModule ) const VULKAN_HPP_NOEXCEPT
@@ -157,7 +157,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCache>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCache const & pipelineCache ) const VULKAN_HPP_NOEXCEPT
@@ -166,7 +166,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Pipeline>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Pipeline const & pipeline ) const VULKAN_HPP_NOEXCEPT
@@ -175,7 +175,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineLayout>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineLayout const & pipelineLayout ) const VULKAN_HPP_NOEXCEPT
@@ -184,7 +184,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Sampler>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Sampler const & sampler ) const VULKAN_HPP_NOEXCEPT
@@ -193,7 +193,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorPool>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorPool const & descriptorPool ) const VULKAN_HPP_NOEXCEPT
@@ -202,7 +202,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSet>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSet const & descriptorSet ) const VULKAN_HPP_NOEXCEPT
@@ -211,7 +211,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayout>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetLayout const & descriptorSetLayout ) const VULKAN_HPP_NOEXCEPT
@@ -220,7 +220,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Framebuffer>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Framebuffer const & framebuffer ) const VULKAN_HPP_NOEXCEPT
@@ -229,7 +229,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPass>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPass const & renderPass ) const VULKAN_HPP_NOEXCEPT
@@ -238,7 +238,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandPool>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandPool const & commandPool ) const VULKAN_HPP_NOEXCEPT
@@ -247,7 +247,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBuffer>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBuffer const & commandBuffer ) const VULKAN_HPP_NOEXCEPT
@@ -258,7 +258,7 @@ namespace std
 
   //=== VK_VERSION_1_1 ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion const & samplerYcbcrConversion ) const VULKAN_HPP_NOEXCEPT
@@ -267,7 +267,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate const & descriptorUpdateTemplate ) const VULKAN_HPP_NOEXCEPT
@@ -278,7 +278,7 @@ namespace std
 
   //=== VK_VERSION_1_3 ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PrivateDataSlot>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PrivateDataSlot const & privateDataSlot ) const VULKAN_HPP_NOEXCEPT
@@ -289,7 +289,7 @@ namespace std
 
   //=== VK_KHR_surface ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceKHR const & surfaceKHR ) const VULKAN_HPP_NOEXCEPT
@@ -300,7 +300,7 @@ namespace std
 
   //=== VK_KHR_swapchain ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainKHR const & swapchainKHR ) const VULKAN_HPP_NOEXCEPT
@@ -311,7 +311,7 @@ namespace std
 
   //=== VK_KHR_display ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayKHR const & displayKHR ) const VULKAN_HPP_NOEXCEPT
@@ -320,7 +320,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayModeKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayModeKHR const & displayModeKHR ) const VULKAN_HPP_NOEXCEPT
@@ -331,7 +331,7 @@ namespace std
 
   //=== VK_EXT_debug_report ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugReportCallbackEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugReportCallbackEXT const & debugReportCallbackEXT ) const VULKAN_HPP_NOEXCEPT
@@ -342,7 +342,7 @@ namespace std
 
   //=== VK_KHR_video_queue ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionKHR const & videoSessionKHR ) const VULKAN_HPP_NOEXCEPT
@@ -351,7 +351,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionParametersKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionParametersKHR const & videoSessionParametersKHR ) const VULKAN_HPP_NOEXCEPT
@@ -362,7 +362,7 @@ namespace std
 
   //=== VK_NVX_binary_import ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CuModuleNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CuModuleNVX const & cuModuleNVX ) const VULKAN_HPP_NOEXCEPT
@@ -371,7 +371,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CuFunctionNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CuFunctionNVX const & cuFunctionNVX ) const VULKAN_HPP_NOEXCEPT
@@ -382,7 +382,7 @@ namespace std
 
   //=== VK_EXT_debug_utils ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsMessengerEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsMessengerEXT const & debugUtilsMessengerEXT ) const VULKAN_HPP_NOEXCEPT
@@ -393,7 +393,7 @@ namespace std
 
   //=== VK_KHR_acceleration_structure ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureKHR const & accelerationStructureKHR ) const VULKAN_HPP_NOEXCEPT
@@ -404,7 +404,7 @@ namespace std
 
   //=== VK_EXT_validation_cache ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ValidationCacheEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ValidationCacheEXT const & validationCacheEXT ) const VULKAN_HPP_NOEXCEPT
@@ -415,7 +415,7 @@ namespace std
 
   //=== VK_NV_ray_tracing ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureNV const & accelerationStructureNV ) const VULKAN_HPP_NOEXCEPT
@@ -426,7 +426,7 @@ namespace std
 
   //=== VK_INTEL_performance_query ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL const & performanceConfigurationINTEL ) const VULKAN_HPP_NOEXCEPT
@@ -437,7 +437,7 @@ namespace std
 
   //=== VK_KHR_deferred_host_operations ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeferredOperationKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeferredOperationKHR const & deferredOperationKHR ) const VULKAN_HPP_NOEXCEPT
@@ -448,7 +448,7 @@ namespace std
 
   //=== VK_NV_device_generated_commands ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutNV const & indirectCommandsLayoutNV ) const VULKAN_HPP_NOEXCEPT
@@ -460,7 +460,7 @@ namespace std
 #if defined( VK_ENABLE_BETA_EXTENSIONS )
   //=== VK_NV_cuda_kernel_launch ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CudaModuleNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CudaModuleNV const & cudaModuleNV ) const VULKAN_HPP_NOEXCEPT
@@ -469,7 +469,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CudaFunctionNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CudaFunctionNV const & cudaFunctionNV ) const VULKAN_HPP_NOEXCEPT
@@ -482,7 +482,7 @@ namespace std
 #if defined( VK_USE_PLATFORM_FUCHSIA )
   //=== VK_FUCHSIA_buffer_collection ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA const & bufferCollectionFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -494,7 +494,7 @@ namespace std
 
   //=== VK_EXT_opacity_micromap ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapEXT const & micromapEXT ) const VULKAN_HPP_NOEXCEPT
@@ -505,7 +505,7 @@ namespace std
 
   //=== VK_NV_optical_flow ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV const & opticalFlowSessionNV ) const VULKAN_HPP_NOEXCEPT
@@ -516,7 +516,7 @@ namespace std
 
   //=== VK_EXT_shader_object ===
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderEXT const & shaderEXT ) const VULKAN_HPP_NOEXCEPT
@@ -535,7 +535,7 @@ namespace std
       seed ^= std::hash<std::decay<decltype( value )>::type>{}( value ) + 0x9e3779b9 + ( seed << 6 ) + ( seed >> 2 )
 #  endif
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AabbPositionsKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AabbPositionsKHR const & aabbPositionsKHR ) const VULKAN_HPP_NOEXCEPT
@@ -551,7 +551,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureBuildRangeInfoKHR>
   {
     std::size_t
@@ -566,7 +566,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureBuildSizesInfoKHR>
   {
     std::size_t
@@ -582,7 +582,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureCaptureDescriptorDataInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureCaptureDescriptorDataInfoEXT const & accelerationStructureCaptureDescriptorDataInfoEXT )
@@ -597,7 +597,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoKHR const & accelerationStructureCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -615,7 +615,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeometryTrianglesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GeometryTrianglesNV const & geometryTrianglesNV ) const VULKAN_HPP_NOEXCEPT
@@ -638,7 +638,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeometryAABBNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GeometryAABBNV const & geometryAABBNV ) const VULKAN_HPP_NOEXCEPT
@@ -654,7 +654,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeometryDataNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GeometryDataNV const & geometryDataNV ) const VULKAN_HPP_NOEXCEPT
@@ -666,7 +666,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeometryNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GeometryNV const & geometryNV ) const VULKAN_HPP_NOEXCEPT
@@ -681,7 +681,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureInfoNV const & accelerationStructureInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -698,7 +698,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoNV const & accelerationStructureCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -712,7 +712,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureDeviceAddressInfoKHR>
   {
     std::size_t
@@ -726,7 +726,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TransformMatrixKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TransformMatrixKHR const & transformMatrixKHR ) const VULKAN_HPP_NOEXCEPT
@@ -743,7 +743,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureInstanceKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureInstanceKHR const & accelerationStructureInstanceKHR ) const VULKAN_HPP_NOEXCEPT
@@ -759,7 +759,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureMatrixMotionInstanceNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureMatrixMotionInstanceNV const & accelerationStructureMatrixMotionInstanceNV ) const
@@ -777,7 +777,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureMemoryRequirementsInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureMemoryRequirementsInfoNV const & accelerationStructureMemoryRequirementsInfoNV ) const
@@ -792,7 +792,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureMotionInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureMotionInfoNV const & accelerationStructureMotionInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -806,7 +806,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SRTDataNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SRTDataNV const & sRTDataNV ) const VULKAN_HPP_NOEXCEPT
@@ -832,7 +832,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureSRTMotionInstanceNV>
   {
     std::size_t
@@ -850,7 +850,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapUsageEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapUsageEXT const & micromapUsageEXT ) const VULKAN_HPP_NOEXCEPT
@@ -863,7 +863,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AccelerationStructureVersionInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AccelerationStructureVersionInfoKHR const & accelerationStructureVersionInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -876,7 +876,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AcquireNextImageInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AcquireNextImageInfoKHR const & acquireNextImageInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -893,7 +893,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AcquireProfilingLockInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AcquireProfilingLockInfoKHR const & acquireProfilingLockInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -907,7 +907,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AllocationCallbacks>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AllocationCallbacks const & allocationCallbacks ) const VULKAN_HPP_NOEXCEPT
@@ -923,7 +923,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AmigoProfilingSubmitInfoSEC>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AmigoProfilingSubmitInfoSEC const & amigoProfilingSubmitInfoSEC ) const VULKAN_HPP_NOEXCEPT
@@ -937,7 +937,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ComponentMapping>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ComponentMapping const & componentMapping ) const VULKAN_HPP_NOEXCEPT
@@ -952,7 +952,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatProperties2ANDROID>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatProperties2ANDROID const & androidHardwareBufferFormatProperties2ANDROID ) const
@@ -975,7 +975,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatPropertiesANDROID>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatPropertiesANDROID const & androidHardwareBufferFormatPropertiesANDROID ) const
@@ -998,7 +998,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatResolvePropertiesANDROID>
   {
     std::size_t
@@ -1015,7 +1015,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferPropertiesANDROID>
   {
     std::size_t
@@ -1032,7 +1032,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferUsageANDROID>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AndroidHardwareBufferUsageANDROID const & androidHardwareBufferUsageANDROID ) const VULKAN_HPP_NOEXCEPT
@@ -1047,7 +1047,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AndroidSurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AndroidSurfaceCreateInfoKHR const & androidSurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -1062,7 +1062,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AntiLagPresentationInfoAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AntiLagPresentationInfoAMD const & antiLagPresentationInfoAMD ) const VULKAN_HPP_NOEXCEPT
@@ -1076,7 +1076,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AntiLagDataAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AntiLagDataAMD const & antiLagDataAMD ) const VULKAN_HPP_NOEXCEPT
@@ -1091,7 +1091,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ApplicationInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ApplicationInfo const & applicationInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1114,7 +1114,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentDescription>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentDescription const & attachmentDescription ) const VULKAN_HPP_NOEXCEPT
@@ -1133,7 +1133,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentDescription2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentDescription2 const & attachmentDescription2 ) const VULKAN_HPP_NOEXCEPT
@@ -1154,7 +1154,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentDescriptionStencilLayout>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentDescriptionStencilLayout const & attachmentDescriptionStencilLayout ) const VULKAN_HPP_NOEXCEPT
@@ -1168,7 +1168,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentReference>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentReference const & attachmentReference ) const VULKAN_HPP_NOEXCEPT
@@ -1180,7 +1180,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentReference2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentReference2 const & attachmentReference2 ) const VULKAN_HPP_NOEXCEPT
@@ -1195,7 +1195,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentReferenceStencilLayout>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentReferenceStencilLayout const & attachmentReferenceStencilLayout ) const VULKAN_HPP_NOEXCEPT
@@ -1208,7 +1208,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentSampleCountInfoAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentSampleCountInfoAMD const & attachmentSampleCountInfoAMD ) const VULKAN_HPP_NOEXCEPT
@@ -1223,7 +1223,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Extent2D>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Extent2D const & extent2D ) const VULKAN_HPP_NOEXCEPT
@@ -1235,7 +1235,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SampleLocationEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SampleLocationEXT const & sampleLocationEXT ) const VULKAN_HPP_NOEXCEPT
@@ -1247,7 +1247,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT const & sampleLocationsInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -1263,7 +1263,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::AttachmentSampleLocationsEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::AttachmentSampleLocationsEXT const & attachmentSampleLocationsEXT ) const VULKAN_HPP_NOEXCEPT
@@ -1275,7 +1275,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BaseInStructure>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BaseInStructure const & baseInStructure ) const VULKAN_HPP_NOEXCEPT
@@ -1287,7 +1287,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BaseOutStructure>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BaseOutStructure const & baseOutStructure ) const VULKAN_HPP_NOEXCEPT
@@ -1299,7 +1299,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindAccelerationStructureMemoryInfoNV>
   {
     std::size_t
@@ -1317,7 +1317,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindBufferMemoryDeviceGroupInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindBufferMemoryDeviceGroupInfo const & bindBufferMemoryDeviceGroupInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1331,7 +1331,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindBufferMemoryInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindBufferMemoryInfo const & bindBufferMemoryInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1346,7 +1346,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindDescriptorBufferEmbeddedSamplersInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindDescriptorBufferEmbeddedSamplersInfoEXT const & bindDescriptorBufferEmbeddedSamplersInfoEXT ) const
@@ -1362,7 +1362,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindDescriptorSetsInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindDescriptorSetsInfoKHR const & bindDescriptorSetsInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -1381,7 +1381,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Offset2D>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Offset2D const & offset2D ) const VULKAN_HPP_NOEXCEPT
@@ -1393,7 +1393,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Rect2D>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Rect2D const & rect2D ) const VULKAN_HPP_NOEXCEPT
@@ -1405,7 +1405,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindImageMemoryDeviceGroupInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindImageMemoryDeviceGroupInfo const & bindImageMemoryDeviceGroupInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1421,7 +1421,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindImageMemoryInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindImageMemoryInfo const & bindImageMemoryInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1436,7 +1436,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindImageMemorySwapchainInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindImageMemorySwapchainInfoKHR const & bindImageMemorySwapchainInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -1450,7 +1450,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindImagePlaneMemoryInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindImagePlaneMemoryInfo const & bindImagePlaneMemoryInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1463,7 +1463,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindIndexBufferIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindIndexBufferIndirectCommandNV const & bindIndexBufferIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -1476,7 +1476,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindMemoryStatusKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindMemoryStatusKHR const & bindMemoryStatusKHR ) const VULKAN_HPP_NOEXCEPT
@@ -1489,7 +1489,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindPipelineIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindPipelineIndirectCommandNV const & bindPipelineIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -1500,7 +1500,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindShaderGroupIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindShaderGroupIndirectCommandNV const & bindShaderGroupIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -1511,7 +1511,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseMemoryBind>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseMemoryBind const & sparseMemoryBind ) const VULKAN_HPP_NOEXCEPT
@@ -1526,7 +1526,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseBufferMemoryBindInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseBufferMemoryBindInfo const & sparseBufferMemoryBindInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1539,7 +1539,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageOpaqueMemoryBindInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageOpaqueMemoryBindInfo const & sparseImageOpaqueMemoryBindInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1552,7 +1552,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSubresource>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSubresource const & imageSubresource ) const VULKAN_HPP_NOEXCEPT
@@ -1565,7 +1565,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Offset3D>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Offset3D const & offset3D ) const VULKAN_HPP_NOEXCEPT
@@ -1578,7 +1578,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Extent3D>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Extent3D const & extent3D ) const VULKAN_HPP_NOEXCEPT
@@ -1591,7 +1591,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageMemoryBind>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageMemoryBind const & sparseImageMemoryBind ) const VULKAN_HPP_NOEXCEPT
@@ -1607,7 +1607,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageMemoryBindInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageMemoryBindInfo const & sparseImageMemoryBindInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1620,7 +1620,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindSparseInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindSparseInfo const & bindSparseInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1642,7 +1642,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindVertexBufferIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindVertexBufferIndirectCommandNV const & bindVertexBufferIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -1655,7 +1655,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BindVideoSessionMemoryInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BindVideoSessionMemoryInfoKHR const & bindVideoSessionMemoryInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -1671,7 +1671,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BlitImageCubicWeightsInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BlitImageCubicWeightsInfoQCOM const & blitImageCubicWeightsInfoQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -1684,7 +1684,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSubresourceLayers>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSubresourceLayers const & imageSubresourceLayers ) const VULKAN_HPP_NOEXCEPT
@@ -1698,7 +1698,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageBlit2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageBlit2 const & imageBlit2 ) const VULKAN_HPP_NOEXCEPT
@@ -1720,7 +1720,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BlitImageInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BlitImageInfo2 const & blitImageInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -1739,7 +1739,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCaptureDescriptorDataInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCaptureDescriptorDataInfoEXT const & bufferCaptureDescriptorDataInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -1753,7 +1753,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionBufferCreateInfoFUCHSIA>
   {
     std::size_t
@@ -1770,7 +1770,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionConstraintsInfoFUCHSIA>
   {
     std::size_t
@@ -1790,7 +1790,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionCreateInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCollectionCreateInfoFUCHSIA const & bufferCollectionCreateInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -1805,7 +1805,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionImageCreateInfoFUCHSIA>
   {
     std::size_t
@@ -1822,7 +1822,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SysmemColorSpaceFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SysmemColorSpaceFUCHSIA const & sysmemColorSpaceFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -1837,7 +1837,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCollectionPropertiesFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCollectionPropertiesFUCHSIA const & bufferCollectionPropertiesFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -1861,7 +1861,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCreateInfo const & bufferCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1880,7 +1880,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferConstraintsInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferConstraintsInfoFUCHSIA const & bufferConstraintsInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -1896,7 +1896,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCopy>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCopy const & bufferCopy ) const VULKAN_HPP_NOEXCEPT
@@ -1909,7 +1909,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferCopy2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferCopy2 const & bufferCopy2 ) const VULKAN_HPP_NOEXCEPT
@@ -1924,7 +1924,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferDeviceAddressCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferDeviceAddressCreateInfoEXT const & bufferDeviceAddressCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -1937,7 +1937,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo const & bufferDeviceAddressInfo ) const VULKAN_HPP_NOEXCEPT
@@ -1950,7 +1950,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferImageCopy>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferImageCopy const & bufferImageCopy ) const VULKAN_HPP_NOEXCEPT
@@ -1966,7 +1966,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferImageCopy2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferImageCopy2 const & bufferImageCopy2 ) const VULKAN_HPP_NOEXCEPT
@@ -1984,7 +1984,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferMemoryBarrier>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferMemoryBarrier const & bufferMemoryBarrier ) const VULKAN_HPP_NOEXCEPT
@@ -2003,7 +2003,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferMemoryBarrier2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferMemoryBarrier2 const & bufferMemoryBarrier2 ) const VULKAN_HPP_NOEXCEPT
@@ -2024,7 +2024,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferMemoryRequirementsInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferMemoryRequirementsInfo2 const & bufferMemoryRequirementsInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -2037,7 +2037,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferOpaqueCaptureAddressCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferOpaqueCaptureAddressCreateInfo const & bufferOpaqueCaptureAddressCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2050,7 +2050,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferUsageFlags2CreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferUsageFlags2CreateInfoKHR const & bufferUsageFlags2CreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -2063,7 +2063,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::BufferViewCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::BufferViewCreateInfo const & bufferViewCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2080,7 +2080,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR const & calibratedTimestampInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -2093,7 +2093,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CheckpointData2NV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CheckpointData2NV const & checkpointData2NV ) const VULKAN_HPP_NOEXCEPT
@@ -2107,7 +2107,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CheckpointDataNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CheckpointDataNV const & checkpointDataNV ) const VULKAN_HPP_NOEXCEPT
@@ -2121,7 +2121,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ClearDepthStencilValue>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ClearDepthStencilValue const & clearDepthStencilValue ) const VULKAN_HPP_NOEXCEPT
@@ -2133,7 +2133,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ClearRect>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ClearRect const & clearRect ) const VULKAN_HPP_NOEXCEPT
@@ -2146,7 +2146,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CoarseSampleLocationNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CoarseSampleLocationNV const & coarseSampleLocationNV ) const VULKAN_HPP_NOEXCEPT
@@ -2159,7 +2159,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CoarseSampleOrderCustomNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CoarseSampleOrderCustomNV const & coarseSampleOrderCustomNV ) const VULKAN_HPP_NOEXCEPT
@@ -2173,7 +2173,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ColorBlendAdvancedEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ColorBlendAdvancedEXT const & colorBlendAdvancedEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2188,7 +2188,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ColorBlendEquationEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ColorBlendEquationEXT const & colorBlendEquationEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2204,7 +2204,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBufferAllocateInfo const & commandBufferAllocateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2219,7 +2219,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferInheritanceInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBufferInheritanceInfo const & commandBufferInheritanceInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2237,7 +2237,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBufferBeginInfo const & commandBufferBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2251,7 +2251,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferInheritanceConditionalRenderingInfoEXT>
   {
     std::size_t
@@ -2266,7 +2266,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferInheritanceRenderPassTransformInfoQCOM>
   {
     std::size_t
@@ -2282,7 +2282,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferInheritanceRenderingInfo>
   {
     std::size_t
@@ -2302,7 +2302,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Viewport>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Viewport const & viewport ) const VULKAN_HPP_NOEXCEPT
@@ -2318,7 +2318,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferInheritanceViewportScissorInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBufferInheritanceViewportScissorInfoNV const & commandBufferInheritanceViewportScissorInfoNV ) const
@@ -2334,7 +2334,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandBufferSubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandBufferSubmitInfo const & commandBufferSubmitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2348,7 +2348,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CommandPoolCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CommandPoolCreateInfo const & commandPoolCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2362,7 +2362,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SpecializationMapEntry>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SpecializationMapEntry const & specializationMapEntry ) const VULKAN_HPP_NOEXCEPT
@@ -2375,7 +2375,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SpecializationInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SpecializationInfo const & specializationInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2389,7 +2389,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineShaderStageCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineShaderStageCreateInfo const & pipelineShaderStageCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2409,7 +2409,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ComputePipelineCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ComputePipelineCreateInfo const & computePipelineCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -2426,7 +2426,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ComputePipelineIndirectBufferInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ComputePipelineIndirectBufferInfoNV const & computePipelineIndirectBufferInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -2441,7 +2441,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ConditionalRenderingBeginInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ConditionalRenderingBeginInfoEXT const & conditionalRenderingBeginInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2456,7 +2456,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ConformanceVersion>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ConformanceVersion const & conformanceVersion ) const VULKAN_HPP_NOEXCEPT
@@ -2470,7 +2470,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesKHR const & cooperativeMatrixPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -2491,7 +2491,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesNV const & cooperativeMatrixPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -2511,7 +2511,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyAccelerationStructureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyAccelerationStructureInfoKHR const & copyAccelerationStructureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -2526,7 +2526,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyBufferInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyBufferInfo2 const & copyBufferInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -2542,7 +2542,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyBufferToImageInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyBufferToImageInfo2 const & copyBufferToImageInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -2559,7 +2559,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyCommandTransformInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyCommandTransformInfoQCOM const & copyCommandTransformInfoQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -2572,7 +2572,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyDescriptorSet>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyDescriptorSet const & copyDescriptorSet ) const VULKAN_HPP_NOEXCEPT
@@ -2591,7 +2591,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCopy2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCopy2 const & imageCopy2 ) const VULKAN_HPP_NOEXCEPT
@@ -2608,7 +2608,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyImageInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyImageInfo2 const & copyImageInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -2626,7 +2626,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyImageToBufferInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyImageToBufferInfo2 const & copyImageToBufferInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -2643,7 +2643,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyImageToImageInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyImageToImageInfoEXT const & copyImageToImageInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2662,7 +2662,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageToMemoryCopyEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageToMemoryCopyEXT const & imageToMemoryCopyEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2680,7 +2680,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyImageToMemoryInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyImageToMemoryInfoEXT const & copyImageToMemoryInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2697,7 +2697,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyMemoryIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyMemoryIndirectCommandNV const & copyMemoryIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -2710,7 +2710,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyMemoryToImageIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyMemoryToImageIndirectCommandNV const & copyMemoryToImageIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -2726,7 +2726,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryToImageCopyEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryToImageCopyEXT const & memoryToImageCopyEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2744,7 +2744,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyMemoryToImageInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyMemoryToImageInfoEXT const & copyMemoryToImageInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2761,7 +2761,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CopyMicromapInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CopyMicromapInfoEXT const & copyMicromapInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2776,7 +2776,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CuFunctionCreateInfoNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CuFunctionCreateInfoNVX const & cuFunctionCreateInfoNVX ) const VULKAN_HPP_NOEXCEPT
@@ -2793,7 +2793,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CuLaunchInfoNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CuLaunchInfoNVX const & cuLaunchInfoNVX ) const VULKAN_HPP_NOEXCEPT
@@ -2817,7 +2817,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CuModuleCreateInfoNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CuModuleCreateInfoNVX const & cuModuleCreateInfoNVX ) const VULKAN_HPP_NOEXCEPT
@@ -2832,7 +2832,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV const & cudaFunctionCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -2851,7 +2851,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV const & cudaLaunchInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -2877,7 +2877,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV const & cudaModuleCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -2893,7 +2893,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::D3D12FenceSubmitInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::D3D12FenceSubmitInfoKHR const & d3D12FenceSubmitInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -2910,7 +2910,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugMarkerMarkerInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugMarkerMarkerInfoEXT const & debugMarkerMarkerInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2930,7 +2930,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugMarkerObjectNameInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugMarkerObjectNameInfoEXT const & debugMarkerObjectNameInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2948,7 +2948,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugMarkerObjectTagInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugMarkerObjectTagInfoEXT const & debugMarkerObjectTagInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2965,7 +2965,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugReportCallbackCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugReportCallbackCreateInfoEXT const & debugReportCallbackCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -2980,7 +2980,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT const & debugUtilsLabelEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3000,7 +3000,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsObjectNameInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsObjectNameInfoEXT const & debugUtilsObjectNameInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3018,7 +3018,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCallbackDataEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCallbackDataEXT const & debugUtilsMessengerCallbackDataEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3046,7 +3046,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCreateInfoEXT const & debugUtilsMessengerCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3063,7 +3063,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DebugUtilsObjectTagInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DebugUtilsObjectTagInfoEXT const & debugUtilsObjectTagInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3080,7 +3080,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DecompressMemoryRegionNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DecompressMemoryRegionNV const & decompressMemoryRegionNV ) const VULKAN_HPP_NOEXCEPT
@@ -3095,7 +3095,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DedicatedAllocationBufferCreateInfoNV>
   {
     std::size_t
@@ -3109,7 +3109,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DedicatedAllocationImageCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DedicatedAllocationImageCreateInfoNV const & dedicatedAllocationImageCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -3122,7 +3122,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DedicatedAllocationMemoryAllocateInfoNV>
   {
     std::size_t
@@ -3137,7 +3137,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryBarrier2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryBarrier2 const & memoryBarrier2 ) const VULKAN_HPP_NOEXCEPT
@@ -3153,7 +3153,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSubresourceRange>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSubresourceRange const & imageSubresourceRange ) const VULKAN_HPP_NOEXCEPT
@@ -3168,7 +3168,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageMemoryBarrier2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageMemoryBarrier2 const & imageMemoryBarrier2 ) const VULKAN_HPP_NOEXCEPT
@@ -3190,7 +3190,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DependencyInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DependencyInfo const & dependencyInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3209,7 +3209,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DepthBiasInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DepthBiasInfoEXT const & depthBiasInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3224,7 +3224,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DepthBiasRepresentationInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DepthBiasRepresentationInfoEXT const & depthBiasRepresentationInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3238,7 +3238,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorAddressInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorAddressInfoEXT const & descriptorAddressInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3253,7 +3253,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorBufferBindingInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorBufferBindingInfoEXT const & descriptorBufferBindingInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3267,7 +3267,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorBufferBindingPushDescriptorBufferHandleEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorBufferBindingPushDescriptorBufferHandleEXT const &
@@ -3281,7 +3281,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorBufferInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorBufferInfo const & descriptorBufferInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3294,7 +3294,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorImageInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorImageInfo const & descriptorImageInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3307,7 +3307,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorPoolSize>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorPoolSize const & descriptorPoolSize ) const VULKAN_HPP_NOEXCEPT
@@ -3319,7 +3319,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorPoolCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorPoolCreateInfo const & descriptorPoolCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3335,7 +3335,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorPoolInlineUniformBlockCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorPoolInlineUniformBlockCreateInfo const & descriptorPoolInlineUniformBlockCreateInfo ) const
@@ -3349,7 +3349,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetAllocateInfo const & descriptorSetAllocateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3364,7 +3364,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetBindingReferenceVALVE>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetBindingReferenceVALVE const & descriptorSetBindingReferenceVALVE ) const VULKAN_HPP_NOEXCEPT
@@ -3378,7 +3378,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayoutBinding>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetLayoutBinding const & descriptorSetLayoutBinding ) const VULKAN_HPP_NOEXCEPT
@@ -3393,7 +3393,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayoutBindingFlagsCreateInfo>
   {
     std::size_t
@@ -3408,7 +3408,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayoutCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetLayoutCreateInfo const & descriptorSetLayoutCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3423,7 +3423,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayoutHostMappingInfoVALVE>
   {
     std::size_t
@@ -3438,7 +3438,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetLayoutSupport>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetLayoutSupport const & descriptorSetLayoutSupport ) const VULKAN_HPP_NOEXCEPT
@@ -3451,7 +3451,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetVariableDescriptorCountAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetVariableDescriptorCountAllocateInfo const & descriptorSetVariableDescriptorCountAllocateInfo )
@@ -3466,7 +3466,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorSetVariableDescriptorCountLayoutSupport>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorSetVariableDescriptorCountLayoutSupport const & descriptorSetVariableDescriptorCountLayoutSupport )
@@ -3480,7 +3480,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateEntry>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateEntry const & descriptorUpdateTemplateEntry ) const VULKAN_HPP_NOEXCEPT
@@ -3496,7 +3496,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateCreateInfo const & descriptorUpdateTemplateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3516,7 +3516,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceAddressBindingCallbackDataEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceAddressBindingCallbackDataEXT const & deviceAddressBindingCallbackDataEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3532,7 +3532,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceBufferMemoryRequirements>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceBufferMemoryRequirements const & deviceBufferMemoryRequirements ) const VULKAN_HPP_NOEXCEPT
@@ -3545,7 +3545,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceQueueCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceQueueCreateInfo const & deviceQueueCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3561,7 +3561,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures const & physicalDeviceFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -3626,7 +3626,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceCreateInfo const & deviceCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3658,7 +3658,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceDeviceMemoryReportCreateInfoEXT>
   {
     std::size_t
@@ -3674,7 +3674,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceDiagnosticsConfigCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceDiagnosticsConfigCreateInfoNV const & deviceDiagnosticsConfigCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -3687,7 +3687,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceEventInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceEventInfoEXT const & deviceEventInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3700,7 +3700,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceFaultAddressInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceFaultAddressInfoEXT const & deviceFaultAddressInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3713,7 +3713,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceFaultCountsEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceFaultCountsEXT const & deviceFaultCountsEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3728,7 +3728,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceFaultVendorInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceFaultVendorInfoEXT const & deviceFaultVendorInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3744,7 +3744,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceFaultInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceFaultInfoEXT const & deviceFaultInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -3763,7 +3763,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceFaultVendorBinaryHeaderVersionOneEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceFaultVendorBinaryHeaderVersionOneEXT const & deviceFaultVendorBinaryHeaderVersionOneEXT ) const
@@ -3788,7 +3788,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupBindSparseInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupBindSparseInfo const & deviceGroupBindSparseInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3802,7 +3802,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupCommandBufferBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupCommandBufferBeginInfo const & deviceGroupCommandBufferBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3815,7 +3815,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupDeviceCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupDeviceCreateInfo const & deviceGroupDeviceCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3829,7 +3829,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupPresentCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupPresentCapabilitiesKHR const & deviceGroupPresentCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -3846,7 +3846,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupPresentInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupPresentInfoKHR const & deviceGroupPresentInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -3861,7 +3861,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupRenderPassBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupRenderPassBeginInfo const & deviceGroupRenderPassBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3876,7 +3876,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupSubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupSubmitInfo const & deviceGroupSubmitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3894,7 +3894,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceGroupSwapchainCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceGroupSwapchainCreateInfoKHR const & deviceGroupSwapchainCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -3907,7 +3907,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCreateInfo const & imageCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3932,7 +3932,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements const & deviceImageMemoryRequirements ) const VULKAN_HPP_NOEXCEPT
@@ -3946,7 +3946,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSubresource2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSubresource2KHR const & imageSubresource2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -3959,7 +3959,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceImageSubresourceInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceImageSubresourceInfoKHR const & deviceImageSubresourceInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -3973,7 +3973,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceMemoryOpaqueCaptureAddressInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceMemoryOpaqueCaptureAddressInfo const & deviceMemoryOpaqueCaptureAddressInfo ) const VULKAN_HPP_NOEXCEPT
@@ -3986,7 +3986,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceMemoryOverallocationCreateInfoAMD>
   {
     std::size_t
@@ -4000,7 +4000,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceMemoryReportCallbackDataEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceMemoryReportCallbackDataEXT const & deviceMemoryReportCallbackDataEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4019,7 +4019,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DevicePrivateDataCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DevicePrivateDataCreateInfo const & devicePrivateDataCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4032,7 +4032,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceQueueGlobalPriorityCreateInfoKHR>
   {
     std::size_t
@@ -4046,7 +4046,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceQueueInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DeviceQueueInfo2 const & deviceQueueInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -4061,7 +4061,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DeviceQueueShaderCoreControlCreateInfoARM>
   {
     std::size_t
@@ -4075,7 +4075,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DirectDriverLoadingInfoLUNARG>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DirectDriverLoadingInfoLUNARG const & directDriverLoadingInfoLUNARG ) const VULKAN_HPP_NOEXCEPT
@@ -4089,7 +4089,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DirectDriverLoadingListLUNARG>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DirectDriverLoadingListLUNARG const & directDriverLoadingListLUNARG ) const VULKAN_HPP_NOEXCEPT
@@ -4105,7 +4105,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_DIRECTFB_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DirectFBSurfaceCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DirectFBSurfaceCreateInfoEXT const & directFBSurfaceCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4121,7 +4121,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_DIRECTFB_EXT*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DispatchIndirectCommand>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DispatchIndirectCommand const & dispatchIndirectCommand ) const VULKAN_HPP_NOEXCEPT
@@ -4134,7 +4134,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayEventInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayEventInfoEXT const & displayEventInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4147,7 +4147,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayModeParametersKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayModeParametersKHR const & displayModeParametersKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4159,7 +4159,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayModeCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayModeCreateInfoKHR const & displayModeCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4173,7 +4173,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayModePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayModePropertiesKHR const & displayModePropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4185,7 +4185,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayModeProperties2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayModeProperties2KHR const & displayModeProperties2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -4198,7 +4198,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayNativeHdrSurfaceCapabilitiesAMD>
   {
     std::size_t
@@ -4212,7 +4212,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilitiesKHR const & displayPlaneCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4231,7 +4231,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilities2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilities2KHR const & displayPlaneCapabilities2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -4244,7 +4244,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPlaneInfo2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPlaneInfo2KHR const & displayPlaneInfo2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -4258,7 +4258,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPlanePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPlanePropertiesKHR const & displayPlanePropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4270,7 +4270,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPlaneProperties2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPlaneProperties2KHR const & displayPlaneProperties2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -4283,7 +4283,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPowerInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPowerInfoEXT const & displayPowerInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4296,7 +4296,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPresentInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPresentInfoKHR const & displayPresentInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4311,7 +4311,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayPropertiesKHR const & displayPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4331,7 +4331,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplayProperties2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplayProperties2KHR const & displayProperties2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -4344,7 +4344,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DisplaySurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DisplaySurfaceCreateInfoKHR const & displaySurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4364,7 +4364,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrawIndexedIndirectCommand>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrawIndexedIndirectCommand const & drawIndexedIndirectCommand ) const VULKAN_HPP_NOEXCEPT
@@ -4379,7 +4379,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrawIndirectCommand>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrawIndirectCommand const & drawIndirectCommand ) const VULKAN_HPP_NOEXCEPT
@@ -4393,7 +4393,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrawMeshTasksIndirectCommandEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrawMeshTasksIndirectCommandEXT const & drawMeshTasksIndirectCommandEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4406,7 +4406,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrawMeshTasksIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrawMeshTasksIndirectCommandNV const & drawMeshTasksIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -4418,7 +4418,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrmFormatModifierProperties2EXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrmFormatModifierProperties2EXT const & drmFormatModifierProperties2EXT ) const VULKAN_HPP_NOEXCEPT
@@ -4431,7 +4431,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesEXT const & drmFormatModifierPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4444,7 +4444,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesList2EXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesList2EXT const & drmFormatModifierPropertiesList2EXT ) const VULKAN_HPP_NOEXCEPT
@@ -4458,7 +4458,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesListEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesListEXT const & drmFormatModifierPropertiesListEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4472,7 +4472,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::EventCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::EventCreateInfo const & eventCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4485,7 +4485,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineLibraryCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineLibraryCreateInfoKHR const & pipelineLibraryCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4500,7 +4500,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExecutionGraphPipelineCreateInfoAMDX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExecutionGraphPipelineCreateInfoAMDX const & executionGraphPipelineCreateInfoAMDX ) const VULKAN_HPP_NOEXCEPT
@@ -4521,7 +4521,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExecutionGraphPipelineScratchSizeAMDX>
   {
     std::size_t
@@ -4536,7 +4536,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportFenceCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportFenceCreateInfo const & exportFenceCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4550,7 +4550,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportFenceWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportFenceWin32HandleInfoKHR const & exportFenceWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4566,7 +4566,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMemoryAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMemoryAllocateInfo const & exportMemoryAllocateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4579,7 +4579,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMemoryAllocateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMemoryAllocateInfoNV const & exportMemoryAllocateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -4593,7 +4593,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMemoryWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMemoryWin32HandleInfoKHR const & exportMemoryWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4610,7 +4610,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMemoryWin32HandleInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMemoryWin32HandleInfoNV const & exportMemoryWin32HandleInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -4626,7 +4626,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalBufferInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalBufferInfoEXT const & exportMetalBufferInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4642,7 +4642,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalCommandQueueInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalCommandQueueInfoEXT const & exportMetalCommandQueueInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4658,7 +4658,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalDeviceInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalDeviceInfoEXT const & exportMetalDeviceInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4673,7 +4673,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalIOSurfaceInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalIOSurfaceInfoEXT const & exportMetalIOSurfaceInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4689,7 +4689,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalObjectCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalObjectCreateInfoEXT const & exportMetalObjectCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4704,7 +4704,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalObjectsInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalObjectsInfoEXT const & exportMetalObjectsInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4718,7 +4718,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalSharedEventInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalSharedEventInfoEXT const & exportMetalSharedEventInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4735,7 +4735,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportMetalTextureInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportMetalTextureInfoEXT const & exportMetalTextureInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4753,7 +4753,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportSemaphoreCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportSemaphoreCreateInfo const & exportSemaphoreCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4767,7 +4767,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExportSemaphoreWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExportSemaphoreWin32HandleInfoKHR const & exportSemaphoreWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -4783,7 +4783,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExtensionProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExtensionProperties const & extensionProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4798,7 +4798,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalMemoryProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalMemoryProperties const & externalMemoryProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4811,7 +4811,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalBufferProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalBufferProperties const & externalBufferProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4824,7 +4824,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalFenceProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalFenceProperties const & externalFenceProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4840,7 +4840,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalFormatANDROID>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalFormatANDROID const & externalFormatANDROID ) const VULKAN_HPP_NOEXCEPT
@@ -4855,7 +4855,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalFormatQNX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalFormatQNX const & externalFormatQNX ) const VULKAN_HPP_NOEXCEPT
@@ -4869,7 +4869,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalImageFormatProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalImageFormatProperties const & externalImageFormatProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4882,7 +4882,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageFormatProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageFormatProperties const & imageFormatProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4897,7 +4897,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalImageFormatPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalImageFormatPropertiesNV const & externalImageFormatPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -4911,7 +4911,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalMemoryAcquireUnmodifiedEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalMemoryAcquireUnmodifiedEXT const & externalMemoryAcquireUnmodifiedEXT ) const VULKAN_HPP_NOEXCEPT
@@ -4924,7 +4924,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalMemoryBufferCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalMemoryBufferCreateInfo const & externalMemoryBufferCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4937,7 +4937,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalMemoryImageCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalMemoryImageCreateInfo const & externalMemoryImageCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4950,7 +4950,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalMemoryImageCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalMemoryImageCreateInfoNV const & externalMemoryImageCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -4963,7 +4963,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ExternalSemaphoreProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ExternalSemaphoreProperties const & externalSemaphoreProperties ) const VULKAN_HPP_NOEXCEPT
@@ -4978,7 +4978,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FenceCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FenceCreateInfo const & fenceCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -4991,7 +4991,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FenceGetFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FenceGetFdInfoKHR const & fenceGetFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -5006,7 +5006,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FenceGetWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FenceGetWin32HandleInfoKHR const & fenceGetWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -5021,7 +5021,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FilterCubicImageViewImageFormatPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FilterCubicImageViewImageFormatPropertiesEXT const & filterCubicImageViewImageFormatPropertiesEXT ) const
@@ -5036,7 +5036,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FormatProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FormatProperties const & formatProperties ) const VULKAN_HPP_NOEXCEPT
@@ -5049,7 +5049,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FormatProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FormatProperties2 const & formatProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -5062,7 +5062,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FormatProperties3>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FormatProperties3 const & formatProperties3 ) const VULKAN_HPP_NOEXCEPT
@@ -5077,7 +5077,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FragmentShadingRateAttachmentInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FragmentShadingRateAttachmentInfoKHR const & fragmentShadingRateAttachmentInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -5091,7 +5091,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FrameBoundaryEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FrameBoundaryEXT const & frameBoundaryEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5112,7 +5112,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FramebufferAttachmentImageInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FramebufferAttachmentImageInfo const & framebufferAttachmentImageInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5131,7 +5131,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FramebufferAttachmentsCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FramebufferAttachmentsCreateInfo const & framebufferAttachmentsCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5145,7 +5145,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FramebufferCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FramebufferCreateInfo const & framebufferCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5164,7 +5164,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::FramebufferMixedSamplesCombinationNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::FramebufferMixedSamplesCombinationNV const & framebufferMixedSamplesCombinationNV ) const VULKAN_HPP_NOEXCEPT
@@ -5180,7 +5180,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::IndirectCommandsStreamNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::IndirectCommandsStreamNV const & indirectCommandsStreamNV ) const VULKAN_HPP_NOEXCEPT
@@ -5192,7 +5192,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeneratedCommandsInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GeneratedCommandsInfoNV const & generatedCommandsInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -5217,7 +5217,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GeneratedCommandsMemoryRequirementsInfoNV>
   {
     std::size_t
@@ -5234,7 +5234,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LatencyTimingsFrameReportNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LatencyTimingsFrameReportNV const & latencyTimingsFrameReportNV ) const VULKAN_HPP_NOEXCEPT
@@ -5260,7 +5260,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV const & getLatencyMarkerInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -5274,7 +5274,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VertexInputBindingDescription>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VertexInputBindingDescription const & vertexInputBindingDescription ) const VULKAN_HPP_NOEXCEPT
@@ -5287,7 +5287,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VertexInputAttributeDescription>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VertexInputAttributeDescription const & vertexInputAttributeDescription ) const VULKAN_HPP_NOEXCEPT
@@ -5301,7 +5301,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineVertexInputStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineVertexInputStateCreateInfo const & pipelineVertexInputStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5318,7 +5318,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineInputAssemblyStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineInputAssemblyStateCreateInfo const & pipelineInputAssemblyStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5333,7 +5333,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineTessellationStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineTessellationStateCreateInfo const & pipelineTessellationStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5347,7 +5347,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineViewportStateCreateInfo const & pipelineViewportStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5364,7 +5364,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRasterizationStateCreateInfo const & pipelineRasterizationStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5387,7 +5387,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineMultisampleStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineMultisampleStateCreateInfo const & pipelineMultisampleStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5406,7 +5406,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::StencilOpState>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::StencilOpState const & stencilOpState ) const VULKAN_HPP_NOEXCEPT
@@ -5423,7 +5423,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineDepthStencilStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineDepthStencilStateCreateInfo const & pipelineDepthStencilStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5445,7 +5445,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineColorBlendAttachmentState>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineColorBlendAttachmentState const & pipelineColorBlendAttachmentState ) const VULKAN_HPP_NOEXCEPT
@@ -5463,7 +5463,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineColorBlendStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineColorBlendStateCreateInfo const & pipelineColorBlendStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5484,7 +5484,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineDynamicStateCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineDynamicStateCreateInfo const & pipelineDynamicStateCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5499,7 +5499,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GraphicsPipelineCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GraphicsPipelineCreateInfo const & graphicsPipelineCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5528,7 +5528,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GraphicsPipelineLibraryCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GraphicsPipelineLibraryCreateInfoEXT const & graphicsPipelineLibraryCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5541,7 +5541,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GraphicsShaderGroupCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GraphicsShaderGroupCreateInfoNV const & graphicsShaderGroupCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -5557,7 +5557,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::GraphicsPipelineShaderGroupsCreateInfoNV>
   {
     std::size_t
@@ -5574,7 +5574,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::XYColorEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::XYColorEXT const & xYColorEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5586,7 +5586,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::HdrMetadataEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::HdrMetadataEXT const & hdrMetadataEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5606,7 +5606,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::HeadlessSurfaceCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::HeadlessSurfaceCreateInfoEXT const & headlessSurfaceCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5619,7 +5619,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::HostImageCopyDevicePerformanceQueryEXT>
   {
     std::size_t
@@ -5634,7 +5634,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::HostImageLayoutTransitionInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::HostImageLayoutTransitionInfoEXT const & hostImageLayoutTransitionInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5651,7 +5651,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_IOS_MVK )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::IOSSurfaceCreateInfoMVK>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::IOSSurfaceCreateInfoMVK const & iOSSurfaceCreateInfoMVK ) const VULKAN_HPP_NOEXCEPT
@@ -5666,7 +5666,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_IOS_MVK*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageAlignmentControlCreateInfoMESA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageAlignmentControlCreateInfoMESA const & imageAlignmentControlCreateInfoMESA ) const VULKAN_HPP_NOEXCEPT
@@ -5679,7 +5679,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageBlit>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageBlit const & imageBlit ) const VULKAN_HPP_NOEXCEPT
@@ -5699,7 +5699,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCaptureDescriptorDataInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCaptureDescriptorDataInfoEXT const & imageCaptureDescriptorDataInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5712,7 +5712,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCompressionControlEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCompressionControlEXT const & imageCompressionControlEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5727,7 +5727,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCompressionPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCompressionPropertiesEXT const & imageCompressionPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5742,7 +5742,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageFormatConstraintsInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageFormatConstraintsInfoFUCHSIA const & imageFormatConstraintsInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -5762,7 +5762,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageConstraintsInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageConstraintsInfoFUCHSIA const & imageConstraintsInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -5779,7 +5779,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageCopy>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageCopy const & imageCopy ) const VULKAN_HPP_NOEXCEPT
@@ -5794,7 +5794,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubresourceLayout>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubresourceLayout const & subresourceLayout ) const VULKAN_HPP_NOEXCEPT
@@ -5809,7 +5809,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierExplicitCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierExplicitCreateInfoEXT const & imageDrmFormatModifierExplicitCreateInfoEXT ) const
@@ -5825,7 +5825,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierListCreateInfoEXT>
   {
     std::size_t
@@ -5840,7 +5840,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierPropertiesEXT const & imageDrmFormatModifierPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -5853,7 +5853,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageFormatListCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageFormatListCreateInfo const & imageFormatListCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5867,7 +5867,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageFormatProperties2 const & imageFormatProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -5880,7 +5880,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageMemoryBarrier>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageMemoryBarrier const & imageMemoryBarrier ) const VULKAN_HPP_NOEXCEPT
@@ -5900,7 +5900,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageMemoryRequirementsInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageMemoryRequirementsInfo2 const & imageMemoryRequirementsInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -5914,7 +5914,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImagePipeSurfaceCreateInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImagePipeSurfaceCreateInfoFUCHSIA const & imagePipeSurfaceCreateInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -5929,7 +5929,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImagePlaneMemoryRequirementsInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImagePlaneMemoryRequirementsInfo const & imagePlaneMemoryRequirementsInfo ) const VULKAN_HPP_NOEXCEPT
@@ -5942,7 +5942,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageResolve>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageResolve const & imageResolve ) const VULKAN_HPP_NOEXCEPT
@@ -5957,7 +5957,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageResolve2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageResolve2 const & imageResolve2 ) const VULKAN_HPP_NOEXCEPT
@@ -5974,7 +5974,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSparseMemoryRequirementsInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSparseMemoryRequirementsInfo2 const & imageSparseMemoryRequirementsInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -5987,7 +5987,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageStencilUsageCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageStencilUsageCreateInfo const & imageStencilUsageCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6000,7 +6000,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageSwapchainCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageSwapchainCreateInfoKHR const & imageSwapchainCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6013,7 +6013,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewASTCDecodeModeEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewASTCDecodeModeEXT const & imageViewASTCDecodeModeEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6026,7 +6026,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewAddressPropertiesNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewAddressPropertiesNVX const & imageViewAddressPropertiesNVX ) const VULKAN_HPP_NOEXCEPT
@@ -6040,7 +6040,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewCaptureDescriptorDataInfoEXT>
   {
     std::size_t
@@ -6054,7 +6054,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewCreateInfo const & imageViewCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6072,7 +6072,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewHandleInfoNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewHandleInfoNVX const & imageViewHandleInfoNVX ) const VULKAN_HPP_NOEXCEPT
@@ -6087,7 +6087,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewMinLodCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewMinLodCreateInfoEXT const & imageViewMinLodCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6100,7 +6100,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewSampleWeightCreateInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewSampleWeightCreateInfoQCOM const & imageViewSampleWeightCreateInfoQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -6115,7 +6115,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewSlicedCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewSlicedCreateInfoEXT const & imageViewSlicedCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6129,7 +6129,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImageViewUsageCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImageViewUsageCreateInfo const & imageViewUsageCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6143,7 +6143,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportAndroidHardwareBufferInfoANDROID>
   {
     std::size_t
@@ -6158,7 +6158,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportFenceFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportFenceFdInfoKHR const & importFenceFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6175,7 +6175,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportFenceWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportFenceWin32HandleInfoKHR const & importFenceWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6194,7 +6194,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryBufferCollectionFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryBufferCollectionFUCHSIA const & importMemoryBufferCollectionFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -6209,7 +6209,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryFdInfoKHR const & importMemoryFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6223,7 +6223,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryHostPointerInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryHostPointerInfoEXT const & importMemoryHostPointerInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6238,7 +6238,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryWin32HandleInfoKHR const & importMemoryWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6255,7 +6255,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryWin32HandleInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryWin32HandleInfoNV const & importMemoryWin32HandleInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6271,7 +6271,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMemoryZirconHandleInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMemoryZirconHandleInfoFUCHSIA const & importMemoryZirconHandleInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -6287,7 +6287,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMetalBufferInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMetalBufferInfoEXT const & importMetalBufferInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6302,7 +6302,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMetalIOSurfaceInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMetalIOSurfaceInfoEXT const & importMetalIOSurfaceInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6317,7 +6317,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMetalSharedEventInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMetalSharedEventInfoEXT const & importMetalSharedEventInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6332,7 +6332,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportMetalTextureInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportMetalTextureInfoEXT const & importMetalTextureInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6348,7 +6348,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportScreenBufferInfoQNX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportScreenBufferInfoQNX const & importScreenBufferInfoQNX ) const VULKAN_HPP_NOEXCEPT
@@ -6362,7 +6362,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportSemaphoreFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportSemaphoreFdInfoKHR const & importSemaphoreFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6379,7 +6379,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportSemaphoreWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ImportSemaphoreWin32HandleInfoKHR const & importSemaphoreWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6398,7 +6398,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ImportSemaphoreZirconHandleInfoFUCHSIA>
   {
     std::size_t
@@ -6416,7 +6416,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutTokenNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutTokenNV const & indirectCommandsLayoutTokenNV ) const VULKAN_HPP_NOEXCEPT
@@ -6441,7 +6441,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutCreateInfoNV const & indirectCommandsLayoutCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6459,7 +6459,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::InitializePerformanceApiInfoINTEL>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::InitializePerformanceApiInfoINTEL const & initializePerformanceApiInfoINTEL ) const VULKAN_HPP_NOEXCEPT
@@ -6472,7 +6472,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::InputAttachmentAspectReference>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::InputAttachmentAspectReference const & inputAttachmentAspectReference ) const VULKAN_HPP_NOEXCEPT
@@ -6485,7 +6485,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::InstanceCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::InstanceCreateInfo const & instanceCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6515,7 +6515,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LatencySleepInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LatencySleepInfoNV const & latencySleepInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6529,7 +6529,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV const & latencySleepModeInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6544,7 +6544,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LatencySubmissionPresentIdNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LatencySubmissionPresentIdNV const & latencySubmissionPresentIdNV ) const VULKAN_HPP_NOEXCEPT
@@ -6557,7 +6557,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LatencySurfaceCapabilitiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LatencySurfaceCapabilitiesNV const & latencySurfaceCapabilitiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -6571,7 +6571,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LayerProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LayerProperties const & layerProperties ) const VULKAN_HPP_NOEXCEPT
@@ -6591,7 +6591,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LayerSettingEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LayerSettingEXT const & layerSettingEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6612,7 +6612,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::LayerSettingsCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::LayerSettingsCreateInfoEXT const & layerSettingsCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6627,7 +6627,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_MACOS_MVK )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MacOSSurfaceCreateInfoMVK>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MacOSSurfaceCreateInfoMVK const & macOSSurfaceCreateInfoMVK ) const VULKAN_HPP_NOEXCEPT
@@ -6642,7 +6642,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_MACOS_MVK*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MappedMemoryRange>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MappedMemoryRange const & mappedMemoryRange ) const VULKAN_HPP_NOEXCEPT
@@ -6657,7 +6657,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryAllocateFlagsInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryAllocateFlagsInfo const & memoryAllocateFlagsInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6671,7 +6671,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryAllocateInfo const & memoryAllocateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6685,7 +6685,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryBarrier>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryBarrier const & memoryBarrier ) const VULKAN_HPP_NOEXCEPT
@@ -6699,7 +6699,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryDedicatedAllocateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryDedicatedAllocateInfo const & memoryDedicatedAllocateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -6713,7 +6713,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryDedicatedRequirements>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryDedicatedRequirements const & memoryDedicatedRequirements ) const VULKAN_HPP_NOEXCEPT
@@ -6727,7 +6727,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryFdPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryFdPropertiesKHR const & memoryFdPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6741,7 +6741,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryGetAndroidHardwareBufferInfoANDROID>
   {
     std::size_t
@@ -6756,7 +6756,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryGetFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryGetFdInfoKHR const & memoryGetFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6770,7 +6770,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryGetRemoteAddressInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryGetRemoteAddressInfoNV const & memoryGetRemoteAddressInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6785,7 +6785,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryGetWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryGetWin32HandleInfoKHR const & memoryGetWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6801,7 +6801,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryGetZirconHandleInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryGetZirconHandleInfoFUCHSIA const & memoryGetZirconHandleInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -6816,7 +6816,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryHeap>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryHeap const & memoryHeap ) const VULKAN_HPP_NOEXCEPT
@@ -6828,7 +6828,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryHostPointerPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryHostPointerPropertiesEXT const & memoryHostPointerPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6841,7 +6841,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryMapInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryMapInfoKHR const & memoryMapInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6857,7 +6857,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryMapPlacedInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryMapPlacedInfoEXT const & memoryMapPlacedInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6870,7 +6870,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryOpaqueCaptureAddressAllocateInfo>
   {
     std::size_t
@@ -6884,7 +6884,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryPriorityAllocateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryPriorityAllocateInfoEXT const & memoryPriorityAllocateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6897,7 +6897,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryRequirements>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryRequirements const & memoryRequirements ) const VULKAN_HPP_NOEXCEPT
@@ -6910,7 +6910,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryRequirements2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryRequirements2 const & memoryRequirements2 ) const VULKAN_HPP_NOEXCEPT
@@ -6923,7 +6923,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryType>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryType const & memoryType ) const VULKAN_HPP_NOEXCEPT
@@ -6935,7 +6935,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryUnmapInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryUnmapInfoKHR const & memoryUnmapInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6950,7 +6950,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryWin32HandlePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryWin32HandlePropertiesKHR const & memoryWin32HandlePropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -6965,7 +6965,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MemoryZirconHandlePropertiesFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MemoryZirconHandlePropertiesFUCHSIA const & memoryZirconHandlePropertiesFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -6980,7 +6980,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MetalSurfaceCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MetalSurfaceCreateInfoEXT const & metalSurfaceCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -6995,7 +6995,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapBuildSizesInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapBuildSizesInfoEXT const & micromapBuildSizesInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7010,7 +7010,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapCreateInfoEXT const & micromapCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7028,7 +7028,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapTriangleEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapTriangleEXT const & micromapTriangleEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7041,7 +7041,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MicromapVersionInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MicromapVersionInfoEXT const & micromapVersionInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7054,7 +7054,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultiDrawIndexedInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MultiDrawIndexedInfoEXT const & multiDrawIndexedInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7067,7 +7067,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultiDrawInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MultiDrawInfoEXT const & multiDrawInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7079,7 +7079,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultisamplePropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MultisamplePropertiesEXT const & multisamplePropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7092,7 +7092,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultisampledRenderToSingleSampledInfoEXT>
   {
     std::size_t
@@ -7107,7 +7107,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultiviewPerViewAttributesInfoNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MultiviewPerViewAttributesInfoNVX const & multiviewPerViewAttributesInfoNVX ) const VULKAN_HPP_NOEXCEPT
@@ -7121,7 +7121,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MultiviewPerViewRenderAreasRenderPassBeginInfoQCOM>
   {
     std::size_t
@@ -7137,7 +7137,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MutableDescriptorTypeListEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MutableDescriptorTypeListEXT const & mutableDescriptorTypeListEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7149,7 +7149,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::MutableDescriptorTypeCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::MutableDescriptorTypeCreateInfoEXT const & mutableDescriptorTypeCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7163,7 +7163,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpaqueCaptureDescriptorDataCreateInfoEXT>
   {
     std::size_t
@@ -7177,7 +7177,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowExecuteInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OpticalFlowExecuteInfoNV const & opticalFlowExecuteInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -7192,7 +7192,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowImageFormatInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OpticalFlowImageFormatInfoNV const & opticalFlowImageFormatInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -7205,7 +7205,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowImageFormatPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OpticalFlowImageFormatPropertiesNV const & opticalFlowImageFormatPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -7218,7 +7218,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowSessionCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OpticalFlowSessionCreateInfoNV const & opticalFlowSessionCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -7239,7 +7239,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OpticalFlowSessionCreatePrivateDataInfoNV>
   {
     std::size_t
@@ -7255,7 +7255,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV const & outOfBandQueueTypeInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -7268,7 +7268,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PastPresentationTimingGOOGLE>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PastPresentationTimingGOOGLE const & pastPresentationTimingGOOGLE ) const VULKAN_HPP_NOEXCEPT
@@ -7283,7 +7283,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceConfigurationAcquireInfoINTEL>
   {
     std::size_t
@@ -7297,7 +7297,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceCounterDescriptionKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceCounterDescriptionKHR const & performanceCounterDescriptionKHR ) const VULKAN_HPP_NOEXCEPT
@@ -7322,7 +7322,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceCounterKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceCounterKHR const & performanceCounterKHR ) const VULKAN_HPP_NOEXCEPT
@@ -7341,7 +7341,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceMarkerInfoINTEL>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceMarkerInfoINTEL const & performanceMarkerInfoINTEL ) const VULKAN_HPP_NOEXCEPT
@@ -7354,7 +7354,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceOverrideInfoINTEL>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceOverrideInfoINTEL const & performanceOverrideInfoINTEL ) const VULKAN_HPP_NOEXCEPT
@@ -7369,7 +7369,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceQuerySubmitInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceQuerySubmitInfoKHR const & performanceQuerySubmitInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -7382,7 +7382,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PerformanceStreamMarkerInfoINTEL>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PerformanceStreamMarkerInfoINTEL const & performanceStreamMarkerInfoINTEL ) const VULKAN_HPP_NOEXCEPT
@@ -7395,7 +7395,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevice16BitStorageFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevice16BitStorageFeatures const & physicalDevice16BitStorageFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -7411,7 +7411,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevice4444FormatsFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevice4444FormatsFeaturesEXT const & physicalDevice4444FormatsFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7425,7 +7425,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevice8BitStorageFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevice8BitStorageFeatures const & physicalDevice8BitStorageFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -7440,7 +7440,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceASTCDecodeFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceASTCDecodeFeaturesEXT const & physicalDeviceASTCDecodeFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -7453,7 +7453,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAccelerationStructureFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAccelerationStructureFeaturesKHR const & physicalDeviceAccelerationStructureFeaturesKHR ) const
@@ -7471,7 +7471,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAccelerationStructurePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAccelerationStructurePropertiesKHR const & physicalDeviceAccelerationStructurePropertiesKHR )
@@ -7492,7 +7492,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAddressBindingReportFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAddressBindingReportFeaturesEXT const & physicalDeviceAddressBindingReportFeaturesEXT ) const
@@ -7506,7 +7506,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAmigoProfilingFeaturesSEC>
   {
     std::size_t
@@ -7520,7 +7520,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAntiLagFeaturesAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAntiLagFeaturesAMD const & physicalDeviceAntiLagFeaturesAMD ) const VULKAN_HPP_NOEXCEPT
@@ -7533,7 +7533,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT const &
@@ -7547,7 +7547,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT const &
@@ -7561,7 +7561,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceBlendOperationAdvancedFeaturesEXT>
   {
     std::size_t operator()(
@@ -7575,7 +7575,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceBlendOperationAdvancedPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceBlendOperationAdvancedPropertiesEXT const & physicalDeviceBlendOperationAdvancedPropertiesEXT )
@@ -7594,7 +7594,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceBorderColorSwizzleFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceBorderColorSwizzleFeaturesEXT const & physicalDeviceBorderColorSwizzleFeaturesEXT ) const
@@ -7609,7 +7609,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceBufferDeviceAddressFeatures>
   {
     std::size_t
@@ -7625,7 +7625,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceBufferDeviceAddressFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceBufferDeviceAddressFeaturesEXT const & physicalDeviceBufferDeviceAddressFeaturesEXT ) const
@@ -7641,7 +7641,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderFeaturesHUAWEI>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderFeaturesHUAWEI const & physicalDeviceClusterCullingShaderFeaturesHUAWEI )
@@ -7656,7 +7656,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderPropertiesHUAWEI>
   {
     std::size_t
@@ -7680,7 +7680,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI>
   {
     std::size_t
@@ -7695,7 +7695,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCoherentMemoryFeaturesAMD>
   {
     std::size_t
@@ -7709,7 +7709,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceColorWriteEnableFeaturesEXT>
   {
     std::size_t
@@ -7723,7 +7723,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceComputeShaderDerivativesFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceComputeShaderDerivativesFeaturesNV const & physicalDeviceComputeShaderDerivativesFeaturesNV )
@@ -7738,7 +7738,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceConditionalRenderingFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceConditionalRenderingFeaturesEXT const & physicalDeviceConditionalRenderingFeaturesEXT ) const
@@ -7753,7 +7753,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceConservativeRasterizationPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceConservativeRasterizationPropertiesEXT const &
@@ -7775,7 +7775,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixFeaturesKHR const & physicalDeviceCooperativeMatrixFeaturesKHR ) const
@@ -7790,7 +7790,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixFeaturesNV>
   {
     std::size_t
@@ -7805,7 +7805,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixPropertiesKHR const & physicalDeviceCooperativeMatrixPropertiesKHR ) const
@@ -7819,7 +7819,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCooperativeMatrixPropertiesNV const & physicalDeviceCooperativeMatrixPropertiesNV ) const
@@ -7833,7 +7833,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCopyMemoryIndirectFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCopyMemoryIndirectFeaturesNV const & physicalDeviceCopyMemoryIndirectFeaturesNV ) const
@@ -7847,7 +7847,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCopyMemoryIndirectPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCopyMemoryIndirectPropertiesNV const & physicalDeviceCopyMemoryIndirectPropertiesNV ) const
@@ -7861,7 +7861,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCornerSampledImageFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCornerSampledImageFeaturesNV const & physicalDeviceCornerSampledImageFeaturesNV ) const
@@ -7875,7 +7875,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCoverageReductionModeFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCoverageReductionModeFeaturesNV const & physicalDeviceCoverageReductionModeFeaturesNV ) const
@@ -7889,7 +7889,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicClampFeaturesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicClampFeaturesQCOM const & physicalDeviceCubicClampFeaturesQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -7902,7 +7902,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicWeightsFeaturesQCOM>
   {
     std::size_t
@@ -7917,7 +7917,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchFeaturesNV>
   {
     std::size_t
@@ -7933,7 +7933,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchPropertiesNV const & physicalDeviceCudaKernelLaunchPropertiesNV ) const
@@ -7949,7 +7949,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCustomBorderColorFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCustomBorderColorFeaturesEXT const & physicalDeviceCustomBorderColorFeaturesEXT ) const
@@ -7964,7 +7964,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceCustomBorderColorPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceCustomBorderColorPropertiesEXT const & physicalDeviceCustomBorderColorPropertiesEXT ) const
@@ -7978,7 +7978,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV const &
@@ -7992,7 +7992,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthBiasControlFeaturesEXT>
   {
     std::size_t
@@ -8009,7 +8009,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthClampZeroOneFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthClampZeroOneFeaturesEXT const & physicalDeviceDepthClampZeroOneFeaturesEXT ) const
@@ -8023,7 +8023,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthClipControlFeaturesEXT>
   {
     std::size_t
@@ -8037,7 +8037,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthClipEnableFeaturesEXT>
   {
     std::size_t
@@ -8051,7 +8051,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthStencilResolveProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDepthStencilResolveProperties const & physicalDeviceDepthStencilResolveProperties ) const
@@ -8068,7 +8068,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorBufferDensityMapPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorBufferDensityMapPropertiesEXT const &
@@ -8082,7 +8082,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorBufferFeaturesEXT>
   {
     std::size_t
@@ -8099,7 +8099,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorBufferPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorBufferPropertiesEXT const & physicalDeviceDescriptorBufferPropertiesEXT ) const
@@ -8145,7 +8145,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorIndexingFeatures>
   {
     std::size_t
@@ -8178,7 +8178,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorIndexingProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorIndexingProperties const & physicalDeviceDescriptorIndexingProperties ) const
@@ -8214,7 +8214,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorPoolOverallocationFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorPoolOverallocationFeaturesNV const &
@@ -8228,7 +8228,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorSetHostMappingFeaturesVALVE>
   {
     std::size_t
@@ -8243,7 +8243,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV const &
@@ -8259,7 +8259,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>
   {
     std::size_t operator()(
@@ -8273,7 +8273,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceGeneratedCommandsPropertiesNV const & physicalDeviceDeviceGeneratedCommandsPropertiesNV )
@@ -8295,7 +8295,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceMemoryReportFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDeviceMemoryReportFeaturesEXT const & physicalDeviceDeviceMemoryReportFeaturesEXT ) const
@@ -8309,7 +8309,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDiagnosticsConfigFeaturesNV>
   {
     std::size_t
@@ -8323,7 +8323,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDiscardRectanglePropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDiscardRectanglePropertiesEXT const & physicalDeviceDiscardRectanglePropertiesEXT ) const
@@ -8338,7 +8338,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDisplacementMicromapFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDisplacementMicromapFeaturesNV const & physicalDeviceDisplacementMicromapFeaturesNV ) const
@@ -8354,7 +8354,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDisplacementMicromapPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDisplacementMicromapPropertiesNV const & physicalDeviceDisplacementMicromapPropertiesNV ) const
@@ -8369,7 +8369,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDriverProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDriverProperties const & physicalDeviceDriverProperties ) const VULKAN_HPP_NOEXCEPT
@@ -8391,7 +8391,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDrmPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDrmPropertiesEXT const & physicalDeviceDrmPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -8409,7 +8409,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDynamicRenderingFeatures>
   {
     std::size_t
@@ -8423,7 +8423,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDynamicRenderingLocalReadFeaturesKHR>
   {
     std::size_t
@@ -8438,7 +8438,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT const &
@@ -8452,7 +8452,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExclusiveScissorFeaturesNV>
   {
     std::size_t
@@ -8466,7 +8466,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState2FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState2FeaturesEXT const & physicalDeviceExtendedDynamicState2FeaturesEXT ) const
@@ -8482,7 +8482,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState3FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState3FeaturesEXT const & physicalDeviceExtendedDynamicState3FeaturesEXT ) const
@@ -8526,7 +8526,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState3PropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicState3PropertiesEXT const & physicalDeviceExtendedDynamicState3PropertiesEXT )
@@ -8540,7 +8540,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicStateFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedDynamicStateFeaturesEXT const & physicalDeviceExtendedDynamicStateFeaturesEXT ) const
@@ -8554,7 +8554,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV>
   {
     std::size_t
@@ -8569,7 +8569,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpacePropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpacePropertiesNV const &
@@ -8585,7 +8585,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalBufferInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalBufferInfo const & physicalDeviceExternalBufferInfo ) const VULKAN_HPP_NOEXCEPT
@@ -8600,7 +8600,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFenceInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFenceInfo const & physicalDeviceExternalFenceInfo ) const VULKAN_HPP_NOEXCEPT
@@ -8614,7 +8614,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolveFeaturesANDROID>
   {
     std::size_t
@@ -8631,7 +8631,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
 #  if defined( VK_USE_PLATFORM_ANDROID_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolvePropertiesANDROID>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolvePropertiesANDROID const &
@@ -8648,7 +8648,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_ANDROID_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalImageFormatInfo>
   {
     std::size_t
@@ -8662,7 +8662,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryHostPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryHostPropertiesEXT const & physicalDeviceExternalMemoryHostPropertiesEXT ) const
@@ -8676,7 +8676,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryRDMAFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryRDMAFeaturesNV const & physicalDeviceExternalMemoryRDMAFeaturesNV ) const
@@ -8691,7 +8691,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX>
   {
     std::size_t
@@ -8707,7 +8707,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalSemaphoreInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalSemaphoreInfo const & physicalDeviceExternalSemaphoreInfo ) const VULKAN_HPP_NOEXCEPT
@@ -8720,7 +8720,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFaultFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFaultFeaturesEXT const & physicalDeviceFaultFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -8734,7 +8734,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures2 const & physicalDeviceFeatures2 ) const VULKAN_HPP_NOEXCEPT
@@ -8747,7 +8747,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFloatControlsProperties>
   {
     std::size_t
@@ -8777,7 +8777,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMap2FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMap2FeaturesEXT const & physicalDeviceFragmentDensityMap2FeaturesEXT ) const
@@ -8791,7 +8791,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMap2PropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMap2PropertiesEXT const & physicalDeviceFragmentDensityMap2PropertiesEXT ) const
@@ -8808,7 +8808,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapFeaturesEXT const & physicalDeviceFragmentDensityMapFeaturesEXT ) const
@@ -8824,7 +8824,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM>
   {
     std::size_t
@@ -8839,7 +8839,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM const &
@@ -8853,7 +8853,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentDensityMapPropertiesEXT const & physicalDeviceFragmentDensityMapPropertiesEXT ) const
@@ -8869,7 +8869,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShaderBarycentricFeaturesKHR>
   {
     std::size_t
@@ -8884,7 +8884,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShaderBarycentricPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShaderBarycentricPropertiesKHR const &
@@ -8898,7 +8898,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShaderInterlockFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShaderInterlockFeaturesEXT const & physicalDeviceFragmentShaderInterlockFeaturesEXT )
@@ -8914,7 +8914,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateEnumsFeaturesNV const & physicalDeviceFragmentShadingRateEnumsFeaturesNV )
@@ -8930,7 +8930,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateEnumsPropertiesNV>
   {
     std::size_t
@@ -8945,7 +8945,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateFeaturesKHR const & physicalDeviceFragmentShadingRateFeaturesKHR ) const
@@ -8961,7 +8961,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateKHR const & physicalDeviceFragmentShadingRateKHR ) const VULKAN_HPP_NOEXCEPT
@@ -8975,7 +8975,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRatePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRatePropertiesKHR const & physicalDeviceFragmentShadingRatePropertiesKHR ) const
@@ -9005,7 +9005,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceFrameBoundaryFeaturesEXT>
   {
     std::size_t
@@ -9019,7 +9019,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGlobalPriorityQueryFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGlobalPriorityQueryFeaturesKHR const & physicalDeviceGlobalPriorityQueryFeaturesKHR ) const
@@ -9033,7 +9033,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryFeaturesEXT const & physicalDeviceGraphicsPipelineLibraryFeaturesEXT )
@@ -9047,7 +9047,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryPropertiesEXT>
   {
     std::size_t
@@ -9063,7 +9063,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties const & physicalDeviceGroupProperties ) const VULKAN_HPP_NOEXCEPT
@@ -9081,7 +9081,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceHostImageCopyFeaturesEXT>
   {
     std::size_t
@@ -9095,7 +9095,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceHostImageCopyPropertiesEXT>
   {
     std::size_t
@@ -9117,7 +9117,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceHostQueryResetFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceHostQueryResetFeatures const & physicalDeviceHostQueryResetFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -9130,7 +9130,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceIDProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceIDProperties const & physicalDeviceIDProperties ) const VULKAN_HPP_NOEXCEPT
@@ -9156,7 +9156,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImage2DViewOf3DFeaturesEXT>
   {
     std::size_t
@@ -9171,7 +9171,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageAlignmentControlFeaturesMESA>
   {
     std::size_t operator()(
@@ -9185,7 +9185,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageAlignmentControlPropertiesMESA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageAlignmentControlPropertiesMESA const & physicalDeviceImageAlignmentControlPropertiesMESA )
@@ -9199,7 +9199,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageCompressionControlFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageCompressionControlFeaturesEXT const & physicalDeviceImageCompressionControlFeaturesEXT )
@@ -9213,7 +9213,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageCompressionControlSwapchainFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageCompressionControlSwapchainFeaturesEXT const &
@@ -9227,7 +9227,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageDrmFormatModifierInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageDrmFormatModifierInfoEXT const & physicalDeviceImageDrmFormatModifierInfoEXT ) const
@@ -9244,7 +9244,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 const & physicalDeviceImageFormatInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -9261,7 +9261,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2FeaturesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2FeaturesQCOM const & physicalDeviceImageProcessing2FeaturesQCOM ) const
@@ -9275,7 +9275,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2PropertiesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2PropertiesQCOM const & physicalDeviceImageProcessing2PropertiesQCOM ) const
@@ -9289,7 +9289,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessingFeaturesQCOM>
   {
     std::size_t
@@ -9305,7 +9305,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessingPropertiesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessingPropertiesQCOM const & physicalDeviceImageProcessingPropertiesQCOM ) const
@@ -9322,7 +9322,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageRobustnessFeatures>
   {
     std::size_t
@@ -9336,7 +9336,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageSlicedViewOf3DFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageSlicedViewOf3DFeaturesEXT const & physicalDeviceImageSlicedViewOf3DFeaturesEXT ) const
@@ -9350,7 +9350,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageViewImageFormatInfoEXT>
   {
     std::size_t
@@ -9364,7 +9364,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageViewMinLodFeaturesEXT>
   {
     std::size_t
@@ -9378,7 +9378,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImagelessFramebufferFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImagelessFramebufferFeatures const & physicalDeviceImagelessFramebufferFeatures ) const
@@ -9392,7 +9392,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceIndexTypeUint8FeaturesKHR>
   {
     std::size_t
@@ -9406,7 +9406,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceInheritedViewportScissorFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceInheritedViewportScissorFeaturesNV const & physicalDeviceInheritedViewportScissorFeaturesNV )
@@ -9420,7 +9420,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceInlineUniformBlockFeatures>
   {
     std::size_t
@@ -9435,7 +9435,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceInlineUniformBlockProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceInlineUniformBlockProperties const & physicalDeviceInlineUniformBlockProperties ) const
@@ -9453,7 +9453,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceInvocationMaskFeaturesHUAWEI>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceInvocationMaskFeaturesHUAWEI const & physicalDeviceInvocationMaskFeaturesHUAWEI ) const
@@ -9467,7 +9467,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredApiPropertiesKHR>
   {
     std::size_t
@@ -9487,7 +9487,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredApiPropertiesListKHR>
   {
     std::size_t
@@ -9502,7 +9502,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLimits>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLimits const & physicalDeviceLimits ) const VULKAN_HPP_NOEXCEPT
@@ -9636,7 +9636,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseProperties const & physicalDeviceSparseProperties ) const VULKAN_HPP_NOEXCEPT
@@ -9651,7 +9651,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties const & physicalDeviceProperties ) const VULKAN_HPP_NOEXCEPT
@@ -9676,7 +9676,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties2 const & physicalDeviceProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -9689,7 +9689,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredApiVulkanPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredApiVulkanPropertiesKHR const & physicalDeviceLayeredApiVulkanPropertiesKHR ) const
@@ -9703,7 +9703,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredDriverPropertiesMSFT>
   {
     std::size_t
@@ -9717,7 +9717,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLegacyDitheringFeaturesEXT>
   {
     std::size_t
@@ -9731,7 +9731,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLegacyVertexAttributesFeaturesEXT>
   {
     std::size_t operator()(
@@ -9745,7 +9745,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLegacyVertexAttributesPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLegacyVertexAttributesPropertiesEXT const & physicalDeviceLegacyVertexAttributesPropertiesEXT )
@@ -9759,7 +9759,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLineRasterizationFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLineRasterizationFeaturesKHR const & physicalDeviceLineRasterizationFeaturesKHR ) const
@@ -9778,7 +9778,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLineRasterizationPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLineRasterizationPropertiesKHR const & physicalDeviceLineRasterizationPropertiesKHR ) const
@@ -9792,7 +9792,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceLinearColorAttachmentFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceLinearColorAttachmentFeaturesNV const & physicalDeviceLinearColorAttachmentFeaturesNV ) const
@@ -9806,7 +9806,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance3Properties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance3Properties const & physicalDeviceMaintenance3Properties ) const VULKAN_HPP_NOEXCEPT
@@ -9820,7 +9820,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance4Features>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance4Features const & physicalDeviceMaintenance4Features ) const VULKAN_HPP_NOEXCEPT
@@ -9833,7 +9833,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance4Properties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance4Properties const & physicalDeviceMaintenance4Properties ) const VULKAN_HPP_NOEXCEPT
@@ -9846,7 +9846,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance5FeaturesKHR>
   {
     std::size_t
@@ -9860,7 +9860,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance5PropertiesKHR>
   {
     std::size_t
@@ -9879,7 +9879,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance6FeaturesKHR>
   {
     std::size_t
@@ -9893,7 +9893,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance6PropertiesKHR>
   {
     std::size_t
@@ -9909,7 +9909,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance7FeaturesKHR>
   {
     std::size_t
@@ -9923,7 +9923,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance7PropertiesKHR>
   {
     std::size_t
@@ -9944,7 +9944,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMapMemoryPlacedFeaturesEXT>
   {
     std::size_t
@@ -9960,7 +9960,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMapMemoryPlacedPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMapMemoryPlacedPropertiesEXT const & physicalDeviceMapMemoryPlacedPropertiesEXT ) const
@@ -9974,7 +9974,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryBudgetPropertiesEXT>
   {
     std::size_t
@@ -9995,7 +9995,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryDecompressionFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryDecompressionFeaturesNV const & physicalDeviceMemoryDecompressionFeaturesNV ) const
@@ -10009,7 +10009,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryDecompressionPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryDecompressionPropertiesNV const & physicalDeviceMemoryDecompressionPropertiesNV ) const
@@ -10024,7 +10024,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryPriorityFeaturesEXT>
   {
     std::size_t
@@ -10038,7 +10038,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties const & physicalDeviceMemoryProperties ) const VULKAN_HPP_NOEXCEPT
@@ -10058,7 +10058,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties2 const & physicalDeviceMemoryProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -10071,7 +10071,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderFeaturesEXT const & physicalDeviceMeshShaderFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -10088,7 +10088,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderFeaturesNV const & physicalDeviceMeshShaderFeaturesNV ) const VULKAN_HPP_NOEXCEPT
@@ -10102,7 +10102,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderPropertiesEXT>
   {
     std::size_t
@@ -10155,7 +10155,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMeshShaderPropertiesNV const & physicalDeviceMeshShaderPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -10186,7 +10186,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiDrawFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiDrawFeaturesEXT const & physicalDeviceMultiDrawFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -10199,7 +10199,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiDrawPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiDrawPropertiesEXT const & physicalDeviceMultiDrawPropertiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -10212,7 +10212,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT const &
@@ -10226,7 +10226,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewFeatures const & physicalDeviceMultiviewFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -10241,7 +10241,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX const &
@@ -10255,7 +10255,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewPerViewRenderAreasFeaturesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewPerViewRenderAreasFeaturesQCOM const &
@@ -10269,7 +10269,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM>
   {
     std::size_t
@@ -10284,7 +10284,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultiviewProperties const & physicalDeviceMultiviewProperties ) const VULKAN_HPP_NOEXCEPT
@@ -10298,7 +10298,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceMutableDescriptorTypeFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceMutableDescriptorTypeFeaturesEXT const & physicalDeviceMutableDescriptorTypeFeaturesEXT ) const
@@ -10312,7 +10312,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferFeaturesEXT const & physicalDeviceNestedCommandBufferFeaturesEXT ) const
@@ -10328,7 +10328,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferPropertiesEXT const & physicalDeviceNestedCommandBufferPropertiesEXT ) const
@@ -10342,7 +10342,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceNonSeamlessCubeMapFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceNonSeamlessCubeMapFeaturesEXT const & physicalDeviceNonSeamlessCubeMapFeaturesEXT ) const
@@ -10356,7 +10356,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceOpacityMicromapFeaturesEXT>
   {
     std::size_t
@@ -10372,7 +10372,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceOpacityMicromapPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceOpacityMicromapPropertiesEXT const & physicalDeviceOpacityMicromapPropertiesEXT ) const
@@ -10387,7 +10387,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceOpticalFlowFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceOpticalFlowFeaturesNV const & physicalDeviceOpticalFlowFeaturesNV ) const VULKAN_HPP_NOEXCEPT
@@ -10400,7 +10400,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceOpticalFlowPropertiesNV>
   {
     std::size_t
@@ -10424,7 +10424,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePCIBusInfoPropertiesEXT>
   {
     std::size_t
@@ -10441,7 +10441,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT>
   {
     std::size_t
@@ -10456,7 +10456,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePerStageDescriptorSetFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePerStageDescriptorSetFeaturesNV const & physicalDevicePerStageDescriptorSetFeaturesNV ) const
@@ -10471,7 +10471,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePerformanceQueryFeaturesKHR>
   {
     std::size_t
@@ -10486,7 +10486,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePerformanceQueryPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePerformanceQueryPropertiesKHR const & physicalDevicePerformanceQueryPropertiesKHR ) const
@@ -10500,7 +10500,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineCreationCacheControlFeatures>
   {
     std::size_t
@@ -10515,7 +10515,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineExecutablePropertiesFeaturesKHR const &
@@ -10529,7 +10529,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT const &
@@ -10543,7 +10543,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelinePropertiesFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelinePropertiesFeaturesEXT const & physicalDevicePipelinePropertiesFeaturesEXT ) const
@@ -10557,7 +10557,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineProtectedAccessFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineProtectedAccessFeaturesEXT const & physicalDevicePipelineProtectedAccessFeaturesEXT )
@@ -10571,7 +10571,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineRobustnessFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineRobustnessFeaturesEXT const & physicalDevicePipelineRobustnessFeaturesEXT ) const
@@ -10585,7 +10585,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineRobustnessPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineRobustnessPropertiesEXT const & physicalDevicePipelineRobustnessPropertiesEXT ) const
@@ -10602,7 +10602,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePointClippingProperties>
   {
     std::size_t
@@ -10617,7 +10617,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePortabilitySubsetFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePortabilitySubsetFeaturesKHR const & physicalDevicePortabilitySubsetFeaturesKHR ) const
@@ -10647,7 +10647,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePortabilitySubsetPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePortabilitySubsetPropertiesKHR const & physicalDevicePortabilitySubsetPropertiesKHR ) const
@@ -10662,7 +10662,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePresentBarrierFeaturesNV>
   {
     std::size_t
@@ -10676,7 +10676,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePresentIdFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePresentIdFeaturesKHR const & physicalDevicePresentIdFeaturesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -10689,7 +10689,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePresentWaitFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePresentWaitFeaturesKHR const & physicalDevicePresentWaitFeaturesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -10702,7 +10702,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitiveTopologyListRestartFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitiveTopologyListRestartFeaturesEXT const &
@@ -10717,7 +10717,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitivesGeneratedQueryFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitivesGeneratedQueryFeaturesEXT const & physicalDevicePrimitivesGeneratedQueryFeaturesEXT )
@@ -10733,7 +10733,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePrivateDataFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePrivateDataFeatures const & physicalDevicePrivateDataFeatures ) const VULKAN_HPP_NOEXCEPT
@@ -10746,7 +10746,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProtectedMemoryFeatures>
   {
     std::size_t
@@ -10760,7 +10760,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProtectedMemoryProperties>
   {
     std::size_t
@@ -10774,7 +10774,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProvokingVertexFeaturesEXT>
   {
     std::size_t
@@ -10789,7 +10789,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceProvokingVertexPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceProvokingVertexPropertiesEXT const & physicalDeviceProvokingVertexPropertiesEXT ) const
@@ -10804,7 +10804,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePushDescriptorPropertiesKHR>
   {
     std::size_t
@@ -10818,7 +10818,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRGBA10X6FormatsFeaturesEXT>
   {
     std::size_t
@@ -10832,7 +10832,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT const &
@@ -10848,7 +10848,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRawAccessChainsFeaturesNV>
   {
     std::size_t
@@ -10862,7 +10862,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayQueryFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayQueryFeaturesKHR const & physicalDeviceRayQueryFeaturesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -10875,7 +10875,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingInvocationReorderFeaturesNV>
   {
     std::size_t
@@ -10890,7 +10890,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingInvocationReorderPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingInvocationReorderPropertiesNV const &
@@ -10904,7 +10904,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingMaintenance1FeaturesKHR>
   {
     std::size_t operator()(
@@ -10919,7 +10919,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingMotionBlurFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingMotionBlurFeaturesNV const & physicalDeviceRayTracingMotionBlurFeaturesNV ) const
@@ -10934,7 +10934,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPipelineFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPipelineFeaturesKHR const & physicalDeviceRayTracingPipelineFeaturesKHR ) const
@@ -10952,7 +10952,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPipelinePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPipelinePropertiesKHR const & physicalDeviceRayTracingPipelinePropertiesKHR ) const
@@ -10973,7 +10973,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPositionFetchFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPositionFetchFeaturesKHR const & physicalDeviceRayTracingPositionFetchFeaturesKHR )
@@ -10987,7 +10987,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingPropertiesNV const & physicalDeviceRayTracingPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -11007,7 +11007,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingValidationFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingValidationFeaturesNV const & physicalDeviceRayTracingValidationFeaturesNV ) const
@@ -11021,7 +11021,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRelaxedLineRasterizationFeaturesIMG>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRelaxedLineRasterizationFeaturesIMG const & physicalDeviceRelaxedLineRasterizationFeaturesIMG )
@@ -11035,7 +11035,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedFeaturesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedFeaturesARM const & physicalDeviceRenderPassStripedFeaturesARM ) const
@@ -11049,7 +11049,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedPropertiesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedPropertiesARM const & physicalDeviceRenderPassStripedPropertiesARM ) const
@@ -11064,7 +11064,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRepresentativeFragmentTestFeaturesNV>
   {
     std::size_t
@@ -11079,7 +11079,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRobustness2FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceRobustness2FeaturesEXT const & physicalDeviceRobustness2FeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -11094,7 +11094,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceRobustness2PropertiesEXT>
   {
     std::size_t
@@ -11109,7 +11109,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSampleLocationsPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSampleLocationsPropertiesEXT const & physicalDeviceSampleLocationsPropertiesEXT ) const
@@ -11130,7 +11130,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSamplerFilterMinmaxProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSamplerFilterMinmaxProperties const & physicalDeviceSamplerFilterMinmaxProperties ) const
@@ -11145,7 +11145,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSamplerYcbcrConversionFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSamplerYcbcrConversionFeatures const & physicalDeviceSamplerYcbcrConversionFeatures ) const
@@ -11159,7 +11159,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceScalarBlockLayoutFeatures>
   {
     std::size_t
@@ -11173,7 +11173,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsFeaturesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsFeaturesARM const & physicalDeviceSchedulingControlsFeaturesARM ) const
@@ -11187,7 +11187,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsPropertiesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsPropertiesARM const & physicalDeviceSchedulingControlsPropertiesARM ) const
@@ -11201,7 +11201,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSeparateDepthStencilLayoutsFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSeparateDepthStencilLayoutsFeatures const & physicalDeviceSeparateDepthStencilLayoutsFeatures )
@@ -11215,7 +11215,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloat16VectorFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloat16VectorFeaturesNV const & physicalDeviceShaderAtomicFloat16VectorFeaturesNV )
@@ -11229,7 +11229,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloat2FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloat2FeaturesEXT const & physicalDeviceShaderAtomicFloat2FeaturesEXT ) const
@@ -11254,7 +11254,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloatFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicFloatFeaturesEXT const & physicalDeviceShaderAtomicFloatFeaturesEXT ) const
@@ -11279,7 +11279,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderAtomicInt64Features>
   {
     std::size_t
@@ -11294,7 +11294,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderClockFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderClockFeaturesKHR const & physicalDeviceShaderClockFeaturesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -11308,7 +11308,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCoreBuiltinsFeaturesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCoreBuiltinsFeaturesARM const & physicalDeviceShaderCoreBuiltinsFeaturesARM ) const
@@ -11322,7 +11322,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCoreBuiltinsPropertiesARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCoreBuiltinsPropertiesARM const & physicalDeviceShaderCoreBuiltinsPropertiesARM ) const
@@ -11338,7 +11338,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCoreProperties2AMD>
   {
     std::size_t
@@ -11353,7 +11353,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCorePropertiesAMD>
   {
     std::size_t
@@ -11380,7 +11380,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCorePropertiesARM>
   {
     std::size_t
@@ -11396,7 +11396,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderDemoteToHelperInvocationFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderDemoteToHelperInvocationFeatures const &
@@ -11410,7 +11410,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderDrawParametersFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderDrawParametersFeatures const & physicalDeviceShaderDrawParametersFeatures ) const
@@ -11424,7 +11424,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD const &
@@ -11439,7 +11439,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderEnqueueFeaturesAMDX>
   {
     std::size_t
@@ -11455,7 +11455,7 @@ namespace std
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderEnqueuePropertiesAMDX>
   {
     std::size_t
@@ -11474,7 +11474,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderExpectAssumeFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderExpectAssumeFeaturesKHR const & physicalDeviceShaderExpectAssumeFeaturesKHR ) const
@@ -11488,7 +11488,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderFloat16Int8Features>
   {
     std::size_t
@@ -11503,7 +11503,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderFloatControls2FeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderFloatControls2FeaturesKHR const & physicalDeviceShaderFloatControls2FeaturesKHR ) const
@@ -11517,7 +11517,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderImageAtomicInt64FeaturesEXT>
   {
     std::size_t operator()(
@@ -11532,7 +11532,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderImageFootprintFeaturesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderImageFootprintFeaturesNV const & physicalDeviceShaderImageFootprintFeaturesNV ) const
@@ -11546,7 +11546,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderIntegerDotProductFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderIntegerDotProductFeatures const & physicalDeviceShaderIntegerDotProductFeatures ) const
@@ -11560,7 +11560,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderIntegerDotProductProperties>
   {
     std::size_t operator()(
@@ -11604,7 +11604,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>
   {
     std::size_t
@@ -11619,7 +11619,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderMaximalReconvergenceFeaturesKHR>
   {
     std::size_t
@@ -11634,7 +11634,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderModuleIdentifierFeaturesEXT>
   {
     std::size_t operator()(
@@ -11648,7 +11648,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderModuleIdentifierPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderModuleIdentifierPropertiesEXT const & physicalDeviceShaderModuleIdentifierPropertiesEXT )
@@ -11665,7 +11665,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderObjectFeaturesEXT>
   {
     std::size_t
@@ -11679,7 +11679,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderObjectPropertiesEXT>
   {
     std::size_t
@@ -11697,7 +11697,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderQuadControlFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderQuadControlFeaturesKHR const & physicalDeviceShaderQuadControlFeaturesKHR ) const
@@ -11711,7 +11711,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderRelaxedExtendedInstructionFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderRelaxedExtendedInstructionFeaturesKHR const &
@@ -11725,7 +11725,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderReplicatedCompositesFeaturesEXT>
   {
     std::size_t
@@ -11740,7 +11740,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSMBuiltinsFeaturesNV>
   {
     std::size_t
@@ -11754,7 +11754,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSMBuiltinsPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSMBuiltinsPropertiesNV const & physicalDeviceShaderSMBuiltinsPropertiesNV ) const
@@ -11769,7 +11769,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupExtendedTypesFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupExtendedTypesFeatures const & physicalDeviceShaderSubgroupExtendedTypesFeatures )
@@ -11783,7 +11783,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupRotateFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupRotateFeaturesKHR const & physicalDeviceShaderSubgroupRotateFeaturesKHR ) const
@@ -11798,7 +11798,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR const &
@@ -11812,7 +11812,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderTerminateInvocationFeatures>
   {
     std::size_t operator()(
@@ -11826,7 +11826,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderTileImageFeaturesEXT>
   {
     std::size_t
@@ -11842,7 +11842,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderTileImagePropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderTileImagePropertiesEXT const & physicalDeviceShaderTileImagePropertiesEXT ) const
@@ -11858,7 +11858,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShadingRateImageFeaturesNV>
   {
     std::size_t
@@ -11873,7 +11873,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceShadingRateImagePropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceShadingRateImagePropertiesNV const & physicalDeviceShadingRateImagePropertiesNV ) const
@@ -11889,7 +11889,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseImageFormatInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseImageFormatInfo2 const & physicalDeviceSparseImageFormatInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -11906,7 +11906,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubgroupProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSubgroupProperties const & physicalDeviceSubgroupProperties ) const VULKAN_HPP_NOEXCEPT
@@ -11922,7 +11922,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubgroupSizeControlFeatures>
   {
     std::size_t
@@ -11937,7 +11937,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubgroupSizeControlProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSubgroupSizeControlProperties const & physicalDeviceSubgroupSizeControlProperties ) const
@@ -11954,7 +11954,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassMergeFeedbackFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassMergeFeedbackFeaturesEXT const & physicalDeviceSubpassMergeFeedbackFeaturesEXT ) const
@@ -11968,7 +11968,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassShadingFeaturesHUAWEI>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassShadingFeaturesHUAWEI const & physicalDeviceSubpassShadingFeaturesHUAWEI ) const
@@ -11982,7 +11982,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassShadingPropertiesHUAWEI>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSubpassShadingPropertiesHUAWEI const & physicalDeviceSubpassShadingPropertiesHUAWEI ) const
@@ -11996,7 +11996,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR const & physicalDeviceSurfaceInfo2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -12009,7 +12009,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSwapchainMaintenance1FeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceSwapchainMaintenance1FeaturesEXT const & physicalDeviceSwapchainMaintenance1FeaturesEXT ) const
@@ -12023,7 +12023,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceSynchronization2Features>
   {
     std::size_t
@@ -12037,7 +12037,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTexelBufferAlignmentFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceTexelBufferAlignmentFeaturesEXT const & physicalDeviceTexelBufferAlignmentFeaturesEXT ) const
@@ -12051,7 +12051,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTexelBufferAlignmentProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceTexelBufferAlignmentProperties const & physicalDeviceTexelBufferAlignmentProperties ) const
@@ -12068,7 +12068,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTextureCompressionASTCHDRFeatures>
   {
     std::size_t operator()(
@@ -12082,7 +12082,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTilePropertiesFeaturesQCOM>
   {
     std::size_t
@@ -12096,7 +12096,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTimelineSemaphoreFeatures>
   {
     std::size_t
@@ -12110,7 +12110,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTimelineSemaphoreProperties>
   {
     std::size_t
@@ -12124,7 +12124,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceToolProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceToolProperties const & physicalDeviceToolProperties ) const VULKAN_HPP_NOEXCEPT
@@ -12153,7 +12153,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTransformFeedbackFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceTransformFeedbackFeaturesEXT const & physicalDeviceTransformFeedbackFeaturesEXT ) const
@@ -12168,7 +12168,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceTransformFeedbackPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceTransformFeedbackPropertiesEXT const & physicalDeviceTransformFeedbackPropertiesEXT ) const
@@ -12191,7 +12191,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceUniformBufferStandardLayoutFeatures>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceUniformBufferStandardLayoutFeatures const & physicalDeviceUniformBufferStandardLayoutFeatures )
@@ -12205,7 +12205,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVariablePointersFeatures>
   {
     std::size_t
@@ -12220,7 +12220,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesKHR>
   {
     std::size_t operator()(
@@ -12235,7 +12235,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesEXT const & physicalDeviceVertexAttributeDivisorPropertiesEXT )
@@ -12249,7 +12249,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesKHR const & physicalDeviceVertexAttributeDivisorPropertiesKHR )
@@ -12264,7 +12264,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexInputDynamicStateFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexInputDynamicStateFeaturesEXT const & physicalDeviceVertexInputDynamicStateFeaturesEXT )
@@ -12278,7 +12278,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoProfileInfoKHR const & videoProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -12294,7 +12294,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoEncodeQualityLevelInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoEncodeQualityLevelInfoKHR const & physicalDeviceVideoEncodeQualityLevelInfoKHR ) const
@@ -12309,7 +12309,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoFormatInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoFormatInfoKHR const & physicalDeviceVideoFormatInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -12322,7 +12322,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoMaintenance1FeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoMaintenance1FeaturesKHR const & physicalDeviceVideoMaintenance1FeaturesKHR ) const
@@ -12336,7 +12336,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan11Features>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan11Features const & physicalDeviceVulkan11Features ) const VULKAN_HPP_NOEXCEPT
@@ -12360,7 +12360,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan11Properties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan11Properties const & physicalDeviceVulkan11Properties ) const VULKAN_HPP_NOEXCEPT
@@ -12396,7 +12396,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan12Features>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan12Features const & physicalDeviceVulkan12Features ) const VULKAN_HPP_NOEXCEPT
@@ -12455,7 +12455,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan12Properties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan12Properties const & physicalDeviceVulkan12Properties ) const VULKAN_HPP_NOEXCEPT
@@ -12525,7 +12525,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan13Features>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan13Features const & physicalDeviceVulkan13Features ) const VULKAN_HPP_NOEXCEPT
@@ -12552,7 +12552,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan13Properties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkan13Properties const & physicalDeviceVulkan13Properties ) const VULKAN_HPP_NOEXCEPT
@@ -12609,7 +12609,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceVulkanMemoryModelFeatures>
   {
     std::size_t
@@ -12625,7 +12625,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR const &
@@ -12642,7 +12642,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT const & physicalDeviceYcbcr2Plane444FormatsFeaturesEXT ) const
@@ -12656,7 +12656,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcrDegammaFeaturesQCOM>
   {
     std::size_t
@@ -12670,7 +12670,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcrImageArraysFeaturesEXT>
   {
     std::size_t
@@ -12684,7 +12684,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures>
   {
     std::size_t
@@ -12699,7 +12699,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCacheCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCacheCreateInfo const & pipelineCacheCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -12714,7 +12714,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCacheHeaderVersionOne>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCacheHeaderVersionOne const & pipelineCacheHeaderVersionOne ) const VULKAN_HPP_NOEXCEPT
@@ -12732,7 +12732,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineColorBlendAdvancedStateCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineColorBlendAdvancedStateCreateInfoEXT const & pipelineColorBlendAdvancedStateCreateInfoEXT ) const
@@ -12748,7 +12748,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineColorWriteCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineColorWriteCreateInfoEXT const & pipelineColorWriteCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -12762,7 +12762,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCompilerControlCreateInfoAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCompilerControlCreateInfoAMD const & pipelineCompilerControlCreateInfoAMD ) const VULKAN_HPP_NOEXCEPT
@@ -12775,7 +12775,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCoverageModulationStateCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCoverageModulationStateCreateInfoNV const & pipelineCoverageModulationStateCreateInfoNV ) const
@@ -12793,7 +12793,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCoverageReductionStateCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCoverageReductionStateCreateInfoNV const & pipelineCoverageReductionStateCreateInfoNV ) const
@@ -12808,7 +12808,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCoverageToColorStateCreateInfoNV>
   {
     std::size_t
@@ -12824,7 +12824,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCreateFlags2CreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCreateFlags2CreateInfoKHR const & pipelineCreateFlags2CreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -12837,7 +12837,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCreationFeedback>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCreationFeedback const & pipelineCreationFeedback ) const VULKAN_HPP_NOEXCEPT
@@ -12849,7 +12849,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineCreationFeedbackCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineCreationFeedbackCreateInfo const & pipelineCreationFeedbackCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -12864,7 +12864,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineDiscardRectangleStateCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineDiscardRectangleStateCreateInfoEXT const & pipelineDiscardRectangleStateCreateInfoEXT ) const
@@ -12881,7 +12881,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineExecutableInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineExecutableInfoKHR const & pipelineExecutableInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -12895,7 +12895,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineExecutableInternalRepresentationKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineExecutableInternalRepresentationKHR const & pipelineExecutableInternalRepresentationKHR ) const
@@ -12919,7 +12919,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineExecutablePropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineExecutablePropertiesKHR const & pipelineExecutablePropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -12941,7 +12941,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineFragmentShadingRateEnumStateCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineFragmentShadingRateEnumStateCreateInfoNV const & pipelineFragmentShadingRateEnumStateCreateInfoNV )
@@ -12960,7 +12960,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineFragmentShadingRateStateCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineFragmentShadingRateStateCreateInfoKHR const & pipelineFragmentShadingRateStateCreateInfoKHR ) const
@@ -12978,7 +12978,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineIndirectDeviceAddressInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineIndirectDeviceAddressInfoNV const & pipelineIndirectDeviceAddressInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -12992,7 +12992,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineInfoKHR const & pipelineInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13005,7 +13005,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PushConstantRange>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PushConstantRange const & pushConstantRange ) const VULKAN_HPP_NOEXCEPT
@@ -13018,7 +13018,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineLayoutCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineLayoutCreateInfo const & pipelineLayoutCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13035,7 +13035,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelinePropertiesIdentifierEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelinePropertiesIdentifierEXT const & pipelinePropertiesIdentifierEXT ) const VULKAN_HPP_NOEXCEPT
@@ -13051,7 +13051,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationConservativeStateCreateInfoEXT>
   {
     std::size_t
@@ -13068,7 +13068,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationDepthClipStateCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRasterizationDepthClipStateCreateInfoEXT const & pipelineRasterizationDepthClipStateCreateInfoEXT )
@@ -13083,7 +13083,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationLineStateCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRasterizationLineStateCreateInfoKHR const & pipelineRasterizationLineStateCreateInfoKHR ) const
@@ -13100,7 +13100,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationProvokingVertexStateCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRasterizationProvokingVertexStateCreateInfoEXT const &
@@ -13114,7 +13114,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationStateRasterizationOrderAMD>
   {
     std::size_t operator()(
@@ -13128,7 +13128,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRasterizationStateStreamCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRasterizationStateStreamCreateInfoEXT const & pipelineRasterizationStateStreamCreateInfoEXT ) const
@@ -13143,7 +13143,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRenderingCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRenderingCreateInfo const & pipelineRenderingCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13160,7 +13160,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRepresentativeFragmentTestStateCreateInfoNV>
   {
     std::size_t
@@ -13175,7 +13175,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineRobustnessCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineRobustnessCreateInfoEXT const & pipelineRobustnessCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -13191,7 +13191,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineSampleLocationsStateCreateInfoEXT>
   {
     std::size_t
@@ -13206,7 +13206,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineShaderStageModuleIdentifierCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineShaderStageModuleIdentifierCreateInfoEXT const & pipelineShaderStageModuleIdentifierCreateInfoEXT )
@@ -13222,7 +13222,7 @@ namespace std
   };
 
 #  if defined( VK_ENABLE_BETA_EXTENSIONS )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineShaderStageNodeCreateInfoAMDX>
   {
     std::size_t
@@ -13241,7 +13241,7 @@ namespace std
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineShaderStageRequiredSubgroupSizeCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineShaderStageRequiredSubgroupSizeCreateInfo const & pipelineShaderStageRequiredSubgroupSizeCreateInfo )
@@ -13255,7 +13255,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineTessellationDomainOriginStateCreateInfo>
   {
     std::size_t operator()(
@@ -13269,7 +13269,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionKHR>
   {
     std::size_t
@@ -13282,7 +13282,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoKHR const & pipelineVertexInputDivisorStateCreateInfoKHR ) const
@@ -13297,7 +13297,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportCoarseSampleOrderStateCreateInfoNV>
   {
     std::size_t
@@ -13314,7 +13314,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportDepthClipControlCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineViewportDepthClipControlCreateInfoEXT const & pipelineViewportDepthClipControlCreateInfoEXT ) const
@@ -13328,7 +13328,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportExclusiveScissorStateCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineViewportExclusiveScissorStateCreateInfoNV const & pipelineViewportExclusiveScissorStateCreateInfoNV )
@@ -13343,7 +13343,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShadingRatePaletteNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShadingRatePaletteNV const & shadingRatePaletteNV ) const VULKAN_HPP_NOEXCEPT
@@ -13355,7 +13355,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportShadingRateImageStateCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PipelineViewportShadingRateImageStateCreateInfoNV const & pipelineViewportShadingRateImageStateCreateInfoNV )
@@ -13371,7 +13371,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ViewportSwizzleNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ViewportSwizzleNV const & viewportSwizzleNV ) const VULKAN_HPP_NOEXCEPT
@@ -13385,7 +13385,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportSwizzleStateCreateInfoNV>
   {
     std::size_t
@@ -13401,7 +13401,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ViewportWScalingNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ViewportWScalingNV const & viewportWScalingNV ) const VULKAN_HPP_NOEXCEPT
@@ -13413,7 +13413,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PipelineViewportWScalingStateCreateInfoNV>
   {
     std::size_t
@@ -13430,7 +13430,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_GGP )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentFrameTokenGGP>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentFrameTokenGGP const & presentFrameTokenGGP ) const VULKAN_HPP_NOEXCEPT
@@ -13444,7 +13444,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_GGP*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentIdKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentIdKHR const & presentIdKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13458,7 +13458,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentInfoKHR const & presentInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13476,7 +13476,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RectLayerKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RectLayerKHR const & rectLayerKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13489,7 +13489,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentRegionKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentRegionKHR const & presentRegionKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13501,7 +13501,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentRegionsKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentRegionsKHR const & presentRegionsKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13515,7 +13515,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentTimeGOOGLE>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentTimeGOOGLE const & presentTimeGOOGLE ) const VULKAN_HPP_NOEXCEPT
@@ -13527,7 +13527,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PresentTimesInfoGOOGLE>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PresentTimesInfoGOOGLE const & presentTimesInfoGOOGLE ) const VULKAN_HPP_NOEXCEPT
@@ -13541,7 +13541,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PrivateDataSlotCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PrivateDataSlotCreateInfo const & privateDataSlotCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13554,7 +13554,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ProtectedSubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ProtectedSubmitInfo const & protectedSubmitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13567,7 +13567,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PushConstantsInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PushConstantsInfoKHR const & pushConstantsInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13584,7 +13584,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::WriteDescriptorSet>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::WriteDescriptorSet const & writeDescriptorSet ) const VULKAN_HPP_NOEXCEPT
@@ -13604,7 +13604,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PushDescriptorSetInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PushDescriptorSetInfoKHR const & pushDescriptorSetInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13621,7 +13621,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::PushDescriptorSetWithTemplateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PushDescriptorSetWithTemplateInfoKHR const & pushDescriptorSetWithTemplateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13637,7 +13637,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryLowLatencySupportNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueryLowLatencySupportNV const & queryLowLatencySupportNV ) const VULKAN_HPP_NOEXCEPT
@@ -13650,7 +13650,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryPoolCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueryPoolCreateInfo const & queryPoolCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13666,7 +13666,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryPoolPerformanceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueryPoolPerformanceCreateInfoKHR const & queryPoolPerformanceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13681,7 +13681,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryPoolPerformanceQueryCreateInfoINTEL>
   {
     std::size_t
@@ -13695,7 +13695,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueryPoolVideoEncodeFeedbackCreateInfoKHR>
   {
     std::size_t
@@ -13709,7 +13709,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyCheckpointProperties2NV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueueFamilyCheckpointProperties2NV const & queueFamilyCheckpointProperties2NV ) const VULKAN_HPP_NOEXCEPT
@@ -13722,7 +13722,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyCheckpointPropertiesNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueueFamilyCheckpointPropertiesNV const & queueFamilyCheckpointPropertiesNV ) const VULKAN_HPP_NOEXCEPT
@@ -13735,7 +13735,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyGlobalPriorityPropertiesKHR>
   {
     std::size_t
@@ -13753,7 +13753,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueueFamilyProperties const & queueFamilyProperties ) const VULKAN_HPP_NOEXCEPT
@@ -13767,7 +13767,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueueFamilyProperties2 const & queueFamilyProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -13780,7 +13780,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyQueryResultStatusPropertiesKHR>
   {
     std::size_t
@@ -13794,7 +13794,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::QueueFamilyVideoPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::QueueFamilyVideoPropertiesKHR const & queueFamilyVideoPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13807,7 +13807,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RayTracingShaderGroupCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RayTracingShaderGroupCreateInfoKHR const & rayTracingShaderGroupCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13825,7 +13825,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RayTracingPipelineInterfaceCreateInfoKHR>
   {
     std::size_t
@@ -13840,7 +13840,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RayTracingPipelineCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RayTracingPipelineCreateInfoKHR const & rayTracingPipelineCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -13864,7 +13864,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RayTracingShaderGroupCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RayTracingShaderGroupCreateInfoNV const & rayTracingShaderGroupCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -13881,7 +13881,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RayTracingPipelineCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RayTracingPipelineCreateInfoNV const & rayTracingPipelineCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -13902,7 +13902,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RefreshCycleDurationGOOGLE>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RefreshCycleDurationGOOGLE const & refreshCycleDurationGOOGLE ) const VULKAN_HPP_NOEXCEPT
@@ -13913,7 +13913,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ReleaseSwapchainImagesInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ReleaseSwapchainImagesInfoEXT const & releaseSwapchainImagesInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -13928,7 +13928,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassAttachmentBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassAttachmentBeginInfo const & renderPassAttachmentBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13942,7 +13942,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassBeginInfo const & renderPassBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -13959,7 +13959,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassDescription>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassDescription const & subpassDescription ) const VULKAN_HPP_NOEXCEPT
@@ -13979,7 +13979,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassDependency>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassDependency const & subpassDependency ) const VULKAN_HPP_NOEXCEPT
@@ -13996,7 +13996,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassCreateInfo const & renderPassCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14015,7 +14015,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassDescription2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassDescription2 const & subpassDescription2 ) const VULKAN_HPP_NOEXCEPT
@@ -14038,7 +14038,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassDependency2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassDependency2 const & subpassDependency2 ) const VULKAN_HPP_NOEXCEPT
@@ -14058,7 +14058,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassCreateInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassCreateInfo2 const & renderPassCreateInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -14079,7 +14079,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassCreationControlEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassCreationControlEXT const & renderPassCreationControlEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14092,7 +14092,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassCreationFeedbackInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassCreationFeedbackInfoEXT const & renderPassCreationFeedbackInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14103,7 +14103,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassCreationFeedbackCreateInfoEXT>
   {
     std::size_t
@@ -14117,7 +14117,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassFragmentDensityMapCreateInfoEXT>
   {
     std::size_t
@@ -14131,7 +14131,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassInputAttachmentAspectCreateInfo>
   {
     std::size_t
@@ -14146,7 +14146,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassMultiviewCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassMultiviewCreateInfo const & renderPassMultiviewCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14164,7 +14164,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassSampleLocationsEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassSampleLocationsEXT const & subpassSampleLocationsEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14176,7 +14176,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassSampleLocationsBeginInfoEXT>
   {
     std::size_t
@@ -14193,7 +14193,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassStripeInfoARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassStripeInfoARM const & renderPassStripeInfoARM ) const VULKAN_HPP_NOEXCEPT
@@ -14206,7 +14206,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassStripeBeginInfoARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassStripeBeginInfoARM const & renderPassStripeBeginInfoARM ) const VULKAN_HPP_NOEXCEPT
@@ -14220,7 +14220,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreSubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreSubmitInfo const & semaphoreSubmitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14236,7 +14236,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassStripeSubmitInfoARM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassStripeSubmitInfoARM const & renderPassStripeSubmitInfoARM ) const VULKAN_HPP_NOEXCEPT
@@ -14250,7 +14250,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassSubpassFeedbackInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassSubpassFeedbackInfoEXT const & renderPassSubpassFeedbackInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14266,7 +14266,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassSubpassFeedbackCreateInfoEXT>
   {
     std::size_t
@@ -14280,7 +14280,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderPassTransformBeginInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderPassTransformBeginInfoQCOM const & renderPassTransformBeginInfoQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -14293,7 +14293,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingAreaInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingAreaInfoKHR const & renderingAreaInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14310,7 +14310,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingAttachmentLocationInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingAttachmentLocationInfoKHR const & renderingAttachmentLocationInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14324,7 +14324,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingFragmentDensityMapAttachmentInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingFragmentDensityMapAttachmentInfoEXT const & renderingFragmentDensityMapAttachmentInfoEXT ) const
@@ -14339,7 +14339,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingFragmentShadingRateAttachmentInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingFragmentShadingRateAttachmentInfoKHR const & renderingFragmentShadingRateAttachmentInfoKHR ) const
@@ -14355,7 +14355,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingInfo const & renderingInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14375,7 +14375,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::RenderingInputAttachmentIndexInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::RenderingInputAttachmentIndexInfoKHR const & renderingInputAttachmentIndexInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14391,7 +14391,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ResolveImageInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ResolveImageInfo2 const & resolveImageInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -14409,7 +14409,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerBlockMatchWindowCreateInfoQCOM>
   {
     std::size_t
@@ -14424,7 +14424,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerBorderColorComponentMappingCreateInfoEXT>
   {
     std::size_t operator()(
@@ -14439,7 +14439,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerCaptureDescriptorDataInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerCaptureDescriptorDataInfoEXT const & samplerCaptureDescriptorDataInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14452,7 +14452,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerCreateInfo const & samplerCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14480,7 +14480,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerCubicWeightsCreateInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerCubicWeightsCreateInfoQCOM const & samplerCubicWeightsCreateInfoQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -14493,7 +14493,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerReductionModeCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerReductionModeCreateInfo const & samplerReductionModeCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14506,7 +14506,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionCreateInfo const & samplerYcbcrConversionCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14526,7 +14526,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionImageFormatProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionImageFormatProperties const & samplerYcbcrConversionImageFormatProperties ) const
@@ -14540,7 +14540,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionInfo const & samplerYcbcrConversionInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14553,7 +14553,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM const & samplerYcbcrConversionYcbcrDegammaCreateInfoQCOM )
@@ -14569,7 +14569,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ScreenBufferFormatPropertiesQNX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ScreenBufferFormatPropertiesQNX const & screenBufferFormatPropertiesQNX ) const VULKAN_HPP_NOEXCEPT
@@ -14592,7 +14592,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ScreenBufferPropertiesQNX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ScreenBufferPropertiesQNX const & screenBufferPropertiesQNX ) const VULKAN_HPP_NOEXCEPT
@@ -14608,7 +14608,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ScreenSurfaceCreateInfoQNX>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ScreenSurfaceCreateInfoQNX const & screenSurfaceCreateInfoQNX ) const VULKAN_HPP_NOEXCEPT
@@ -14624,7 +14624,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreCreateInfo const & semaphoreCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14637,7 +14637,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreGetFdInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreGetFdInfoKHR const & semaphoreGetFdInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14652,7 +14652,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreGetWin32HandleInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreGetWin32HandleInfoKHR const & semaphoreGetWin32HandleInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14668,7 +14668,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_FUCHSIA )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreGetZirconHandleInfoFUCHSIA>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreGetZirconHandleInfoFUCHSIA const & semaphoreGetZirconHandleInfoFUCHSIA ) const VULKAN_HPP_NOEXCEPT
@@ -14683,7 +14683,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_FUCHSIA*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreSignalInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreSignalInfo const & semaphoreSignalInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14697,7 +14697,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreTypeCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreTypeCreateInfo const & semaphoreTypeCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14711,7 +14711,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SemaphoreWaitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SemaphoreWaitInfo const & semaphoreWaitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14727,7 +14727,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SetDescriptorBufferOffsetsInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SetDescriptorBufferOffsetsInfoEXT const & setDescriptorBufferOffsetsInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14745,7 +14745,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV const & setLatencyMarkerInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -14759,7 +14759,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SetStateFlagsIndirectCommandNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SetStateFlagsIndirectCommandNV const & setStateFlagsIndirectCommandNV ) const VULKAN_HPP_NOEXCEPT
@@ -14770,7 +14770,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderCreateInfoEXT const & shaderCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14797,7 +14797,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderModuleCreateInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderModuleCreateInfo const & shaderModuleCreateInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14812,7 +14812,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderModuleIdentifierEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderModuleIdentifierEXT const & shaderModuleIdentifierEXT ) const VULKAN_HPP_NOEXCEPT
@@ -14829,7 +14829,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderModuleValidationCacheCreateInfoEXT>
   {
     std::size_t
@@ -14843,7 +14843,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderResourceUsageAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderResourceUsageAMD const & shaderResourceUsageAMD ) const VULKAN_HPP_NOEXCEPT
@@ -14858,7 +14858,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ShaderStatisticsInfoAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ShaderStatisticsInfoAMD const & shaderStatisticsInfoAMD ) const VULKAN_HPP_NOEXCEPT
@@ -14878,7 +14878,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SharedPresentSurfaceCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SharedPresentSurfaceCapabilitiesKHR const & sharedPresentSurfaceCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14891,7 +14891,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageFormatProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageFormatProperties const & sparseImageFormatProperties ) const VULKAN_HPP_NOEXCEPT
@@ -14904,7 +14904,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageFormatProperties2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageFormatProperties2 const & sparseImageFormatProperties2 ) const VULKAN_HPP_NOEXCEPT
@@ -14917,7 +14917,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements const & sparseImageMemoryRequirements ) const VULKAN_HPP_NOEXCEPT
@@ -14932,7 +14932,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2 const & sparseImageMemoryRequirements2 ) const VULKAN_HPP_NOEXCEPT
@@ -14946,7 +14946,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_GGP )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::StreamDescriptorSurfaceCreateInfoGGP>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::StreamDescriptorSurfaceCreateInfoGGP const & streamDescriptorSurfaceCreateInfoGGP ) const VULKAN_HPP_NOEXCEPT
@@ -14961,7 +14961,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_GGP*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR const & stridedDeviceAddressRegionKHR ) const VULKAN_HPP_NOEXCEPT
@@ -14974,7 +14974,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubmitInfo const & submitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -14993,7 +14993,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubmitInfo2>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubmitInfo2 const & submitInfo2 ) const VULKAN_HPP_NOEXCEPT
@@ -15012,7 +15012,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassBeginInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassBeginInfo const & subpassBeginInfo ) const VULKAN_HPP_NOEXCEPT
@@ -15025,7 +15025,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassDescriptionDepthStencilResolve>
   {
     std::size_t
@@ -15041,7 +15041,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassEndInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassEndInfo const & subpassEndInfo ) const VULKAN_HPP_NOEXCEPT
@@ -15053,7 +15053,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassFragmentDensityMapOffsetEndInfoQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassFragmentDensityMapOffsetEndInfoQCOM const & subpassFragmentDensityMapOffsetEndInfoQCOM ) const
@@ -15068,7 +15068,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassResolvePerformanceQueryEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubpassResolvePerformanceQueryEXT const & subpassResolvePerformanceQueryEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15081,7 +15081,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubpassShadingPipelineCreateInfoHUAWEI>
   {
     std::size_t
@@ -15096,7 +15096,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubresourceHostMemcpySizeEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubresourceHostMemcpySizeEXT const & subresourceHostMemcpySizeEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15109,7 +15109,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SubresourceLayout2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SubresourceLayout2KHR const & subresourceLayout2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -15122,7 +15122,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceCapabilities2EXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceCapabilities2EXT const & surfaceCapabilities2EXT ) const VULKAN_HPP_NOEXCEPT
@@ -15145,7 +15145,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesKHR const & surfaceCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15165,7 +15165,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceCapabilities2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceCapabilities2KHR const & surfaceCapabilities2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -15179,7 +15179,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesFullScreenExclusiveEXT>
   {
     std::size_t
@@ -15194,7 +15194,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesPresentBarrierNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesPresentBarrierNV const & surfaceCapabilitiesPresentBarrierNV ) const VULKAN_HPP_NOEXCEPT
@@ -15207,7 +15207,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceFormatKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceFormatKHR const & surfaceFormatKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15219,7 +15219,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceFormat2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceFormat2KHR const & surfaceFormat2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -15233,7 +15233,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceFullScreenExclusiveInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceFullScreenExclusiveInfoEXT const & surfaceFullScreenExclusiveInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15248,7 +15248,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceFullScreenExclusiveWin32InfoEXT>
   {
     std::size_t
@@ -15263,7 +15263,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfacePresentModeCompatibilityEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfacePresentModeCompatibilityEXT const & surfacePresentModeCompatibilityEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15277,7 +15277,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfacePresentModeEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfacePresentModeEXT const & surfacePresentModeEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15290,7 +15290,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfacePresentScalingCapabilitiesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfacePresentScalingCapabilitiesEXT const & surfacePresentScalingCapabilitiesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15307,7 +15307,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SurfaceProtectedCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SurfaceProtectedCapabilitiesKHR const & surfaceProtectedCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15320,7 +15320,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainCounterCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainCounterCreateInfoEXT const & swapchainCounterCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15333,7 +15333,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainCreateInfoKHR const & swapchainCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15361,7 +15361,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainDisplayNativeHdrCreateInfoAMD>
   {
     std::size_t
@@ -15375,7 +15375,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainLatencyCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainLatencyCreateInfoNV const & swapchainLatencyCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -15388,7 +15388,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainPresentBarrierCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainPresentBarrierCreateInfoNV const & swapchainPresentBarrierCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -15401,7 +15401,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainPresentFenceInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainPresentFenceInfoEXT const & swapchainPresentFenceInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15415,7 +15415,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainPresentModeInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainPresentModeInfoEXT const & swapchainPresentModeInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15429,7 +15429,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainPresentModesCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainPresentModesCreateInfoEXT const & swapchainPresentModesCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15443,7 +15443,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::SwapchainPresentScalingCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::SwapchainPresentScalingCreateInfoEXT const & swapchainPresentScalingCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15458,7 +15458,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TextureLODGatherFormatPropertiesAMD>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TextureLODGatherFormatPropertiesAMD const & textureLODGatherFormatPropertiesAMD ) const VULKAN_HPP_NOEXCEPT
@@ -15471,7 +15471,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TilePropertiesQCOM>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TilePropertiesQCOM const & tilePropertiesQCOM ) const VULKAN_HPP_NOEXCEPT
@@ -15486,7 +15486,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TimelineSemaphoreSubmitInfo>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TimelineSemaphoreSubmitInfo const & timelineSemaphoreSubmitInfo ) const VULKAN_HPP_NOEXCEPT
@@ -15502,7 +15502,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TraceRaysIndirectCommand2KHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TraceRaysIndirectCommand2KHR const & traceRaysIndirectCommand2KHR ) const VULKAN_HPP_NOEXCEPT
@@ -15526,7 +15526,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::TraceRaysIndirectCommandKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::TraceRaysIndirectCommandKHR const & traceRaysIndirectCommandKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15539,7 +15539,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ValidationCacheCreateInfoEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ValidationCacheCreateInfoEXT const & validationCacheCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15554,7 +15554,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ValidationFeaturesEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ValidationFeaturesEXT const & validationFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15570,7 +15570,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ValidationFlagsEXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ValidationFlagsEXT const & validationFlagsEXT ) const VULKAN_HPP_NOEXCEPT
@@ -15584,7 +15584,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VertexInputAttributeDescription2EXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VertexInputAttributeDescription2EXT const & vertexInputAttributeDescription2EXT ) const VULKAN_HPP_NOEXCEPT
@@ -15600,7 +15600,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VertexInputBindingDescription2EXT>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VertexInputBindingDescription2EXT const & vertexInputBindingDescription2EXT ) const VULKAN_HPP_NOEXCEPT
@@ -15617,7 +15617,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_VI_NN )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::ViSurfaceCreateInfoNN>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::ViSurfaceCreateInfoNN const & viSurfaceCreateInfoNN ) const VULKAN_HPP_NOEXCEPT
@@ -15632,7 +15632,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_VI_NN*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoPictureResourceInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoPictureResourceInfoKHR const & videoPictureResourceInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15648,7 +15648,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoReferenceSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoReferenceSlotInfoKHR const & videoReferenceSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15662,7 +15662,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoBeginCodingInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoBeginCodingInfoKHR const & videoBeginCodingInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15679,7 +15679,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoCapabilitiesKHR const & videoCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15700,7 +15700,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoCodingControlInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoCodingControlInfoKHR const & videoCodingControlInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15713,7 +15713,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeAV1CapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeAV1CapabilitiesKHR const & videoDecodeAV1CapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15726,7 +15726,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeAV1DpbSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeAV1DpbSlotInfoKHR const & videoDecodeAV1DpbSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15739,7 +15739,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeAV1PictureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeAV1PictureInfoKHR const & videoDecodeAV1PictureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15760,7 +15760,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeAV1ProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeAV1ProfileInfoKHR const & videoDecodeAV1ProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15774,7 +15774,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeAV1SessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeAV1SessionParametersCreateInfoKHR const & videoDecodeAV1SessionParametersCreateInfoKHR ) const
@@ -15788,7 +15788,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeCapabilitiesKHR const & videoDecodeCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15801,7 +15801,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264CapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264CapabilitiesKHR const & videoDecodeH264CapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15815,7 +15815,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264DpbSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264DpbSlotInfoKHR const & videoDecodeH264DpbSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15828,7 +15828,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264PictureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264PictureInfoKHR const & videoDecodeH264PictureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15843,7 +15843,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264ProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264ProfileInfoKHR const & videoDecodeH264ProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15857,7 +15857,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264SessionParametersAddInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264SessionParametersAddInfoKHR const & videoDecodeH264SessionParametersAddInfoKHR ) const
@@ -15874,7 +15874,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH264SessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH264SessionParametersCreateInfoKHR const & videoDecodeH264SessionParametersCreateInfoKHR ) const
@@ -15890,7 +15890,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265CapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265CapabilitiesKHR const & videoDecodeH265CapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15903,7 +15903,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265DpbSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265DpbSlotInfoKHR const & videoDecodeH265DpbSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15916,7 +15916,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265PictureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265PictureInfoKHR const & videoDecodeH265PictureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15931,7 +15931,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265ProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265ProfileInfoKHR const & videoDecodeH265ProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -15944,7 +15944,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265SessionParametersAddInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265SessionParametersAddInfoKHR const & videoDecodeH265SessionParametersAddInfoKHR ) const
@@ -15963,7 +15963,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeH265SessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeH265SessionParametersCreateInfoKHR const & videoDecodeH265SessionParametersCreateInfoKHR ) const
@@ -15980,7 +15980,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeInfoKHR const & videoDecodeInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16000,7 +16000,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoDecodeUsageInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoDecodeUsageInfoKHR const & videoDecodeUsageInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16013,7 +16013,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeCapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeCapabilitiesKHR const & videoEncodeCapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16032,7 +16032,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264CapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264CapabilitiesKHR const & videoEncodeH264CapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16057,7 +16057,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264DpbSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264DpbSlotInfoKHR const & videoEncodeH264DpbSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16070,7 +16070,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264FrameSizeKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264FrameSizeKHR const & videoEncodeH264FrameSizeKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16083,7 +16083,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264GopRemainingFrameInfoKHR>
   {
     std::size_t
@@ -16100,7 +16100,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264NaluSliceInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264NaluSliceInfoKHR const & videoEncodeH264NaluSliceInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16114,7 +16114,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264PictureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264PictureInfoKHR const & videoEncodeH264PictureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16130,7 +16130,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264ProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264ProfileInfoKHR const & videoEncodeH264ProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16143,7 +16143,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264QpKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264QpKHR const & videoEncodeH264QpKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16156,7 +16156,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264QualityLevelPropertiesKHR>
   {
     std::size_t
@@ -16178,7 +16178,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264RateControlInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264RateControlInfoKHR const & videoEncodeH264RateControlInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16195,7 +16195,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264RateControlLayerInfoKHR>
   {
     std::size_t
@@ -16214,7 +16214,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionCreateInfoKHR const & videoEncodeH264SessionCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16228,7 +16228,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersAddInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersAddInfoKHR const & videoEncodeH264SessionParametersAddInfoKHR ) const
@@ -16245,7 +16245,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersCreateInfoKHR const & videoEncodeH264SessionParametersCreateInfoKHR ) const
@@ -16261,7 +16261,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersFeedbackInfoKHR>
   {
     std::size_t operator()(
@@ -16276,7 +16276,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersGetInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH264SessionParametersGetInfoKHR const & videoEncodeH264SessionParametersGetInfoKHR ) const
@@ -16293,7 +16293,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265CapabilitiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265CapabilitiesKHR const & videoEncodeH265CapabilitiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16321,7 +16321,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265DpbSlotInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265DpbSlotInfoKHR const & videoEncodeH265DpbSlotInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16334,7 +16334,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265FrameSizeKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265FrameSizeKHR const & videoEncodeH265FrameSizeKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16347,7 +16347,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265GopRemainingFrameInfoKHR>
   {
     std::size_t
@@ -16364,7 +16364,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265NaluSliceSegmentInfoKHR>
   {
     std::size_t
@@ -16379,7 +16379,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265PictureInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265PictureInfoKHR const & videoEncodeH265PictureInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16394,7 +16394,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265ProfileInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265ProfileInfoKHR const & videoEncodeH265ProfileInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16407,7 +16407,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265QpKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265QpKHR const & videoEncodeH265QpKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16420,7 +16420,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265QualityLevelPropertiesKHR>
   {
     std::size_t
@@ -16441,7 +16441,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265RateControlInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265RateControlInfoKHR const & videoEncodeH265RateControlInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16458,7 +16458,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265RateControlLayerInfoKHR>
   {
     std::size_t
@@ -16477,7 +16477,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionCreateInfoKHR const & videoEncodeH265SessionCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16491,7 +16491,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersAddInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersAddInfoKHR const & videoEncodeH265SessionParametersAddInfoKHR ) const
@@ -16510,7 +16510,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersCreateInfoKHR const & videoEncodeH265SessionParametersCreateInfoKHR ) const
@@ -16527,7 +16527,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersFeedbackInfoKHR>
   {
     std::size_t operator()(
@@ -16543,7 +16543,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersGetInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeH265SessionParametersGetInfoKHR const & videoEncodeH265SessionParametersGetInfoKHR ) const
@@ -16562,7 +16562,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeInfoKHR const & videoEncodeInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16583,7 +16583,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeQualityLevelInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeQualityLevelInfoKHR const & videoEncodeQualityLevelInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16596,7 +16596,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeQualityLevelPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeQualityLevelPropertiesKHR const & videoEncodeQualityLevelPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16610,7 +16610,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeRateControlLayerInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeRateControlLayerInfoKHR const & videoEncodeRateControlLayerInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16626,7 +16626,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeRateControlInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeRateControlInfoKHR const & videoEncodeRateControlInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16644,7 +16644,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeSessionParametersFeedbackInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeSessionParametersFeedbackInfoKHR const & videoEncodeSessionParametersFeedbackInfoKHR ) const
@@ -16658,7 +16658,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeSessionParametersGetInfoKHR>
   {
     std::size_t
@@ -16672,7 +16672,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEncodeUsageInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEncodeUsageInfoKHR const & videoEncodeUsageInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16687,7 +16687,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoEndCodingInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoEndCodingInfoKHR const & videoEndCodingInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16700,7 +16700,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoFormatPropertiesKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoFormatPropertiesKHR const & videoFormatPropertiesKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16718,7 +16718,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoInlineQueryInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoInlineQueryInfoKHR const & videoInlineQueryInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16733,7 +16733,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoProfileListInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoProfileListInfoKHR const & videoProfileListInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16747,7 +16747,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionCreateInfoKHR const & videoSessionCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16768,7 +16768,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionMemoryRequirementsKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionMemoryRequirementsKHR const & videoSessionMemoryRequirementsKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16782,7 +16782,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionParametersCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionParametersCreateInfoKHR const & videoSessionParametersCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16797,7 +16797,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::VideoSessionParametersUpdateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::VideoSessionParametersUpdateInfoKHR const & videoSessionParametersUpdateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16811,7 +16811,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_WAYLAND_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::WaylandSurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::WaylandSurfaceCreateInfoKHR const & waylandSurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16828,7 +16828,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WAYLAND_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Win32KeyedMutexAcquireReleaseInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Win32KeyedMutexAcquireReleaseInfoKHR const & win32KeyedMutexAcquireReleaseInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16849,7 +16849,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Win32KeyedMutexAcquireReleaseInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Win32KeyedMutexAcquireReleaseInfoNV const & win32KeyedMutexAcquireReleaseInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -16870,7 +16870,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
 #  if defined( VK_USE_PLATFORM_WIN32_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::Win32SurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Win32SurfaceCreateInfoKHR const & win32SurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16886,7 +16886,7 @@ namespace std
   };
 #  endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::WriteDescriptorSetAccelerationStructureKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::WriteDescriptorSetAccelerationStructureKHR const & writeDescriptorSetAccelerationStructureKHR ) const
@@ -16901,7 +16901,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::WriteDescriptorSetAccelerationStructureNV>
   {
     std::size_t
@@ -16916,7 +16916,7 @@ namespace std
     }
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::WriteDescriptorSetInlineUniformBlock>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::WriteDescriptorSetInlineUniformBlock const & writeDescriptorSetInlineUniformBlock ) const VULKAN_HPP_NOEXCEPT
@@ -16931,7 +16931,7 @@ namespace std
   };
 
 #  if defined( VK_USE_PLATFORM_XCB_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::XcbSurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::XcbSurfaceCreateInfoKHR const & xcbSurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT
@@ -16948,7 +16948,7 @@ namespace std
 #  endif /*VK_USE_PLATFORM_XCB_KHR*/
 
 #  if defined( VK_USE_PLATFORM_XLIB_KHR )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct hash<VULKAN_HPP_NAMESPACE::XlibSurfaceCreateInfoKHR>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::XlibSurfaceCreateInfoKHR const & xlibSurfaceCreateInfoKHR ) const VULKAN_HPP_NOEXCEPT

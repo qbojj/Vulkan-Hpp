@@ -1,4 +1,4 @@
-  template <typename RefType>
+  VULKAN_HPP_EXPORT template <typename RefType>
   class Optional
   {
   public:

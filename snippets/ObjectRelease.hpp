@@ -1,4 +1,4 @@
-  template <typename OwnerType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename Dispatch>
   class ObjectRelease
   {
   public:

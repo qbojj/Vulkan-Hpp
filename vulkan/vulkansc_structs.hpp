@@ -8,7 +8,9 @@
 #ifndef VULKAN_STRUCTS_HPP
 #define VULKAN_STRUCTS_HPP
 
-#include <cstring>  // strcmp
+#if !defined( VULKAN_HPP_BUILD_MODULE )
+#  include <cstring>  // strcmp
+#endif
 
 namespace VULKAN_HPP_NAMESPACE
 {
@@ -17,7 +19,7 @@ namespace VULKAN_HPP_NAMESPACE
   //=== STRUCTS ===
   //===============
 
-  struct AcquireNextImageInfoKHR
+  VULKAN_HPP_EXPORT struct AcquireNextImageInfoKHR
   {
     using NativeType = VkAcquireNextImageInfoKHR;
 
@@ -151,13 +153,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            deviceMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAcquireNextImageInfoKHR>
   {
     using Type = AcquireNextImageInfoKHR;
   };
 
-  struct AcquireProfilingLockInfoKHR
+  VULKAN_HPP_EXPORT struct AcquireProfilingLockInfoKHR
   {
     using NativeType = VkAcquireProfilingLockInfoKHR;
 
@@ -257,13 +259,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                                           timeout = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAcquireProfilingLockInfoKHR>
   {
     using Type = AcquireProfilingLockInfoKHR;
   };
 
-  struct AllocationCallbacks
+  VULKAN_HPP_EXPORT struct AllocationCallbacks
   {
     using NativeType = VkAllocationCallbacks;
 
@@ -387,7 +389,7 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkInternalFreeNotification       pfnInternalFree       = {};
   };
 
-  struct ApplicationInfo
+  VULKAN_HPP_EXPORT struct ApplicationInfo
   {
     using NativeType = VkApplicationInfo;
 
@@ -536,13 +538,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            apiVersion         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eApplicationInfo>
   {
     using Type = ApplicationInfo;
   };
 
-  struct ApplicationParametersEXT
+  VULKAN_HPP_EXPORT struct ApplicationParametersEXT
   {
     using NativeType = VkApplicationParametersEXT;
 
@@ -658,13 +660,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            value    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eApplicationParametersEXT>
   {
     using Type = ApplicationParametersEXT;
   };
 
-  struct AttachmentDescription
+  VULKAN_HPP_EXPORT struct AttachmentDescription
   {
     using NativeType = VkAttachmentDescription;
 
@@ -825,7 +827,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout                finalLayout    = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  struct AttachmentDescription2
+  VULKAN_HPP_EXPORT struct AttachmentDescription2
   {
     using NativeType = VkAttachmentDescription2;
 
@@ -1000,15 +1002,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout                finalLayout    = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAttachmentDescription2>
   {
     using Type = AttachmentDescription2;
   };
 
-  using AttachmentDescription2KHR = AttachmentDescription2;
+  VULKAN_HPP_EXPORT using AttachmentDescription2KHR = AttachmentDescription2;
 
-  struct AttachmentDescriptionStencilLayout
+  VULKAN_HPP_EXPORT struct AttachmentDescriptionStencilLayout
   {
     using NativeType = VkAttachmentDescriptionStencilLayout;
 
@@ -1113,15 +1115,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout   stencilFinalLayout   = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAttachmentDescriptionStencilLayout>
   {
     using Type = AttachmentDescriptionStencilLayout;
   };
 
-  using AttachmentDescriptionStencilLayoutKHR = AttachmentDescriptionStencilLayout;
+  VULKAN_HPP_EXPORT using AttachmentDescriptionStencilLayoutKHR = AttachmentDescriptionStencilLayout;
 
-  struct AttachmentReference
+  VULKAN_HPP_EXPORT struct AttachmentReference
   {
     using NativeType = VkAttachmentReference;
 
@@ -1207,7 +1209,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout layout     = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  struct AttachmentReference2
+  VULKAN_HPP_EXPORT struct AttachmentReference2
   {
     using NativeType = VkAttachmentReference2;
 
@@ -1321,15 +1323,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageAspectFlags aspectMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAttachmentReference2>
   {
     using Type = AttachmentReference2;
   };
 
-  using AttachmentReference2KHR = AttachmentReference2;
+  VULKAN_HPP_EXPORT using AttachmentReference2KHR = AttachmentReference2;
 
-  struct AttachmentReferenceStencilLayout
+  VULKAN_HPP_EXPORT struct AttachmentReferenceStencilLayout
   {
     using NativeType = VkAttachmentReferenceStencilLayout;
 
@@ -1420,15 +1422,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout   stencilLayout = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eAttachmentReferenceStencilLayout>
   {
     using Type = AttachmentReferenceStencilLayout;
   };
 
-  using AttachmentReferenceStencilLayoutKHR = AttachmentReferenceStencilLayout;
+  VULKAN_HPP_EXPORT using AttachmentReferenceStencilLayoutKHR = AttachmentReferenceStencilLayout;
 
-  struct Extent2D
+  VULKAN_HPP_EXPORT struct Extent2D
   {
     using NativeType = VkExtent2D;
 
@@ -1511,7 +1513,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t height = {};
   };
 
-  struct SampleLocationEXT
+  VULKAN_HPP_EXPORT struct SampleLocationEXT
   {
     using NativeType = VkSampleLocationEXT;
 
@@ -1594,7 +1596,7 @@ namespace VULKAN_HPP_NAMESPACE
     float y = {};
   };
 
-  struct SampleLocationsInfoEXT
+  VULKAN_HPP_EXPORT struct SampleLocationsInfoEXT
   {
     using NativeType = VkSampleLocationsInfoEXT;
 
@@ -1747,13 +1749,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SampleLocationEXT * pSampleLocations        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSampleLocationsInfoEXT>
   {
     using Type = SampleLocationsInfoEXT;
   };
 
-  struct AttachmentSampleLocationsEXT
+  VULKAN_HPP_EXPORT struct AttachmentSampleLocationsEXT
   {
     using NativeType = VkAttachmentSampleLocationsEXT;
 
@@ -1841,7 +1843,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT sampleLocationsInfo = {};
   };
 
-  struct BaseInStructure
+  VULKAN_HPP_EXPORT struct BaseInStructure
   {
     using NativeType = VkBaseInStructure;
 
@@ -1919,7 +1921,7 @@ namespace VULKAN_HPP_NAMESPACE
     const struct VULKAN_HPP_NAMESPACE::BaseInStructure * pNext = {};
   };
 
-  struct BaseOutStructure
+  VULKAN_HPP_EXPORT struct BaseOutStructure
   {
     using NativeType = VkBaseOutStructure;
 
@@ -1997,7 +1999,7 @@ namespace VULKAN_HPP_NAMESPACE
     struct VULKAN_HPP_NAMESPACE::BaseOutStructure * pNext = {};
   };
 
-  struct BindBufferMemoryDeviceGroupInfo
+  VULKAN_HPP_EXPORT struct BindBufferMemoryDeviceGroupInfo
   {
     using NativeType = VkBindBufferMemoryDeviceGroupInfo;
 
@@ -2114,15 +2116,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pDeviceIndices   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindBufferMemoryDeviceGroupInfo>
   {
     using Type = BindBufferMemoryDeviceGroupInfo;
   };
 
-  using BindBufferMemoryDeviceGroupInfoKHR = BindBufferMemoryDeviceGroupInfo;
+  VULKAN_HPP_EXPORT using BindBufferMemoryDeviceGroupInfoKHR = BindBufferMemoryDeviceGroupInfo;
 
-  struct BindBufferMemoryInfo
+  VULKAN_HPP_EXPORT struct BindBufferMemoryInfo
   {
     using NativeType = VkBindBufferMemoryInfo;
 
@@ -2235,15 +2237,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    memoryOffset = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindBufferMemoryInfo>
   {
     using Type = BindBufferMemoryInfo;
   };
 
-  using BindBufferMemoryInfoKHR = BindBufferMemoryInfo;
+  VULKAN_HPP_EXPORT using BindBufferMemoryInfoKHR = BindBufferMemoryInfo;
 
-  struct Offset2D
+  VULKAN_HPP_EXPORT struct Offset2D
   {
     using NativeType = VkOffset2D;
 
@@ -2326,7 +2328,7 @@ namespace VULKAN_HPP_NAMESPACE
     int32_t y = {};
   };
 
-  struct Rect2D
+  VULKAN_HPP_EXPORT struct Rect2D
   {
     using NativeType = VkRect2D;
 
@@ -2409,7 +2411,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D extent = {};
   };
 
-  struct BindImageMemoryDeviceGroupInfo
+  VULKAN_HPP_EXPORT struct BindImageMemoryDeviceGroupInfo
   {
     using NativeType = VkBindImageMemoryDeviceGroupInfo;
 
@@ -2567,15 +2569,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Rect2D * pSplitInstanceBindRegions    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindImageMemoryDeviceGroupInfo>
   {
     using Type = BindImageMemoryDeviceGroupInfo;
   };
 
-  using BindImageMemoryDeviceGroupInfoKHR = BindImageMemoryDeviceGroupInfo;
+  VULKAN_HPP_EXPORT using BindImageMemoryDeviceGroupInfoKHR = BindImageMemoryDeviceGroupInfo;
 
-  struct BindImageMemoryInfo
+  VULKAN_HPP_EXPORT struct BindImageMemoryInfo
   {
     using NativeType = VkBindImageMemoryInfo;
 
@@ -2687,15 +2689,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    memoryOffset = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindImageMemoryInfo>
   {
     using Type = BindImageMemoryInfo;
   };
 
-  using BindImageMemoryInfoKHR = BindImageMemoryInfo;
+  VULKAN_HPP_EXPORT using BindImageMemoryInfoKHR = BindImageMemoryInfo;
 
-  struct BindImageMemorySwapchainInfoKHR
+  VULKAN_HPP_EXPORT struct BindImageMemorySwapchainInfoKHR
   {
     using NativeType = VkBindImageMemorySwapchainInfoKHR;
 
@@ -2795,13 +2797,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            imageIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindImageMemorySwapchainInfoKHR>
   {
     using Type = BindImageMemorySwapchainInfoKHR;
   };
 
-  struct BindImagePlaneMemoryInfo
+  VULKAN_HPP_EXPORT struct BindImagePlaneMemoryInfo
   {
     using NativeType = VkBindImagePlaneMemoryInfo;
 
@@ -2892,15 +2894,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageAspectFlagBits planeAspect = VULKAN_HPP_NAMESPACE::ImageAspectFlagBits::eColor;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBindImagePlaneMemoryInfo>
   {
     using Type = BindImagePlaneMemoryInfo;
   };
 
-  using BindImagePlaneMemoryInfoKHR = BindImagePlaneMemoryInfo;
+  VULKAN_HPP_EXPORT using BindImagePlaneMemoryInfoKHR = BindImagePlaneMemoryInfo;
 
-  struct ImageSubresourceLayers
+  VULKAN_HPP_EXPORT struct ImageSubresourceLayers
   {
     using NativeType = VkImageSubresourceLayers;
 
@@ -3005,7 +3007,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                               layerCount     = {};
   };
 
-  struct Offset3D
+  VULKAN_HPP_EXPORT struct Offset3D
   {
     using NativeType = VkOffset3D;
 
@@ -3098,7 +3100,7 @@ namespace VULKAN_HPP_NAMESPACE
     int32_t z = {};
   };
 
-  struct ImageBlit2
+  VULKAN_HPP_EXPORT struct ImageBlit2
   {
     using NativeType = VkImageBlit2;
 
@@ -3219,15 +3221,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::Offset3D, 2> dstOffsets     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageBlit2>
   {
     using Type = ImageBlit2;
   };
 
-  using ImageBlit2KHR = ImageBlit2;
+  VULKAN_HPP_EXPORT using ImageBlit2KHR = ImageBlit2;
 
-  struct BlitImageInfo2
+  VULKAN_HPP_EXPORT struct BlitImageInfo2
   {
     using NativeType = VkBlitImageInfo2;
 
@@ -3408,15 +3410,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Filter             filter         = VULKAN_HPP_NAMESPACE::Filter::eNearest;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBlitImageInfo2>
   {
     using Type = BlitImageInfo2;
   };
 
-  using BlitImageInfo2KHR = BlitImageInfo2;
+  VULKAN_HPP_EXPORT using BlitImageInfo2KHR = BlitImageInfo2;
 
-  struct BufferCopy
+  VULKAN_HPP_EXPORT struct BufferCopy
   {
     using NativeType = VkBufferCopy;
 
@@ -3509,7 +3511,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize size      = {};
   };
 
-  struct BufferCopy2
+  VULKAN_HPP_EXPORT struct BufferCopy2
   {
     using NativeType = VkBufferCopy2;
 
@@ -3619,15 +3621,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    size      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferCopy2>
   {
     using Type = BufferCopy2;
   };
 
-  using BufferCopy2KHR = BufferCopy2;
+  VULKAN_HPP_EXPORT using BufferCopy2KHR = BufferCopy2;
 
-  struct BufferCreateInfo
+  VULKAN_HPP_EXPORT struct BufferCreateInfo
   {
     using NativeType = VkBufferCreateInfo;
 
@@ -3795,13 +3797,13 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                        pQueueFamilyIndices   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferCreateInfo>
   {
     using Type = BufferCreateInfo;
   };
 
-  struct BufferDeviceAddressInfo
+  VULKAN_HPP_EXPORT struct BufferDeviceAddressInfo
   {
     using NativeType = VkBufferDeviceAddressInfo;
 
@@ -3891,16 +3893,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Buffer        buffer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferDeviceAddressInfo>
   {
     using Type = BufferDeviceAddressInfo;
   };
 
-  using BufferDeviceAddressInfoEXT = BufferDeviceAddressInfo;
-  using BufferDeviceAddressInfoKHR = BufferDeviceAddressInfo;
+  VULKAN_HPP_EXPORT using BufferDeviceAddressInfoEXT = BufferDeviceAddressInfo;
+  VULKAN_HPP_EXPORT using BufferDeviceAddressInfoKHR = BufferDeviceAddressInfo;
 
-  struct Extent3D
+  VULKAN_HPP_EXPORT struct Extent3D
   {
     using NativeType = VkExtent3D;
 
@@ -3993,7 +3995,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t depth  = {};
   };
 
-  struct BufferImageCopy
+  VULKAN_HPP_EXPORT struct BufferImageCopy
   {
     using NativeType = VkBufferImageCopy;
 
@@ -4119,7 +4121,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               imageExtent       = {};
   };
 
-  struct BufferImageCopy2
+  VULKAN_HPP_EXPORT struct BufferImageCopy2
   {
     using NativeType = VkBufferImageCopy2;
 
@@ -4261,15 +4263,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               imageExtent       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferImageCopy2>
   {
     using Type = BufferImageCopy2;
   };
 
-  using BufferImageCopy2KHR = BufferImageCopy2;
+  VULKAN_HPP_EXPORT using BufferImageCopy2KHR = BufferImageCopy2;
 
-  struct BufferMemoryBarrier
+  VULKAN_HPP_EXPORT struct BufferMemoryBarrier
   {
     using NativeType = VkBufferMemoryBarrier;
 
@@ -4423,13 +4425,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    size                = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferMemoryBarrier>
   {
     using Type = BufferMemoryBarrier;
   };
 
-  struct BufferMemoryBarrier2
+  VULKAN_HPP_EXPORT struct BufferMemoryBarrier2
   {
     using NativeType = VkBufferMemoryBarrier2;
 
@@ -4604,15 +4606,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize          size                = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferMemoryBarrier2>
   {
     using Type = BufferMemoryBarrier2;
   };
 
-  using BufferMemoryBarrier2KHR = BufferMemoryBarrier2;
+  VULKAN_HPP_EXPORT using BufferMemoryBarrier2KHR = BufferMemoryBarrier2;
 
-  struct BufferMemoryRequirementsInfo2
+  VULKAN_HPP_EXPORT struct BufferMemoryRequirementsInfo2
   {
     using NativeType = VkBufferMemoryRequirementsInfo2;
 
@@ -4702,15 +4704,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Buffer        buffer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferMemoryRequirementsInfo2>
   {
     using Type = BufferMemoryRequirementsInfo2;
   };
 
-  using BufferMemoryRequirementsInfo2KHR = BufferMemoryRequirementsInfo2;
+  VULKAN_HPP_EXPORT using BufferMemoryRequirementsInfo2KHR = BufferMemoryRequirementsInfo2;
 
-  struct BufferOpaqueCaptureAddressCreateInfo
+  VULKAN_HPP_EXPORT struct BufferOpaqueCaptureAddressCreateInfo
   {
     using NativeType = VkBufferOpaqueCaptureAddressCreateInfo;
 
@@ -4800,15 +4802,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            opaqueCaptureAddress = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferOpaqueCaptureAddressCreateInfo>
   {
     using Type = BufferOpaqueCaptureAddressCreateInfo;
   };
 
-  using BufferOpaqueCaptureAddressCreateInfoKHR = BufferOpaqueCaptureAddressCreateInfo;
+  VULKAN_HPP_EXPORT using BufferOpaqueCaptureAddressCreateInfoKHR = BufferOpaqueCaptureAddressCreateInfo;
 
-  struct BufferViewCreateInfo
+  VULKAN_HPP_EXPORT struct BufferViewCreateInfo
   {
     using NativeType = VkBufferViewCreateInfo;
 
@@ -4942,13 +4944,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize            range  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eBufferViewCreateInfo>
   {
     using Type = BufferViewCreateInfo;
   };
 
-  struct CalibratedTimestampInfoKHR
+  VULKAN_HPP_EXPORT struct CalibratedTimestampInfoKHR
   {
     using NativeType = VkCalibratedTimestampInfoKHR;
 
@@ -5039,15 +5041,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::TimeDomainKHR timeDomain = VULKAN_HPP_NAMESPACE::TimeDomainKHR::eDevice;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCalibratedTimestampInfoKHR>
   {
     using Type = CalibratedTimestampInfoKHR;
   };
 
-  using CalibratedTimestampInfoEXT = CalibratedTimestampInfoKHR;
+  VULKAN_HPP_EXPORT using CalibratedTimestampInfoEXT = CalibratedTimestampInfoKHR;
 
-  struct CheckpointData2NV
+  VULKAN_HPP_EXPORT struct CheckpointData2NV
   {
     using NativeType = VkCheckpointData2NV;
 
@@ -5123,13 +5125,13 @@ namespace VULKAN_HPP_NAMESPACE
     void *                                    pCheckpointMarker = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCheckpointData2NV>
   {
     using Type = CheckpointData2NV;
   };
 
-  union ClearColorValue
+  VULKAN_HPP_EXPORT union ClearColorValue
   {
     using NativeType = VkClearColorValue;
 #if !defined( VULKAN_HPP_NO_UNION_CONSTRUCTORS )
@@ -5191,7 +5193,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<uint32_t, 4> uint32;
   };
 
-  struct ClearDepthStencilValue
+  VULKAN_HPP_EXPORT struct ClearDepthStencilValue
   {
     using NativeType = VkClearDepthStencilValue;
 
@@ -5277,7 +5279,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t stencil = {};
   };
 
-  union ClearValue
+  VULKAN_HPP_EXPORT union ClearValue
   {
     using NativeType = VkClearValue;
 #if !defined( VULKAN_HPP_NO_UNION_CONSTRUCTORS )
@@ -5320,7 +5322,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VULKAN_HPP_HAS_UNRESTRICTED_UNIONS*/
   };
 
-  struct ClearAttachment
+  VULKAN_HPP_EXPORT struct ClearAttachment
   {
     using NativeType = VkClearAttachment;
 
@@ -5395,7 +5397,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ClearValue       clearValue      = {};
   };
 
-  struct ClearRect
+  VULKAN_HPP_EXPORT struct ClearRect
   {
     using NativeType = VkClearRect;
 
@@ -5465,7 +5467,7 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
     auto operator<=>( ClearRect const & ) const = default;
 #else
-    bool                     operator==( ClearRect const & rhs ) const VULKAN_HPP_NOEXCEPT
+    bool operator==( ClearRect const & rhs ) const VULKAN_HPP_NOEXCEPT
     {
 #  if defined( VULKAN_HPP_USE_REFLECT )
       return this->reflect() == rhs.reflect();
@@ -5486,7 +5488,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                     layerCount     = {};
   };
 
-  struct CommandBufferAllocateInfo
+  VULKAN_HPP_EXPORT struct CommandBufferAllocateInfo
   {
     using NativeType = VkCommandBufferAllocateInfo;
 
@@ -5600,13 +5602,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                 commandBufferCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandBufferAllocateInfo>
   {
     using Type = CommandBufferAllocateInfo;
   };
 
-  struct CommandBufferInheritanceInfo
+  VULKAN_HPP_EXPORT struct CommandBufferInheritanceInfo
   {
     using NativeType = VkCommandBufferInheritanceInfo;
 
@@ -5752,13 +5754,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::QueryPipelineStatisticFlags pipelineStatistics   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandBufferInheritanceInfo>
   {
     using Type = CommandBufferInheritanceInfo;
   };
 
-  struct CommandBufferBeginInfo
+  VULKAN_HPP_EXPORT struct CommandBufferBeginInfo
   {
     using NativeType = VkCommandBufferBeginInfo;
 
@@ -5862,13 +5864,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::CommandBufferInheritanceInfo * pInheritanceInfo = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandBufferBeginInfo>
   {
     using Type = CommandBufferBeginInfo;
   };
 
-  struct CommandBufferInheritanceRenderingInfo
+  VULKAN_HPP_EXPORT struct CommandBufferInheritanceRenderingInfo
   {
     using NativeType = VkCommandBufferInheritanceRenderingInfo;
 
@@ -6060,15 +6062,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SampleCountFlagBits rasterizationSamples    = VULKAN_HPP_NAMESPACE::SampleCountFlagBits::e1;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandBufferInheritanceRenderingInfo>
   {
     using Type = CommandBufferInheritanceRenderingInfo;
   };
 
-  using CommandBufferInheritanceRenderingInfoKHR = CommandBufferInheritanceRenderingInfo;
+  VULKAN_HPP_EXPORT using CommandBufferInheritanceRenderingInfoKHR = CommandBufferInheritanceRenderingInfo;
 
-  struct CommandBufferSubmitInfo
+  VULKAN_HPP_EXPORT struct CommandBufferSubmitInfo
   {
     using NativeType = VkCommandBufferSubmitInfo;
 
@@ -6168,15 +6170,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            deviceMask    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandBufferSubmitInfo>
   {
     using Type = CommandBufferSubmitInfo;
   };
 
-  using CommandBufferSubmitInfoKHR = CommandBufferSubmitInfo;
+  VULKAN_HPP_EXPORT using CommandBufferSubmitInfoKHR = CommandBufferSubmitInfo;
 
-  struct CommandPoolCreateInfo
+  VULKAN_HPP_EXPORT struct CommandPoolCreateInfo
   {
     using NativeType = VkCommandPoolCreateInfo;
 
@@ -6276,13 +6278,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                     queueFamilyIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandPoolCreateInfo>
   {
     using Type = CommandPoolCreateInfo;
   };
 
-  struct CommandPoolMemoryConsumption
+  VULKAN_HPP_EXPORT struct CommandPoolMemoryConsumption
   {
     using NativeType = VkCommandPoolMemoryConsumption;
 
@@ -6370,13 +6372,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    commandBufferAllocated  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandPoolMemoryConsumption>
   {
     using Type = CommandPoolMemoryConsumption;
   };
 
-  struct CommandPoolMemoryReservationCreateInfo
+  VULKAN_HPP_EXPORT struct CommandPoolMemoryReservationCreateInfo
   {
     using NativeType = VkCommandPoolMemoryReservationCreateInfo;
 
@@ -6479,13 +6481,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            commandPoolMaxCommandBuffers = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCommandPoolMemoryReservationCreateInfo>
   {
     using Type = CommandPoolMemoryReservationCreateInfo;
   };
 
-  struct ComponentMapping
+  VULKAN_HPP_EXPORT struct ComponentMapping
   {
     using NativeType = VkComponentMapping;
 
@@ -6590,7 +6592,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ComponentSwizzle a = VULKAN_HPP_NAMESPACE::ComponentSwizzle::eIdentity;
   };
 
-  struct SpecializationMapEntry
+  VULKAN_HPP_EXPORT struct SpecializationMapEntry
   {
     using NativeType = VkSpecializationMapEntry;
 
@@ -6684,7 +6686,7 @@ namespace VULKAN_HPP_NAMESPACE
     size_t   size       = {};
   };
 
-  struct SpecializationInfo
+  VULKAN_HPP_EXPORT struct SpecializationInfo
   {
     using NativeType = VkSpecializationInfo;
 
@@ -6818,7 +6820,7 @@ namespace VULKAN_HPP_NAMESPACE
     const void *                                         pData         = {};
   };
 
-  struct PipelineShaderStageCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineShaderStageCreateInfo
   {
     using NativeType = VkPipelineShaderStageCreateInfo;
 
@@ -6968,13 +6970,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SpecializationInfo *     pSpecializationInfo = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineShaderStageCreateInfo>
   {
     using Type = PipelineShaderStageCreateInfo;
   };
 
-  struct ComputePipelineCreateInfo
+  VULKAN_HPP_EXPORT struct ComputePipelineCreateInfo
   {
     using NativeType = VkComputePipelineCreateInfo;
 
@@ -7108,13 +7110,13 @@ namespace VULKAN_HPP_NAMESPACE
     int32_t                                             basePipelineIndex  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eComputePipelineCreateInfo>
   {
     using Type = ComputePipelineCreateInfo;
   };
 
-  struct ConformanceVersion
+  VULKAN_HPP_EXPORT struct ConformanceVersion
   {
     using NativeType = VkConformanceVersion;
 
@@ -7213,9 +7215,9 @@ namespace VULKAN_HPP_NAMESPACE
     uint8_t patch    = {};
   };
 
-  using ConformanceVersionKHR = ConformanceVersion;
+  VULKAN_HPP_EXPORT using ConformanceVersionKHR = ConformanceVersion;
 
-  struct CopyBufferInfo2
+  VULKAN_HPP_EXPORT struct CopyBufferInfo2
   {
     using NativeType = VkCopyBufferInfo2;
 
@@ -7355,15 +7357,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::BufferCopy2 * pRegions    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCopyBufferInfo2>
   {
     using Type = CopyBufferInfo2;
   };
 
-  using CopyBufferInfo2KHR = CopyBufferInfo2;
+  VULKAN_HPP_EXPORT using CopyBufferInfo2KHR = CopyBufferInfo2;
 
-  struct CopyBufferToImageInfo2
+  VULKAN_HPP_EXPORT struct CopyBufferToImageInfo2
   {
     using NativeType = VkCopyBufferToImageInfo2;
 
@@ -7523,15 +7525,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::BufferImageCopy2 * pRegions       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCopyBufferToImageInfo2>
   {
     using Type = CopyBufferToImageInfo2;
   };
 
-  using CopyBufferToImageInfo2KHR = CopyBufferToImageInfo2;
+  VULKAN_HPP_EXPORT using CopyBufferToImageInfo2KHR = CopyBufferToImageInfo2;
 
-  struct CopyDescriptorSet
+  VULKAN_HPP_EXPORT struct CopyDescriptorSet
   {
     using NativeType = VkCopyDescriptorSet;
 
@@ -7683,13 +7685,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            descriptorCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCopyDescriptorSet>
   {
     using Type = CopyDescriptorSet;
   };
 
-  struct ImageCopy2
+  VULKAN_HPP_EXPORT struct ImageCopy2
   {
     using NativeType = VkImageCopy2;
 
@@ -7820,15 +7822,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               extent         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageCopy2>
   {
     using Type = ImageCopy2;
   };
 
-  using ImageCopy2KHR = ImageCopy2;
+  VULKAN_HPP_EXPORT using ImageCopy2KHR = ImageCopy2;
 
-  struct CopyImageInfo2
+  VULKAN_HPP_EXPORT struct CopyImageInfo2
   {
     using NativeType = VkCopyImageInfo2;
 
@@ -7996,15 +7998,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ImageCopy2 * pRegions       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCopyImageInfo2>
   {
     using Type = CopyImageInfo2;
   };
 
-  using CopyImageInfo2KHR = CopyImageInfo2;
+  VULKAN_HPP_EXPORT using CopyImageInfo2KHR = CopyImageInfo2;
 
-  struct CopyImageToBufferInfo2
+  VULKAN_HPP_EXPORT struct CopyImageToBufferInfo2
   {
     using NativeType = VkCopyImageToBufferInfo2;
 
@@ -8164,15 +8166,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::BufferImageCopy2 * pRegions       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eCopyImageToBufferInfo2>
   {
     using Type = CopyImageToBufferInfo2;
   };
 
-  using CopyImageToBufferInfo2KHR = CopyImageToBufferInfo2;
+  VULKAN_HPP_EXPORT using CopyImageToBufferInfo2KHR = CopyImageToBufferInfo2;
 
-  struct DebugUtilsLabelEXT
+  VULKAN_HPP_EXPORT struct DebugUtilsLabelEXT
   {
     using NativeType = VkDebugUtilsLabelEXT;
 
@@ -8278,13 +8280,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<float, 4> color      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDebugUtilsLabelEXT>
   {
     using Type = DebugUtilsLabelEXT;
   };
 
-  struct DebugUtilsObjectNameInfoEXT
+  VULKAN_HPP_EXPORT struct DebugUtilsObjectNameInfoEXT
   {
     using NativeType = VkDebugUtilsObjectNameInfoEXT;
 
@@ -8406,13 +8408,13 @@ namespace VULKAN_HPP_NAMESPACE
     const char *                        pObjectName  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDebugUtilsObjectNameInfoEXT>
   {
     using Type = DebugUtilsObjectNameInfoEXT;
   };
 
-  struct DebugUtilsMessengerCallbackDataEXT
+  VULKAN_HPP_EXPORT struct DebugUtilsMessengerCallbackDataEXT
   {
     using NativeType = VkDebugUtilsMessengerCallbackDataEXT;
 
@@ -8685,13 +8687,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DebugUtilsObjectNameInfoEXT *     pObjects         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDebugUtilsMessengerCallbackDataEXT>
   {
     using Type = DebugUtilsMessengerCallbackDataEXT;
   };
 
-  struct DebugUtilsMessengerCreateInfoEXT
+  VULKAN_HPP_EXPORT struct DebugUtilsMessengerCreateInfoEXT
   {
     using NativeType = VkDebugUtilsMessengerCreateInfoEXT;
 
@@ -8823,13 +8825,13 @@ namespace VULKAN_HPP_NAMESPACE
     void *                                                  pUserData       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDebugUtilsMessengerCreateInfoEXT>
   {
     using Type = DebugUtilsMessengerCreateInfoEXT;
   };
 
-  struct DebugUtilsObjectTagInfoEXT
+  VULKAN_HPP_EXPORT struct DebugUtilsObjectTagInfoEXT
   {
     using NativeType = VkDebugUtilsObjectTagInfoEXT;
 
@@ -8990,13 +8992,13 @@ namespace VULKAN_HPP_NAMESPACE
     const void *                        pTag         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDebugUtilsObjectTagInfoEXT>
   {
     using Type = DebugUtilsObjectTagInfoEXT;
   };
 
-  struct MemoryBarrier2
+  VULKAN_HPP_EXPORT struct MemoryBarrier2
   {
     using NativeType = VkMemoryBarrier2;
 
@@ -9117,15 +9119,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::AccessFlags2        dstAccessMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryBarrier2>
   {
     using Type = MemoryBarrier2;
   };
 
-  using MemoryBarrier2KHR = MemoryBarrier2;
+  VULKAN_HPP_EXPORT using MemoryBarrier2KHR = MemoryBarrier2;
 
-  struct ImageSubresourceRange
+  VULKAN_HPP_EXPORT struct ImageSubresourceRange
   {
     using NativeType = VkImageSubresourceRange;
 
@@ -9240,7 +9242,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                               layerCount     = {};
   };
 
-  struct ImageMemoryBarrier2
+  VULKAN_HPP_EXPORT struct ImageMemoryBarrier2
   {
     using NativeType = VkImageMemoryBarrier2;
 
@@ -9437,15 +9439,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageSubresourceRange subresourceRange    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageMemoryBarrier2>
   {
     using Type = ImageMemoryBarrier2;
   };
 
-  using ImageMemoryBarrier2KHR = ImageMemoryBarrier2;
+  VULKAN_HPP_EXPORT using ImageMemoryBarrier2KHR = ImageMemoryBarrier2;
 
-  struct DependencyInfo
+  VULKAN_HPP_EXPORT struct DependencyInfo
   {
     using NativeType = VkDependencyInfo;
 
@@ -9656,15 +9658,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ImageMemoryBarrier2 *  pImageMemoryBarriers     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDependencyInfo>
   {
     using Type = DependencyInfo;
   };
 
-  using DependencyInfoKHR = DependencyInfo;
+  VULKAN_HPP_EXPORT using DependencyInfoKHR = DependencyInfo;
 
-  struct DescriptorBufferInfo
+  VULKAN_HPP_EXPORT struct DescriptorBufferInfo
   {
     using NativeType = VkDescriptorBufferInfo;
 
@@ -9760,7 +9762,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize range  = {};
   };
 
-  struct DescriptorImageInfo
+  VULKAN_HPP_EXPORT struct DescriptorImageInfo
   {
     using NativeType = VkDescriptorImageInfo;
 
@@ -9856,7 +9858,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout imageLayout = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  struct DescriptorPoolSize
+  VULKAN_HPP_EXPORT struct DescriptorPoolSize
   {
     using NativeType = VkDescriptorPoolSize;
 
@@ -9940,7 +9942,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                             descriptorCount = {};
   };
 
-  struct DescriptorPoolCreateInfo
+  VULKAN_HPP_EXPORT struct DescriptorPoolCreateInfo
   {
     using NativeType = VkDescriptorPoolCreateInfo;
 
@@ -10084,13 +10086,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DescriptorPoolSize * pPoolSizes    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorPoolCreateInfo>
   {
     using Type = DescriptorPoolCreateInfo;
   };
 
-  struct DescriptorPoolInlineUniformBlockCreateInfo
+  VULKAN_HPP_EXPORT struct DescriptorPoolInlineUniformBlockCreateInfo
   {
     using NativeType = VkDescriptorPoolInlineUniformBlockCreateInfo;
 
@@ -10182,15 +10184,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxInlineUniformBlockBindings = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorPoolInlineUniformBlockCreateInfo>
   {
     using Type = DescriptorPoolInlineUniformBlockCreateInfo;
   };
 
-  using DescriptorPoolInlineUniformBlockCreateInfoEXT = DescriptorPoolInlineUniformBlockCreateInfo;
+  VULKAN_HPP_EXPORT using DescriptorPoolInlineUniformBlockCreateInfoEXT = DescriptorPoolInlineUniformBlockCreateInfo;
 
-  struct DescriptorSetAllocateInfo
+  VULKAN_HPP_EXPORT struct DescriptorSetAllocateInfo
   {
     using NativeType = VkDescriptorSetAllocateInfo;
 
@@ -10323,13 +10325,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DescriptorSetLayout * pSetLayouts        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetAllocateInfo>
   {
     using Type = DescriptorSetAllocateInfo;
   };
 
-  struct DescriptorSetLayoutBinding
+  VULKAN_HPP_EXPORT struct DescriptorSetLayoutBinding
   {
     using NativeType = VkDescriptorSetLayoutBinding;
 
@@ -10472,7 +10474,7 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Sampler *  pImmutableSamplers = {};
   };
 
-  struct DescriptorSetLayoutBindingFlagsCreateInfo
+  VULKAN_HPP_EXPORT struct DescriptorSetLayoutBindingFlagsCreateInfo
   {
     using NativeType = VkDescriptorSetLayoutBindingFlagsCreateInfo;
 
@@ -10592,15 +10594,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DescriptorBindingFlags * pBindingFlags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetLayoutBindingFlagsCreateInfo>
   {
     using Type = DescriptorSetLayoutBindingFlagsCreateInfo;
   };
 
-  using DescriptorSetLayoutBindingFlagsCreateInfoEXT = DescriptorSetLayoutBindingFlagsCreateInfo;
+  VULKAN_HPP_EXPORT using DescriptorSetLayoutBindingFlagsCreateInfoEXT = DescriptorSetLayoutBindingFlagsCreateInfo;
 
-  struct DescriptorSetLayoutCreateInfo
+  VULKAN_HPP_EXPORT struct DescriptorSetLayoutCreateInfo
   {
     using NativeType = VkDescriptorSetLayoutCreateInfo;
 
@@ -10734,13 +10736,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DescriptorSetLayoutBinding * pBindings    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetLayoutCreateInfo>
   {
     using Type = DescriptorSetLayoutCreateInfo;
   };
 
-  struct DescriptorSetLayoutSupport
+  VULKAN_HPP_EXPORT struct DescriptorSetLayoutSupport
   {
     using NativeType = VkDescriptorSetLayoutSupport;
 
@@ -10816,15 +10818,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        supported = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetLayoutSupport>
   {
     using Type = DescriptorSetLayoutSupport;
   };
 
-  using DescriptorSetLayoutSupportKHR = DescriptorSetLayoutSupport;
+  VULKAN_HPP_EXPORT using DescriptorSetLayoutSupportKHR = DescriptorSetLayoutSupport;
 
-  struct DescriptorSetVariableDescriptorCountAllocateInfo
+  VULKAN_HPP_EXPORT struct DescriptorSetVariableDescriptorCountAllocateInfo
   {
     using NativeType = VkDescriptorSetVariableDescriptorCountAllocateInfo;
 
@@ -10944,15 +10946,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pDescriptorCounts  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetVariableDescriptorCountAllocateInfo>
   {
     using Type = DescriptorSetVariableDescriptorCountAllocateInfo;
   };
 
-  using DescriptorSetVariableDescriptorCountAllocateInfoEXT = DescriptorSetVariableDescriptorCountAllocateInfo;
+  VULKAN_HPP_EXPORT using DescriptorSetVariableDescriptorCountAllocateInfoEXT = DescriptorSetVariableDescriptorCountAllocateInfo;
 
-  struct DescriptorSetVariableDescriptorCountLayoutSupport
+  VULKAN_HPP_EXPORT struct DescriptorSetVariableDescriptorCountLayoutSupport
   {
     using NativeType = VkDescriptorSetVariableDescriptorCountLayoutSupport;
 
@@ -11031,15 +11033,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxVariableDescriptorCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDescriptorSetVariableDescriptorCountLayoutSupport>
   {
     using Type = DescriptorSetVariableDescriptorCountLayoutSupport;
   };
 
-  using DescriptorSetVariableDescriptorCountLayoutSupportEXT = DescriptorSetVariableDescriptorCountLayoutSupport;
+  VULKAN_HPP_EXPORT using DescriptorSetVariableDescriptorCountLayoutSupportEXT = DescriptorSetVariableDescriptorCountLayoutSupport;
 
-  struct DeviceBufferMemoryRequirements
+  VULKAN_HPP_EXPORT struct DeviceBufferMemoryRequirements
   {
     using NativeType = VkDeviceBufferMemoryRequirements;
 
@@ -11130,15 +11132,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::BufferCreateInfo * pCreateInfo = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceBufferMemoryRequirements>
   {
     using Type = DeviceBufferMemoryRequirements;
   };
 
-  using DeviceBufferMemoryRequirementsKHR = DeviceBufferMemoryRequirements;
+  VULKAN_HPP_EXPORT using DeviceBufferMemoryRequirementsKHR = DeviceBufferMemoryRequirements;
 
-  struct DeviceQueueCreateInfo
+  VULKAN_HPP_EXPORT struct DeviceQueueCreateInfo
   {
     using NativeType = VkDeviceQueueCreateInfo;
 
@@ -11285,13 +11287,13 @@ namespace VULKAN_HPP_NAMESPACE
     const float *                                pQueuePriorities = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceQueueCreateInfo>
   {
     using Type = DeviceQueueCreateInfo;
   };
 
-  struct PhysicalDeviceFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFeatures
   {
     using NativeType = VkPhysicalDeviceFeatures;
 
@@ -12001,7 +12003,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32 inheritedQueries                        = {};
   };
 
-  struct DeviceCreateInfo
+  VULKAN_HPP_EXPORT struct DeviceCreateInfo
   {
     using NativeType = VkDeviceCreateInfo;
 
@@ -12260,13 +12262,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures * pEnabledFeatures        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceCreateInfo>
   {
     using Type = DeviceCreateInfo;
   };
 
-  struct DeviceEventInfoEXT
+  VULKAN_HPP_EXPORT struct DeviceEventInfoEXT
   {
     using NativeType = VkDeviceEventInfoEXT;
 
@@ -12354,13 +12356,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceEventTypeEXT deviceEvent = VULKAN_HPP_NAMESPACE::DeviceEventTypeEXT::eDisplayHotplug;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceEventInfoEXT>
   {
     using Type = DeviceEventInfoEXT;
   };
 
-  struct DeviceGroupCommandBufferBeginInfo
+  VULKAN_HPP_EXPORT struct DeviceGroupCommandBufferBeginInfo
   {
     using NativeType = VkDeviceGroupCommandBufferBeginInfo;
 
@@ -12450,15 +12452,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            deviceMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupCommandBufferBeginInfo>
   {
     using Type = DeviceGroupCommandBufferBeginInfo;
   };
 
-  using DeviceGroupCommandBufferBeginInfoKHR = DeviceGroupCommandBufferBeginInfo;
+  VULKAN_HPP_EXPORT using DeviceGroupCommandBufferBeginInfoKHR = DeviceGroupCommandBufferBeginInfo;
 
-  struct DeviceGroupDeviceCreateInfo
+  VULKAN_HPP_EXPORT struct DeviceGroupDeviceCreateInfo
   {
     using NativeType = VkDeviceGroupDeviceCreateInfo;
 
@@ -12578,15 +12580,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::PhysicalDevice * pPhysicalDevices    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupDeviceCreateInfo>
   {
     using Type = DeviceGroupDeviceCreateInfo;
   };
 
-  using DeviceGroupDeviceCreateInfoKHR = DeviceGroupDeviceCreateInfo;
+  VULKAN_HPP_EXPORT using DeviceGroupDeviceCreateInfoKHR = DeviceGroupDeviceCreateInfo;
 
-  struct DeviceGroupPresentCapabilitiesKHR
+  VULKAN_HPP_EXPORT struct DeviceGroupPresentCapabilitiesKHR
   {
     using NativeType = VkDeviceGroupPresentCapabilitiesKHR;
 
@@ -12669,13 +12671,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagsKHR                     modes       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupPresentCapabilitiesKHR>
   {
     using Type = DeviceGroupPresentCapabilitiesKHR;
   };
 
-  struct DeviceGroupPresentInfoKHR
+  VULKAN_HPP_EXPORT struct DeviceGroupPresentInfoKHR
   {
     using NativeType = VkDeviceGroupPresentInfoKHR;
 
@@ -12808,13 +12810,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagBitsKHR mode           = VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagBitsKHR::eLocal;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupPresentInfoKHR>
   {
     using Type = DeviceGroupPresentInfoKHR;
   };
 
-  struct DeviceGroupRenderPassBeginInfo
+  VULKAN_HPP_EXPORT struct DeviceGroupRenderPassBeginInfo
   {
     using NativeType = VkDeviceGroupRenderPassBeginInfo;
 
@@ -12948,15 +12950,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Rect2D * pDeviceRenderAreas    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupRenderPassBeginInfo>
   {
     using Type = DeviceGroupRenderPassBeginInfo;
   };
 
-  using DeviceGroupRenderPassBeginInfoKHR = DeviceGroupRenderPassBeginInfo;
+  VULKAN_HPP_EXPORT using DeviceGroupRenderPassBeginInfoKHR = DeviceGroupRenderPassBeginInfo;
 
-  struct DeviceGroupSubmitInfo
+  VULKAN_HPP_EXPORT struct DeviceGroupSubmitInfo
   {
     using NativeType = VkDeviceGroupSubmitInfo;
 
@@ -13155,15 +13157,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pSignalSemaphoreDeviceIndices = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupSubmitInfo>
   {
     using Type = DeviceGroupSubmitInfo;
   };
 
-  using DeviceGroupSubmitInfoKHR = DeviceGroupSubmitInfo;
+  VULKAN_HPP_EXPORT using DeviceGroupSubmitInfoKHR = DeviceGroupSubmitInfo;
 
-  struct DeviceGroupSwapchainCreateInfoKHR
+  VULKAN_HPP_EXPORT struct DeviceGroupSwapchainCreateInfoKHR
   {
     using NativeType = VkDeviceGroupSwapchainCreateInfoKHR;
 
@@ -13254,13 +13256,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagsKHR modes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceGroupSwapchainCreateInfoKHR>
   {
     using Type = DeviceGroupSwapchainCreateInfoKHR;
   };
 
-  struct ImageCreateInfo
+  VULKAN_HPP_EXPORT struct ImageCreateInfo
   {
     using NativeType = VkImageCreateInfo;
 
@@ -13529,13 +13531,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageLayout         initialLayout         = VULKAN_HPP_NAMESPACE::ImageLayout::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageCreateInfo>
   {
     using Type = ImageCreateInfo;
   };
 
-  struct DeviceImageMemoryRequirements
+  VULKAN_HPP_EXPORT struct DeviceImageMemoryRequirements
   {
     using NativeType = VkDeviceImageMemoryRequirements;
 
@@ -13639,15 +13641,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageAspectFlagBits     planeAspect = VULKAN_HPP_NAMESPACE::ImageAspectFlagBits::eColor;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceImageMemoryRequirements>
   {
     using Type = DeviceImageMemoryRequirements;
   };
 
-  using DeviceImageMemoryRequirementsKHR = DeviceImageMemoryRequirements;
+  VULKAN_HPP_EXPORT using DeviceImageMemoryRequirementsKHR = DeviceImageMemoryRequirements;
 
-  struct DeviceMemoryOpaqueCaptureAddressInfo
+  VULKAN_HPP_EXPORT struct DeviceMemoryOpaqueCaptureAddressInfo
   {
     using NativeType = VkDeviceMemoryOpaqueCaptureAddressInfo;
 
@@ -13738,15 +13740,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceMemory  memory = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceMemoryOpaqueCaptureAddressInfo>
   {
     using Type = DeviceMemoryOpaqueCaptureAddressInfo;
   };
 
-  using DeviceMemoryOpaqueCaptureAddressInfoKHR = DeviceMemoryOpaqueCaptureAddressInfo;
+  VULKAN_HPP_EXPORT using DeviceMemoryOpaqueCaptureAddressInfoKHR = DeviceMemoryOpaqueCaptureAddressInfo;
 
-  struct PipelineCacheCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineCacheCreateInfo
   {
     using NativeType = VkPipelineCacheCreateInfo;
 
@@ -13880,13 +13882,13 @@ namespace VULKAN_HPP_NAMESPACE
     const void *                                   pInitialData    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineCacheCreateInfo>
   {
     using Type = PipelineCacheCreateInfo;
   };
 
-  struct PipelinePoolSize
+  VULKAN_HPP_EXPORT struct PipelinePoolSize
   {
     using NativeType = VkPipelinePoolSize;
 
@@ -13982,13 +13984,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            poolEntryCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelinePoolSize>
   {
     using Type = PipelinePoolSize;
   };
 
-  struct DeviceObjectReservationCreateInfo
+  VULKAN_HPP_EXPORT struct DeviceObjectReservationCreateInfo
   {
     using NativeType = VkDeviceObjectReservationCreateInfo;
 
@@ -14664,13 +14666,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                              maxImmutableSamplersPerDescriptorSetLayout = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceObjectReservationCreateInfo>
   {
     using Type = DeviceObjectReservationCreateInfo;
   };
 
-  struct DevicePrivateDataCreateInfo
+  VULKAN_HPP_EXPORT struct DevicePrivateDataCreateInfo
   {
     using NativeType = VkDevicePrivateDataCreateInfo;
 
@@ -14760,15 +14762,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            privateDataSlotRequestCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDevicePrivateDataCreateInfo>
   {
     using Type = DevicePrivateDataCreateInfo;
   };
 
-  using DevicePrivateDataCreateInfoEXT = DevicePrivateDataCreateInfo;
+  VULKAN_HPP_EXPORT using DevicePrivateDataCreateInfoEXT = DevicePrivateDataCreateInfo;
 
-  struct DeviceQueueGlobalPriorityCreateInfoKHR
+  VULKAN_HPP_EXPORT struct DeviceQueueGlobalPriorityCreateInfoKHR
   {
     using NativeType = VkDeviceQueueGlobalPriorityCreateInfoKHR;
 
@@ -14861,15 +14863,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::QueueGlobalPriorityKHR globalPriority = VULKAN_HPP_NAMESPACE::QueueGlobalPriorityKHR::eLow;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceQueueGlobalPriorityCreateInfoKHR>
   {
     using Type = DeviceQueueGlobalPriorityCreateInfoKHR;
   };
 
-  using DeviceQueueGlobalPriorityCreateInfoEXT = DeviceQueueGlobalPriorityCreateInfoKHR;
+  VULKAN_HPP_EXPORT using DeviceQueueGlobalPriorityCreateInfoEXT = DeviceQueueGlobalPriorityCreateInfoKHR;
 
-  struct DeviceQueueInfo2
+  VULKAN_HPP_EXPORT struct DeviceQueueInfo2
   {
     using NativeType = VkDeviceQueueInfo2;
 
@@ -14980,14 +14982,14 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                     queueIndex       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceQueueInfo2>
   {
     using Type = DeviceQueueInfo2;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct DeviceSemaphoreSciSyncPoolReservationCreateInfoNV
+  VULKAN_HPP_EXPORT struct DeviceSemaphoreSciSyncPoolReservationCreateInfoNV
   {
     using NativeType = VkDeviceSemaphoreSciSyncPoolReservationCreateInfoNV;
 
@@ -15081,14 +15083,14 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            semaphoreSciSyncPoolRequestCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDeviceSemaphoreSciSyncPoolReservationCreateInfoNV>
   {
     using Type = DeviceSemaphoreSciSyncPoolReservationCreateInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct DispatchIndirectCommand
+  VULKAN_HPP_EXPORT struct DispatchIndirectCommand
   {
     using NativeType = VkDispatchIndirectCommand;
 
@@ -15182,7 +15184,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t z = {};
   };
 
-  struct DisplayEventInfoEXT
+  VULKAN_HPP_EXPORT struct DisplayEventInfoEXT
   {
     using NativeType = VkDisplayEventInfoEXT;
 
@@ -15273,13 +15275,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayEventTypeEXT displayEvent = VULKAN_HPP_NAMESPACE::DisplayEventTypeEXT::eFirstPixelOut;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayEventInfoEXT>
   {
     using Type = DisplayEventInfoEXT;
   };
 
-  struct DisplayModeParametersKHR
+  VULKAN_HPP_EXPORT struct DisplayModeParametersKHR
   {
     using NativeType = VkDisplayModeParametersKHR;
 
@@ -15365,7 +15367,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                       refreshRate   = {};
   };
 
-  struct DisplayModeCreateInfoKHR
+  VULKAN_HPP_EXPORT struct DisplayModeCreateInfoKHR
   {
     using NativeType = VkDisplayModeCreateInfoKHR;
 
@@ -15468,13 +15470,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayModeParametersKHR  parameters = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayModeCreateInfoKHR>
   {
     using Type = DisplayModeCreateInfoKHR;
   };
 
-  struct DisplayModePropertiesKHR
+  VULKAN_HPP_EXPORT struct DisplayModePropertiesKHR
   {
     using NativeType = VkDisplayModePropertiesKHR;
 
@@ -15547,7 +15549,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayModeParametersKHR parameters  = {};
   };
 
-  struct DisplayModeProperties2KHR
+  VULKAN_HPP_EXPORT struct DisplayModeProperties2KHR
   {
     using NativeType = VkDisplayModeProperties2KHR;
 
@@ -15624,13 +15626,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayModePropertiesKHR displayModeProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayModeProperties2KHR>
   {
     using Type = DisplayModeProperties2KHR;
   };
 
-  struct DisplayPlaneCapabilitiesKHR
+  VULKAN_HPP_EXPORT struct DisplayPlaneCapabilitiesKHR
   {
     using NativeType = VkDisplayPlaneCapabilitiesKHR;
 
@@ -15734,7 +15736,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D                  maxDstExtent   = {};
   };
 
-  struct DisplayPlaneCapabilities2KHR
+  VULKAN_HPP_EXPORT struct DisplayPlaneCapabilities2KHR
   {
     using NativeType = VkDisplayPlaneCapabilities2KHR;
 
@@ -15811,13 +15813,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilitiesKHR capabilities = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayPlaneCapabilities2KHR>
   {
     using Type = DisplayPlaneCapabilities2KHR;
   };
 
-  struct DisplayPlaneInfo2KHR
+  VULKAN_HPP_EXPORT struct DisplayPlaneInfo2KHR
   {
     using NativeType = VkDisplayPlaneInfo2KHR;
 
@@ -15916,13 +15918,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                             planeIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayPlaneInfo2KHR>
   {
     using Type = DisplayPlaneInfo2KHR;
   };
 
-  struct DisplayPlanePropertiesKHR
+  VULKAN_HPP_EXPORT struct DisplayPlanePropertiesKHR
   {
     using NativeType = VkDisplayPlanePropertiesKHR;
 
@@ -15995,7 +15997,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                         currentStackIndex = {};
   };
 
-  struct DisplayPlaneProperties2KHR
+  VULKAN_HPP_EXPORT struct DisplayPlaneProperties2KHR
   {
     using NativeType = VkDisplayPlaneProperties2KHR;
 
@@ -16072,13 +16074,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayPlanePropertiesKHR displayPlaneProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayPlaneProperties2KHR>
   {
     using Type = DisplayPlaneProperties2KHR;
   };
 
-  struct DisplayPowerInfoEXT
+  VULKAN_HPP_EXPORT struct DisplayPowerInfoEXT
   {
     using NativeType = VkDisplayPowerInfoEXT;
 
@@ -16168,13 +16170,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayPowerStateEXT powerState = VULKAN_HPP_NAMESPACE::DisplayPowerStateEXT::eOff;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayPowerInfoEXT>
   {
     using Type = DisplayPowerInfoEXT;
   };
 
-  struct DisplayPresentInfoKHR
+  VULKAN_HPP_EXPORT struct DisplayPresentInfoKHR
   {
     using NativeType = VkDisplayPresentInfoKHR;
 
@@ -16287,13 +16289,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        persistent = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayPresentInfoKHR>
   {
     using Type = DisplayPresentInfoKHR;
   };
 
-  struct DisplayPropertiesKHR
+  VULKAN_HPP_EXPORT struct DisplayPropertiesKHR
   {
     using NativeType = VkDisplayPropertiesKHR;
 
@@ -16405,7 +16407,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                   persistentContent    = {};
   };
 
-  struct DisplayProperties2KHR
+  VULKAN_HPP_EXPORT struct DisplayProperties2KHR
   {
     using NativeType = VkDisplayProperties2KHR;
 
@@ -16482,13 +16484,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DisplayPropertiesKHR displayProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplayProperties2KHR>
   {
     using Type = DisplayProperties2KHR;
   };
 
-  struct DisplaySurfaceCreateInfoKHR
+  VULKAN_HPP_EXPORT struct DisplaySurfaceCreateInfoKHR
   {
     using NativeType = VkDisplaySurfaceCreateInfoKHR;
 
@@ -16654,13 +16656,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D                     imageExtent     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDisplaySurfaceCreateInfoKHR>
   {
     using Type = DisplaySurfaceCreateInfoKHR;
   };
 
-  struct DrawIndexedIndirectCommand
+  VULKAN_HPP_EXPORT struct DrawIndexedIndirectCommand
   {
     using NativeType = VkDrawIndexedIndirectCommand;
 
@@ -16775,7 +16777,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t firstInstance = {};
   };
 
-  struct DrawIndirectCommand
+  VULKAN_HPP_EXPORT struct DrawIndirectCommand
   {
     using NativeType = VkDrawIndirectCommand;
 
@@ -16880,7 +16882,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t firstInstance = {};
   };
 
-  struct DrmFormatModifierProperties2EXT
+  VULKAN_HPP_EXPORT struct DrmFormatModifierProperties2EXT
   {
     using NativeType = VkDrmFormatModifierProperties2EXT;
 
@@ -16957,7 +16959,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FormatFeatureFlags2 drmFormatModifierTilingFeatures = {};
   };
 
-  struct DrmFormatModifierPropertiesEXT
+  VULKAN_HPP_EXPORT struct DrmFormatModifierPropertiesEXT
   {
     using NativeType = VkDrmFormatModifierPropertiesEXT;
 
@@ -17034,7 +17036,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FormatFeatureFlags drmFormatModifierTilingFeatures = {};
   };
 
-  struct DrmFormatModifierPropertiesList2EXT
+  VULKAN_HPP_EXPORT struct DrmFormatModifierPropertiesList2EXT
   {
     using NativeType = VkDrmFormatModifierPropertiesList2EXT;
 
@@ -17115,13 +17117,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DrmFormatModifierProperties2EXT * pDrmFormatModifierProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDrmFormatModifierPropertiesList2EXT>
   {
     using Type = DrmFormatModifierPropertiesList2EXT;
   };
 
-  struct DrmFormatModifierPropertiesListEXT
+  VULKAN_HPP_EXPORT struct DrmFormatModifierPropertiesListEXT
   {
     using NativeType = VkDrmFormatModifierPropertiesListEXT;
 
@@ -17202,13 +17204,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DrmFormatModifierPropertiesEXT * pDrmFormatModifierProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eDrmFormatModifierPropertiesListEXT>
   {
     using Type = DrmFormatModifierPropertiesListEXT;
   };
 
-  struct EventCreateInfo
+  VULKAN_HPP_EXPORT struct EventCreateInfo
   {
     using NativeType = VkEventCreateInfo;
 
@@ -17295,13 +17297,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::EventCreateFlags flags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eEventCreateInfo>
   {
     using Type = EventCreateInfo;
   };
 
-  struct ExportFenceCreateInfo
+  VULKAN_HPP_EXPORT struct ExportFenceCreateInfo
   {
     using NativeType = VkExportFenceCreateInfo;
 
@@ -17392,16 +17394,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlags handleTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportFenceCreateInfo>
   {
     using Type = ExportFenceCreateInfo;
   };
 
-  using ExportFenceCreateInfoKHR = ExportFenceCreateInfo;
+  VULKAN_HPP_EXPORT using ExportFenceCreateInfoKHR = ExportFenceCreateInfo;
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ExportFenceSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct ExportFenceSciSyncInfoNV
   {
     using NativeType = VkExportFenceSciSyncInfoNV;
 
@@ -17497,14 +17499,14 @@ namespace VULKAN_HPP_NAMESPACE
     NvSciSyncAttrList                   pAttributes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportFenceSciSyncInfoNV>
   {
     using Type = ExportFenceSciSyncInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct ExportMemoryAllocateInfo
+  VULKAN_HPP_EXPORT struct ExportMemoryAllocateInfo
   {
     using NativeType = VkExportMemoryAllocateInfo;
 
@@ -17595,16 +17597,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlags handleTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportMemoryAllocateInfo>
   {
     using Type = ExportMemoryAllocateInfo;
   };
 
-  using ExportMemoryAllocateInfoKHR = ExportMemoryAllocateInfo;
+  VULKAN_HPP_EXPORT using ExportMemoryAllocateInfoKHR = ExportMemoryAllocateInfo;
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ExportMemorySciBufInfoNV
+  VULKAN_HPP_EXPORT struct ExportMemorySciBufInfoNV
   {
     using NativeType = VkExportMemorySciBufInfoNV;
 
@@ -17700,14 +17702,14 @@ namespace VULKAN_HPP_NAMESPACE
     NvSciBufAttrList                    pAttributes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportMemorySciBufInfoNV>
   {
     using Type = ExportMemorySciBufInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct ExportSemaphoreCreateInfo
+  VULKAN_HPP_EXPORT struct ExportSemaphoreCreateInfo
   {
     using NativeType = VkExportSemaphoreCreateInfo;
 
@@ -17799,16 +17801,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlags handleTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportSemaphoreCreateInfo>
   {
     using Type = ExportSemaphoreCreateInfo;
   };
 
-  using ExportSemaphoreCreateInfoKHR = ExportSemaphoreCreateInfo;
+  VULKAN_HPP_EXPORT using ExportSemaphoreCreateInfoKHR = ExportSemaphoreCreateInfo;
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ExportSemaphoreSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct ExportSemaphoreSciSyncInfoNV
   {
     using NativeType = VkExportSemaphoreSciSyncInfoNV;
 
@@ -17904,14 +17906,14 @@ namespace VULKAN_HPP_NAMESPACE
     NvSciSyncAttrList                   pAttributes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExportSemaphoreSciSyncInfoNV>
   {
     using Type = ExportSemaphoreSciSyncInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct ExtensionProperties
+  VULKAN_HPP_EXPORT struct ExtensionProperties
   {
     using NativeType = VkExtensionProperties;
 
@@ -17987,7 +17989,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                                               specVersion   = {};
   };
 
-  struct ExternalMemoryProperties
+  VULKAN_HPP_EXPORT struct ExternalMemoryProperties
   {
     using NativeType = VkExternalMemoryProperties;
 
@@ -18066,9 +18068,9 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlags compatibleHandleTypes         = {};
   };
 
-  using ExternalMemoryPropertiesKHR = ExternalMemoryProperties;
+  VULKAN_HPP_EXPORT using ExternalMemoryPropertiesKHR = ExternalMemoryProperties;
 
-  struct ExternalBufferProperties
+  VULKAN_HPP_EXPORT struct ExternalBufferProperties
   {
     using NativeType = VkExternalBufferProperties;
 
@@ -18145,15 +18147,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryProperties externalMemoryProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalBufferProperties>
   {
     using Type = ExternalBufferProperties;
   };
 
-  using ExternalBufferPropertiesKHR = ExternalBufferProperties;
+  VULKAN_HPP_EXPORT using ExternalBufferPropertiesKHR = ExternalBufferProperties;
 
-  struct ExternalFenceProperties
+  VULKAN_HPP_EXPORT struct ExternalFenceProperties
   {
     using NativeType = VkExternalFenceProperties;
 
@@ -18241,16 +18243,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalFenceFeatureFlags    externalFenceFeatures         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalFenceProperties>
   {
     using Type = ExternalFenceProperties;
   };
 
-  using ExternalFencePropertiesKHR = ExternalFenceProperties;
+  VULKAN_HPP_EXPORT using ExternalFencePropertiesKHR = ExternalFenceProperties;
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  struct ExternalFormatQNX
+  VULKAN_HPP_EXPORT struct ExternalFormatQNX
   {
     using NativeType = VkExternalFormatQNX;
 
@@ -18337,14 +18339,14 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            externalFormat = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalFormatQNX>
   {
     using Type = ExternalFormatQNX;
   };
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  struct ExternalImageFormatProperties
+  VULKAN_HPP_EXPORT struct ExternalImageFormatProperties
   {
     using NativeType = VkExternalImageFormatProperties;
 
@@ -18421,15 +18423,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryProperties externalMemoryProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalImageFormatProperties>
   {
     using Type = ExternalImageFormatProperties;
   };
 
-  using ExternalImageFormatPropertiesKHR = ExternalImageFormatProperties;
+  VULKAN_HPP_EXPORT using ExternalImageFormatPropertiesKHR = ExternalImageFormatProperties;
 
-  struct ExternalMemoryBufferCreateInfo
+  VULKAN_HPP_EXPORT struct ExternalMemoryBufferCreateInfo
   {
     using NativeType = VkExternalMemoryBufferCreateInfo;
 
@@ -18521,15 +18523,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlags handleTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalMemoryBufferCreateInfo>
   {
     using Type = ExternalMemoryBufferCreateInfo;
   };
 
-  using ExternalMemoryBufferCreateInfoKHR = ExternalMemoryBufferCreateInfo;
+  VULKAN_HPP_EXPORT using ExternalMemoryBufferCreateInfoKHR = ExternalMemoryBufferCreateInfo;
 
-  struct ExternalMemoryImageCreateInfo
+  VULKAN_HPP_EXPORT struct ExternalMemoryImageCreateInfo
   {
     using NativeType = VkExternalMemoryImageCreateInfo;
 
@@ -18621,15 +18623,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlags handleTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalMemoryImageCreateInfo>
   {
     using Type = ExternalMemoryImageCreateInfo;
   };
 
-  using ExternalMemoryImageCreateInfoKHR = ExternalMemoryImageCreateInfo;
+  VULKAN_HPP_EXPORT using ExternalMemoryImageCreateInfoKHR = ExternalMemoryImageCreateInfo;
 
-  struct ExternalSemaphoreProperties
+  VULKAN_HPP_EXPORT struct ExternalSemaphoreProperties
   {
     using NativeType = VkExternalSemaphoreProperties;
 
@@ -18717,15 +18719,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalSemaphoreFeatureFlags    externalSemaphoreFeatures     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eExternalSemaphoreProperties>
   {
     using Type = ExternalSemaphoreProperties;
   };
 
-  using ExternalSemaphorePropertiesKHR = ExternalSemaphoreProperties;
+  VULKAN_HPP_EXPORT using ExternalSemaphorePropertiesKHR = ExternalSemaphoreProperties;
 
-  struct FaultData
+  VULKAN_HPP_EXPORT struct FaultData
   {
     using NativeType = VkFaultData;
 
@@ -18802,13 +18804,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FaultType     faultType  = VULKAN_HPP_NAMESPACE::FaultType::eInvalid;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFaultData>
   {
     using Type = FaultData;
   };
 
-  struct FaultCallbackInfo
+  VULKAN_HPP_EXPORT struct FaultCallbackInfo
   {
     using NativeType = VkFaultCallbackInfo;
 
@@ -18933,13 +18935,13 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkFaultCallbackFunction         pfnFaultCallback = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFaultCallbackInfo>
   {
     using Type = FaultCallbackInfo;
   };
 
-  struct FenceCreateInfo
+  VULKAN_HPP_EXPORT struct FenceCreateInfo
   {
     using NativeType = VkFenceCreateInfo;
 
@@ -19026,13 +19028,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FenceCreateFlags flags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFenceCreateInfo>
   {
     using Type = FenceCreateInfo;
   };
 
-  struct FenceGetFdInfoKHR
+  VULKAN_HPP_EXPORT struct FenceGetFdInfoKHR
   {
     using NativeType = VkFenceGetFdInfoKHR;
 
@@ -19133,14 +19135,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFenceGetFdInfoKHR>
   {
     using Type = FenceGetFdInfoKHR;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct FenceGetSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct FenceGetSciSyncInfoNV
   {
     using NativeType = VkFenceGetSciSyncInfoNV;
 
@@ -19244,14 +19246,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFenceGetSciSyncInfoNV>
   {
     using Type = FenceGetSciSyncInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct FilterCubicImageViewImageFormatPropertiesEXT
+  VULKAN_HPP_EXPORT struct FilterCubicImageViewImageFormatPropertiesEXT
   {
     using NativeType = VkFilterCubicImageViewImageFormatPropertiesEXT;
 
@@ -19331,13 +19333,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        filterCubicMinmax = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFilterCubicImageViewImageFormatPropertiesEXT>
   {
     using Type = FilterCubicImageViewImageFormatPropertiesEXT;
   };
 
-  struct FormatProperties
+  VULKAN_HPP_EXPORT struct FormatProperties
   {
     using NativeType = VkFormatProperties;
 
@@ -19413,7 +19415,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FormatFeatureFlags bufferFeatures        = {};
   };
 
-  struct FormatProperties2
+  VULKAN_HPP_EXPORT struct FormatProperties2
   {
     using NativeType = VkFormatProperties2;
 
@@ -19486,15 +19488,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FormatProperties formatProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFormatProperties2>
   {
     using Type = FormatProperties2;
   };
 
-  using FormatProperties2KHR = FormatProperties2;
+  VULKAN_HPP_EXPORT using FormatProperties2KHR = FormatProperties2;
 
-  struct FormatProperties3
+  VULKAN_HPP_EXPORT struct FormatProperties3
   {
     using NativeType = VkFormatProperties3;
 
@@ -19579,15 +19581,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::FormatFeatureFlags2 bufferFeatures        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFormatProperties3>
   {
     using Type = FormatProperties3;
   };
 
-  using FormatProperties3KHR = FormatProperties3;
+  VULKAN_HPP_EXPORT using FormatProperties3KHR = FormatProperties3;
 
-  struct FragmentShadingRateAttachmentInfoKHR
+  VULKAN_HPP_EXPORT struct FragmentShadingRateAttachmentInfoKHR
   {
     using NativeType = VkFragmentShadingRateAttachmentInfoKHR;
 
@@ -19693,13 +19695,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D                     shadingRateAttachmentTexelSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFragmentShadingRateAttachmentInfoKHR>
   {
     using Type = FragmentShadingRateAttachmentInfoKHR;
   };
 
-  struct FramebufferAttachmentImageInfo
+  VULKAN_HPP_EXPORT struct FramebufferAttachmentImageInfo
   {
     using NativeType = VkFramebufferAttachmentImageInfo;
 
@@ -19883,15 +19885,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Format *   pViewFormats    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFramebufferAttachmentImageInfo>
   {
     using Type = FramebufferAttachmentImageInfo;
   };
 
-  using FramebufferAttachmentImageInfoKHR = FramebufferAttachmentImageInfo;
+  VULKAN_HPP_EXPORT using FramebufferAttachmentImageInfoKHR = FramebufferAttachmentImageInfo;
 
-  struct FramebufferAttachmentsCreateInfo
+  VULKAN_HPP_EXPORT struct FramebufferAttachmentsCreateInfo
   {
     using NativeType = VkFramebufferAttachmentsCreateInfo;
 
@@ -20018,15 +20020,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::FramebufferAttachmentImageInfo * pAttachmentImageInfos    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFramebufferAttachmentsCreateInfo>
   {
     using Type = FramebufferAttachmentsCreateInfo;
   };
 
-  using FramebufferAttachmentsCreateInfoKHR = FramebufferAttachmentsCreateInfo;
+  VULKAN_HPP_EXPORT using FramebufferAttachmentsCreateInfoKHR = FramebufferAttachmentsCreateInfo;
 
-  struct FramebufferCreateInfo
+  VULKAN_HPP_EXPORT struct FramebufferCreateInfo
   {
     using NativeType = VkFramebufferCreateInfo;
 
@@ -20211,13 +20213,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                     layers          = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eFramebufferCreateInfo>
   {
     using Type = FramebufferCreateInfo;
   };
 
-  struct VertexInputBindingDescription
+  VULKAN_HPP_EXPORT struct VertexInputBindingDescription
   {
     using NativeType = VkVertexInputBindingDescription;
 
@@ -20314,7 +20316,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::VertexInputRate inputRate = VULKAN_HPP_NAMESPACE::VertexInputRate::eVertex;
   };
 
-  struct VertexInputAttributeDescription
+  VULKAN_HPP_EXPORT struct VertexInputAttributeDescription
   {
     using NativeType = VkVertexInputAttributeDescription;
 
@@ -20419,7 +20421,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                     offset   = {};
   };
 
-  struct PipelineVertexInputStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineVertexInputStateCreateInfo
   {
     using NativeType = VkPipelineVertexInputStateCreateInfo;
 
@@ -20597,13 +20599,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::VertexInputAttributeDescription * pVertexAttributeDescriptions    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineVertexInputStateCreateInfo>
   {
     using Type = PipelineVertexInputStateCreateInfo;
   };
 
-  struct PipelineInputAssemblyStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineInputAssemblyStateCreateInfo
   {
     using NativeType = VkPipelineInputAssemblyStateCreateInfo;
 
@@ -20720,13 +20722,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                                primitiveRestartEnable = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineInputAssemblyStateCreateInfo>
   {
     using Type = PipelineInputAssemblyStateCreateInfo;
   };
 
-  struct PipelineTessellationStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineTessellationStateCreateInfo
   {
     using NativeType = VkPipelineTessellationStateCreateInfo;
 
@@ -20830,13 +20832,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                                   patchControlPoints = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineTessellationStateCreateInfo>
   {
     using Type = PipelineTessellationStateCreateInfo;
   };
 
-  struct Viewport
+  VULKAN_HPP_EXPORT struct Viewport
   {
     using NativeType = VkViewport;
 
@@ -20953,7 +20955,7 @@ namespace VULKAN_HPP_NAMESPACE
     float maxDepth = {};
   };
 
-  struct PipelineViewportStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineViewportStateCreateInfo
   {
     using NativeType = VkPipelineViewportStateCreateInfo;
 
@@ -21122,13 +21124,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Rect2D *                   pScissors     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineViewportStateCreateInfo>
   {
     using Type = PipelineViewportStateCreateInfo;
   };
 
-  struct PipelineRasterizationStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineRasterizationStateCreateInfo
   {
     using NativeType = VkPipelineRasterizationStateCreateInfo;
 
@@ -21338,13 +21340,13 @@ namespace VULKAN_HPP_NAMESPACE
     float                                                       lineWidth               = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineRasterizationStateCreateInfo>
   {
     using Type = PipelineRasterizationStateCreateInfo;
   };
 
-  struct PipelineMultisampleStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineMultisampleStateCreateInfo
   {
     using NativeType = VkPipelineMultisampleStateCreateInfo;
 
@@ -21503,13 +21505,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                              alphaToOneEnable      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineMultisampleStateCreateInfo>
   {
     using Type = PipelineMultisampleStateCreateInfo;
   };
 
-  struct StencilOpState
+  VULKAN_HPP_EXPORT struct StencilOpState
   {
     using NativeType = VkStencilOpState;
 
@@ -21645,7 +21647,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                        reference   = {};
   };
 
-  struct PipelineDepthStencilStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineDepthStencilStateCreateInfo
   {
     using NativeType = VkPipelineDepthStencilStateCreateInfo;
 
@@ -21844,13 +21846,13 @@ namespace VULKAN_HPP_NAMESPACE
     float                                                      maxDepthBounds        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineDepthStencilStateCreateInfo>
   {
     using Type = PipelineDepthStencilStateCreateInfo;
   };
 
-  struct PipelineColorBlendAttachmentState
+  VULKAN_HPP_EXPORT struct PipelineColorBlendAttachmentState
   {
     using NativeType = VkPipelineColorBlendAttachmentState;
 
@@ -22006,7 +22008,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ColorComponentFlags colorWriteMask      = {};
   };
 
-  struct PipelineColorBlendStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineColorBlendStateCreateInfo
   {
     using NativeType = VkPipelineColorBlendStateCreateInfo;
 
@@ -22181,13 +22183,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<float, 4>                  blendConstants  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineColorBlendStateCreateInfo>
   {
     using Type = PipelineColorBlendStateCreateInfo;
   };
 
-  struct PipelineDynamicStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineDynamicStateCreateInfo
   {
     using NativeType = VkPipelineDynamicStateCreateInfo;
 
@@ -22320,13 +22322,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::DynamicState *            pDynamicStates    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineDynamicStateCreateInfo>
   {
     using Type = PipelineDynamicStateCreateInfo;
   };
 
-  struct GraphicsPipelineCreateInfo
+  VULKAN_HPP_EXPORT struct GraphicsPipelineCreateInfo
   {
     using NativeType = VkGraphicsPipelineCreateInfo;
 
@@ -22662,13 +22664,13 @@ namespace VULKAN_HPP_NAMESPACE
     int32_t                                                            basePipelineIndex   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eGraphicsPipelineCreateInfo>
   {
     using Type = GraphicsPipelineCreateInfo;
   };
 
-  struct XYColorEXT
+  VULKAN_HPP_EXPORT struct XYColorEXT
   {
     using NativeType = VkXYColorEXT;
 
@@ -22751,7 +22753,7 @@ namespace VULKAN_HPP_NAMESPACE
     float y = {};
   };
 
-  struct HdrMetadataEXT
+  VULKAN_HPP_EXPORT struct HdrMetadataEXT
   {
     using NativeType = VkHdrMetadataEXT;
 
@@ -22923,13 +22925,13 @@ namespace VULKAN_HPP_NAMESPACE
     float                               maxFrameAverageLightLevel = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eHdrMetadataEXT>
   {
     using Type = HdrMetadataEXT;
   };
 
-  struct HeadlessSurfaceCreateInfoEXT
+  VULKAN_HPP_EXPORT struct HeadlessSurfaceCreateInfoEXT
   {
     using NativeType = VkHeadlessSurfaceCreateInfoEXT;
 
@@ -23020,13 +23022,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::HeadlessSurfaceCreateFlagsEXT flags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eHeadlessSurfaceCreateInfoEXT>
   {
     using Type = HeadlessSurfaceCreateInfoEXT;
   };
 
-  struct ImageBlit
+  VULKAN_HPP_EXPORT struct ImageBlit
   {
     using NativeType = VkImageBlit;
 
@@ -23132,7 +23134,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::Offset3D, 2> dstOffsets     = {};
   };
 
-  struct ImageCopy
+  VULKAN_HPP_EXPORT struct ImageCopy
   {
     using NativeType = VkImageCopy;
 
@@ -23248,7 +23250,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               extent         = {};
   };
 
-  struct SubresourceLayout
+  VULKAN_HPP_EXPORT struct SubresourceLayout
   {
     using NativeType = VkSubresourceLayout;
 
@@ -23364,7 +23366,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize depthPitch = {};
   };
 
-  struct ImageDrmFormatModifierExplicitCreateInfoEXT
+  VULKAN_HPP_EXPORT struct ImageDrmFormatModifierExplicitCreateInfoEXT
   {
     using NativeType = VkImageDrmFormatModifierExplicitCreateInfoEXT;
 
@@ -23503,13 +23505,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SubresourceLayout * pPlaneLayouts               = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageDrmFormatModifierExplicitCreateInfoEXT>
   {
     using Type = ImageDrmFormatModifierExplicitCreateInfoEXT;
   };
 
-  struct ImageDrmFormatModifierListCreateInfoEXT
+  VULKAN_HPP_EXPORT struct ImageDrmFormatModifierListCreateInfoEXT
   {
     using NativeType = VkImageDrmFormatModifierListCreateInfoEXT;
 
@@ -23628,13 +23630,13 @@ namespace VULKAN_HPP_NAMESPACE
     const uint64_t *                    pDrmFormatModifiers    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageDrmFormatModifierListCreateInfoEXT>
   {
     using Type = ImageDrmFormatModifierListCreateInfoEXT;
   };
 
-  struct ImageDrmFormatModifierPropertiesEXT
+  VULKAN_HPP_EXPORT struct ImageDrmFormatModifierPropertiesEXT
   {
     using NativeType = VkImageDrmFormatModifierPropertiesEXT;
 
@@ -23710,13 +23712,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            drmFormatModifier = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageDrmFormatModifierPropertiesEXT>
   {
     using Type = ImageDrmFormatModifierPropertiesEXT;
   };
 
-  struct ImageFormatListCreateInfo
+  VULKAN_HPP_EXPORT struct ImageFormatListCreateInfo
   {
     using NativeType = VkImageFormatListCreateInfo;
 
@@ -23834,15 +23836,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Format * pViewFormats    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageFormatListCreateInfo>
   {
     using Type = ImageFormatListCreateInfo;
   };
 
-  using ImageFormatListCreateInfoKHR = ImageFormatListCreateInfo;
+  VULKAN_HPP_EXPORT using ImageFormatListCreateInfoKHR = ImageFormatListCreateInfo;
 
-  struct ImageFormatProperties
+  VULKAN_HPP_EXPORT struct ImageFormatProperties
   {
     using NativeType = VkImageFormatProperties;
 
@@ -23929,7 +23931,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize       maxResourceSize = {};
   };
 
-  struct ImageFormatProperties2
+  VULKAN_HPP_EXPORT struct ImageFormatProperties2
   {
     using NativeType = VkImageFormatProperties2;
 
@@ -24006,15 +24008,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageFormatProperties imageFormatProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageFormatProperties2>
   {
     using Type = ImageFormatProperties2;
   };
 
-  using ImageFormatProperties2KHR = ImageFormatProperties2;
+  VULKAN_HPP_EXPORT using ImageFormatProperties2KHR = ImageFormatProperties2;
 
-  struct ImageMemoryBarrier
+  VULKAN_HPP_EXPORT struct ImageMemoryBarrier
   {
     using NativeType = VkImageMemoryBarrier;
 
@@ -24177,13 +24179,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageSubresourceRange subresourceRange    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageMemoryBarrier>
   {
     using Type = ImageMemoryBarrier;
   };
 
-  struct ImageMemoryRequirementsInfo2
+  VULKAN_HPP_EXPORT struct ImageMemoryRequirementsInfo2
   {
     using NativeType = VkImageMemoryRequirementsInfo2;
 
@@ -24273,15 +24275,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Image         image = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageMemoryRequirementsInfo2>
   {
     using Type = ImageMemoryRequirementsInfo2;
   };
 
-  using ImageMemoryRequirementsInfo2KHR = ImageMemoryRequirementsInfo2;
+  VULKAN_HPP_EXPORT using ImageMemoryRequirementsInfo2KHR = ImageMemoryRequirementsInfo2;
 
-  struct ImagePlaneMemoryRequirementsInfo
+  VULKAN_HPP_EXPORT struct ImagePlaneMemoryRequirementsInfo
   {
     using NativeType = VkImagePlaneMemoryRequirementsInfo;
 
@@ -24373,15 +24375,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageAspectFlagBits planeAspect = VULKAN_HPP_NAMESPACE::ImageAspectFlagBits::eColor;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImagePlaneMemoryRequirementsInfo>
   {
     using Type = ImagePlaneMemoryRequirementsInfo;
   };
 
-  using ImagePlaneMemoryRequirementsInfoKHR = ImagePlaneMemoryRequirementsInfo;
+  VULKAN_HPP_EXPORT using ImagePlaneMemoryRequirementsInfoKHR = ImagePlaneMemoryRequirementsInfo;
 
-  struct ImageResolve
+  VULKAN_HPP_EXPORT struct ImageResolve
   {
     using NativeType = VkImageResolve;
 
@@ -24497,7 +24499,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               extent         = {};
   };
 
-  struct ImageResolve2
+  VULKAN_HPP_EXPORT struct ImageResolve2
   {
     using NativeType = VkImageResolve2;
 
@@ -24628,15 +24630,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D               extent         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageResolve2>
   {
     using Type = ImageResolve2;
   };
 
-  using ImageResolve2KHR = ImageResolve2;
+  VULKAN_HPP_EXPORT using ImageResolve2KHR = ImageResolve2;
 
-  struct ImageStencilUsageCreateInfo
+  VULKAN_HPP_EXPORT struct ImageStencilUsageCreateInfo
   {
     using NativeType = VkImageStencilUsageCreateInfo;
 
@@ -24727,15 +24729,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageUsageFlags stencilUsage = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageStencilUsageCreateInfo>
   {
     using Type = ImageStencilUsageCreateInfo;
   };
 
-  using ImageStencilUsageCreateInfoEXT = ImageStencilUsageCreateInfo;
+  VULKAN_HPP_EXPORT using ImageStencilUsageCreateInfoEXT = ImageStencilUsageCreateInfo;
 
-  struct ImageSubresource
+  VULKAN_HPP_EXPORT struct ImageSubresource
   {
     using NativeType = VkImageSubresource;
 
@@ -24827,7 +24829,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                               arrayLayer = {};
   };
 
-  struct ImageSwapchainCreateInfoKHR
+  VULKAN_HPP_EXPORT struct ImageSwapchainCreateInfoKHR
   {
     using NativeType = VkImageSwapchainCreateInfoKHR;
 
@@ -24917,13 +24919,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SwapchainKHR  swapchain = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageSwapchainCreateInfoKHR>
   {
     using Type = ImageSwapchainCreateInfoKHR;
   };
 
-  struct ImageViewASTCDecodeModeEXT
+  VULKAN_HPP_EXPORT struct ImageViewASTCDecodeModeEXT
   {
     using NativeType = VkImageViewASTCDecodeModeEXT;
 
@@ -25014,13 +25016,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Format        decodeMode = VULKAN_HPP_NAMESPACE::Format::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageViewAstcDecodeModeEXT>
   {
     using Type = ImageViewASTCDecodeModeEXT;
   };
 
-  struct ImageViewCreateInfo
+  VULKAN_HPP_EXPORT struct ImageViewCreateInfo
   {
     using NativeType = VkImageViewCreateInfo;
 
@@ -25164,13 +25166,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageSubresourceRange subresourceRange = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageViewCreateInfo>
   {
     using Type = ImageViewCreateInfo;
   };
 
-  struct ImageViewUsageCreateInfo
+  VULKAN_HPP_EXPORT struct ImageViewUsageCreateInfo
   {
     using NativeType = VkImageViewUsageCreateInfo;
 
@@ -25260,15 +25262,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageUsageFlags usage = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImageViewUsageCreateInfo>
   {
     using Type = ImageViewUsageCreateInfo;
   };
 
-  using ImageViewUsageCreateInfoKHR = ImageViewUsageCreateInfo;
+  VULKAN_HPP_EXPORT using ImageViewUsageCreateInfoKHR = ImageViewUsageCreateInfo;
 
-  struct ImportFenceFdInfoKHR
+  VULKAN_HPP_EXPORT struct ImportFenceFdInfoKHR
   {
     using NativeType = VkImportFenceFdInfoKHR;
 
@@ -25393,14 +25395,14 @@ namespace VULKAN_HPP_NAMESPACE
     int                                                   fd         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportFenceFdInfoKHR>
   {
     using Type = ImportFenceFdInfoKHR;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ImportFenceSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct ImportFenceSciSyncInfoNV
   {
     using NativeType = VkImportFenceSciSyncInfoNV;
 
@@ -25514,14 +25516,14 @@ namespace VULKAN_HPP_NAMESPACE
     void *                                                handle     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportFenceSciSyncInfoNV>
   {
     using Type = ImportFenceSciSyncInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct ImportMemoryFdInfoKHR
+  VULKAN_HPP_EXPORT struct ImportMemoryFdInfoKHR
   {
     using NativeType = VkImportMemoryFdInfoKHR;
 
@@ -25622,13 +25624,13 @@ namespace VULKAN_HPP_NAMESPACE
     int                                                    fd         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportMemoryFdInfoKHR>
   {
     using Type = ImportMemoryFdInfoKHR;
   };
 
-  struct ImportMemoryHostPointerInfoEXT
+  VULKAN_HPP_EXPORT struct ImportMemoryHostPointerInfoEXT
   {
     using NativeType = VkImportMemoryHostPointerInfoEXT;
 
@@ -25731,14 +25733,14 @@ namespace VULKAN_HPP_NAMESPACE
     void *                                                 pHostPointer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportMemoryHostPointerInfoEXT>
   {
     using Type = ImportMemoryHostPointerInfoEXT;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ImportMemorySciBufInfoNV
+  VULKAN_HPP_EXPORT struct ImportMemorySciBufInfoNV
   {
     using NativeType = VkImportMemorySciBufInfoNV;
 
@@ -25851,7 +25853,7 @@ namespace VULKAN_HPP_NAMESPACE
     NvSciBufObj                                            handle     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportMemorySciBufInfoNV>
   {
     using Type = ImportMemorySciBufInfoNV;
@@ -25859,7 +25861,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  struct ImportScreenBufferInfoQNX
+  VULKAN_HPP_EXPORT struct ImportScreenBufferInfoQNX
   {
     using NativeType = VkImportScreenBufferInfoQNX;
 
@@ -25949,14 +25951,14 @@ namespace VULKAN_HPP_NAMESPACE
     struct _screen_buffer *             buffer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportScreenBufferInfoQNX>
   {
     using Type = ImportScreenBufferInfoQNX;
   };
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  struct ImportSemaphoreFdInfoKHR
+  VULKAN_HPP_EXPORT struct ImportSemaphoreFdInfoKHR
   {
     using NativeType = VkImportSemaphoreFdInfoKHR;
 
@@ -26082,14 +26084,14 @@ namespace VULKAN_HPP_NAMESPACE
     int                                                       fd         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportSemaphoreFdInfoKHR>
   {
     using Type = ImportSemaphoreFdInfoKHR;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct ImportSemaphoreSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct ImportSemaphoreSciSyncInfoNV
   {
     using NativeType = VkImportSemaphoreSciSyncInfoNV;
 
@@ -26204,14 +26206,14 @@ namespace VULKAN_HPP_NAMESPACE
     void *                                                    handle     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eImportSemaphoreSciSyncInfoNV>
   {
     using Type = ImportSemaphoreSciSyncInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct InputAttachmentAspectReference
+  VULKAN_HPP_EXPORT struct InputAttachmentAspectReference
   {
     using NativeType = VkInputAttachmentAspectReference;
 
@@ -26307,9 +26309,9 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageAspectFlags aspectMask           = {};
   };
 
-  using InputAttachmentAspectReferenceKHR = InputAttachmentAspectReference;
+  VULKAN_HPP_EXPORT using InputAttachmentAspectReferenceKHR = InputAttachmentAspectReference;
 
-  struct InstanceCreateInfo
+  VULKAN_HPP_EXPORT struct InstanceCreateInfo
   {
     using NativeType = VkInstanceCreateInfo;
 
@@ -26520,13 +26522,13 @@ namespace VULKAN_HPP_NAMESPACE
     const char * const *                          ppEnabledExtensionNames = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eInstanceCreateInfo>
   {
     using Type = InstanceCreateInfo;
   };
 
-  struct LayerProperties
+  VULKAN_HPP_EXPORT struct LayerProperties
   {
     using NativeType = VkLayerProperties;
 
@@ -26614,7 +26616,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<char, VK_MAX_DESCRIPTION_SIZE>    description           = {};
   };
 
-  struct MappedMemoryRange
+  VULKAN_HPP_EXPORT struct MappedMemoryRange
   {
     using NativeType = VkMappedMemoryRange;
 
@@ -26724,13 +26726,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    size   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMappedMemoryRange>
   {
     using Type = MappedMemoryRange;
   };
 
-  struct MemoryAllocateFlagsInfo
+  VULKAN_HPP_EXPORT struct MemoryAllocateFlagsInfo
   {
     using NativeType = VkMemoryAllocateFlagsInfo;
 
@@ -26830,15 +26832,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                  deviceMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryAllocateFlagsInfo>
   {
     using Type = MemoryAllocateFlagsInfo;
   };
 
-  using MemoryAllocateFlagsInfoKHR = MemoryAllocateFlagsInfo;
+  VULKAN_HPP_EXPORT using MemoryAllocateFlagsInfoKHR = MemoryAllocateFlagsInfo;
 
-  struct MemoryAllocateInfo
+  VULKAN_HPP_EXPORT struct MemoryAllocateInfo
   {
     using NativeType = VkMemoryAllocateInfo;
 
@@ -26935,13 +26937,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            memoryTypeIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryAllocateInfo>
   {
     using Type = MemoryAllocateInfo;
   };
 
-  struct MemoryBarrier
+  VULKAN_HPP_EXPORT struct MemoryBarrier
   {
     using NativeType = VkMemoryBarrier;
 
@@ -27041,13 +27043,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::AccessFlags   dstAccessMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryBarrier>
   {
     using Type = MemoryBarrier;
   };
 
-  struct MemoryDedicatedAllocateInfo
+  VULKAN_HPP_EXPORT struct MemoryDedicatedAllocateInfo
   {
     using NativeType = VkMemoryDedicatedAllocateInfo;
 
@@ -27147,15 +27149,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Buffer        buffer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryDedicatedAllocateInfo>
   {
     using Type = MemoryDedicatedAllocateInfo;
   };
 
-  using MemoryDedicatedAllocateInfoKHR = MemoryDedicatedAllocateInfo;
+  VULKAN_HPP_EXPORT using MemoryDedicatedAllocateInfoKHR = MemoryDedicatedAllocateInfo;
 
-  struct MemoryDedicatedRequirements
+  VULKAN_HPP_EXPORT struct MemoryDedicatedRequirements
   {
     using NativeType = VkMemoryDedicatedRequirements;
 
@@ -27236,15 +27238,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        requiresDedicatedAllocation = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryDedicatedRequirements>
   {
     using Type = MemoryDedicatedRequirements;
   };
 
-  using MemoryDedicatedRequirementsKHR = MemoryDedicatedRequirements;
+  VULKAN_HPP_EXPORT using MemoryDedicatedRequirementsKHR = MemoryDedicatedRequirements;
 
-  struct MemoryFdPropertiesKHR
+  VULKAN_HPP_EXPORT struct MemoryFdPropertiesKHR
   {
     using NativeType = VkMemoryFdPropertiesKHR;
 
@@ -27320,13 +27322,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            memoryTypeBits = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryFdPropertiesKHR>
   {
     using Type = MemoryFdPropertiesKHR;
   };
 
-  struct MemoryGetFdInfoKHR
+  VULKAN_HPP_EXPORT struct MemoryGetFdInfoKHR
   {
     using NativeType = VkMemoryGetFdInfoKHR;
 
@@ -27427,14 +27429,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryGetFdInfoKHR>
   {
     using Type = MemoryGetFdInfoKHR;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct MemoryGetSciBufInfoNV
+  VULKAN_HPP_EXPORT struct MemoryGetSciBufInfoNV
   {
     using NativeType = VkMemoryGetSciBufInfoNV;
 
@@ -27538,14 +27540,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryGetSciBufInfoNV>
   {
     using Type = MemoryGetSciBufInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct MemoryHeap
+  VULKAN_HPP_EXPORT struct MemoryHeap
   {
     using NativeType = VkMemoryHeap;
 
@@ -27614,7 +27616,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::MemoryHeapFlags flags = {};
   };
 
-  struct MemoryHostPointerPropertiesEXT
+  VULKAN_HPP_EXPORT struct MemoryHostPointerPropertiesEXT
   {
     using NativeType = VkMemoryHostPointerPropertiesEXT;
 
@@ -27690,13 +27692,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            memoryTypeBits = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryHostPointerPropertiesEXT>
   {
     using Type = MemoryHostPointerPropertiesEXT;
   };
 
-  struct MemoryOpaqueCaptureAddressAllocateInfo
+  VULKAN_HPP_EXPORT struct MemoryOpaqueCaptureAddressAllocateInfo
   {
     using NativeType = VkMemoryOpaqueCaptureAddressAllocateInfo;
 
@@ -27786,15 +27788,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            opaqueCaptureAddress = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryOpaqueCaptureAddressAllocateInfo>
   {
     using Type = MemoryOpaqueCaptureAddressAllocateInfo;
   };
 
-  using MemoryOpaqueCaptureAddressAllocateInfoKHR = MemoryOpaqueCaptureAddressAllocateInfo;
+  VULKAN_HPP_EXPORT using MemoryOpaqueCaptureAddressAllocateInfoKHR = MemoryOpaqueCaptureAddressAllocateInfo;
 
-  struct MemoryRequirements
+  VULKAN_HPP_EXPORT struct MemoryRequirements
   {
     using NativeType = VkMemoryRequirements;
 
@@ -27867,7 +27869,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                         memoryTypeBits = {};
   };
 
-  struct MemoryRequirements2
+  VULKAN_HPP_EXPORT struct MemoryRequirements2
   {
     using NativeType = VkMemoryRequirements2;
 
@@ -27942,16 +27944,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::MemoryRequirements memoryRequirements = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemoryRequirements2>
   {
     using Type = MemoryRequirements2;
   };
 
-  using MemoryRequirements2KHR = MemoryRequirements2;
+  VULKAN_HPP_EXPORT using MemoryRequirements2KHR = MemoryRequirements2;
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct MemorySciBufPropertiesNV
+  VULKAN_HPP_EXPORT struct MemorySciBufPropertiesNV
   {
     using NativeType = VkMemorySciBufPropertiesNV;
 
@@ -28041,14 +28043,14 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            memoryTypeBits = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMemorySciBufPropertiesNV>
   {
     using Type = MemorySciBufPropertiesNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct MemoryType
+  VULKAN_HPP_EXPORT struct MemoryType
   {
     using NativeType = VkMemoryType;
 
@@ -28117,7 +28119,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                  heapIndex     = {};
   };
 
-  struct MultisamplePropertiesEXT
+  VULKAN_HPP_EXPORT struct MultisamplePropertiesEXT
   {
     using NativeType = VkMultisamplePropertiesEXT;
 
@@ -28193,13 +28195,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D      maxSampleLocationGridSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eMultisamplePropertiesEXT>
   {
     using Type = MultisamplePropertiesEXT;
   };
 
-  struct PerformanceCounterDescriptionKHR
+  VULKAN_HPP_EXPORT struct PerformanceCounterDescriptionKHR
   {
     using NativeType = VkPerformanceCounterDescriptionKHR;
 
@@ -28303,13 +28305,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<char, VK_MAX_DESCRIPTION_SIZE> description = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePerformanceCounterDescriptionKHR>
   {
     using Type = PerformanceCounterDescriptionKHR;
   };
 
-  struct PerformanceCounterKHR
+  VULKAN_HPP_EXPORT struct PerformanceCounterKHR
   {
     using NativeType = VkPerformanceCounterKHR;
 
@@ -28402,13 +28404,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<uint8_t, VK_UUID_SIZE> uuid    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePerformanceCounterKHR>
   {
     using Type = PerformanceCounterKHR;
   };
 
-  union PerformanceCounterResultKHR
+  VULKAN_HPP_EXPORT union PerformanceCounterResultKHR
   {
     using NativeType = VkPerformanceCounterResultKHR;
 #if !defined( VULKAN_HPP_NO_UNION_CONSTRUCTORS )
@@ -28482,7 +28484,7 @@ namespace VULKAN_HPP_NAMESPACE
     double   float64;
   };
 
-  struct PerformanceQueryReservationInfoKHR
+  VULKAN_HPP_EXPORT struct PerformanceQueryReservationInfoKHR
   {
     using NativeType = VkPerformanceQueryReservationInfoKHR;
 
@@ -28572,13 +28574,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxPerformanceQueriesPerPool = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePerformanceQueryReservationInfoKHR>
   {
     using Type = PerformanceQueryReservationInfoKHR;
   };
 
-  struct PerformanceQuerySubmitInfoKHR
+  VULKAN_HPP_EXPORT struct PerformanceQuerySubmitInfoKHR
   {
     using NativeType = VkPerformanceQuerySubmitInfoKHR;
 
@@ -28668,13 +28670,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            counterPassIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePerformanceQuerySubmitInfoKHR>
   {
     using Type = PerformanceQuerySubmitInfoKHR;
   };
 
-  struct PhysicalDevice16BitStorageFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDevice16BitStorageFeatures
   {
     using NativeType = VkPhysicalDevice16BitStorageFeatures;
 
@@ -28803,15 +28805,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        storageInputOutput16               = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevice16BitStorageFeatures>
   {
     using Type = PhysicalDevice16BitStorageFeatures;
   };
 
-  using PhysicalDevice16BitStorageFeaturesKHR = PhysicalDevice16BitStorageFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDevice16BitStorageFeaturesKHR = PhysicalDevice16BitStorageFeatures;
 
-  struct PhysicalDevice4444FormatsFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDevice4444FormatsFeaturesEXT
   {
     using NativeType = VkPhysicalDevice4444FormatsFeaturesEXT;
 
@@ -28911,13 +28913,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        formatA4B4G4R4 = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevice4444FormatsFeaturesEXT>
   {
     using Type = PhysicalDevice4444FormatsFeaturesEXT;
   };
 
-  struct PhysicalDevice8BitStorageFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDevice8BitStorageFeatures
   {
     using NativeType = VkPhysicalDevice8BitStorageFeatures;
 
@@ -29034,15 +29036,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        storagePushConstant8              = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevice8BitStorageFeatures>
   {
     using Type = PhysicalDevice8BitStorageFeatures;
   };
 
-  using PhysicalDevice8BitStorageFeaturesKHR = PhysicalDevice8BitStorageFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDevice8BitStorageFeaturesKHR = PhysicalDevice8BitStorageFeatures;
 
-  struct PhysicalDeviceASTCDecodeFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceASTCDecodeFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceASTCDecodeFeaturesEXT;
 
@@ -29134,13 +29136,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        decodeModeSharedExponent = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceAstcDecodeFeaturesEXT>
   {
     using Type = PhysicalDeviceASTCDecodeFeaturesEXT;
   };
 
-  struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT;
 
@@ -29233,13 +29235,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        advancedBlendCoherentOperations = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceBlendOperationAdvancedFeaturesEXT>
   {
     using Type = PhysicalDeviceBlendOperationAdvancedFeaturesEXT;
   };
 
-  struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT;
 
@@ -29351,13 +29353,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        advancedBlendAllOperations            = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceBlendOperationAdvancedPropertiesEXT>
   {
     using Type = PhysicalDeviceBlendOperationAdvancedPropertiesEXT;
   };
 
-  struct PhysicalDeviceBufferDeviceAddressFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceBufferDeviceAddressFeatures
   {
     using NativeType = VkPhysicalDeviceBufferDeviceAddressFeatures;
 
@@ -29475,15 +29477,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        bufferDeviceAddressMultiDevice   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceBufferDeviceAddressFeatures>
   {
     using Type = PhysicalDeviceBufferDeviceAddressFeatures;
   };
 
-  using PhysicalDeviceBufferDeviceAddressFeaturesKHR = PhysicalDeviceBufferDeviceAddressFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceBufferDeviceAddressFeaturesKHR = PhysicalDeviceBufferDeviceAddressFeatures;
 
-  struct PhysicalDeviceColorWriteEnableFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceColorWriteEnableFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceColorWriteEnableFeaturesEXT;
 
@@ -29575,13 +29577,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        colorWriteEnable = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceColorWriteEnableFeaturesEXT>
   {
     using Type = PhysicalDeviceColorWriteEnableFeaturesEXT;
   };
 
-  struct PhysicalDeviceConservativeRasterizationPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceConservativeRasterizationPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceConservativeRasterizationPropertiesEXT;
 
@@ -29711,13 +29713,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        conservativeRasterizationPostDepthCoverage  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceConservativeRasterizationPropertiesEXT>
   {
     using Type = PhysicalDeviceConservativeRasterizationPropertiesEXT;
   };
 
-  struct PhysicalDeviceCustomBorderColorFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceCustomBorderColorFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceCustomBorderColorFeaturesEXT;
 
@@ -29820,13 +29822,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        customBorderColorWithoutFormat = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceCustomBorderColorFeaturesEXT>
   {
     using Type = PhysicalDeviceCustomBorderColorFeaturesEXT;
   };
 
-  struct PhysicalDeviceCustomBorderColorPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceCustomBorderColorPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceCustomBorderColorPropertiesEXT;
 
@@ -29903,13 +29905,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxCustomBorderColorSamplers = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceCustomBorderColorPropertiesEXT>
   {
     using Type = PhysicalDeviceCustomBorderColorPropertiesEXT;
   };
 
-  struct PhysicalDeviceDepthClipEnableFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDepthClipEnableFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceDepthClipEnableFeaturesEXT;
 
@@ -30000,13 +30002,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        depthClipEnable = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDepthClipEnableFeaturesEXT>
   {
     using Type = PhysicalDeviceDepthClipEnableFeaturesEXT;
   };
 
-  struct PhysicalDeviceDepthStencilResolveProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDepthStencilResolveProperties
   {
     using NativeType = VkPhysicalDeviceDepthStencilResolveProperties;
 
@@ -30099,15 +30101,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32           independentResolve           = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDepthStencilResolveProperties>
   {
     using Type = PhysicalDeviceDepthStencilResolveProperties;
   };
 
-  using PhysicalDeviceDepthStencilResolvePropertiesKHR = PhysicalDeviceDepthStencilResolveProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceDepthStencilResolvePropertiesKHR = PhysicalDeviceDepthStencilResolveProperties;
 
-  struct PhysicalDeviceDescriptorIndexingFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDescriptorIndexingFeatures
   {
     using NativeType = VkPhysicalDeviceDescriptorIndexingFeatures;
 
@@ -30451,15 +30453,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        runtimeDescriptorArray                             = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDescriptorIndexingFeatures>
   {
     using Type = PhysicalDeviceDescriptorIndexingFeatures;
   };
 
-  using PhysicalDeviceDescriptorIndexingFeaturesEXT = PhysicalDeviceDescriptorIndexingFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceDescriptorIndexingFeaturesEXT = PhysicalDeviceDescriptorIndexingFeatures;
 
-  struct PhysicalDeviceDescriptorIndexingProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDescriptorIndexingProperties
   {
     using NativeType = VkPhysicalDeviceDescriptorIndexingProperties;
 
@@ -30671,15 +30673,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxDescriptorSetUpdateAfterBindInputAttachments      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDescriptorIndexingProperties>
   {
     using Type = PhysicalDeviceDescriptorIndexingProperties;
   };
 
-  using PhysicalDeviceDescriptorIndexingPropertiesEXT = PhysicalDeviceDescriptorIndexingProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceDescriptorIndexingPropertiesEXT = PhysicalDeviceDescriptorIndexingProperties;
 
-  struct PhysicalDeviceDiscardRectanglePropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDiscardRectanglePropertiesEXT
   {
     using NativeType = VkPhysicalDeviceDiscardRectanglePropertiesEXT;
 
@@ -30755,13 +30757,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxDiscardRectangles = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDiscardRectanglePropertiesEXT>
   {
     using Type = PhysicalDeviceDiscardRectanglePropertiesEXT;
   };
 
-  struct PhysicalDeviceDriverProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDriverProperties
   {
     using NativeType = VkPhysicalDeviceDriverProperties;
 
@@ -30865,15 +30867,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ConformanceVersion                            conformanceVersion = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDriverProperties>
   {
     using Type = PhysicalDeviceDriverProperties;
   };
 
-  using PhysicalDeviceDriverPropertiesKHR = PhysicalDeviceDriverProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceDriverPropertiesKHR = PhysicalDeviceDriverProperties;
 
-  struct PhysicalDeviceDynamicRenderingFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceDynamicRenderingFeatures
   {
     using NativeType = VkPhysicalDeviceDynamicRenderingFeatures;
 
@@ -30964,15 +30966,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        dynamicRendering = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceDynamicRenderingFeatures>
   {
     using Type = PhysicalDeviceDynamicRenderingFeatures;
   };
 
-  using PhysicalDeviceDynamicRenderingFeaturesKHR = PhysicalDeviceDynamicRenderingFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceDynamicRenderingFeaturesKHR = PhysicalDeviceDynamicRenderingFeatures;
 
-  struct PhysicalDeviceExtendedDynamicState2FeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExtendedDynamicState2FeaturesEXT
   {
     using NativeType = VkPhysicalDeviceExtendedDynamicState2FeaturesEXT;
 
@@ -31091,13 +31093,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        extendedDynamicState2PatchControlPoints = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExtendedDynamicState2FeaturesEXT>
   {
     using Type = PhysicalDeviceExtendedDynamicState2FeaturesEXT;
   };
 
-  struct PhysicalDeviceExtendedDynamicStateFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExtendedDynamicStateFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceExtendedDynamicStateFeaturesEXT;
 
@@ -31190,13 +31192,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        extendedDynamicState = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExtendedDynamicStateFeaturesEXT>
   {
     using Type = PhysicalDeviceExtendedDynamicStateFeaturesEXT;
   };
 
-  struct PhysicalDeviceExternalBufferInfo
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalBufferInfo
   {
     using NativeType = VkPhysicalDeviceExternalBufferInfo;
 
@@ -31311,15 +31313,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalBufferInfo>
   {
     using Type = PhysicalDeviceExternalBufferInfo;
   };
 
-  using PhysicalDeviceExternalBufferInfoKHR = PhysicalDeviceExternalBufferInfo;
+  VULKAN_HPP_EXPORT using PhysicalDeviceExternalBufferInfoKHR = PhysicalDeviceExternalBufferInfo;
 
-  struct PhysicalDeviceExternalFenceInfo
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalFenceInfo
   {
     using NativeType = VkPhysicalDeviceExternalFenceInfo;
 
@@ -31412,15 +31414,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalFenceHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalFenceInfo>
   {
     using Type = PhysicalDeviceExternalFenceInfo;
   };
 
-  using PhysicalDeviceExternalFenceInfoKHR = PhysicalDeviceExternalFenceInfo;
+  VULKAN_HPP_EXPORT using PhysicalDeviceExternalFenceInfoKHR = PhysicalDeviceExternalFenceInfo;
 
-  struct PhysicalDeviceExternalImageFormatInfo
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalImageFormatInfo
   {
     using NativeType = VkPhysicalDeviceExternalImageFormatInfo;
 
@@ -31513,15 +31515,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalImageFormatInfo>
   {
     using Type = PhysicalDeviceExternalImageFormatInfo;
   };
 
-  using PhysicalDeviceExternalImageFormatInfoKHR = PhysicalDeviceExternalImageFormatInfo;
+  VULKAN_HPP_EXPORT using PhysicalDeviceExternalImageFormatInfoKHR = PhysicalDeviceExternalImageFormatInfo;
 
-  struct PhysicalDeviceExternalMemoryHostPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalMemoryHostPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceExternalMemoryHostPropertiesEXT;
 
@@ -31599,14 +31601,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    minImportedHostPointerAlignment = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalMemoryHostPropertiesEXT>
   {
     using Type = PhysicalDeviceExternalMemoryHostPropertiesEXT;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct PhysicalDeviceExternalMemorySciBufFeaturesNV
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalMemorySciBufFeaturesNV
   {
     using NativeType = VkPhysicalDeviceExternalMemorySciBufFeaturesNV;
 
@@ -31706,17 +31708,17 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        sciBufExport = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalMemorySciBufFeaturesNV>
   {
     using Type = PhysicalDeviceExternalMemorySciBufFeaturesNV;
   };
 
-  using PhysicalDeviceExternalSciBufFeaturesNV = PhysicalDeviceExternalMemorySciBufFeaturesNV;
+  VULKAN_HPP_EXPORT using PhysicalDeviceExternalSciBufFeaturesNV = PhysicalDeviceExternalMemorySciBufFeaturesNV;
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  struct PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX
   {
     using NativeType = VkPhysicalDeviceExternalMemoryScreenBufferFeaturesQNX;
 
@@ -31810,7 +31812,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        screenBufferImport = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalMemoryScreenBufferFeaturesQNX>
   {
     using Type = PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX;
@@ -31818,7 +31820,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct PhysicalDeviceExternalSciSync2FeaturesNV
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalSciSync2FeaturesNV
   {
     using NativeType = VkPhysicalDeviceExternalSciSync2FeaturesNV;
 
@@ -31943,7 +31945,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        sciSyncExport     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalSciSync2FeaturesNV>
   {
     using Type = PhysicalDeviceExternalSciSync2FeaturesNV;
@@ -31951,7 +31953,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct PhysicalDeviceExternalSciSyncFeaturesNV
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalSciSyncFeaturesNV
   {
     using NativeType = VkPhysicalDeviceExternalSciSyncFeaturesNV;
 
@@ -32075,14 +32077,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        sciSyncExport    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalSciSyncFeaturesNV>
   {
     using Type = PhysicalDeviceExternalSciSyncFeaturesNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct PhysicalDeviceExternalSemaphoreInfo
+  VULKAN_HPP_EXPORT struct PhysicalDeviceExternalSemaphoreInfo
   {
     using NativeType = VkPhysicalDeviceExternalSemaphoreInfo;
 
@@ -32175,15 +32177,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceExternalSemaphoreInfo>
   {
     using Type = PhysicalDeviceExternalSemaphoreInfo;
   };
 
-  using PhysicalDeviceExternalSemaphoreInfoKHR = PhysicalDeviceExternalSemaphoreInfo;
+  VULKAN_HPP_EXPORT using PhysicalDeviceExternalSemaphoreInfoKHR = PhysicalDeviceExternalSemaphoreInfo;
 
-  struct PhysicalDeviceFeatures2
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFeatures2
   {
     using NativeType = VkPhysicalDeviceFeatures2;
 
@@ -32273,15 +32275,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures features = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFeatures2>
   {
     using Type = PhysicalDeviceFeatures2;
   };
 
-  using PhysicalDeviceFeatures2KHR = PhysicalDeviceFeatures2;
+  VULKAN_HPP_EXPORT using PhysicalDeviceFeatures2KHR = PhysicalDeviceFeatures2;
 
-  struct PhysicalDeviceFloatControlsProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFloatControlsProperties
   {
     using NativeType = VkPhysicalDeviceFloatControlsProperties;
 
@@ -32454,15 +32456,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                          shaderRoundingModeRTZFloat64          = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFloatControlsProperties>
   {
     using Type = PhysicalDeviceFloatControlsProperties;
   };
 
-  using PhysicalDeviceFloatControlsPropertiesKHR = PhysicalDeviceFloatControlsProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceFloatControlsPropertiesKHR = PhysicalDeviceFloatControlsProperties;
 
-  struct PhysicalDeviceFragmentShaderInterlockFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFragmentShaderInterlockFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT;
 
@@ -32581,13 +32583,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        fragmentShaderShadingRateInterlock = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFragmentShaderInterlockFeaturesEXT>
   {
     using Type = PhysicalDeviceFragmentShaderInterlockFeaturesEXT;
   };
 
-  struct PhysicalDeviceFragmentShadingRateFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFragmentShadingRateFeaturesKHR
   {
     using NativeType = VkPhysicalDeviceFragmentShadingRateFeaturesKHR;
 
@@ -32704,13 +32706,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        attachmentFragmentShadingRate = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFragmentShadingRateFeaturesKHR>
   {
     using Type = PhysicalDeviceFragmentShadingRateFeaturesKHR;
   };
 
-  struct PhysicalDeviceFragmentShadingRateKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFragmentShadingRateKHR
   {
     using NativeType = VkPhysicalDeviceFragmentShadingRateKHR;
 
@@ -32791,13 +32793,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent2D         fragmentSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFragmentShadingRateKHR>
   {
     using Type = PhysicalDeviceFragmentShadingRateKHR;
   };
 
-  struct PhysicalDeviceFragmentShadingRatePropertiesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceFragmentShadingRatePropertiesKHR
   {
     using NativeType = VkPhysicalDeviceFragmentShadingRatePropertiesKHR;
 
@@ -32976,13 +32978,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32              fragmentShadingRateStrictMultiplyCombiner            = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceFragmentShadingRatePropertiesKHR>
   {
     using Type = PhysicalDeviceFragmentShadingRatePropertiesKHR;
   };
 
-  struct PhysicalDeviceGlobalPriorityQueryFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceGlobalPriorityQueryFeaturesKHR
   {
     using NativeType = VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR;
 
@@ -33074,15 +33076,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        globalPriorityQuery = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceGlobalPriorityQueryFeaturesKHR>
   {
     using Type = PhysicalDeviceGlobalPriorityQueryFeaturesKHR;
   };
 
-  using PhysicalDeviceGlobalPriorityQueryFeaturesEXT = PhysicalDeviceGlobalPriorityQueryFeaturesKHR;
+  VULKAN_HPP_EXPORT using PhysicalDeviceGlobalPriorityQueryFeaturesEXT = PhysicalDeviceGlobalPriorityQueryFeaturesKHR;
 
-  struct PhysicalDeviceGroupProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceGroupProperties
   {
     using NativeType = VkPhysicalDeviceGroupProperties;
 
@@ -33185,15 +33187,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                                                                         subsetAllocation    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceGroupProperties>
   {
     using Type = PhysicalDeviceGroupProperties;
   };
 
-  using PhysicalDeviceGroupPropertiesKHR = PhysicalDeviceGroupProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceGroupPropertiesKHR = PhysicalDeviceGroupProperties;
 
-  struct PhysicalDeviceHostQueryResetFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceHostQueryResetFeatures
   {
     using NativeType = VkPhysicalDeviceHostQueryResetFeatures;
 
@@ -33283,15 +33285,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        hostQueryReset = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceHostQueryResetFeatures>
   {
     using Type = PhysicalDeviceHostQueryResetFeatures;
   };
 
-  using PhysicalDeviceHostQueryResetFeaturesEXT = PhysicalDeviceHostQueryResetFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceHostQueryResetFeaturesEXT = PhysicalDeviceHostQueryResetFeatures;
 
-  struct PhysicalDeviceIDProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceIDProperties
   {
     using NativeType = VkPhysicalDeviceIDProperties;
 
@@ -33387,15 +33389,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                                deviceLUIDValid = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceIdProperties>
   {
     using Type = PhysicalDeviceIDProperties;
   };
 
-  using PhysicalDeviceIDPropertiesKHR = PhysicalDeviceIDProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceIDPropertiesKHR = PhysicalDeviceIDProperties;
 
-  struct PhysicalDeviceImageDrmFormatModifierInfoEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceImageDrmFormatModifierInfoEXT
   {
     using NativeType = VkPhysicalDeviceImageDrmFormatModifierInfoEXT;
 
@@ -33544,13 +33546,13 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pQueueFamilyIndices   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceImageDrmFormatModifierInfoEXT>
   {
     using Type = PhysicalDeviceImageDrmFormatModifierInfoEXT;
   };
 
-  struct PhysicalDeviceImageFormatInfo2
+  VULKAN_HPP_EXPORT struct PhysicalDeviceImageFormatInfo2
   {
     using NativeType = VkPhysicalDeviceImageFormatInfo2;
 
@@ -33684,15 +33686,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageCreateFlags flags  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceImageFormatInfo2>
   {
     using Type = PhysicalDeviceImageFormatInfo2;
   };
 
-  using PhysicalDeviceImageFormatInfo2KHR = PhysicalDeviceImageFormatInfo2;
+  VULKAN_HPP_EXPORT using PhysicalDeviceImageFormatInfo2KHR = PhysicalDeviceImageFormatInfo2;
 
-  struct PhysicalDeviceImageRobustnessFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceImageRobustnessFeatures
   {
     using NativeType = VkPhysicalDeviceImageRobustnessFeatures;
 
@@ -33783,15 +33785,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        robustImageAccess = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceImageRobustnessFeatures>
   {
     using Type = PhysicalDeviceImageRobustnessFeatures;
   };
 
-  using PhysicalDeviceImageRobustnessFeaturesEXT = PhysicalDeviceImageRobustnessFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceImageRobustnessFeaturesEXT = PhysicalDeviceImageRobustnessFeatures;
 
-  struct PhysicalDeviceImageViewImageFormatInfoEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceImageViewImageFormatInfoEXT
   {
     using NativeType = VkPhysicalDeviceImageViewImageFormatInfoEXT;
 
@@ -33884,13 +33886,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageViewType imageViewType = VULKAN_HPP_NAMESPACE::ImageViewType::e1D;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceImageViewImageFormatInfoEXT>
   {
     using Type = PhysicalDeviceImageViewImageFormatInfoEXT;
   };
 
-  struct PhysicalDeviceImagelessFramebufferFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceImagelessFramebufferFeatures
   {
     using NativeType = VkPhysicalDeviceImagelessFramebufferFeatures;
 
@@ -33982,15 +33984,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        imagelessFramebuffer = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceImagelessFramebufferFeatures>
   {
     using Type = PhysicalDeviceImagelessFramebufferFeatures;
   };
 
-  using PhysicalDeviceImagelessFramebufferFeaturesKHR = PhysicalDeviceImagelessFramebufferFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceImagelessFramebufferFeaturesKHR = PhysicalDeviceImagelessFramebufferFeatures;
 
-  struct PhysicalDeviceIndexTypeUint8FeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceIndexTypeUint8FeaturesKHR
   {
     using NativeType = VkPhysicalDeviceIndexTypeUint8FeaturesKHR;
 
@@ -34081,15 +34083,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        indexTypeUint8 = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceIndexTypeUint8FeaturesKHR>
   {
     using Type = PhysicalDeviceIndexTypeUint8FeaturesKHR;
   };
 
-  using PhysicalDeviceIndexTypeUint8FeaturesEXT = PhysicalDeviceIndexTypeUint8FeaturesKHR;
+  VULKAN_HPP_EXPORT using PhysicalDeviceIndexTypeUint8FeaturesEXT = PhysicalDeviceIndexTypeUint8FeaturesKHR;
 
-  struct PhysicalDeviceInlineUniformBlockFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceInlineUniformBlockFeatures
   {
     using NativeType = VkPhysicalDeviceInlineUniformBlockFeatures;
 
@@ -34192,15 +34194,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        descriptorBindingInlineUniformBlockUpdateAfterBind = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceInlineUniformBlockFeatures>
   {
     using Type = PhysicalDeviceInlineUniformBlockFeatures;
   };
 
-  using PhysicalDeviceInlineUniformBlockFeaturesEXT = PhysicalDeviceInlineUniformBlockFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceInlineUniformBlockFeaturesEXT = PhysicalDeviceInlineUniformBlockFeatures;
 
-  struct PhysicalDeviceInlineUniformBlockProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceInlineUniformBlockProperties
   {
     using NativeType = VkPhysicalDeviceInlineUniformBlockProperties;
 
@@ -34305,15 +34307,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxDescriptorSetUpdateAfterBindInlineUniformBlocks      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceInlineUniformBlockProperties>
   {
     using Type = PhysicalDeviceInlineUniformBlockProperties;
   };
 
-  using PhysicalDeviceInlineUniformBlockPropertiesEXT = PhysicalDeviceInlineUniformBlockProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceInlineUniformBlockPropertiesEXT = PhysicalDeviceInlineUniformBlockProperties;
 
-  struct PhysicalDeviceLimits
+  VULKAN_HPP_EXPORT struct PhysicalDeviceLimits
   {
     using NativeType = VkPhysicalDeviceLimits;
 
@@ -34969,7 +34971,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize                  nonCoherentAtomSize                             = {};
   };
 
-  struct PhysicalDeviceLineRasterizationFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceLineRasterizationFeaturesKHR
   {
     using NativeType = VkPhysicalDeviceLineRasterizationFeaturesKHR;
 
@@ -35118,15 +35120,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        stippledSmoothLines      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceLineRasterizationFeaturesKHR>
   {
     using Type = PhysicalDeviceLineRasterizationFeaturesKHR;
   };
 
-  using PhysicalDeviceLineRasterizationFeaturesEXT = PhysicalDeviceLineRasterizationFeaturesKHR;
+  VULKAN_HPP_EXPORT using PhysicalDeviceLineRasterizationFeaturesEXT = PhysicalDeviceLineRasterizationFeaturesKHR;
 
-  struct PhysicalDeviceLineRasterizationPropertiesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceLineRasterizationPropertiesKHR
   {
     using NativeType = VkPhysicalDeviceLineRasterizationPropertiesKHR;
 
@@ -35202,15 +35204,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            lineSubPixelPrecisionBits = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceLineRasterizationPropertiesKHR>
   {
     using Type = PhysicalDeviceLineRasterizationPropertiesKHR;
   };
 
-  using PhysicalDeviceLineRasterizationPropertiesEXT = PhysicalDeviceLineRasterizationPropertiesKHR;
+  VULKAN_HPP_EXPORT using PhysicalDeviceLineRasterizationPropertiesEXT = PhysicalDeviceLineRasterizationPropertiesKHR;
 
-  struct PhysicalDeviceMaintenance3Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMaintenance3Properties
   {
     using NativeType = VkPhysicalDeviceMaintenance3Properties;
 
@@ -35291,15 +35293,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    maxMemoryAllocationSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMaintenance3Properties>
   {
     using Type = PhysicalDeviceMaintenance3Properties;
   };
 
-  using PhysicalDeviceMaintenance3PropertiesKHR = PhysicalDeviceMaintenance3Properties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMaintenance3PropertiesKHR = PhysicalDeviceMaintenance3Properties;
 
-  struct PhysicalDeviceMaintenance4Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMaintenance4Features
   {
     using NativeType = VkPhysicalDeviceMaintenance4Features;
 
@@ -35389,15 +35391,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        maintenance4 = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMaintenance4Features>
   {
     using Type = PhysicalDeviceMaintenance4Features;
   };
 
-  using PhysicalDeviceMaintenance4FeaturesKHR = PhysicalDeviceMaintenance4Features;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMaintenance4FeaturesKHR = PhysicalDeviceMaintenance4Features;
 
-  struct PhysicalDeviceMaintenance4Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMaintenance4Properties
   {
     using NativeType = VkPhysicalDeviceMaintenance4Properties;
 
@@ -35474,15 +35476,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    maxBufferSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMaintenance4Properties>
   {
     using Type = PhysicalDeviceMaintenance4Properties;
   };
 
-  using PhysicalDeviceMaintenance4PropertiesKHR = PhysicalDeviceMaintenance4Properties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMaintenance4PropertiesKHR = PhysicalDeviceMaintenance4Properties;
 
-  struct PhysicalDeviceMemoryBudgetPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMemoryBudgetPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceMemoryBudgetPropertiesEXT;
 
@@ -35565,13 +35567,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::DeviceSize, VK_MAX_MEMORY_HEAPS> heapUsage  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMemoryBudgetPropertiesEXT>
   {
     using Type = PhysicalDeviceMemoryBudgetPropertiesEXT;
   };
 
-  struct PhysicalDeviceMemoryProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMemoryProperties
   {
     using NativeType = VkPhysicalDeviceMemoryProperties;
 
@@ -35671,7 +35673,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::MemoryHeap, VK_MAX_MEMORY_HEAPS> memoryHeaps     = {};
   };
 
-  struct PhysicalDeviceMemoryProperties2
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMemoryProperties2
   {
     using NativeType = VkPhysicalDeviceMemoryProperties2;
 
@@ -35748,15 +35750,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties memoryProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMemoryProperties2>
   {
     using Type = PhysicalDeviceMemoryProperties2;
   };
 
-  using PhysicalDeviceMemoryProperties2KHR = PhysicalDeviceMemoryProperties2;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMemoryProperties2KHR = PhysicalDeviceMemoryProperties2;
 
-  struct PhysicalDeviceMultiviewFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMultiviewFeatures
   {
     using NativeType = VkPhysicalDeviceMultiviewFeatures;
 
@@ -35872,15 +35874,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        multiviewTessellationShader = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMultiviewFeatures>
   {
     using Type = PhysicalDeviceMultiviewFeatures;
   };
 
-  using PhysicalDeviceMultiviewFeaturesKHR = PhysicalDeviceMultiviewFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMultiviewFeaturesKHR = PhysicalDeviceMultiviewFeatures;
 
-  struct PhysicalDeviceMultiviewProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceMultiviewProperties
   {
     using NativeType = VkPhysicalDeviceMultiviewProperties;
 
@@ -35961,15 +35963,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            maxMultiviewInstanceIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceMultiviewProperties>
   {
     using Type = PhysicalDeviceMultiviewProperties;
   };
 
-  using PhysicalDeviceMultiviewPropertiesKHR = PhysicalDeviceMultiviewProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceMultiviewPropertiesKHR = PhysicalDeviceMultiviewProperties;
 
-  struct PhysicalDevicePCIBusInfoPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDevicePCIBusInfoPropertiesEXT
   {
     using NativeType = VkPhysicalDevicePCIBusInfoPropertiesEXT;
 
@@ -36053,13 +36055,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            pciFunction = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePciBusInfoPropertiesEXT>
   {
     using Type = PhysicalDevicePCIBusInfoPropertiesEXT;
   };
 
-  struct PhysicalDevicePerformanceQueryFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDevicePerformanceQueryFeaturesKHR
   {
     using NativeType = VkPhysicalDevicePerformanceQueryFeaturesKHR;
 
@@ -36162,13 +36164,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        performanceCounterMultipleQueryPools = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePerformanceQueryFeaturesKHR>
   {
     using Type = PhysicalDevicePerformanceQueryFeaturesKHR;
   };
 
-  struct PhysicalDevicePerformanceQueryPropertiesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDevicePerformanceQueryPropertiesKHR
   {
     using NativeType = VkPhysicalDevicePerformanceQueryPropertiesKHR;
 
@@ -36245,13 +36247,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        allowCommandBufferQueryCopies = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePerformanceQueryPropertiesKHR>
   {
     using Type = PhysicalDevicePerformanceQueryPropertiesKHR;
   };
 
-  struct PhysicalDevicePipelineCreationCacheControlFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDevicePipelineCreationCacheControlFeatures
   {
     using NativeType = VkPhysicalDevicePipelineCreationCacheControlFeatures;
 
@@ -36345,15 +36347,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        pipelineCreationCacheControl = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePipelineCreationCacheControlFeatures>
   {
     using Type = PhysicalDevicePipelineCreationCacheControlFeatures;
   };
 
-  using PhysicalDevicePipelineCreationCacheControlFeaturesEXT = PhysicalDevicePipelineCreationCacheControlFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDevicePipelineCreationCacheControlFeaturesEXT = PhysicalDevicePipelineCreationCacheControlFeatures;
 
-  struct PhysicalDevicePointClippingProperties
+  VULKAN_HPP_EXPORT struct PhysicalDevicePointClippingProperties
   {
     using NativeType = VkPhysicalDevicePointClippingProperties;
 
@@ -36431,15 +36433,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PointClippingBehavior pointClippingBehavior = VULKAN_HPP_NAMESPACE::PointClippingBehavior::eAllClipPlanes;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePointClippingProperties>
   {
     using Type = PhysicalDevicePointClippingProperties;
   };
 
-  using PhysicalDevicePointClippingPropertiesKHR = PhysicalDevicePointClippingProperties;
+  VULKAN_HPP_EXPORT using PhysicalDevicePointClippingPropertiesKHR = PhysicalDevicePointClippingProperties;
 
-  struct PhysicalDevicePrivateDataFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDevicePrivateDataFeatures
   {
     using NativeType = VkPhysicalDevicePrivateDataFeatures;
 
@@ -36529,15 +36531,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        privateData = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDevicePrivateDataFeatures>
   {
     using Type = PhysicalDevicePrivateDataFeatures;
   };
 
-  using PhysicalDevicePrivateDataFeaturesEXT = PhysicalDevicePrivateDataFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDevicePrivateDataFeaturesEXT = PhysicalDevicePrivateDataFeatures;
 
-  struct PhysicalDeviceSparseProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSparseProperties
   {
     using NativeType = VkPhysicalDeviceSparseProperties;
 
@@ -36630,7 +36632,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32 residencyNonResidentStrict               = {};
   };
 
-  struct PhysicalDeviceProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceProperties
   {
     using NativeType = VkPhysicalDeviceProperties;
 
@@ -36752,7 +36754,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseProperties                         sparseProperties  = {};
   };
 
-  struct PhysicalDeviceProperties2
+  VULKAN_HPP_EXPORT struct PhysicalDeviceProperties2
   {
     using NativeType = VkPhysicalDeviceProperties2;
 
@@ -36829,15 +36831,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties properties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceProperties2>
   {
     using Type = PhysicalDeviceProperties2;
   };
 
-  using PhysicalDeviceProperties2KHR = PhysicalDeviceProperties2;
+  VULKAN_HPP_EXPORT using PhysicalDeviceProperties2KHR = PhysicalDeviceProperties2;
 
-  struct PhysicalDeviceProtectedMemoryFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceProtectedMemoryFeatures
   {
     using NativeType = VkPhysicalDeviceProtectedMemoryFeatures;
 
@@ -36928,13 +36930,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        protectedMemory = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceProtectedMemoryFeatures>
   {
     using Type = PhysicalDeviceProtectedMemoryFeatures;
   };
 
-  struct PhysicalDeviceProtectedMemoryProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceProtectedMemoryProperties
   {
     using NativeType = VkPhysicalDeviceProtectedMemoryProperties;
 
@@ -37011,13 +37013,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        protectedNoFault = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceProtectedMemoryProperties>
   {
     using Type = PhysicalDeviceProtectedMemoryProperties;
   };
 
-  struct PhysicalDeviceRobustness2FeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceRobustness2FeaturesEXT
   {
     using NativeType = VkPhysicalDeviceRobustness2FeaturesEXT;
 
@@ -37132,13 +37134,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        nullDescriptor      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceRobustness2FeaturesEXT>
   {
     using Type = PhysicalDeviceRobustness2FeaturesEXT;
   };
 
-  struct PhysicalDeviceRobustness2PropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceRobustness2PropertiesEXT
   {
     using NativeType = VkPhysicalDeviceRobustness2PropertiesEXT;
 
@@ -37219,13 +37221,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    robustUniformBufferAccessSizeAlignment = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceRobustness2PropertiesEXT>
   {
     using Type = PhysicalDeviceRobustness2PropertiesEXT;
   };
 
-  struct PhysicalDeviceSampleLocationsPropertiesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSampleLocationsPropertiesEXT
   {
     using NativeType = VkPhysicalDeviceSampleLocationsPropertiesEXT;
 
@@ -37328,13 +37330,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                   variableSampleLocations       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSampleLocationsPropertiesEXT>
   {
     using Type = PhysicalDeviceSampleLocationsPropertiesEXT;
   };
 
-  struct PhysicalDeviceSamplerFilterMinmaxProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSamplerFilterMinmaxProperties
   {
     using NativeType = VkPhysicalDeviceSamplerFilterMinmaxProperties;
 
@@ -37415,15 +37417,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        filterMinmaxImageComponentMapping  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSamplerFilterMinmaxProperties>
   {
     using Type = PhysicalDeviceSamplerFilterMinmaxProperties;
   };
 
-  using PhysicalDeviceSamplerFilterMinmaxPropertiesEXT = PhysicalDeviceSamplerFilterMinmaxProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSamplerFilterMinmaxPropertiesEXT = PhysicalDeviceSamplerFilterMinmaxProperties;
 
-  struct PhysicalDeviceSamplerYcbcrConversionFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSamplerYcbcrConversionFeatures
   {
     using NativeType = VkPhysicalDeviceSamplerYcbcrConversionFeatures;
 
@@ -37515,15 +37517,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        samplerYcbcrConversion = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSamplerYcbcrConversionFeatures>
   {
     using Type = PhysicalDeviceSamplerYcbcrConversionFeatures;
   };
 
-  using PhysicalDeviceSamplerYcbcrConversionFeaturesKHR = PhysicalDeviceSamplerYcbcrConversionFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSamplerYcbcrConversionFeaturesKHR = PhysicalDeviceSamplerYcbcrConversionFeatures;
 
-  struct PhysicalDeviceScalarBlockLayoutFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceScalarBlockLayoutFeatures
   {
     using NativeType = VkPhysicalDeviceScalarBlockLayoutFeatures;
 
@@ -37615,15 +37617,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        scalarBlockLayout = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceScalarBlockLayoutFeatures>
   {
     using Type = PhysicalDeviceScalarBlockLayoutFeatures;
   };
 
-  using PhysicalDeviceScalarBlockLayoutFeaturesEXT = PhysicalDeviceScalarBlockLayoutFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceScalarBlockLayoutFeaturesEXT = PhysicalDeviceScalarBlockLayoutFeatures;
 
-  struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures
   {
     using NativeType = VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures;
 
@@ -37717,15 +37719,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        separateDepthStencilLayouts = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSeparateDepthStencilLayoutsFeatures>
   {
     using Type = PhysicalDeviceSeparateDepthStencilLayoutsFeatures;
   };
 
-  using PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR = PhysicalDeviceSeparateDepthStencilLayoutsFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR = PhysicalDeviceSeparateDepthStencilLayoutsFeatures;
 
-  struct PhysicalDeviceShaderAtomicFloatFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderAtomicFloatFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceShaderAtomicFloatFeaturesEXT;
 
@@ -37959,13 +37961,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        sparseImageFloat32AtomicAdd  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderAtomicFloatFeaturesEXT>
   {
     using Type = PhysicalDeviceShaderAtomicFloatFeaturesEXT;
   };
 
-  struct PhysicalDeviceShaderAtomicInt64Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderAtomicInt64Features
   {
     using NativeType = VkPhysicalDeviceShaderAtomicInt64Features;
 
@@ -38068,15 +38070,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderSharedInt64Atomics = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderAtomicInt64Features>
   {
     using Type = PhysicalDeviceShaderAtomicInt64Features;
   };
 
-  using PhysicalDeviceShaderAtomicInt64FeaturesKHR = PhysicalDeviceShaderAtomicInt64Features;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderAtomicInt64FeaturesKHR = PhysicalDeviceShaderAtomicInt64Features;
 
-  struct PhysicalDeviceShaderClockFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderClockFeaturesKHR
   {
     using NativeType = VkPhysicalDeviceShaderClockFeaturesKHR;
 
@@ -38178,13 +38180,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderDeviceClock   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderClockFeaturesKHR>
   {
     using Type = PhysicalDeviceShaderClockFeaturesKHR;
   };
 
-  struct PhysicalDeviceShaderDemoteToHelperInvocationFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderDemoteToHelperInvocationFeatures
   {
     using NativeType = VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures;
 
@@ -38278,15 +38280,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderDemoteToHelperInvocation = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderDemoteToHelperInvocationFeatures>
   {
     using Type = PhysicalDeviceShaderDemoteToHelperInvocationFeatures;
   };
 
-  using PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT = PhysicalDeviceShaderDemoteToHelperInvocationFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT = PhysicalDeviceShaderDemoteToHelperInvocationFeatures;
 
-  struct PhysicalDeviceShaderDrawParametersFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderDrawParametersFeatures
   {
     using NativeType = VkPhysicalDeviceShaderDrawParametersFeatures;
 
@@ -38378,15 +38380,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderDrawParameters = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderDrawParametersFeatures>
   {
     using Type = PhysicalDeviceShaderDrawParametersFeatures;
   };
 
-  using PhysicalDeviceShaderDrawParameterFeatures = PhysicalDeviceShaderDrawParametersFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderDrawParameterFeatures = PhysicalDeviceShaderDrawParametersFeatures;
 
-  struct PhysicalDeviceShaderFloat16Int8Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderFloat16Int8Features
   {
     using NativeType = VkPhysicalDeviceShaderFloat16Int8Features;
 
@@ -38486,16 +38488,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderInt8    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderFloat16Int8Features>
   {
     using Type = PhysicalDeviceShaderFloat16Int8Features;
   };
 
-  using PhysicalDeviceFloat16Int8FeaturesKHR       = PhysicalDeviceShaderFloat16Int8Features;
-  using PhysicalDeviceShaderFloat16Int8FeaturesKHR = PhysicalDeviceShaderFloat16Int8Features;
+  VULKAN_HPP_EXPORT using PhysicalDeviceFloat16Int8FeaturesKHR       = PhysicalDeviceShaderFloat16Int8Features;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderFloat16Int8FeaturesKHR = PhysicalDeviceShaderFloat16Int8Features;
 
-  struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT
   {
     using NativeType = VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT;
 
@@ -38599,13 +38601,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        sparseImageInt64Atomics = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderImageAtomicInt64FeaturesEXT>
   {
     using Type = PhysicalDeviceShaderImageAtomicInt64FeaturesEXT;
   };
 
-  struct PhysicalDeviceShaderIntegerDotProductFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderIntegerDotProductFeatures
   {
     using NativeType = VkPhysicalDeviceShaderIntegerDotProductFeatures;
 
@@ -38698,15 +38700,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderIntegerDotProduct = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderIntegerDotProductFeatures>
   {
     using Type = PhysicalDeviceShaderIntegerDotProductFeatures;
   };
 
-  using PhysicalDeviceShaderIntegerDotProductFeaturesKHR = PhysicalDeviceShaderIntegerDotProductFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderIntegerDotProductFeaturesKHR = PhysicalDeviceShaderIntegerDotProductFeatures;
 
-  struct PhysicalDeviceShaderIntegerDotProductProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderIntegerDotProductProperties
   {
     using NativeType = VkPhysicalDeviceShaderIntegerDotProductProperties;
 
@@ -38970,15 +38972,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderIntegerDotProductProperties>
   {
     using Type = PhysicalDeviceShaderIntegerDotProductProperties;
   };
 
-  using PhysicalDeviceShaderIntegerDotProductPropertiesKHR = PhysicalDeviceShaderIntegerDotProductProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderIntegerDotProductPropertiesKHR = PhysicalDeviceShaderIntegerDotProductProperties;
 
-  struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures
   {
     using NativeType = VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures;
 
@@ -39072,15 +39074,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderSubgroupExtendedTypes = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderSubgroupExtendedTypesFeatures>
   {
     using Type = PhysicalDeviceShaderSubgroupExtendedTypesFeatures;
   };
 
-  using PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR = PhysicalDeviceShaderSubgroupExtendedTypesFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR = PhysicalDeviceShaderSubgroupExtendedTypesFeatures;
 
-  struct PhysicalDeviceShaderTerminateInvocationFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceShaderTerminateInvocationFeatures
   {
     using NativeType = VkPhysicalDeviceShaderTerminateInvocationFeatures;
 
@@ -39173,15 +39175,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderTerminateInvocation = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceShaderTerminateInvocationFeatures>
   {
     using Type = PhysicalDeviceShaderTerminateInvocationFeatures;
   };
 
-  using PhysicalDeviceShaderTerminateInvocationFeaturesKHR = PhysicalDeviceShaderTerminateInvocationFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceShaderTerminateInvocationFeaturesKHR = PhysicalDeviceShaderTerminateInvocationFeatures;
 
-  struct PhysicalDeviceSubgroupProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSubgroupProperties
   {
     using NativeType = VkPhysicalDeviceSubgroupProperties;
 
@@ -39273,13 +39275,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32               quadOperationsInAllStages = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSubgroupProperties>
   {
     using Type = PhysicalDeviceSubgroupProperties;
   };
 
-  struct PhysicalDeviceSubgroupSizeControlFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSubgroupSizeControlFeatures
   {
     using NativeType = VkPhysicalDeviceSubgroupSizeControlFeatures;
 
@@ -39382,15 +39384,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        computeFullSubgroups = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSubgroupSizeControlFeatures>
   {
     using Type = PhysicalDeviceSubgroupSizeControlFeatures;
   };
 
-  using PhysicalDeviceSubgroupSizeControlFeaturesEXT = PhysicalDeviceSubgroupSizeControlFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSubgroupSizeControlFeaturesEXT = PhysicalDeviceSubgroupSizeControlFeatures;
 
-  struct PhysicalDeviceSubgroupSizeControlProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSubgroupSizeControlProperties
   {
     using NativeType = VkPhysicalDeviceSubgroupSizeControlProperties;
 
@@ -39482,15 +39484,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ShaderStageFlags requiredSubgroupSizeStages   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSubgroupSizeControlProperties>
   {
     using Type = PhysicalDeviceSubgroupSizeControlProperties;
   };
 
-  using PhysicalDeviceSubgroupSizeControlPropertiesEXT = PhysicalDeviceSubgroupSizeControlProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSubgroupSizeControlPropertiesEXT = PhysicalDeviceSubgroupSizeControlProperties;
 
-  struct PhysicalDeviceSurfaceInfo2KHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSurfaceInfo2KHR
   {
     using NativeType = VkPhysicalDeviceSurfaceInfo2KHR;
 
@@ -39580,13 +39582,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SurfaceKHR    surface = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSurfaceInfo2KHR>
   {
     using Type = PhysicalDeviceSurfaceInfo2KHR;
   };
 
-  struct PhysicalDeviceSynchronization2Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceSynchronization2Features
   {
     using NativeType = VkPhysicalDeviceSynchronization2Features;
 
@@ -39677,15 +39679,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        synchronization2 = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceSynchronization2Features>
   {
     using Type = PhysicalDeviceSynchronization2Features;
   };
 
-  using PhysicalDeviceSynchronization2FeaturesKHR = PhysicalDeviceSynchronization2Features;
+  VULKAN_HPP_EXPORT using PhysicalDeviceSynchronization2FeaturesKHR = PhysicalDeviceSynchronization2Features;
 
-  struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT;
 
@@ -39778,13 +39780,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        texelBufferAlignment = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceTexelBufferAlignmentFeaturesEXT>
   {
     using Type = PhysicalDeviceTexelBufferAlignmentFeaturesEXT;
   };
 
-  struct PhysicalDeviceTexelBufferAlignmentProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceTexelBufferAlignmentProperties
   {
     using NativeType = VkPhysicalDeviceTexelBufferAlignmentProperties;
 
@@ -39883,15 +39885,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        uniformTexelBufferOffsetSingleTexelAlignment = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceTexelBufferAlignmentProperties>
   {
     using Type = PhysicalDeviceTexelBufferAlignmentProperties;
   };
 
-  using PhysicalDeviceTexelBufferAlignmentPropertiesEXT = PhysicalDeviceTexelBufferAlignmentProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceTexelBufferAlignmentPropertiesEXT = PhysicalDeviceTexelBufferAlignmentProperties;
 
-  struct PhysicalDeviceTextureCompressionASTCHDRFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceTextureCompressionASTCHDRFeatures
   {
     using NativeType = VkPhysicalDeviceTextureCompressionASTCHDRFeatures;
 
@@ -39984,15 +39986,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        textureCompressionASTC_HDR = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceTextureCompressionAstcHdrFeatures>
   {
     using Type = PhysicalDeviceTextureCompressionASTCHDRFeatures;
   };
 
-  using PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT = PhysicalDeviceTextureCompressionASTCHDRFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT = PhysicalDeviceTextureCompressionASTCHDRFeatures;
 
-  struct PhysicalDeviceTimelineSemaphoreFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceTimelineSemaphoreFeatures
   {
     using NativeType = VkPhysicalDeviceTimelineSemaphoreFeatures;
 
@@ -40084,15 +40086,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        timelineSemaphore = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceTimelineSemaphoreFeatures>
   {
     using Type = PhysicalDeviceTimelineSemaphoreFeatures;
   };
 
-  using PhysicalDeviceTimelineSemaphoreFeaturesKHR = PhysicalDeviceTimelineSemaphoreFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceTimelineSemaphoreFeaturesKHR = PhysicalDeviceTimelineSemaphoreFeatures;
 
-  struct PhysicalDeviceTimelineSemaphoreProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceTimelineSemaphoreProperties
   {
     using NativeType = VkPhysicalDeviceTimelineSemaphoreProperties;
 
@@ -40169,15 +40171,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            maxTimelineSemaphoreValueDifference = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceTimelineSemaphoreProperties>
   {
     using Type = PhysicalDeviceTimelineSemaphoreProperties;
   };
 
-  using PhysicalDeviceTimelineSemaphorePropertiesKHR = PhysicalDeviceTimelineSemaphoreProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceTimelineSemaphorePropertiesKHR = PhysicalDeviceTimelineSemaphoreProperties;
 
-  struct PhysicalDeviceToolProperties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceToolProperties
   {
     using NativeType = VkPhysicalDeviceToolProperties;
 
@@ -40287,15 +40289,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<char, VK_MAX_EXTENSION_NAME_SIZE> layer       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceToolProperties>
   {
     using Type = PhysicalDeviceToolProperties;
   };
 
-  using PhysicalDeviceToolPropertiesEXT = PhysicalDeviceToolProperties;
+  VULKAN_HPP_EXPORT using PhysicalDeviceToolPropertiesEXT = PhysicalDeviceToolProperties;
 
-  struct PhysicalDeviceUniformBufferStandardLayoutFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceUniformBufferStandardLayoutFeatures
   {
     using NativeType = VkPhysicalDeviceUniformBufferStandardLayoutFeatures;
 
@@ -40389,15 +40391,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        uniformBufferStandardLayout = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceUniformBufferStandardLayoutFeatures>
   {
     using Type = PhysicalDeviceUniformBufferStandardLayoutFeatures;
   };
 
-  using PhysicalDeviceUniformBufferStandardLayoutFeaturesKHR = PhysicalDeviceUniformBufferStandardLayoutFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceUniformBufferStandardLayoutFeaturesKHR = PhysicalDeviceUniformBufferStandardLayoutFeatures;
 
-  struct PhysicalDeviceVariablePointersFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVariablePointersFeatures
   {
     using NativeType = VkPhysicalDeviceVariablePointersFeatures;
 
@@ -40499,17 +40501,17 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        variablePointers              = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVariablePointersFeatures>
   {
     using Type = PhysicalDeviceVariablePointersFeatures;
   };
 
-  using PhysicalDeviceVariablePointerFeatures     = PhysicalDeviceVariablePointersFeatures;
-  using PhysicalDeviceVariablePointerFeaturesKHR  = PhysicalDeviceVariablePointersFeatures;
-  using PhysicalDeviceVariablePointersFeaturesKHR = PhysicalDeviceVariablePointersFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceVariablePointerFeatures     = PhysicalDeviceVariablePointersFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceVariablePointerFeaturesKHR  = PhysicalDeviceVariablePointersFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceVariablePointersFeaturesKHR = PhysicalDeviceVariablePointersFeatures;
 
-  struct PhysicalDeviceVertexAttributeDivisorFeaturesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVertexAttributeDivisorFeaturesKHR
   {
     using NativeType = VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR;
 
@@ -40613,15 +40615,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        vertexAttributeInstanceRateZeroDivisor = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVertexAttributeDivisorFeaturesKHR>
   {
     using Type = PhysicalDeviceVertexAttributeDivisorFeaturesKHR;
   };
 
-  using PhysicalDeviceVertexAttributeDivisorFeaturesEXT = PhysicalDeviceVertexAttributeDivisorFeaturesKHR;
+  VULKAN_HPP_EXPORT using PhysicalDeviceVertexAttributeDivisorFeaturesEXT = PhysicalDeviceVertexAttributeDivisorFeaturesKHR;
 
-  struct PhysicalDeviceVertexAttributeDivisorPropertiesKHR
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVertexAttributeDivisorPropertiesKHR
   {
     using NativeType = VkPhysicalDeviceVertexAttributeDivisorPropertiesKHR;
 
@@ -40704,13 +40706,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        supportsNonZeroFirstInstance = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVertexAttributeDivisorPropertiesKHR>
   {
     using Type = PhysicalDeviceVertexAttributeDivisorPropertiesKHR;
   };
 
-  struct PhysicalDeviceVertexInputDynamicStateFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVertexInputDynamicStateFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT;
 
@@ -40803,13 +40805,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        vertexInputDynamicState = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVertexInputDynamicStateFeaturesEXT>
   {
     using Type = PhysicalDeviceVertexInputDynamicStateFeaturesEXT;
   };
 
-  struct PhysicalDeviceVulkan11Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan11Features
   {
     using NativeType = VkPhysicalDeviceVulkan11Features;
 
@@ -41037,13 +41039,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderDrawParameters               = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan11Features>
   {
     using Type = PhysicalDeviceVulkan11Features;
   };
 
-  struct PhysicalDeviceVulkan11Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan11Properties
   {
     using NativeType = VkPhysicalDeviceVulkan11Properties;
 
@@ -41202,13 +41204,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize                            maxMemoryAllocationSize           = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan11Properties>
   {
     using Type = PhysicalDeviceVulkan11Properties;
   };
 
-  struct PhysicalDeviceVulkan12Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan12Features
   {
     using NativeType = VkPhysicalDeviceVulkan12Features;
 
@@ -41877,13 +41879,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        subgroupBroadcastDynamicId                         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan12Features>
   {
     using Type = PhysicalDeviceVulkan12Features;
   };
 
-  struct PhysicalDeviceVulkan12Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan12Properties
   {
     using NativeType = VkPhysicalDeviceVulkan12Properties;
 
@@ -42368,13 +42370,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SampleCountFlags                framebufferIntegerColorSampleCounts                  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan12Properties>
   {
     using Type = PhysicalDeviceVulkan12Properties;
   };
 
-  struct PhysicalDeviceVulkan13Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan13Features
   {
     using NativeType = VkPhysicalDeviceVulkan13Features;
 
@@ -42638,13 +42640,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        maintenance4                                       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan13Features>
   {
     using Type = PhysicalDeviceVulkan13Features;
   };
 
-  struct PhysicalDeviceVulkan13Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkan13Properties
   {
     using NativeType = VkPhysicalDeviceVulkan13Properties;
 
@@ -42994,13 +42996,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize       maxBufferSize                                                                 = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkan13Properties>
   {
     using Type = PhysicalDeviceVulkan13Properties;
   };
 
-  struct PhysicalDeviceVulkanMemoryModelFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkanMemoryModelFeatures
   {
     using NativeType = VkPhysicalDeviceVulkanMemoryModelFeatures;
 
@@ -43118,15 +43120,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        vulkanMemoryModelAvailabilityVisibilityChains = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkanMemoryModelFeatures>
   {
     using Type = PhysicalDeviceVulkanMemoryModelFeatures;
   };
 
-  using PhysicalDeviceVulkanMemoryModelFeaturesKHR = PhysicalDeviceVulkanMemoryModelFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceVulkanMemoryModelFeaturesKHR = PhysicalDeviceVulkanMemoryModelFeatures;
 
-  struct PhysicalDeviceVulkanSC10Features
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkanSC10Features
   {
     using NativeType = VkPhysicalDeviceVulkanSC10Features;
 
@@ -43218,13 +43220,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderAtomicInstructions = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkanSc10Features>
   {
     using Type = PhysicalDeviceVulkanSC10Features;
   };
 
-  struct PhysicalDeviceVulkanSC10Properties
+  VULKAN_HPP_EXPORT struct PhysicalDeviceVulkanSC10Properties
   {
     using NativeType = VkPhysicalDeviceVulkanSC10Properties;
 
@@ -43400,13 +43402,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize    maxCommandBufferSize                             = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceVulkanSc10Properties>
   {
     using Type = PhysicalDeviceVulkanSC10Properties;
   };
 
-  struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT;
 
@@ -43499,13 +43501,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        ycbcr2plane444Formats = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT>
   {
     using Type = PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT;
   };
 
-  struct PhysicalDeviceYcbcrImageArraysFeaturesEXT
+  VULKAN_HPP_EXPORT struct PhysicalDeviceYcbcrImageArraysFeaturesEXT
   {
     using NativeType = VkPhysicalDeviceYcbcrImageArraysFeaturesEXT;
 
@@ -43597,13 +43599,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        ycbcrImageArrays = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceYcbcrImageArraysFeaturesEXT>
   {
     using Type = PhysicalDeviceYcbcrImageArraysFeaturesEXT;
   };
 
-  struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
+  VULKAN_HPP_EXPORT struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
   {
     using NativeType = VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures;
 
@@ -43697,15 +43699,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        shaderZeroInitializeWorkgroupMemory = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePhysicalDeviceZeroInitializeWorkgroupMemoryFeatures>
   {
     using Type = PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures;
   };
 
-  using PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR = PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures;
+  VULKAN_HPP_EXPORT using PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR = PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures;
 
-  struct PipelineCacheHeaderVersionOne
+  VULKAN_HPP_EXPORT struct PipelineCacheHeaderVersionOne
   {
     using NativeType = VkPipelineCacheHeaderVersionOne;
 
@@ -43826,7 +43828,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<uint8_t, VK_UUID_SIZE> pipelineCacheUUID = {};
   };
 
-  struct PipelineCacheHeaderVersionSafetyCriticalOne
+  VULKAN_HPP_EXPORT struct PipelineCacheHeaderVersionSafetyCriticalOne
   {
     using NativeType = VkPipelineCacheHeaderVersionSafetyCriticalOne;
 
@@ -43960,7 +43962,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                                             pipelineIndexOffset = {};
   };
 
-  struct PipelineCacheSafetyCriticalIndexEntry
+  VULKAN_HPP_EXPORT struct PipelineCacheSafetyCriticalIndexEntry
   {
     using NativeType = VkPipelineCacheSafetyCriticalIndexEntry;
 
@@ -44101,7 +44103,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                                                    stageIndexOffset   = {};
   };
 
-  struct PipelineCacheStageValidationIndexEntry
+  VULKAN_HPP_EXPORT struct PipelineCacheStageValidationIndexEntry
   {
     using NativeType = VkPipelineCacheStageValidationIndexEntry;
 
@@ -44187,7 +44189,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t codeOffset = {};
   };
 
-  struct PipelineColorBlendAdvancedStateCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineColorBlendAdvancedStateCreateInfoEXT
   {
     using NativeType = VkPipelineColorBlendAdvancedStateCreateInfoEXT;
 
@@ -44305,13 +44307,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::BlendOverlapEXT blendOverlap     = VULKAN_HPP_NAMESPACE::BlendOverlapEXT::eUncorrelated;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineColorBlendAdvancedStateCreateInfoEXT>
   {
     using Type = PipelineColorBlendAdvancedStateCreateInfoEXT;
   };
 
-  struct PipelineColorWriteCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineColorWriteCreateInfoEXT
   {
     using NativeType = VkPipelineColorWriteCreateInfoEXT;
 
@@ -44430,13 +44432,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Bool32 * pColorWriteEnables = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineColorWriteCreateInfoEXT>
   {
     using Type = PipelineColorWriteCreateInfoEXT;
   };
 
-  struct PipelineCreationFeedback
+  VULKAN_HPP_EXPORT struct PipelineCreationFeedback
   {
     using NativeType = VkPipelineCreationFeedback;
 
@@ -44509,9 +44511,9 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                                            duration = {};
   };
 
-  using PipelineCreationFeedbackEXT = PipelineCreationFeedback;
+  VULKAN_HPP_EXPORT using PipelineCreationFeedbackEXT = PipelineCreationFeedback;
 
-  struct PipelineCreationFeedbackCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineCreationFeedbackCreateInfo
   {
     using NativeType = VkPipelineCreationFeedbackCreateInfo;
 
@@ -44653,15 +44655,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PipelineCreationFeedback * pPipelineStageCreationFeedbacks    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineCreationFeedbackCreateInfo>
   {
     using Type = PipelineCreationFeedbackCreateInfo;
   };
 
-  using PipelineCreationFeedbackCreateInfoEXT = PipelineCreationFeedbackCreateInfo;
+  VULKAN_HPP_EXPORT using PipelineCreationFeedbackCreateInfoEXT = PipelineCreationFeedbackCreateInfo;
 
-  struct PipelineDiscardRectangleStateCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineDiscardRectangleStateCreateInfoEXT
   {
     using NativeType = VkPipelineDiscardRectangleStateCreateInfoEXT;
 
@@ -44813,13 +44815,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Rect2D *                              pDiscardRectangles    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineDiscardRectangleStateCreateInfoEXT>
   {
     using Type = PipelineDiscardRectangleStateCreateInfoEXT;
   };
 
-  struct PipelineFragmentShadingRateStateCreateInfoKHR
+  VULKAN_HPP_EXPORT struct PipelineFragmentShadingRateStateCreateInfoKHR
   {
     using NativeType = VkPipelineFragmentShadingRateStateCreateInfoKHR;
 
@@ -44927,13 +44929,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::FragmentShadingRateCombinerOpKHR, 2> combinerOps = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineFragmentShadingRateStateCreateInfoKHR>
   {
     using Type = PipelineFragmentShadingRateStateCreateInfoKHR;
   };
 
-  struct PushConstantRange
+  VULKAN_HPP_EXPORT struct PushConstantRange
   {
     using NativeType = VkPushConstantRange;
 
@@ -45025,7 +45027,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                               size       = {};
   };
 
-  struct PipelineLayoutCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineLayoutCreateInfo
   {
     using NativeType = VkPipelineLayoutCreateInfo;
 
@@ -45196,13 +45198,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::PushConstantRange *   pPushConstantRanges    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineLayoutCreateInfo>
   {
     using Type = PipelineLayoutCreateInfo;
   };
 
-  struct PipelineOfflineCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineOfflineCreateInfo
   {
     using NativeType = VkPipelineOfflineCreateInfo;
 
@@ -45317,13 +45319,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DeviceSize                            poolEntrySize      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineOfflineCreateInfo>
   {
     using Type = PipelineOfflineCreateInfo;
   };
 
-  struct PipelineRasterizationConservativeStateCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineRasterizationConservativeStateCreateInfoEXT
   {
     using NativeType = VkPipelineRasterizationConservativeStateCreateInfoEXT;
 
@@ -45444,13 +45446,13 @@ namespace VULKAN_HPP_NAMESPACE
     float                                                  extraPrimitiveOverestimationSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineRasterizationConservativeStateCreateInfoEXT>
   {
     using Type = PipelineRasterizationConservativeStateCreateInfoEXT;
   };
 
-  struct PipelineRasterizationDepthClipStateCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineRasterizationDepthClipStateCreateInfoEXT
   {
     using NativeType = VkPipelineRasterizationDepthClipStateCreateInfoEXT;
 
@@ -45556,13 +45558,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                                            depthClipEnable = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineRasterizationDepthClipStateCreateInfoEXT>
   {
     using Type = PipelineRasterizationDepthClipStateCreateInfoEXT;
   };
 
-  struct PipelineRasterizationLineStateCreateInfoKHR
+  VULKAN_HPP_EXPORT struct PipelineRasterizationLineStateCreateInfoKHR
   {
     using NativeType = VkPipelineRasterizationLineStateCreateInfoKHR;
 
@@ -45690,15 +45692,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint16_t                                       lineStipplePattern    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineRasterizationLineStateCreateInfoKHR>
   {
     using Type = PipelineRasterizationLineStateCreateInfoKHR;
   };
 
-  using PipelineRasterizationLineStateCreateInfoEXT = PipelineRasterizationLineStateCreateInfoKHR;
+  VULKAN_HPP_EXPORT using PipelineRasterizationLineStateCreateInfoEXT = PipelineRasterizationLineStateCreateInfoKHR;
 
-  struct PipelineRenderingCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineRenderingCreateInfo
   {
     using NativeType = VkPipelineRenderingCreateInfo;
 
@@ -45861,15 +45863,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Format         stencilAttachmentFormat = VULKAN_HPP_NAMESPACE::Format::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineRenderingCreateInfo>
   {
     using Type = PipelineRenderingCreateInfo;
   };
 
-  using PipelineRenderingCreateInfoKHR = PipelineRenderingCreateInfo;
+  VULKAN_HPP_EXPORT using PipelineRenderingCreateInfoKHR = PipelineRenderingCreateInfo;
 
-  struct PipelineSampleLocationsStateCreateInfoEXT
+  VULKAN_HPP_EXPORT struct PipelineSampleLocationsStateCreateInfoEXT
   {
     using NativeType = VkPipelineSampleLocationsStateCreateInfoEXT;
 
@@ -45975,13 +45977,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT sampleLocationsInfo   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineSampleLocationsStateCreateInfoEXT>
   {
     using Type = PipelineSampleLocationsStateCreateInfoEXT;
   };
 
-  struct PipelineShaderStageRequiredSubgroupSizeCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineShaderStageRequiredSubgroupSizeCreateInfo
   {
     using NativeType = VkPipelineShaderStageRequiredSubgroupSizeCreateInfo;
 
@@ -46059,16 +46061,16 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            requiredSubgroupSize = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineShaderStageRequiredSubgroupSizeCreateInfo>
   {
     using Type = PipelineShaderStageRequiredSubgroupSizeCreateInfo;
   };
 
-  using PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT = PipelineShaderStageRequiredSubgroupSizeCreateInfo;
-  using ShaderRequiredSubgroupSizeCreateInfoEXT              = PipelineShaderStageRequiredSubgroupSizeCreateInfo;
+  VULKAN_HPP_EXPORT using PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT = PipelineShaderStageRequiredSubgroupSizeCreateInfo;
+  VULKAN_HPP_EXPORT using ShaderRequiredSubgroupSizeCreateInfoEXT              = PipelineShaderStageRequiredSubgroupSizeCreateInfo;
 
-  struct PipelineTessellationDomainOriginStateCreateInfo
+  VULKAN_HPP_EXPORT struct PipelineTessellationDomainOriginStateCreateInfo
   {
     using NativeType = VkPipelineTessellationDomainOriginStateCreateInfo;
 
@@ -46162,15 +46164,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::TessellationDomainOrigin domainOrigin = VULKAN_HPP_NAMESPACE::TessellationDomainOrigin::eUpperLeft;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineTessellationDomainOriginStateCreateInfo>
   {
     using Type = PipelineTessellationDomainOriginStateCreateInfo;
   };
 
-  using PipelineTessellationDomainOriginStateCreateInfoKHR = PipelineTessellationDomainOriginStateCreateInfo;
+  VULKAN_HPP_EXPORT using PipelineTessellationDomainOriginStateCreateInfoKHR = PipelineTessellationDomainOriginStateCreateInfo;
 
-  struct VertexInputBindingDivisorDescriptionKHR
+  VULKAN_HPP_EXPORT struct VertexInputBindingDivisorDescriptionKHR
   {
     using NativeType = VkVertexInputBindingDivisorDescriptionKHR;
 
@@ -46256,9 +46258,9 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t divisor = {};
   };
 
-  using VertexInputBindingDivisorDescriptionEXT = VertexInputBindingDivisorDescriptionKHR;
+  VULKAN_HPP_EXPORT using VertexInputBindingDivisorDescriptionEXT = VertexInputBindingDivisorDescriptionKHR;
 
-  struct PipelineVertexInputDivisorStateCreateInfoKHR
+  VULKAN_HPP_EXPORT struct PipelineVertexInputDivisorStateCreateInfoKHR
   {
     using NativeType = VkPipelineVertexInputDivisorStateCreateInfoKHR;
 
@@ -46387,15 +46389,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionKHR * pVertexBindingDivisors    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePipelineVertexInputDivisorStateCreateInfoKHR>
   {
     using Type = PipelineVertexInputDivisorStateCreateInfoKHR;
   };
 
-  using PipelineVertexInputDivisorStateCreateInfoEXT = PipelineVertexInputDivisorStateCreateInfoKHR;
+  VULKAN_HPP_EXPORT using PipelineVertexInputDivisorStateCreateInfoEXT = PipelineVertexInputDivisorStateCreateInfoKHR;
 
-  struct PresentInfoKHR
+  VULKAN_HPP_EXPORT struct PresentInfoKHR
   {
     using NativeType = VkPresentInfoKHR;
 
@@ -46610,13 +46612,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Result *             pResults           = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePresentInfoKHR>
   {
     using Type = PresentInfoKHR;
   };
 
-  struct RectLayerKHR
+  VULKAN_HPP_EXPORT struct RectLayerKHR
   {
     using NativeType = VkRectLayerKHR;
 
@@ -46710,7 +46712,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                       layer  = {};
   };
 
-  struct PresentRegionKHR
+  VULKAN_HPP_EXPORT struct PresentRegionKHR
   {
     using NativeType = VkPresentRegionKHR;
 
@@ -46810,7 +46812,7 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::RectLayerKHR * pRectangles    = {};
   };
 
-  struct PresentRegionsKHR
+  VULKAN_HPP_EXPORT struct PresentRegionsKHR
   {
     using NativeType = VkPresentRegionsKHR;
 
@@ -46925,13 +46927,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::PresentRegionKHR * pRegions       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePresentRegionsKHR>
   {
     using Type = PresentRegionsKHR;
   };
 
-  struct PrivateDataSlotCreateInfo
+  VULKAN_HPP_EXPORT struct PrivateDataSlotCreateInfo
   {
     using NativeType = VkPrivateDataSlotCreateInfo;
 
@@ -47022,15 +47024,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PrivateDataSlotCreateFlags flags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::ePrivateDataSlotCreateInfo>
   {
     using Type = PrivateDataSlotCreateInfo;
   };
 
-  using PrivateDataSlotCreateInfoEXT = PrivateDataSlotCreateInfo;
+  VULKAN_HPP_EXPORT using PrivateDataSlotCreateInfoEXT = PrivateDataSlotCreateInfo;
 
-  struct ProtectedSubmitInfo
+  VULKAN_HPP_EXPORT struct ProtectedSubmitInfo
   {
     using NativeType = VkProtectedSubmitInfo;
 
@@ -47119,13 +47121,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32        protectedSubmit = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eProtectedSubmitInfo>
   {
     using Type = ProtectedSubmitInfo;
   };
 
-  struct QueryPoolCreateInfo
+  VULKAN_HPP_EXPORT struct QueryPoolCreateInfo
   {
     using NativeType = VkQueryPoolCreateInfo;
 
@@ -47249,13 +47251,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::QueryPipelineStatisticFlags pipelineStatistics = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eQueryPoolCreateInfo>
   {
     using Type = QueryPoolCreateInfo;
   };
 
-  struct QueryPoolPerformanceCreateInfoKHR
+  VULKAN_HPP_EXPORT struct QueryPoolPerformanceCreateInfoKHR
   {
     using NativeType = VkQueryPoolPerformanceCreateInfoKHR;
 
@@ -47387,13 +47389,13 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pCounterIndices   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eQueryPoolPerformanceCreateInfoKHR>
   {
     using Type = QueryPoolPerformanceCreateInfoKHR;
   };
 
-  struct QueueFamilyCheckpointProperties2NV
+  VULKAN_HPP_EXPORT struct QueueFamilyCheckpointProperties2NV
   {
     using NativeType = VkQueueFamilyCheckpointProperties2NV;
 
@@ -47470,13 +47472,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::PipelineStageFlags2 checkpointExecutionStageMask = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eQueueFamilyCheckpointProperties2NV>
   {
     using Type = QueueFamilyCheckpointProperties2NV;
   };
 
-  struct QueueFamilyGlobalPriorityPropertiesKHR
+  VULKAN_HPP_EXPORT struct QueueFamilyGlobalPriorityPropertiesKHR
   {
     using NativeType = VkQueueFamilyGlobalPriorityPropertiesKHR;
 
@@ -47588,15 +47590,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ArrayWrapper1D<VULKAN_HPP_NAMESPACE::QueueGlobalPriorityKHR, VK_MAX_GLOBAL_PRIORITY_SIZE_KHR> priorities = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eQueueFamilyGlobalPriorityPropertiesKHR>
   {
     using Type = QueueFamilyGlobalPriorityPropertiesKHR;
   };
 
-  using QueueFamilyGlobalPriorityPropertiesEXT = QueueFamilyGlobalPriorityPropertiesKHR;
+  VULKAN_HPP_EXPORT using QueueFamilyGlobalPriorityPropertiesEXT = QueueFamilyGlobalPriorityPropertiesKHR;
 
-  struct QueueFamilyProperties
+  VULKAN_HPP_EXPORT struct QueueFamilyProperties
   {
     using NativeType = VkQueueFamilyProperties;
 
@@ -47676,7 +47678,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Extent3D   minImageTransferGranularity = {};
   };
 
-  struct QueueFamilyProperties2
+  VULKAN_HPP_EXPORT struct QueueFamilyProperties2
   {
     using NativeType = VkQueueFamilyProperties2;
 
@@ -47753,15 +47755,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::QueueFamilyProperties queueFamilyProperties = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eQueueFamilyProperties2>
   {
     using Type = QueueFamilyProperties2;
   };
 
-  using QueueFamilyProperties2KHR = QueueFamilyProperties2;
+  VULKAN_HPP_EXPORT using QueueFamilyProperties2KHR = QueueFamilyProperties2;
 
-  struct RefreshObjectKHR
+  VULKAN_HPP_EXPORT struct RefreshObjectKHR
   {
     using NativeType = VkRefreshObjectKHR;
 
@@ -47854,7 +47856,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::RefreshObjectFlagsKHR flags        = {};
   };
 
-  struct RefreshObjectListKHR
+  VULKAN_HPP_EXPORT struct RefreshObjectListKHR
   {
     using NativeType = VkRefreshObjectListKHR;
 
@@ -47972,13 +47974,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::RefreshObjectKHR * pObjects    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRefreshObjectListKHR>
   {
     using Type = RefreshObjectListKHR;
   };
 
-  struct RenderPassAttachmentBeginInfo
+  VULKAN_HPP_EXPORT struct RenderPassAttachmentBeginInfo
   {
     using NativeType = VkRenderPassAttachmentBeginInfo;
 
@@ -48096,15 +48098,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ImageView * pAttachments    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassAttachmentBeginInfo>
   {
     using Type = RenderPassAttachmentBeginInfo;
   };
 
-  using RenderPassAttachmentBeginInfoKHR = RenderPassAttachmentBeginInfo;
+  VULKAN_HPP_EXPORT using RenderPassAttachmentBeginInfoKHR = RenderPassAttachmentBeginInfo;
 
-  struct RenderPassBeginInfo
+  VULKAN_HPP_EXPORT struct RenderPassBeginInfo
   {
     using NativeType = VkRenderPassBeginInfo;
 
@@ -48263,13 +48265,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ClearValue * pClearValues    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassBeginInfo>
   {
     using Type = RenderPassBeginInfo;
   };
 
-  struct SubpassDescription
+  VULKAN_HPP_EXPORT struct SubpassDescription
   {
     using NativeType = VkSubpassDescription;
 
@@ -48523,7 +48525,7 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                                  pPreserveAttachments    = {};
   };
 
-  struct SubpassDependency
+  VULKAN_HPP_EXPORT struct SubpassDependency
   {
     using NativeType = VkSubpassDependency;
 
@@ -48660,7 +48662,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::DependencyFlags    dependencyFlags = {};
   };
 
-  struct RenderPassCreateInfo
+  VULKAN_HPP_EXPORT struct RenderPassCreateInfo
   {
     using NativeType = VkRenderPassCreateInfo;
 
@@ -48863,13 +48865,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SubpassDependency *     pDependencies   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassCreateInfo>
   {
     using Type = RenderPassCreateInfo;
   };
 
-  struct SubpassDescription2
+  VULKAN_HPP_EXPORT struct SubpassDescription2
   {
     using NativeType = VkSubpassDescription2;
 
@@ -49157,15 +49159,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                                   pPreserveAttachments    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubpassDescription2>
   {
     using Type = SubpassDescription2;
   };
 
-  using SubpassDescription2KHR = SubpassDescription2;
+  VULKAN_HPP_EXPORT using SubpassDescription2KHR = SubpassDescription2;
 
-  struct SubpassDependency2
+  VULKAN_HPP_EXPORT struct SubpassDependency2
   {
     using NativeType = VkSubpassDependency2;
 
@@ -49327,15 +49329,15 @@ namespace VULKAN_HPP_NAMESPACE
     int32_t                                  viewOffset      = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubpassDependency2>
   {
     using Type = SubpassDependency2;
   };
 
-  using SubpassDependency2KHR = SubpassDependency2;
+  VULKAN_HPP_EXPORT using SubpassDependency2KHR = SubpassDependency2;
 
-  struct RenderPassCreateInfo2
+  VULKAN_HPP_EXPORT struct RenderPassCreateInfo2
   {
     using NativeType = VkRenderPassCreateInfo2;
 
@@ -49582,15 +49584,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                                     pCorrelatedViewMasks    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassCreateInfo2>
   {
     using Type = RenderPassCreateInfo2;
   };
 
-  using RenderPassCreateInfo2KHR = RenderPassCreateInfo2;
+  VULKAN_HPP_EXPORT using RenderPassCreateInfo2KHR = RenderPassCreateInfo2;
 
-  struct RenderPassInputAttachmentAspectCreateInfo
+  VULKAN_HPP_EXPORT struct RenderPassInputAttachmentAspectCreateInfo
   {
     using NativeType = VkRenderPassInputAttachmentAspectCreateInfo;
 
@@ -49714,15 +49716,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::InputAttachmentAspectReference * pAspectReferences    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassInputAttachmentAspectCreateInfo>
   {
     using Type = RenderPassInputAttachmentAspectCreateInfo;
   };
 
-  using RenderPassInputAttachmentAspectCreateInfoKHR = RenderPassInputAttachmentAspectCreateInfo;
+  VULKAN_HPP_EXPORT using RenderPassInputAttachmentAspectCreateInfoKHR = RenderPassInputAttachmentAspectCreateInfo;
 
-  struct RenderPassMultiviewCreateInfo
+  VULKAN_HPP_EXPORT struct RenderPassMultiviewCreateInfo
   {
     using NativeType = VkRenderPassMultiviewCreateInfo;
 
@@ -49911,15 +49913,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint32_t *                    pCorrelationMasks    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassMultiviewCreateInfo>
   {
     using Type = RenderPassMultiviewCreateInfo;
   };
 
-  using RenderPassMultiviewCreateInfoKHR = RenderPassMultiviewCreateInfo;
+  VULKAN_HPP_EXPORT using RenderPassMultiviewCreateInfoKHR = RenderPassMultiviewCreateInfo;
 
-  struct SubpassSampleLocationsEXT
+  VULKAN_HPP_EXPORT struct SubpassSampleLocationsEXT
   {
     using NativeType = VkSubpassSampleLocationsEXT;
 
@@ -50007,7 +50009,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT sampleLocationsInfo = {};
   };
 
-  struct RenderPassSampleLocationsBeginInfoEXT
+  VULKAN_HPP_EXPORT struct RenderPassSampleLocationsBeginInfoEXT
   {
     using NativeType = VkRenderPassSampleLocationsBeginInfoEXT;
 
@@ -50174,13 +50176,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SubpassSampleLocationsEXT *    pPostSubpassSampleLocations           = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderPassSampleLocationsBeginInfoEXT>
   {
     using Type = RenderPassSampleLocationsBeginInfoEXT;
   };
 
-  struct RenderingAttachmentInfo
+  VULKAN_HPP_EXPORT struct RenderingAttachmentInfo
   {
     using NativeType = VkRenderingAttachmentInfo;
 
@@ -50325,15 +50327,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ClearValue          clearValue         = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderingAttachmentInfo>
   {
     using Type = RenderingAttachmentInfo;
   };
 
-  using RenderingAttachmentInfoKHR = RenderingAttachmentInfo;
+  VULKAN_HPP_EXPORT using RenderingAttachmentInfoKHR = RenderingAttachmentInfo;
 
-  struct RenderingInfo
+  VULKAN_HPP_EXPORT struct RenderingInfo
   {
     using NativeType = VkRenderingInfo;
 
@@ -50528,15 +50530,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::RenderingAttachmentInfo * pStencilAttachment   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eRenderingInfo>
   {
     using Type = RenderingInfo;
   };
 
-  using RenderingInfoKHR = RenderingInfo;
+  VULKAN_HPP_EXPORT using RenderingInfoKHR = RenderingInfo;
 
-  struct ResolveImageInfo2
+  VULKAN_HPP_EXPORT struct ResolveImageInfo2
   {
     using NativeType = VkResolveImageInfo2;
 
@@ -50705,15 +50707,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ImageResolve2 * pRegions       = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eResolveImageInfo2>
   {
     using Type = ResolveImageInfo2;
   };
 
-  using ResolveImageInfo2KHR = ResolveImageInfo2;
+  VULKAN_HPP_EXPORT using ResolveImageInfo2KHR = ResolveImageInfo2;
 
-  struct SamplerCreateInfo
+  VULKAN_HPP_EXPORT struct SamplerCreateInfo
   {
     using NativeType = VkSamplerCreateInfo;
 
@@ -50974,13 +50976,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32             unnormalizedCoordinates = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerCreateInfo>
   {
     using Type = SamplerCreateInfo;
   };
 
-  struct SamplerCustomBorderColorCreateInfoEXT
+  VULKAN_HPP_EXPORT struct SamplerCustomBorderColorCreateInfoEXT
   {
     using NativeType = VkSamplerCustomBorderColorCreateInfoEXT;
 
@@ -51066,13 +51068,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Format          format            = VULKAN_HPP_NAMESPACE::Format::eUndefined;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerCustomBorderColorCreateInfoEXT>
   {
     using Type = SamplerCustomBorderColorCreateInfoEXT;
   };
 
-  struct SamplerReductionModeCreateInfo
+  VULKAN_HPP_EXPORT struct SamplerReductionModeCreateInfo
   {
     using NativeType = VkSamplerReductionModeCreateInfo;
 
@@ -51164,15 +51166,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SamplerReductionMode reductionMode = VULKAN_HPP_NAMESPACE::SamplerReductionMode::eWeightedAverage;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerReductionModeCreateInfo>
   {
     using Type = SamplerReductionModeCreateInfo;
   };
 
-  using SamplerReductionModeCreateInfoEXT = SamplerReductionModeCreateInfo;
+  VULKAN_HPP_EXPORT using SamplerReductionModeCreateInfoEXT = SamplerReductionModeCreateInfo;
 
-  struct SamplerYcbcrConversionCreateInfo
+  VULKAN_HPP_EXPORT struct SamplerYcbcrConversionCreateInfo
   {
     using NativeType = VkSamplerYcbcrConversionCreateInfo;
 
@@ -51341,15 +51343,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::Bool32                      forceExplicitReconstruction = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerYcbcrConversionCreateInfo>
   {
     using Type = SamplerYcbcrConversionCreateInfo;
   };
 
-  using SamplerYcbcrConversionCreateInfoKHR = SamplerYcbcrConversionCreateInfo;
+  VULKAN_HPP_EXPORT using SamplerYcbcrConversionCreateInfoKHR = SamplerYcbcrConversionCreateInfo;
 
-  struct SamplerYcbcrConversionImageFormatProperties
+  VULKAN_HPP_EXPORT struct SamplerYcbcrConversionImageFormatProperties
   {
     using NativeType = VkSamplerYcbcrConversionImageFormatProperties;
 
@@ -51426,15 +51428,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            combinedImageSamplerDescriptorCount = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerYcbcrConversionImageFormatProperties>
   {
     using Type = SamplerYcbcrConversionImageFormatProperties;
   };
 
-  using SamplerYcbcrConversionImageFormatPropertiesKHR = SamplerYcbcrConversionImageFormatProperties;
+  VULKAN_HPP_EXPORT using SamplerYcbcrConversionImageFormatPropertiesKHR = SamplerYcbcrConversionImageFormatProperties;
 
-  struct SamplerYcbcrConversionInfo
+  VULKAN_HPP_EXPORT struct SamplerYcbcrConversionInfo
   {
     using NativeType = VkSamplerYcbcrConversionInfo;
 
@@ -51525,16 +51527,16 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion conversion = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSamplerYcbcrConversionInfo>
   {
     using Type = SamplerYcbcrConversionInfo;
   };
 
-  using SamplerYcbcrConversionInfoKHR = SamplerYcbcrConversionInfo;
+  VULKAN_HPP_EXPORT using SamplerYcbcrConversionInfoKHR = SamplerYcbcrConversionInfo;
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct SciSyncAttributesInfoNV
+  VULKAN_HPP_EXPORT struct SciSyncAttributesInfoNV
   {
     using NativeType = VkSciSyncAttributesInfoNV;
 
@@ -51638,7 +51640,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SciSyncPrimitiveTypeNV primitiveType = VULKAN_HPP_NAMESPACE::SciSyncPrimitiveTypeNV::eFence;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSciSyncAttributesInfoNV>
   {
     using Type = SciSyncAttributesInfoNV;
@@ -51646,7 +51648,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  struct ScreenBufferFormatPropertiesQNX
+  VULKAN_HPP_EXPORT struct ScreenBufferFormatPropertiesQNX
   {
     using NativeType = VkScreenBufferFormatPropertiesQNX;
 
@@ -51772,7 +51774,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ChromaLocation              suggestedYChromaOffset           = VULKAN_HPP_NAMESPACE::ChromaLocation::eCositedEven;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eScreenBufferFormatPropertiesQNX>
   {
     using Type = ScreenBufferFormatPropertiesQNX;
@@ -51780,7 +51782,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-  struct ScreenBufferPropertiesQNX
+  VULKAN_HPP_EXPORT struct ScreenBufferPropertiesQNX
   {
     using NativeType = VkScreenBufferPropertiesQNX;
 
@@ -51860,14 +51862,14 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            memoryTypeBits = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eScreenBufferPropertiesQNX>
   {
     using Type = ScreenBufferPropertiesQNX;
   };
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
-  struct SemaphoreCreateInfo
+  VULKAN_HPP_EXPORT struct SemaphoreCreateInfo
   {
     using NativeType = VkSemaphoreCreateInfo;
 
@@ -51956,13 +51958,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SemaphoreCreateFlags flags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreCreateInfo>
   {
     using Type = SemaphoreCreateInfo;
   };
 
-  struct SemaphoreGetFdInfoKHR
+  VULKAN_HPP_EXPORT struct SemaphoreGetFdInfoKHR
   {
     using NativeType = VkSemaphoreGetFdInfoKHR;
 
@@ -52066,14 +52068,14 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreGetFdInfoKHR>
   {
     using Type = SemaphoreGetFdInfoKHR;
   };
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct SemaphoreGetSciSyncInfoNV
+  VULKAN_HPP_EXPORT struct SemaphoreGetSciSyncInfoNV
   {
     using NativeType = VkSemaphoreGetSciSyncInfoNV;
 
@@ -52178,7 +52180,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits handleType = VULKAN_HPP_NAMESPACE::ExternalSemaphoreHandleTypeFlagBits::eOpaqueFd;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreGetSciSyncInfoNV>
   {
     using Type = SemaphoreGetSciSyncInfoNV;
@@ -52186,7 +52188,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct SemaphoreSciSyncCreateInfoNV
+  VULKAN_HPP_EXPORT struct SemaphoreSciSyncCreateInfoNV
   {
     using NativeType = VkSemaphoreSciSyncCreateInfoNV;
 
@@ -52289,7 +52291,7 @@ namespace VULKAN_HPP_NAMESPACE
     const NvSciSyncFence *                       pFence        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreSciSyncCreateInfoNV>
   {
     using Type = SemaphoreSciSyncCreateInfoNV;
@@ -52297,7 +52299,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCI )
-  struct SemaphoreSciSyncPoolCreateInfoNV
+  VULKAN_HPP_EXPORT struct SemaphoreSciSyncPoolCreateInfoNV
   {
     using NativeType = VkSemaphoreSciSyncPoolCreateInfoNV;
 
@@ -52393,14 +52395,14 @@ namespace VULKAN_HPP_NAMESPACE
     NvSciSyncObj                        handle = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreSciSyncPoolCreateInfoNV>
   {
     using Type = SemaphoreSciSyncPoolCreateInfoNV;
   };
 #endif /*VK_USE_PLATFORM_SCI*/
 
-  struct SemaphoreSignalInfo
+  VULKAN_HPP_EXPORT struct SemaphoreSignalInfo
   {
     using NativeType = VkSemaphoreSignalInfo;
 
@@ -52498,15 +52500,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            value     = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreSignalInfo>
   {
     using Type = SemaphoreSignalInfo;
   };
 
-  using SemaphoreSignalInfoKHR = SemaphoreSignalInfo;
+  VULKAN_HPP_EXPORT using SemaphoreSignalInfoKHR = SemaphoreSignalInfo;
 
-  struct SemaphoreSubmitInfo
+  VULKAN_HPP_EXPORT struct SemaphoreSubmitInfo
   {
     using NativeType = VkSemaphoreSubmitInfo;
 
@@ -52629,15 +52631,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                                  deviceIndex = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreSubmitInfo>
   {
     using Type = SemaphoreSubmitInfo;
   };
 
-  using SemaphoreSubmitInfoKHR = SemaphoreSubmitInfo;
+  VULKAN_HPP_EXPORT using SemaphoreSubmitInfoKHR = SemaphoreSubmitInfo;
 
-  struct SemaphoreTypeCreateInfo
+  VULKAN_HPP_EXPORT struct SemaphoreTypeCreateInfo
   {
     using NativeType = VkSemaphoreTypeCreateInfo;
 
@@ -52737,15 +52739,15 @@ namespace VULKAN_HPP_NAMESPACE
     uint64_t                            initialValue  = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreTypeCreateInfo>
   {
     using Type = SemaphoreTypeCreateInfo;
   };
 
-  using SemaphoreTypeCreateInfoKHR = SemaphoreTypeCreateInfo;
+  VULKAN_HPP_EXPORT using SemaphoreTypeCreateInfoKHR = SemaphoreTypeCreateInfo;
 
-  struct SemaphoreWaitInfo
+  VULKAN_HPP_EXPORT struct SemaphoreWaitInfo
   {
     using NativeType = VkSemaphoreWaitInfo;
 
@@ -52907,15 +52909,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint64_t *                         pValues        = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSemaphoreWaitInfo>
   {
     using Type = SemaphoreWaitInfo;
   };
 
-  using SemaphoreWaitInfoKHR = SemaphoreWaitInfo;
+  VULKAN_HPP_EXPORT using SemaphoreWaitInfoKHR = SemaphoreWaitInfo;
 
-  struct SharedPresentSurfaceCapabilitiesKHR
+  VULKAN_HPP_EXPORT struct SharedPresentSurfaceCapabilitiesKHR
   {
     using NativeType = VkSharedPresentSurfaceCapabilitiesKHR;
 
@@ -52992,13 +52994,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageUsageFlags sharedPresentSupportedUsageFlags = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSharedPresentSurfaceCapabilitiesKHR>
   {
     using Type = SharedPresentSurfaceCapabilitiesKHR;
   };
 
-  struct SubmitInfo
+  VULKAN_HPP_EXPORT struct SubmitInfo
   {
     using NativeType = VkSubmitInfo;
 
@@ -53218,13 +53220,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::Semaphore *          pSignalSemaphores    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubmitInfo>
   {
     using Type = SubmitInfo;
   };
 
-  struct SubmitInfo2
+  VULKAN_HPP_EXPORT struct SubmitInfo2
   {
     using NativeType = VkSubmitInfo2;
 
@@ -53435,15 +53437,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::SemaphoreSubmitInfo *     pSignalSemaphoreInfos    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubmitInfo2>
   {
     using Type = SubmitInfo2;
   };
 
-  using SubmitInfo2KHR = SubmitInfo2;
+  VULKAN_HPP_EXPORT using SubmitInfo2KHR = SubmitInfo2;
 
-  struct SubpassBeginInfo
+  VULKAN_HPP_EXPORT struct SubpassBeginInfo
   {
     using NativeType = VkSubpassBeginInfo;
 
@@ -53531,15 +53533,15 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SubpassContents contents = VULKAN_HPP_NAMESPACE::SubpassContents::eInline;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubpassBeginInfo>
   {
     using Type = SubpassBeginInfo;
   };
 
-  using SubpassBeginInfoKHR = SubpassBeginInfo;
+  VULKAN_HPP_EXPORT using SubpassBeginInfoKHR = SubpassBeginInfo;
 
-  struct SubpassDescriptionDepthStencilResolve
+  VULKAN_HPP_EXPORT struct SubpassDescriptionDepthStencilResolve
   {
     using NativeType = VkSubpassDescriptionDepthStencilResolve;
 
@@ -53657,15 +53659,15 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::AttachmentReference2 * pDepthStencilResolveAttachment = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubpassDescriptionDepthStencilResolve>
   {
     using Type = SubpassDescriptionDepthStencilResolve;
   };
 
-  using SubpassDescriptionDepthStencilResolveKHR = SubpassDescriptionDepthStencilResolve;
+  VULKAN_HPP_EXPORT using SubpassDescriptionDepthStencilResolveKHR = SubpassDescriptionDepthStencilResolve;
 
-  struct SubpassEndInfo
+  VULKAN_HPP_EXPORT struct SubpassEndInfo
   {
     using NativeType = VkSubpassEndInfo;
 
@@ -53741,15 +53743,15 @@ namespace VULKAN_HPP_NAMESPACE
     const void *                        pNext = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSubpassEndInfo>
   {
     using Type = SubpassEndInfo;
   };
 
-  using SubpassEndInfoKHR = SubpassEndInfo;
+  VULKAN_HPP_EXPORT using SubpassEndInfoKHR = SubpassEndInfo;
 
-  struct SurfaceCapabilities2EXT
+  VULKAN_HPP_EXPORT struct SurfaceCapabilities2EXT
   {
     using NativeType = VkSurfaceCapabilities2EXT;
 
@@ -53885,13 +53887,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SurfaceCounterFlagsEXT      supportedSurfaceCounters = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSurfaceCapabilities2EXT>
   {
     using Type = SurfaceCapabilities2EXT;
   };
 
-  struct SurfaceCapabilitiesKHR
+  VULKAN_HPP_EXPORT struct SurfaceCapabilitiesKHR
   {
     using NativeType = VkSurfaceCapabilitiesKHR;
 
@@ -54010,7 +54012,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ImageUsageFlags             supportedUsageFlags     = {};
   };
 
-  struct SurfaceCapabilities2KHR
+  VULKAN_HPP_EXPORT struct SurfaceCapabilities2KHR
   {
     using NativeType = VkSurfaceCapabilities2KHR;
 
@@ -54087,13 +54089,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesKHR surfaceCapabilities = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSurfaceCapabilities2KHR>
   {
     using Type = SurfaceCapabilities2KHR;
   };
 
-  struct SurfaceFormatKHR
+  VULKAN_HPP_EXPORT struct SurfaceFormatKHR
   {
     using NativeType = VkSurfaceFormatKHR;
 
@@ -54164,7 +54166,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::ColorSpaceKHR colorSpace = VULKAN_HPP_NAMESPACE::ColorSpaceKHR::eSrgbNonlinear;
   };
 
-  struct SurfaceFormat2KHR
+  VULKAN_HPP_EXPORT struct SurfaceFormat2KHR
   {
     using NativeType = VkSurfaceFormat2KHR;
 
@@ -54237,13 +54239,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SurfaceFormatKHR surfaceFormat = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSurfaceFormat2KHR>
   {
     using Type = SurfaceFormat2KHR;
   };
 
-  struct SwapchainCounterCreateInfoEXT
+  VULKAN_HPP_EXPORT struct SwapchainCounterCreateInfoEXT
   {
     using NativeType = VkSwapchainCounterCreateInfoEXT;
 
@@ -54335,13 +54337,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SurfaceCounterFlagsEXT surfaceCounters = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSwapchainCounterCreateInfoEXT>
   {
     using Type = SwapchainCounterCreateInfoEXT;
   };
 
-  struct SwapchainCreateInfoKHR
+  VULKAN_HPP_EXPORT struct SwapchainCreateInfoKHR
   {
     using NativeType = VkSwapchainCreateInfoKHR;
 
@@ -54655,13 +54657,13 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_NAMESPACE::SwapchainKHR                oldSwapchain          = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eSwapchainCreateInfoKHR>
   {
     using Type = SwapchainCreateInfoKHR;
   };
 
-  struct TimelineSemaphoreSubmitInfo
+  VULKAN_HPP_EXPORT struct TimelineSemaphoreSubmitInfo
   {
     using NativeType = VkTimelineSemaphoreSubmitInfo;
 
@@ -54819,15 +54821,15 @@ namespace VULKAN_HPP_NAMESPACE
     const uint64_t *                    pSignalSemaphoreValues    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eTimelineSemaphoreSubmitInfo>
   {
     using Type = TimelineSemaphoreSubmitInfo;
   };
 
-  using TimelineSemaphoreSubmitInfoKHR = TimelineSemaphoreSubmitInfo;
+  VULKAN_HPP_EXPORT using TimelineSemaphoreSubmitInfoKHR = TimelineSemaphoreSubmitInfo;
 
-  struct ValidationFeaturesEXT
+  VULKAN_HPP_EXPORT struct ValidationFeaturesEXT
   {
     using NativeType = VkValidationFeaturesEXT;
 
@@ -54990,13 +54992,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::ValidationFeatureDisableEXT * pDisabledValidationFeatures    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eValidationFeaturesEXT>
   {
     using Type = ValidationFeaturesEXT;
   };
 
-  struct VertexInputAttributeDescription2EXT
+  VULKAN_HPP_EXPORT struct VertexInputAttributeDescription2EXT
   {
     using NativeType = VkVertexInputAttributeDescription2EXT;
 
@@ -55120,13 +55122,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                            offset   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eVertexInputAttributeDescription2EXT>
   {
     using Type = VertexInputAttributeDescription2EXT;
   };
 
-  struct VertexInputBindingDescription2EXT
+  VULKAN_HPP_EXPORT struct VertexInputBindingDescription2EXT
   {
     using NativeType = VkVertexInputBindingDescription2EXT;
 
@@ -55250,13 +55252,13 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t                              divisor   = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eVertexInputBindingDescription2EXT>
   {
     using Type = VertexInputBindingDescription2EXT;
   };
 
-  struct WriteDescriptorSet
+  VULKAN_HPP_EXPORT struct WriteDescriptorSet
   {
     using NativeType = VkWriteDescriptorSet;
 
@@ -55481,13 +55483,13 @@ namespace VULKAN_HPP_NAMESPACE
     const VULKAN_HPP_NAMESPACE::BufferView *           pTexelBufferView = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eWriteDescriptorSet>
   {
     using Type = WriteDescriptorSet;
   };
 
-  struct WriteDescriptorSetInlineUniformBlock
+  VULKAN_HPP_EXPORT struct WriteDescriptorSetInlineUniformBlock
   {
     using NativeType = VkWriteDescriptorSetInlineUniformBlock;
 
@@ -55604,13 +55606,13 @@ namespace VULKAN_HPP_NAMESPACE
     const void *                        pData    = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::eWriteDescriptorSetInlineUniformBlock>
   {
     using Type = WriteDescriptorSetInlineUniformBlock;
   };
 
-  using WriteDescriptorSetInlineUniformBlockEXT = WriteDescriptorSetInlineUniformBlock;
+  VULKAN_HPP_EXPORT using WriteDescriptorSetInlineUniformBlockEXT = WriteDescriptorSetInlineUniformBlock;
 
 }  // namespace VULKAN_HPP_NAMESPACE
 #endif

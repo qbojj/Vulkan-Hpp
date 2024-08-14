@@ -1,5 +1,5 @@
 #if VULKAN_HPP_ENABLE_DYNAMIC_LOADER_TOOL
-  class DynamicLoader
+  VULKAN_HPP_EXPORT class DynamicLoader
   {
   public:
 #  ifdef VULKAN_HPP_NO_EXCEPTIONS

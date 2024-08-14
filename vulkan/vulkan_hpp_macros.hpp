@@ -92,6 +92,10 @@
 #  define VULKAN_HPP_STD_COMPAT_MODULE std.compat
 #endif
 
+#if !defined( VULKAN_HPP_EXPORT )
+#  define VULKAN_HPP_EXPORT
+#endif
+
 // 32-bit vulkan is not typesafe for non-dispatchable handles, so don't allow copy constructors on this platform by default.
 // To enable this feature on 32-bit platforms please #define VULKAN_HPP_TYPESAFE_CONVERSION 1
 // To disable this feature on 64-bit platforms please #define VULKAN_HPP_TYPESAFE_CONVERSION 0
@@ -241,13 +245,16 @@
 #  endif
 #endif
 
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 namespace VULKAN_HPP_NAMESPACE
 {
   class DispatchLoaderDynamic;
 }  // namespace VULKAN_HPP_NAMESPACE
+#endif
 
 #if !defined( VULKAN_HPP_DEFAULT_DISPATCHER )
 #  if VULKAN_HPP_DISPATCH_LOADER_DYNAMIC == 1
+#    define VULKAN_HPP_DYNAMIC_DEFAULT_DISPATCHER
 #    define VULKAN_HPP_DEFAULT_DISPATCHER ::VULKAN_HPP_NAMESPACE::defaultDispatchLoaderDynamic
 #    define VULKAN_HPP_DEFAULT_DISPATCH_LOADER_DYNAMIC_STORAGE                                             \
       namespace VULKAN_HPP_NAMESPACE                                                                       \
@@ -255,10 +262,12 @@ namespace VULKAN_HPP_NAMESPACE
         VULKAN_HPP_STORAGE_API ::VULKAN_HPP_NAMESPACE::DispatchLoaderDynamic defaultDispatchLoaderDynamic; \
       }
 
+#    if !defined( VULKAN_HPP_BUILD_MODULE )
 namespace VULKAN_HPP_NAMESPACE
 {
-  extern VULKAN_HPP_STORAGE_API VULKAN_HPP_NAMESPACE::DispatchLoaderDynamic defaultDispatchLoaderDynamic;
+  extern "C++" VULKAN_HPP_STORAGE_API VULKAN_HPP_NAMESPACE::DispatchLoaderDynamic defaultDispatchLoaderDynamic;
 }  // namespace VULKAN_HPP_NAMESPACE
+#    endif
 #  else
 #    define VULKAN_HPP_DEFAULT_DISPATCHER ::VULKAN_HPP_NAMESPACE::getDispatchLoaderStatic()
 #    define VULKAN_HPP_DEFAULT_DISPATCH_LOADER_DYNAMIC_STORAGE

@@ -8,53 +8,57 @@
 #ifndef VULKAN_HPP
 #define VULKAN_HPP
 
-#include <algorithm>
-#include <array>     // ArrayWrapperND
-#include <string.h>  // strnlen
-#include <string>    // std::string
-#include <utility>   // std::exchange
-#include <vulkan/vulkan_hpp_macros.hpp>
 #include <vulkan/vulkan_sc_core.h>
 
-#if 17 <= VULKAN_HPP_CPP_VERSION
-#  include <string_view>
-#endif
+#if !defined( VULKAN_HPP_BUILD_MODULE )
+#  include <algorithm>
+#  include <array>     // ArrayWrapperND
+#  include <string.h>  // strnlen
+#  include <string>    // std::string
+#  include <utility>   // std::exchange
+#  include <vulkan/vulkan_hpp_macros.hpp>
 
-#if !defined( VULKAN_HPP_DISABLE_ENHANCED_MODE )
-#  include <tuple>   // std::tie
-#  include <vector>  // std::vector
-#endif
+#  if 17 <= VULKAN_HPP_CPP_VERSION
+#    include <string_view>
+#  endif
 
-#if !defined( VULKAN_HPP_NO_EXCEPTIONS )
-#  include <system_error>  // std::is_error_code_enum
-#endif
+#  if !defined( VULKAN_HPP_DISABLE_ENHANCED_MODE )
+#    include <tuple>   // std::tie
+#    include <vector>  // std::vector
+#  endif
 
-#if ( VULKAN_HPP_ASSERT == assert )
-#  include <cassert>
-#endif
+#  if !defined( VULKAN_HPP_NO_EXCEPTIONS )
+#    include <system_error>  // std::is_error_code_enum
+#  endif
 
-#if VULKAN_HPP_ENABLE_DYNAMIC_LOADER_TOOL == 1
-#  if defined( __unix__ ) || defined( __APPLE__ ) || defined( __QNX__ ) || defined( __Fuchsia__ )
-#    include <dlfcn.h>
-#  elif defined( _WIN32 ) && !defined( VULKAN_HPP_NO_WIN32_PROTOTYPES )
+#  if ( VULKAN_HPP_ASSERT == assert )
+#    include <cassert>
+#  endif
+
+#  if VULKAN_HPP_ENABLE_DYNAMIC_LOADER_TOOL == 1
+#    if defined( __unix__ ) || defined( __APPLE__ ) || defined( __QNX__ ) || defined( __Fuchsia__ )
+#      include <dlfcn.h>
+#    elif defined( _WIN32 ) && !defined( VULKAN_HPP_NO_WIN32_PROTOTYPES )
 using HINSTANCE = struct HINSTANCE__ *;
-#    if defined( _WIN64 )
-using FARPROC   = int64_t( __stdcall * )();
-#    else
+#      if defined( _WIN64 )
+using FARPROC = int64_t( __stdcall * )();
+#      else
 using FARPROC = int( __stdcall * )();
-#    endif
+#      endif
 extern "C" __declspec( dllimport ) HINSTANCE __stdcall LoadLibraryA( char const * lpLibFileName );
 extern "C" __declspec( dllimport ) int __stdcall FreeLibrary( HINSTANCE hLibModule );
 extern "C" __declspec( dllimport ) FARPROC __stdcall GetProcAddress( HINSTANCE hModule, const char * lpProcName );
+#    endif
 #  endif
-#endif
 
-#if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
-#  include <compare>
-#endif
+#  if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
+#    include <compare>
+#  endif
 
-#if defined( VULKAN_HPP_SUPPORT_SPAN )
-#  include <span>
+#  if defined( VULKAN_HPP_SUPPORT_SPAN )
+#    include <span>
+#  endif
+
 #endif
 
 static_assert( VK_HEADER_VERSION == 15, "Wrong VK_HEADER_VERSION!" );
@@ -88,7 +92,7 @@ constexpr int False = 0;
 
 namespace VULKAN_HPP_NAMESPACE
 {
-  template <typename T, size_t N>
+  VULKAN_HPP_EXPORT template <typename T, size_t N>
   class ArrayWrapper1D : public std::array<T, N>
   {
   public:
@@ -161,45 +165,45 @@ namespace VULKAN_HPP_NAMESPACE
 
 // relational operators between ArrayWrapper1D of chars with potentially different sizes
 #if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   std::strong_ordering operator<=>( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     int result = strcmp( lhs.data(), rhs.data() );
     return ( result < 0 ) ? std::strong_ordering::less : ( ( result > 0 ) ? std::strong_ordering::greater : std::strong_ordering::equal );
   }
 #else
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator<( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) < 0;
   }
 
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator<=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) <= 0;
   }
 
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator>( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) > 0;
   }
 
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator>=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) >= 0;
   }
 #endif
 
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator==( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) == 0;
   }
 
-  template <size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <size_t N, size_t M>
   bool operator!=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return strcmp( lhs.data(), rhs.data() ) != 0;
@@ -207,50 +211,50 @@ namespace VULKAN_HPP_NAMESPACE
 
 // specialization of relational operators between std::string and arrays of chars
 #if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   std::strong_ordering operator<=>( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs <=> rhs.data();
   }
 #else
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator<( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs < rhs.data();
   }
 
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator<=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs <= rhs.data();
   }
 
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator>( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs > rhs.data();
   }
 
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator>=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs >= rhs.data();
   }
 #endif
 
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator==( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs == rhs.data();
   }
 
-  template <size_t N>
+  VULKAN_HPP_EXPORT template <size_t N>
   bool operator!=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
   {
     return lhs != rhs.data();
   }
 
-  template <typename T, size_t N, size_t M>
+  VULKAN_HPP_EXPORT template <typename T, size_t N, size_t M>
   class ArrayWrapper2D : public std::array<ArrayWrapper1D<T, M>, N>
   {
   public:
@@ -263,7 +267,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
 #if !defined( VULKAN_HPP_DISABLE_ENHANCED_MODE )
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   class ArrayProxy
   {
   public:
@@ -373,7 +377,7 @@ namespace VULKAN_HPP_NAMESPACE
     T const * m_ptr;
   };
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   class ArrayProxyNoTemporaries
   {
   public:
@@ -477,7 +481,7 @@ namespace VULKAN_HPP_NAMESPACE
     T *      m_ptr;
   };
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   class StridedArrayProxy : protected ArrayProxy<T>
   {
   public:
@@ -518,7 +522,7 @@ namespace VULKAN_HPP_NAMESPACE
     uint32_t m_stride = sizeof( T );
   };
 
-  template <typename RefType>
+  VULKAN_HPP_EXPORT template <typename RefType>
   class Optional
   {
   public:
@@ -556,7 +560,7 @@ namespace VULKAN_HPP_NAMESPACE
     RefType * m_ptr;
   };
 
-  template <typename X, typename Y>
+  VULKAN_HPP_EXPORT template <typename X, typename Y>
   struct StructExtends
   {
     enum
@@ -605,7 +609,7 @@ namespace VULKAN_HPP_NAMESPACE
     static const bool valid = true;
   };
 
-  template <typename... ChainElements>
+  VULKAN_HPP_EXPORT template <typename... ChainElements>
   class StructureChain : public std::tuple<ChainElements...>
   {
   public:
@@ -806,7 +810,7 @@ namespace VULKAN_HPP_NAMESPACE
   // interupt the VULKAN_HPP_NAMESPACE for a moment to add specializations of std::tuple_size and std::tuple_element for the StructureChain!
 }
 
-namespace std
+VULKAN_HPP_EXPORT namespace std
 {
   template <typename... Elements>
   struct tuple_size<VULKAN_HPP_NAMESPACE::StructureChain<Elements...>>
@@ -825,10 +829,10 @@ namespace VULKAN_HPP_NAMESPACE
 {
 
 #  if !defined( VULKAN_HPP_NO_SMART_HANDLE )
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   class UniqueHandleTraits;
 
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   class UniqueHandle : public UniqueHandleTraits<Type, Dispatch>::deleter
   {
   private:
@@ -957,7 +961,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif
 #endif  // VULKAN_HPP_DISABLE_ENHANCED_MODE
 
-  class DispatchLoaderBase
+  VULKAN_HPP_EXPORT class DispatchLoaderBase
   {
   public:
     DispatchLoaderBase() = default;
@@ -3153,9 +3157,9 @@ namespace VULKAN_HPP_NAMESPACE
 #endif
 
 #if ( 14 <= VULKAN_HPP_CPP_VERSION )
-  using std::exchange;
+  VULKAN_HPP_EXPORT using std::exchange;
 #else
-  template <class T, class U = T>
+  VULKAN_HPP_EXPORT template <class T, class U = T>
   VULKAN_HPP_CONSTEXPR_14 VULKAN_HPP_INLINE T exchange( T & obj, U && newValue )
   {
     T oldValue = std::move( obj );
@@ -3167,7 +3171,7 @@ namespace VULKAN_HPP_NAMESPACE
 #if !defined( VULKAN_HPP_NO_SMART_HANDLE )
   struct AllocationCallbacks;
 
-  template <typename OwnerType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename Dispatch>
   class ObjectDestroy
   {
   public:
@@ -3211,9 +3215,9 @@ namespace VULKAN_HPP_NAMESPACE
     Dispatch const *                    m_dispatch            = nullptr;
   };
 
-  class NoParent;
+  VULKAN_HPP_EXPORT class NoParent;
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   class ObjectDestroy<NoParent, Dispatch>
   {
   public:
@@ -3249,7 +3253,7 @@ namespace VULKAN_HPP_NAMESPACE
     Dispatch const *                    m_dispatch            = nullptr;
   };
 
-  template <typename OwnerType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename Dispatch>
   class ObjectFree
   {
   public:
@@ -3293,7 +3297,7 @@ namespace VULKAN_HPP_NAMESPACE
     Dispatch const *                    m_dispatch            = nullptr;
   };
 
-  template <typename OwnerType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename Dispatch>
   class ObjectRelease
   {
   public:
@@ -3328,7 +3332,7 @@ namespace VULKAN_HPP_NAMESPACE
     Dispatch const * m_dispatch = nullptr;
   };
 
-  template <typename OwnerType, typename PoolType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename PoolType, typename Dispatch>
   class PoolFree
   {
   public:
@@ -3375,13 +3379,13 @@ namespace VULKAN_HPP_NAMESPACE
   //=== BASE TYPEs ===
   //==================
 
-  using Bool32          = uint32_t;
-  using DeviceAddress   = uint64_t;
-  using DeviceSize      = uint64_t;
-  using RemoteAddressNV = void *;
-  using SampleMask      = uint32_t;
+  VULKAN_HPP_EXPORT using Bool32          = uint32_t;
+  VULKAN_HPP_EXPORT using DeviceAddress   = uint64_t;
+  VULKAN_HPP_EXPORT using DeviceSize      = uint64_t;
+  VULKAN_HPP_EXPORT using RemoteAddressNV = void *;
+  VULKAN_HPP_EXPORT using SampleMask      = uint32_t;
 
-  template <typename Type, Type value = Type{}>
+  VULKAN_HPP_EXPORT template <typename Type, Type value = Type{}>
   struct CppType
   {
   };
@@ -3395,7 +3399,7 @@ namespace VULKAN_HPP_NAMESPACE
 #ifndef VULKAN_HPP_NO_EXCEPTIONS
 namespace std
 {
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct is_error_code_enum<VULKAN_HPP_NAMESPACE::Result> : public true_type
   {
   };
@@ -3405,7 +3409,7 @@ namespace std
 namespace VULKAN_HPP_NAMESPACE
 {
 #ifndef VULKAN_HPP_NO_EXCEPTIONS
-  class ErrorCategoryImpl : public std::error_category
+  VULKAN_HPP_EXPORT class ErrorCategoryImpl : public std::error_category
   {
   public:
     virtual const char * name() const VULKAN_HPP_NOEXCEPT override
@@ -3423,7 +3427,7 @@ namespace VULKAN_HPP_NAMESPACE
     }
   };
 
-  class Error
+  VULKAN_HPP_EXPORT class Error
   {
   public:
     Error() VULKAN_HPP_NOEXCEPT                = default;
@@ -3433,7 +3437,7 @@ namespace VULKAN_HPP_NAMESPACE
     virtual const char * what() const VULKAN_HPP_NOEXCEPT = 0;
   };
 
-  class LogicError
+  VULKAN_HPP_EXPORT class LogicError
     : public Error
     , public std::logic_error
   {
@@ -3448,7 +3452,7 @@ namespace VULKAN_HPP_NAMESPACE
     }
   };
 
-  class SystemError
+  VULKAN_HPP_EXPORT class SystemError
     : public Error
     , public std::system_error
   {
@@ -3471,23 +3475,23 @@ namespace VULKAN_HPP_NAMESPACE
     }
   };
 
-  VULKAN_HPP_INLINE const std::error_category & errorCategory() VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE const std::error_category & errorCategory() VULKAN_HPP_NOEXCEPT
   {
     static ErrorCategoryImpl instance;
     return instance;
   }
 
-  VULKAN_HPP_INLINE std::error_code make_error_code( Result e ) VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::error_code make_error_code( Result e ) VULKAN_HPP_NOEXCEPT
   {
     return std::error_code( static_cast<int>( e ), errorCategory() );
   }
 
-  VULKAN_HPP_INLINE std::error_condition make_error_condition( Result e ) VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::error_condition make_error_condition( Result e ) VULKAN_HPP_NOEXCEPT
   {
     return std::error_condition( static_cast<int>( e ), errorCategory() );
   }
 
-  class OutOfHostMemoryError : public SystemError
+  VULKAN_HPP_EXPORT class OutOfHostMemoryError : public SystemError
   {
   public:
     OutOfHostMemoryError( std::string const & message ) : SystemError( make_error_code( Result::eErrorOutOfHostMemory ), message ) {}
@@ -3495,7 +3499,7 @@ namespace VULKAN_HPP_NAMESPACE
     OutOfHostMemoryError( char const * message ) : SystemError( make_error_code( Result::eErrorOutOfHostMemory ), message ) {}
   };
 
-  class OutOfDeviceMemoryError : public SystemError
+  VULKAN_HPP_EXPORT class OutOfDeviceMemoryError : public SystemError
   {
   public:
     OutOfDeviceMemoryError( std::string const & message ) : SystemError( make_error_code( Result::eErrorOutOfDeviceMemory ), message ) {}
@@ -3503,7 +3507,7 @@ namespace VULKAN_HPP_NAMESPACE
     OutOfDeviceMemoryError( char const * message ) : SystemError( make_error_code( Result::eErrorOutOfDeviceMemory ), message ) {}
   };
 
-  class InitializationFailedError : public SystemError
+  VULKAN_HPP_EXPORT class InitializationFailedError : public SystemError
   {
   public:
     InitializationFailedError( std::string const & message ) : SystemError( make_error_code( Result::eErrorInitializationFailed ), message ) {}
@@ -3511,7 +3515,7 @@ namespace VULKAN_HPP_NAMESPACE
     InitializationFailedError( char const * message ) : SystemError( make_error_code( Result::eErrorInitializationFailed ), message ) {}
   };
 
-  class DeviceLostError : public SystemError
+  VULKAN_HPP_EXPORT class DeviceLostError : public SystemError
   {
   public:
     DeviceLostError( std::string const & message ) : SystemError( make_error_code( Result::eErrorDeviceLost ), message ) {}
@@ -3519,7 +3523,7 @@ namespace VULKAN_HPP_NAMESPACE
     DeviceLostError( char const * message ) : SystemError( make_error_code( Result::eErrorDeviceLost ), message ) {}
   };
 
-  class MemoryMapFailedError : public SystemError
+  VULKAN_HPP_EXPORT class MemoryMapFailedError : public SystemError
   {
   public:
     MemoryMapFailedError( std::string const & message ) : SystemError( make_error_code( Result::eErrorMemoryMapFailed ), message ) {}
@@ -3527,7 +3531,7 @@ namespace VULKAN_HPP_NAMESPACE
     MemoryMapFailedError( char const * message ) : SystemError( make_error_code( Result::eErrorMemoryMapFailed ), message ) {}
   };
 
-  class LayerNotPresentError : public SystemError
+  VULKAN_HPP_EXPORT class LayerNotPresentError : public SystemError
   {
   public:
     LayerNotPresentError( std::string const & message ) : SystemError( make_error_code( Result::eErrorLayerNotPresent ), message ) {}
@@ -3535,7 +3539,7 @@ namespace VULKAN_HPP_NAMESPACE
     LayerNotPresentError( char const * message ) : SystemError( make_error_code( Result::eErrorLayerNotPresent ), message ) {}
   };
 
-  class ExtensionNotPresentError : public SystemError
+  VULKAN_HPP_EXPORT class ExtensionNotPresentError : public SystemError
   {
   public:
     ExtensionNotPresentError( std::string const & message ) : SystemError( make_error_code( Result::eErrorExtensionNotPresent ), message ) {}
@@ -3543,7 +3547,7 @@ namespace VULKAN_HPP_NAMESPACE
     ExtensionNotPresentError( char const * message ) : SystemError( make_error_code( Result::eErrorExtensionNotPresent ), message ) {}
   };
 
-  class FeatureNotPresentError : public SystemError
+  VULKAN_HPP_EXPORT class FeatureNotPresentError : public SystemError
   {
   public:
     FeatureNotPresentError( std::string const & message ) : SystemError( make_error_code( Result::eErrorFeatureNotPresent ), message ) {}
@@ -3551,7 +3555,7 @@ namespace VULKAN_HPP_NAMESPACE
     FeatureNotPresentError( char const * message ) : SystemError( make_error_code( Result::eErrorFeatureNotPresent ), message ) {}
   };
 
-  class IncompatibleDriverError : public SystemError
+  VULKAN_HPP_EXPORT class IncompatibleDriverError : public SystemError
   {
   public:
     IncompatibleDriverError( std::string const & message ) : SystemError( make_error_code( Result::eErrorIncompatibleDriver ), message ) {}
@@ -3559,7 +3563,7 @@ namespace VULKAN_HPP_NAMESPACE
     IncompatibleDriverError( char const * message ) : SystemError( make_error_code( Result::eErrorIncompatibleDriver ), message ) {}
   };
 
-  class TooManyObjectsError : public SystemError
+  VULKAN_HPP_EXPORT class TooManyObjectsError : public SystemError
   {
   public:
     TooManyObjectsError( std::string const & message ) : SystemError( make_error_code( Result::eErrorTooManyObjects ), message ) {}
@@ -3567,7 +3571,7 @@ namespace VULKAN_HPP_NAMESPACE
     TooManyObjectsError( char const * message ) : SystemError( make_error_code( Result::eErrorTooManyObjects ), message ) {}
   };
 
-  class FormatNotSupportedError : public SystemError
+  VULKAN_HPP_EXPORT class FormatNotSupportedError : public SystemError
   {
   public:
     FormatNotSupportedError( std::string const & message ) : SystemError( make_error_code( Result::eErrorFormatNotSupported ), message ) {}
@@ -3575,7 +3579,7 @@ namespace VULKAN_HPP_NAMESPACE
     FormatNotSupportedError( char const * message ) : SystemError( make_error_code( Result::eErrorFormatNotSupported ), message ) {}
   };
 
-  class FragmentedPoolError : public SystemError
+  VULKAN_HPP_EXPORT class FragmentedPoolError : public SystemError
   {
   public:
     FragmentedPoolError( std::string const & message ) : SystemError( make_error_code( Result::eErrorFragmentedPool ), message ) {}
@@ -3583,7 +3587,7 @@ namespace VULKAN_HPP_NAMESPACE
     FragmentedPoolError( char const * message ) : SystemError( make_error_code( Result::eErrorFragmentedPool ), message ) {}
   };
 
-  class UnknownError : public SystemError
+  VULKAN_HPP_EXPORT class UnknownError : public SystemError
   {
   public:
     UnknownError( std::string const & message ) : SystemError( make_error_code( Result::eErrorUnknown ), message ) {}
@@ -3591,7 +3595,7 @@ namespace VULKAN_HPP_NAMESPACE
     UnknownError( char const * message ) : SystemError( make_error_code( Result::eErrorUnknown ), message ) {}
   };
 
-  class OutOfPoolMemoryError : public SystemError
+  VULKAN_HPP_EXPORT class OutOfPoolMemoryError : public SystemError
   {
   public:
     OutOfPoolMemoryError( std::string const & message ) : SystemError( make_error_code( Result::eErrorOutOfPoolMemory ), message ) {}
@@ -3599,7 +3603,7 @@ namespace VULKAN_HPP_NAMESPACE
     OutOfPoolMemoryError( char const * message ) : SystemError( make_error_code( Result::eErrorOutOfPoolMemory ), message ) {}
   };
 
-  class InvalidExternalHandleError : public SystemError
+  VULKAN_HPP_EXPORT class InvalidExternalHandleError : public SystemError
   {
   public:
     InvalidExternalHandleError( std::string const & message ) : SystemError( make_error_code( Result::eErrorInvalidExternalHandle ), message ) {}
@@ -3607,7 +3611,7 @@ namespace VULKAN_HPP_NAMESPACE
     InvalidExternalHandleError( char const * message ) : SystemError( make_error_code( Result::eErrorInvalidExternalHandle ), message ) {}
   };
 
-  class FragmentationError : public SystemError
+  VULKAN_HPP_EXPORT class FragmentationError : public SystemError
   {
   public:
     FragmentationError( std::string const & message ) : SystemError( make_error_code( Result::eErrorFragmentation ), message ) {}
@@ -3615,7 +3619,7 @@ namespace VULKAN_HPP_NAMESPACE
     FragmentationError( char const * message ) : SystemError( make_error_code( Result::eErrorFragmentation ), message ) {}
   };
 
-  class InvalidOpaqueCaptureAddressError : public SystemError
+  VULKAN_HPP_EXPORT class InvalidOpaqueCaptureAddressError : public SystemError
   {
   public:
     InvalidOpaqueCaptureAddressError( std::string const & message ) : SystemError( make_error_code( Result::eErrorInvalidOpaqueCaptureAddress ), message ) {}
@@ -3623,7 +3627,7 @@ namespace VULKAN_HPP_NAMESPACE
     InvalidOpaqueCaptureAddressError( char const * message ) : SystemError( make_error_code( Result::eErrorInvalidOpaqueCaptureAddress ), message ) {}
   };
 
-  class ValidationFailedError : public SystemError
+  VULKAN_HPP_EXPORT class ValidationFailedError : public SystemError
   {
   public:
     ValidationFailedError( std::string const & message ) : SystemError( make_error_code( Result::eErrorValidationFailed ), message ) {}
@@ -3631,7 +3635,7 @@ namespace VULKAN_HPP_NAMESPACE
     ValidationFailedError( char const * message ) : SystemError( make_error_code( Result::eErrorValidationFailed ), message ) {}
   };
 
-  class InvalidPipelineCacheDataError : public SystemError
+  VULKAN_HPP_EXPORT class InvalidPipelineCacheDataError : public SystemError
   {
   public:
     InvalidPipelineCacheDataError( std::string const & message ) : SystemError( make_error_code( Result::eErrorInvalidPipelineCacheData ), message ) {}
@@ -3639,7 +3643,7 @@ namespace VULKAN_HPP_NAMESPACE
     InvalidPipelineCacheDataError( char const * message ) : SystemError( make_error_code( Result::eErrorInvalidPipelineCacheData ), message ) {}
   };
 
-  class NoPipelineMatchError : public SystemError
+  VULKAN_HPP_EXPORT class NoPipelineMatchError : public SystemError
   {
   public:
     NoPipelineMatchError( std::string const & message ) : SystemError( make_error_code( Result::eErrorNoPipelineMatch ), message ) {}
@@ -3647,7 +3651,7 @@ namespace VULKAN_HPP_NAMESPACE
     NoPipelineMatchError( char const * message ) : SystemError( make_error_code( Result::eErrorNoPipelineMatch ), message ) {}
   };
 
-  class SurfaceLostKHRError : public SystemError
+  VULKAN_HPP_EXPORT class SurfaceLostKHRError : public SystemError
   {
   public:
     SurfaceLostKHRError( std::string const & message ) : SystemError( make_error_code( Result::eErrorSurfaceLostKHR ), message ) {}
@@ -3655,7 +3659,7 @@ namespace VULKAN_HPP_NAMESPACE
     SurfaceLostKHRError( char const * message ) : SystemError( make_error_code( Result::eErrorSurfaceLostKHR ), message ) {}
   };
 
-  class NativeWindowInUseKHRError : public SystemError
+  VULKAN_HPP_EXPORT class NativeWindowInUseKHRError : public SystemError
   {
   public:
     NativeWindowInUseKHRError( std::string const & message ) : SystemError( make_error_code( Result::eErrorNativeWindowInUseKHR ), message ) {}
@@ -3663,7 +3667,7 @@ namespace VULKAN_HPP_NAMESPACE
     NativeWindowInUseKHRError( char const * message ) : SystemError( make_error_code( Result::eErrorNativeWindowInUseKHR ), message ) {}
   };
 
-  class OutOfDateKHRError : public SystemError
+  VULKAN_HPP_EXPORT class OutOfDateKHRError : public SystemError
   {
   public:
     OutOfDateKHRError( std::string const & message ) : SystemError( make_error_code( Result::eErrorOutOfDateKHR ), message ) {}
@@ -3671,7 +3675,7 @@ namespace VULKAN_HPP_NAMESPACE
     OutOfDateKHRError( char const * message ) : SystemError( make_error_code( Result::eErrorOutOfDateKHR ), message ) {}
   };
 
-  class IncompatibleDisplayKHRError : public SystemError
+  VULKAN_HPP_EXPORT class IncompatibleDisplayKHRError : public SystemError
   {
   public:
     IncompatibleDisplayKHRError( std::string const & message ) : SystemError( make_error_code( Result::eErrorIncompatibleDisplayKHR ), message ) {}
@@ -3679,7 +3683,7 @@ namespace VULKAN_HPP_NAMESPACE
     IncompatibleDisplayKHRError( char const * message ) : SystemError( make_error_code( Result::eErrorIncompatibleDisplayKHR ), message ) {}
   };
 
-  class InvalidDrmFormatModifierPlaneLayoutEXTError : public SystemError
+  VULKAN_HPP_EXPORT class InvalidDrmFormatModifierPlaneLayoutEXTError : public SystemError
   {
   public:
     InvalidDrmFormatModifierPlaneLayoutEXTError( std::string const & message )
@@ -3693,7 +3697,7 @@ namespace VULKAN_HPP_NAMESPACE
     }
   };
 
-  class NotPermittedKHRError : public SystemError
+  VULKAN_HPP_EXPORT class NotPermittedKHRError : public SystemError
   {
   public:
     NotPermittedKHRError( std::string const & message ) : SystemError( make_error_code( Result::eErrorNotPermittedKHR ), message ) {}
@@ -3739,7 +3743,7 @@ namespace VULKAN_HPP_NAMESPACE
   }  // namespace detail
 #endif
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   struct ResultValue
   {
 #ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -3770,7 +3774,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
 #if !defined( VULKAN_HPP_NO_SMART_HANDLE )
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   struct ResultValue<UniqueHandle<Type, Dispatch>>
   {
 #  ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -3800,7 +3804,7 @@ namespace VULKAN_HPP_NAMESPACE
     UniqueHandle<Type, Dispatch> value;
   };
 
-  template <typename Type, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Type, typename Dispatch>
   struct ResultValue<std::vector<UniqueHandle<Type, Dispatch>>>
   {
 #  ifdef VULKAN_HPP_HAS_NOEXCEPT
@@ -3831,7 +3835,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 #endif
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   struct ResultValueType
   {
 #ifdef VULKAN_HPP_NO_EXCEPTIONS
@@ -3841,7 +3845,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct ResultValueType<void>
   {
 #ifdef VULKAN_HPP_NO_EXCEPTIONS
@@ -3966,62 +3970,62 @@ namespace VULKAN_HPP_NAMESPACE
   //=========================
   //=== CONSTEXPR CALLEEs ===
   //=========================
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_CONSTEXPR uint32_t apiVersionMajor( T const version )
   {
     return ( ( (uint32_t)( version ) >> 22U ) & 0x7FU );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_CONSTEXPR uint32_t apiVersionMinor( T const version )
   {
     return ( ( (uint32_t)( version ) >> 12U ) & 0x3FFU );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_CONSTEXPR uint32_t apiVersionPatch( T const version )
   {
-    return ( (uint32_t)(version)&0xFFFU );
+    return ( (uint32_t)( version ) & 0xFFFU );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_CONSTEXPR uint32_t apiVersionVariant( T const version )
   {
     return ( (uint32_t)( version ) >> 29U );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_CONSTEXPR uint32_t makeApiVersion( T const variant, T const major, T const minor, T const patch )
   {
     return ( ( ( (uint32_t)( variant ) ) << 29U ) | ( ( (uint32_t)( major ) ) << 22U ) | ( ( (uint32_t)( minor ) ) << 12U ) | ( (uint32_t)( patch ) ) );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_DEPRECATED( "This define is deprecated. VK_MAKE_API_VERSION should be used instead." )
   VULKAN_HPP_CONSTEXPR uint32_t makeVersion( T const major, T const minor, T const patch )
   {
     return ( ( ( (uint32_t)( major ) ) << 22U ) | ( ( (uint32_t)( minor ) ) << 12U ) | ( (uint32_t)( patch ) ) );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_DEPRECATED( "This define is deprecated. VK_API_VERSION_MAJOR should be used instead." )
   VULKAN_HPP_CONSTEXPR uint32_t versionMajor( T const version )
   {
     return ( (uint32_t)( version ) >> 22U );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_DEPRECATED( "This define is deprecated. VK_API_VERSION_MINOR should be used instead." )
   VULKAN_HPP_CONSTEXPR uint32_t versionMinor( T const version )
   {
     return ( ( (uint32_t)( version ) >> 12U ) & 0x3FFU );
   }
 
-  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   VULKAN_HPP_DEPRECATED( "This define is deprecated. VK_API_VERSION_PATCH should be used instead." )
   VULKAN_HPP_CONSTEXPR uint32_t versionPatch( T const version )
   {
-    return ( (uint32_t)(version)&0xFFFU );
+    return ( (uint32_t)( version ) & 0xFFFU );
   }
 
   //=========================
@@ -4382,7 +4386,6 @@ namespace VULKAN_HPP_NAMESPACE
 #include <vulkan/vulkansc_handles.hpp>
 #include <vulkan/vulkansc_structs.hpp>
 #include <vulkan/vulkansc_funcs.hpp>
-
 // clang-format on
 
 namespace VULKAN_HPP_NAMESPACE
@@ -4394,7 +4397,7 @@ namespace VULKAN_HPP_NAMESPACE
   //=======================
 
   //=== VK_VERSION_1_0 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, BindDescriptorSetsInfoKHR>
   {
     enum
@@ -4403,7 +4406,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, PushConstantsInfoKHR>
   {
     enum
@@ -4412,7 +4415,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, PushDescriptorSetInfoKHR>
   {
     enum
@@ -4421,7 +4424,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, PushDescriptorSetWithTemplateInfoKHR>
   {
     enum
@@ -4430,7 +4433,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, SetDescriptorBufferOffsetsInfoEXT>
   {
     enum
@@ -4439,7 +4442,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineLayoutCreateInfo, BindDescriptorBufferEmbeddedSamplersInfoEXT>
   {
     enum
@@ -4449,7 +4452,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_VERSION_1_1 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSubgroupProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4458,7 +4461,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice16BitStorageFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4467,7 +4470,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice16BitStorageFeatures, DeviceCreateInfo>
   {
     enum
@@ -4476,7 +4479,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<MemoryDedicatedRequirements, MemoryRequirements2>
   {
     enum
@@ -4485,7 +4488,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<MemoryDedicatedAllocateInfo, MemoryAllocateInfo>
   {
     enum
@@ -4494,7 +4497,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<MemoryAllocateFlagsInfo, MemoryAllocateInfo>
   {
     enum
@@ -4503,7 +4506,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupRenderPassBeginInfo, RenderPassBeginInfo>
   {
     enum
@@ -4512,7 +4515,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupRenderPassBeginInfo, RenderingInfo>
   {
     enum
@@ -4521,7 +4524,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupCommandBufferBeginInfo, CommandBufferBeginInfo>
   {
     enum
@@ -4530,7 +4533,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupSubmitInfo, SubmitInfo>
   {
     enum
@@ -4539,7 +4542,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<BindBufferMemoryDeviceGroupInfo, BindBufferMemoryInfo>
   {
     enum
@@ -4548,7 +4551,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<BindImageMemoryDeviceGroupInfo, BindImageMemoryInfo>
   {
     enum
@@ -4557,7 +4560,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupDeviceCreateInfo, DeviceCreateInfo>
   {
     enum
@@ -4566,7 +4569,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFeatures2, DeviceCreateInfo>
   {
     enum
@@ -4575,7 +4578,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePointClippingProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4584,7 +4587,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<RenderPassInputAttachmentAspectCreateInfo, RenderPassCreateInfo>
   {
     enum
@@ -4593,7 +4596,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageViewUsageCreateInfo, ImageViewCreateInfo>
   {
     enum
@@ -4602,7 +4605,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineTessellationDomainOriginStateCreateInfo, PipelineTessellationStateCreateInfo>
   {
     enum
@@ -4611,7 +4614,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<RenderPassMultiviewCreateInfo, RenderPassCreateInfo>
   {
     enum
@@ -4620,7 +4623,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMultiviewFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4629,7 +4632,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMultiviewFeatures, DeviceCreateInfo>
   {
     enum
@@ -4638,7 +4641,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMultiviewProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4647,7 +4650,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVariablePointersFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4656,7 +4659,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVariablePointersFeatures, DeviceCreateInfo>
   {
     enum
@@ -4665,7 +4668,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceProtectedMemoryFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4674,7 +4677,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceProtectedMemoryFeatures, DeviceCreateInfo>
   {
     enum
@@ -4683,7 +4686,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceProtectedMemoryProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4692,7 +4695,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ProtectedSubmitInfo, SubmitInfo>
   {
     enum
@@ -4701,7 +4704,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SamplerYcbcrConversionInfo, SamplerCreateInfo>
   {
     enum
@@ -4710,7 +4713,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SamplerYcbcrConversionInfo, ImageViewCreateInfo>
   {
     enum
@@ -4719,7 +4722,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<BindImagePlaneMemoryInfo, BindImageMemoryInfo>
   {
     enum
@@ -4728,7 +4731,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImagePlaneMemoryRequirementsInfo, ImageMemoryRequirementsInfo2>
   {
     enum
@@ -4737,7 +4740,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSamplerYcbcrConversionFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4746,7 +4749,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSamplerYcbcrConversionFeatures, DeviceCreateInfo>
   {
     enum
@@ -4755,7 +4758,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SamplerYcbcrConversionImageFormatProperties, ImageFormatProperties2>
   {
     enum
@@ -4764,7 +4767,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalImageFormatInfo, PhysicalDeviceImageFormatInfo2>
   {
     enum
@@ -4773,7 +4776,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExternalImageFormatProperties, ImageFormatProperties2>
   {
     enum
@@ -4782,7 +4785,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceIDProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4791,7 +4794,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExternalMemoryImageCreateInfo, ImageCreateInfo>
   {
     enum
@@ -4800,7 +4803,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExternalMemoryBufferCreateInfo, BufferCreateInfo>
   {
     enum
@@ -4809,7 +4812,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportMemoryAllocateInfo, MemoryAllocateInfo>
   {
     enum
@@ -4818,7 +4821,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportFenceCreateInfo, FenceCreateInfo>
   {
     enum
@@ -4827,7 +4830,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportSemaphoreCreateInfo, SemaphoreCreateInfo>
   {
     enum
@@ -4836,7 +4839,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMaintenance3Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -4845,7 +4848,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderDrawParametersFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4854,7 +4857,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderDrawParametersFeatures, DeviceCreateInfo>
   {
     enum
@@ -4864,7 +4867,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_VERSION_1_2 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan11Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -4873,7 +4876,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan11Features, DeviceCreateInfo>
   {
     enum
@@ -4882,7 +4885,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan11Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -4891,7 +4894,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan12Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -4900,7 +4903,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan12Features, DeviceCreateInfo>
   {
     enum
@@ -4909,7 +4912,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan12Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -4918,7 +4921,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageFormatListCreateInfo, ImageCreateInfo>
   {
     enum
@@ -4927,7 +4930,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageFormatListCreateInfo, SwapchainCreateInfoKHR>
   {
     enum
@@ -4936,7 +4939,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageFormatListCreateInfo, PhysicalDeviceImageFormatInfo2>
   {
     enum
@@ -4945,7 +4948,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice8BitStorageFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -4954,7 +4957,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice8BitStorageFeatures, DeviceCreateInfo>
   {
     enum
@@ -4963,7 +4966,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDriverProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -4972,7 +4975,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderAtomicInt64Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -4981,7 +4984,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderAtomicInt64Features, DeviceCreateInfo>
   {
     enum
@@ -4990,7 +4993,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderFloat16Int8Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -4999,7 +5002,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderFloat16Int8Features, DeviceCreateInfo>
   {
     enum
@@ -5008,7 +5011,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFloatControlsProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5017,7 +5020,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DescriptorSetLayoutBindingFlagsCreateInfo, DescriptorSetLayoutCreateInfo>
   {
     enum
@@ -5026,7 +5029,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDescriptorIndexingFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5035,7 +5038,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDescriptorIndexingFeatures, DeviceCreateInfo>
   {
     enum
@@ -5044,7 +5047,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDescriptorIndexingProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5053,7 +5056,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DescriptorSetVariableDescriptorCountAllocateInfo, DescriptorSetAllocateInfo>
   {
     enum
@@ -5062,7 +5065,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DescriptorSetVariableDescriptorCountLayoutSupport, DescriptorSetLayoutSupport>
   {
     enum
@@ -5071,7 +5074,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SubpassDescriptionDepthStencilResolve, SubpassDescription2>
   {
     enum
@@ -5080,7 +5083,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDepthStencilResolveProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5089,7 +5092,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceScalarBlockLayoutFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5098,7 +5101,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceScalarBlockLayoutFeatures, DeviceCreateInfo>
   {
     enum
@@ -5107,7 +5110,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageStencilUsageCreateInfo, ImageCreateInfo>
   {
     enum
@@ -5116,7 +5119,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageStencilUsageCreateInfo, PhysicalDeviceImageFormatInfo2>
   {
     enum
@@ -5125,7 +5128,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SamplerReductionModeCreateInfo, SamplerCreateInfo>
   {
     enum
@@ -5134,7 +5137,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSamplerFilterMinmaxProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5143,7 +5146,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkanMemoryModelFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5152,7 +5155,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkanMemoryModelFeatures, DeviceCreateInfo>
   {
     enum
@@ -5161,7 +5164,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImagelessFramebufferFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5170,7 +5173,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImagelessFramebufferFeatures, DeviceCreateInfo>
   {
     enum
@@ -5179,7 +5182,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<FramebufferAttachmentsCreateInfo, FramebufferCreateInfo>
   {
     enum
@@ -5188,7 +5191,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<RenderPassAttachmentBeginInfo, RenderPassBeginInfo>
   {
     enum
@@ -5197,7 +5200,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceUniformBufferStandardLayoutFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5206,7 +5209,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceUniformBufferStandardLayoutFeatures, DeviceCreateInfo>
   {
     enum
@@ -5215,7 +5218,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderSubgroupExtendedTypesFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5224,7 +5227,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderSubgroupExtendedTypesFeatures, DeviceCreateInfo>
   {
     enum
@@ -5233,7 +5236,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSeparateDepthStencilLayoutsFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5242,7 +5245,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSeparateDepthStencilLayoutsFeatures, DeviceCreateInfo>
   {
     enum
@@ -5251,7 +5254,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<AttachmentReferenceStencilLayout, AttachmentReference2>
   {
     enum
@@ -5260,7 +5263,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<AttachmentDescriptionStencilLayout, AttachmentDescription2>
   {
     enum
@@ -5269,7 +5272,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceHostQueryResetFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5278,7 +5281,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceHostQueryResetFeatures, DeviceCreateInfo>
   {
     enum
@@ -5287,7 +5290,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTimelineSemaphoreFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5296,7 +5299,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTimelineSemaphoreFeatures, DeviceCreateInfo>
   {
     enum
@@ -5305,7 +5308,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTimelineSemaphoreProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5314,7 +5317,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SemaphoreTypeCreateInfo, SemaphoreCreateInfo>
   {
     enum
@@ -5323,7 +5326,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SemaphoreTypeCreateInfo, PhysicalDeviceExternalSemaphoreInfo>
   {
     enum
@@ -5332,7 +5335,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<TimelineSemaphoreSubmitInfo, SubmitInfo>
   {
     enum
@@ -5341,7 +5344,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<TimelineSemaphoreSubmitInfo, BindSparseInfo>
   {
     enum
@@ -5350,7 +5353,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceBufferDeviceAddressFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5359,7 +5362,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceBufferDeviceAddressFeatures, DeviceCreateInfo>
   {
     enum
@@ -5368,7 +5371,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<BufferOpaqueCaptureAddressCreateInfo, BufferCreateInfo>
   {
     enum
@@ -5377,7 +5380,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<MemoryOpaqueCaptureAddressAllocateInfo, MemoryAllocateInfo>
   {
     enum
@@ -5387,7 +5390,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_VERSION_1_3 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan13Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -5396,7 +5399,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan13Features, DeviceCreateInfo>
   {
     enum
@@ -5405,7 +5408,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkan13Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -5414,7 +5417,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineCreationFeedbackCreateInfo, GraphicsPipelineCreateInfo>
   {
     enum
@@ -5423,7 +5426,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineCreationFeedbackCreateInfo, ComputePipelineCreateInfo>
   {
     enum
@@ -5432,7 +5435,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineCreationFeedbackCreateInfo, RayTracingPipelineCreateInfoNV>
   {
     enum
@@ -5441,7 +5444,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineCreationFeedbackCreateInfo, RayTracingPipelineCreateInfoKHR>
   {
     enum
@@ -5450,7 +5453,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineCreationFeedbackCreateInfo, ExecutionGraphPipelineCreateInfoAMDX>
   {
     enum
@@ -5459,7 +5462,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderTerminateInvocationFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5468,7 +5471,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderTerminateInvocationFeatures, DeviceCreateInfo>
   {
     enum
@@ -5477,7 +5480,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderDemoteToHelperInvocationFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5486,7 +5489,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderDemoteToHelperInvocationFeatures, DeviceCreateInfo>
   {
     enum
@@ -5495,7 +5498,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePrivateDataFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5504,7 +5507,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePrivateDataFeatures, DeviceCreateInfo>
   {
     enum
@@ -5513,7 +5516,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DevicePrivateDataCreateInfo, DeviceCreateInfo>
   {
     enum
@@ -5522,7 +5525,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePipelineCreationCacheControlFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5531,7 +5534,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePipelineCreationCacheControlFeatures, DeviceCreateInfo>
   {
     enum
@@ -5540,7 +5543,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<MemoryBarrier2, SubpassDependency2>
   {
     enum
@@ -5549,7 +5552,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSynchronization2Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -5558,7 +5561,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSynchronization2Features, DeviceCreateInfo>
   {
     enum
@@ -5567,7 +5570,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5576,7 +5579,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures, DeviceCreateInfo>
   {
     enum
@@ -5585,7 +5588,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImageRobustnessFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5594,7 +5597,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImageRobustnessFeatures, DeviceCreateInfo>
   {
     enum
@@ -5603,7 +5606,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSubgroupSizeControlFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5612,7 +5615,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSubgroupSizeControlFeatures, DeviceCreateInfo>
   {
     enum
@@ -5621,7 +5624,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSubgroupSizeControlProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5630,7 +5633,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineShaderStageRequiredSubgroupSizeCreateInfo, PipelineShaderStageCreateInfo>
   {
     enum
@@ -5639,7 +5642,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineShaderStageRequiredSubgroupSizeCreateInfo, ShaderCreateInfoEXT>
   {
     enum
@@ -5648,7 +5651,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceInlineUniformBlockFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5657,7 +5660,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceInlineUniformBlockFeatures, DeviceCreateInfo>
   {
     enum
@@ -5666,7 +5669,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceInlineUniformBlockProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5675,7 +5678,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<WriteDescriptorSetInlineUniformBlock, WriteDescriptorSet>
   {
     enum
@@ -5684,7 +5687,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DescriptorPoolInlineUniformBlockCreateInfo, DescriptorPoolCreateInfo>
   {
     enum
@@ -5693,7 +5696,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTextureCompressionASTCHDRFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5702,7 +5705,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTextureCompressionASTCHDRFeatures, DeviceCreateInfo>
   {
     enum
@@ -5711,7 +5714,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineRenderingCreateInfo, GraphicsPipelineCreateInfo>
   {
     enum
@@ -5720,7 +5723,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDynamicRenderingFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5729,7 +5732,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDynamicRenderingFeatures, DeviceCreateInfo>
   {
     enum
@@ -5738,7 +5741,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<CommandBufferInheritanceRenderingInfo, CommandBufferInheritanceInfo>
   {
     enum
@@ -5747,7 +5750,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderIntegerDotProductFeatures, PhysicalDeviceFeatures2>
   {
     enum
@@ -5756,7 +5759,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderIntegerDotProductFeatures, DeviceCreateInfo>
   {
     enum
@@ -5765,7 +5768,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderIntegerDotProductProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5774,7 +5777,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTexelBufferAlignmentProperties, PhysicalDeviceProperties2>
   {
     enum
@@ -5783,7 +5786,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<FormatProperties3, FormatProperties2>
   {
     enum
@@ -5792,7 +5795,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMaintenance4Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -5801,7 +5804,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMaintenance4Features, DeviceCreateInfo>
   {
     enum
@@ -5810,7 +5813,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMaintenance4Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -5820,7 +5823,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VKSC_VERSION_1_0 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkanSC10Features, PhysicalDeviceFeatures2>
   {
     enum
@@ -5829,7 +5832,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkanSC10Features, DeviceCreateInfo>
   {
     enum
@@ -5838,7 +5841,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVulkanSC10Properties, PhysicalDeviceProperties2>
   {
     enum
@@ -5847,7 +5850,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceObjectReservationCreateInfo, DeviceCreateInfo>
   {
     enum
@@ -5856,7 +5859,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<CommandPoolMemoryReservationCreateInfo, CommandPoolCreateInfo>
   {
     enum
@@ -5865,7 +5868,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<FaultCallbackInfo, DeviceCreateInfo>
   {
     enum
@@ -5874,7 +5877,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineOfflineCreateInfo, GraphicsPipelineCreateInfo>
   {
     enum
@@ -5883,7 +5886,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineOfflineCreateInfo, ComputePipelineCreateInfo>
   {
     enum
@@ -5892,7 +5895,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineOfflineCreateInfo, RayTracingPipelineCreateInfoKHR>
   {
     enum
@@ -5901,7 +5904,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineOfflineCreateInfo, RayTracingPipelineCreateInfoNV>
   {
     enum
@@ -5911,7 +5914,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_swapchain ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageSwapchainCreateInfoKHR, ImageCreateInfo>
   {
     enum
@@ -5920,7 +5923,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<BindImageMemorySwapchainInfoKHR, BindImageMemoryInfo>
   {
     enum
@@ -5929,7 +5932,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupPresentInfoKHR, PresentInfoKHR>
   {
     enum
@@ -5938,7 +5941,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceGroupSwapchainCreateInfoKHR, SwapchainCreateInfoKHR>
   {
     enum
@@ -5948,7 +5951,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_display_swapchain ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DisplayPresentInfoKHR, PresentInfoKHR>
   {
     enum
@@ -5958,7 +5961,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_astc_decode_mode ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageViewASTCDecodeModeEXT, ImageViewCreateInfo>
   {
     enum
@@ -5967,7 +5970,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceASTCDecodeFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -5976,7 +5979,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceASTCDecodeFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -5986,7 +5989,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_external_memory_fd ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImportMemoryFdInfoKHR, MemoryAllocateInfo>
   {
     enum
@@ -5996,7 +5999,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_incremental_present ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PresentRegionsKHR, PresentInfoKHR>
   {
     enum
@@ -6006,7 +6009,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_display_control ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SwapchainCounterCreateInfoEXT, SwapchainCreateInfoKHR>
   {
     enum
@@ -6016,7 +6019,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_discard_rectangles ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDiscardRectanglePropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6025,7 +6028,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineDiscardRectangleStateCreateInfoEXT, GraphicsPipelineCreateInfo>
   {
     enum
@@ -6035,7 +6038,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_conservative_rasterization ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceConservativeRasterizationPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6044,7 +6047,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineRasterizationConservativeStateCreateInfoEXT, PipelineRasterizationStateCreateInfo>
   {
     enum
@@ -6054,7 +6057,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_depth_clip_enable ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDepthClipEnableFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6063,7 +6066,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceDepthClipEnableFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6072,7 +6075,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineRasterizationDepthClipStateCreateInfoEXT, PipelineRasterizationStateCreateInfo>
   {
     enum
@@ -6082,7 +6085,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_shared_presentable_image ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SharedPresentSurfaceCapabilitiesKHR, SurfaceCapabilities2KHR>
   {
     enum
@@ -6092,7 +6095,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_performance_query ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePerformanceQueryFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -6101,7 +6104,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePerformanceQueryFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -6110,7 +6113,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePerformanceQueryPropertiesKHR, PhysicalDeviceProperties2>
   {
     enum
@@ -6119,7 +6122,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<QueryPoolPerformanceCreateInfoKHR, QueryPoolCreateInfo>
   {
     enum
@@ -6128,7 +6131,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PerformanceQuerySubmitInfoKHR, SubmitInfo>
   {
     enum
@@ -6137,7 +6140,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PerformanceQuerySubmitInfoKHR, SubmitInfo2>
   {
     enum
@@ -6146,7 +6149,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PerformanceQueryReservationInfoKHR, DeviceCreateInfo>
   {
     enum
@@ -6156,7 +6159,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_debug_utils ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DebugUtilsMessengerCreateInfoEXT, InstanceCreateInfo>
   {
     enum
@@ -6165,7 +6168,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DebugUtilsObjectNameInfoEXT, PipelineShaderStageCreateInfo>
   {
     enum
@@ -6175,7 +6178,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_sample_locations ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SampleLocationsInfoEXT, ImageMemoryBarrier>
   {
     enum
@@ -6184,7 +6187,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SampleLocationsInfoEXT, ImageMemoryBarrier2>
   {
     enum
@@ -6193,7 +6196,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<RenderPassSampleLocationsBeginInfoEXT, RenderPassBeginInfo>
   {
     enum
@@ -6202,7 +6205,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineSampleLocationsStateCreateInfoEXT, PipelineMultisampleStateCreateInfo>
   {
     enum
@@ -6211,7 +6214,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceSampleLocationsPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6221,7 +6224,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_blend_operation_advanced ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceBlendOperationAdvancedFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6230,7 +6233,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceBlendOperationAdvancedFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6239,7 +6242,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceBlendOperationAdvancedPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6248,7 +6251,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineColorBlendAdvancedStateCreateInfoEXT, PipelineColorBlendStateCreateInfo>
   {
     enum
@@ -6258,7 +6261,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_image_drm_format_modifier ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DrmFormatModifierPropertiesListEXT, FormatProperties2>
   {
     enum
@@ -6267,7 +6270,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImageDrmFormatModifierInfoEXT, PhysicalDeviceImageFormatInfo2>
   {
     enum
@@ -6276,7 +6279,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageDrmFormatModifierListCreateInfoEXT, ImageCreateInfo>
   {
     enum
@@ -6285,7 +6288,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImageDrmFormatModifierExplicitCreateInfoEXT, ImageCreateInfo>
   {
     enum
@@ -6294,7 +6297,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DrmFormatModifierPropertiesList2EXT, FormatProperties2>
   {
     enum
@@ -6304,7 +6307,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_filter_cubic ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceImageViewImageFormatInfoEXT, PhysicalDeviceImageFormatInfo2>
   {
     enum
@@ -6313,7 +6316,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<FilterCubicImageViewImageFormatPropertiesEXT, ImageFormatProperties2>
   {
     enum
@@ -6323,7 +6326,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_external_memory_host ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImportMemoryHostPointerInfoEXT, MemoryAllocateInfo>
   {
     enum
@@ -6332,7 +6335,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalMemoryHostPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6342,7 +6345,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_shader_clock ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderClockFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -6351,7 +6354,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderClockFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -6361,7 +6364,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_global_priority ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceQueueGlobalPriorityCreateInfoKHR, DeviceQueueCreateInfo>
   {
     enum
@@ -6370,7 +6373,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceGlobalPriorityQueryFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -6379,7 +6382,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceGlobalPriorityQueryFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -6388,7 +6391,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<QueueFamilyGlobalPriorityPropertiesKHR, QueueFamilyProperties2>
   {
     enum
@@ -6398,7 +6401,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_pci_bus_info ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevicePCIBusInfoPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6408,7 +6411,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_fragment_shading_rate ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<FragmentShadingRateAttachmentInfoKHR, SubpassDescription2>
   {
     enum
@@ -6417,7 +6420,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineFragmentShadingRateStateCreateInfoKHR, GraphicsPipelineCreateInfo>
   {
     enum
@@ -6426,7 +6429,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFragmentShadingRateFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -6435,7 +6438,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFragmentShadingRateFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -6444,7 +6447,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFragmentShadingRatePropertiesKHR, PhysicalDeviceProperties2>
   {
     enum
@@ -6454,7 +6457,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_shader_image_atomic_int64 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderImageAtomicInt64FeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6463,7 +6466,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderImageAtomicInt64FeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6473,7 +6476,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_memory_budget ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceMemoryBudgetPropertiesEXT, PhysicalDeviceMemoryProperties2>
   {
     enum
@@ -6483,7 +6486,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_validation_features ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ValidationFeaturesEXT, InstanceCreateInfo>
   {
     enum
@@ -6492,7 +6495,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ValidationFeaturesEXT, ShaderModuleCreateInfo>
   {
     enum
@@ -6501,7 +6504,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ValidationFeaturesEXT, ShaderCreateInfoEXT>
   {
     enum
@@ -6511,7 +6514,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_fragment_shader_interlock ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFragmentShaderInterlockFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6520,7 +6523,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceFragmentShaderInterlockFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6530,7 +6533,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_ycbcr_image_arrays ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceYcbcrImageArraysFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6539,7 +6542,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceYcbcrImageArraysFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6549,7 +6552,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_shader_atomic_float ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderAtomicFloatFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6558,7 +6561,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceShaderAtomicFloatFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6568,7 +6571,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_extended_dynamic_state ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExtendedDynamicStateFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6577,7 +6580,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExtendedDynamicStateFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6587,7 +6590,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_texel_buffer_alignment ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTexelBufferAlignmentFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6596,7 +6599,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceTexelBufferAlignmentFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6606,7 +6609,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_robustness2 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceRobustness2FeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6615,7 +6618,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceRobustness2FeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6624,7 +6627,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceRobustness2PropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6634,7 +6637,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_custom_border_color ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SamplerCustomBorderColorCreateInfoEXT, SamplerCreateInfo>
   {
     enum
@@ -6643,7 +6646,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceCustomBorderColorPropertiesEXT, PhysicalDeviceProperties2>
   {
     enum
@@ -6652,7 +6655,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceCustomBorderColorFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6661,7 +6664,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceCustomBorderColorFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6671,7 +6674,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_synchronization2 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<QueueFamilyCheckpointProperties2NV, QueueFamilyProperties2>
   {
     enum
@@ -6681,7 +6684,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_ycbcr_2plane_444_formats ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6690,7 +6693,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6700,7 +6703,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_4444_formats ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice4444FormatsFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6709,7 +6712,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDevice4444FormatsFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6719,7 +6722,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_vertex_input_dynamic_state ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVertexInputDynamicStateFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6728,7 +6731,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVertexInputDynamicStateFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6739,7 +6742,7 @@ namespace VULKAN_HPP_NAMESPACE
 
 #  if defined( VK_USE_PLATFORM_SCI )
   //=== VK_NV_external_sci_sync ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportFenceSciSyncInfoNV, FenceCreateInfo>
   {
     enum
@@ -6748,7 +6751,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportSemaphoreSciSyncInfoNV, SemaphoreCreateInfo>
   {
     enum
@@ -6757,7 +6760,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalSciSyncFeaturesNV, PhysicalDeviceFeatures2>
   {
     enum
@@ -6766,7 +6769,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalSciSyncFeaturesNV, DeviceCreateInfo>
   {
     enum
@@ -6778,7 +6781,7 @@ namespace VULKAN_HPP_NAMESPACE
 
 #  if defined( VK_USE_PLATFORM_SCI )
   //=== VK_NV_external_memory_sci_buf ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExportMemorySciBufInfoNV, MemoryAllocateInfo>
   {
     enum
@@ -6787,7 +6790,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImportMemorySciBufInfoNV, MemoryAllocateInfo>
   {
     enum
@@ -6796,7 +6799,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalMemorySciBufFeaturesNV, PhysicalDeviceFeatures2>
   {
     enum
@@ -6805,7 +6808,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalMemorySciBufFeaturesNV, DeviceCreateInfo>
   {
     enum
@@ -6816,7 +6819,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /*VK_USE_PLATFORM_SCI*/
 
   //=== VK_EXT_extended_dynamic_state2 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExtendedDynamicState2FeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6825,7 +6828,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExtendedDynamicState2FeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6835,7 +6838,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_color_write_enable ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceColorWriteEnableFeaturesEXT, PhysicalDeviceFeatures2>
   {
     enum
@@ -6844,7 +6847,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceColorWriteEnableFeaturesEXT, DeviceCreateInfo>
   {
     enum
@@ -6853,7 +6856,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineColorWriteCreateInfoEXT, PipelineColorBlendStateCreateInfo>
   {
     enum
@@ -6863,7 +6866,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_EXT_application_parameters ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ApplicationParametersEXT, ApplicationInfo>
   {
     enum
@@ -6872,7 +6875,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ApplicationParametersEXT, DeviceCreateInfo>
   {
     enum
@@ -6883,7 +6886,7 @@ namespace VULKAN_HPP_NAMESPACE
 
 #  if defined( VK_USE_PLATFORM_SCI )
   //=== VK_NV_external_sci_sync2 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalSciSync2FeaturesNV, PhysicalDeviceFeatures2>
   {
     enum
@@ -6892,7 +6895,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalSciSync2FeaturesNV, DeviceCreateInfo>
   {
     enum
@@ -6901,7 +6904,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<SemaphoreSciSyncCreateInfoNV, SemaphoreCreateInfo>
   {
     enum
@@ -6910,7 +6913,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<DeviceSemaphoreSciSyncPoolReservationCreateInfoNV, DeviceCreateInfo>
   {
     enum
@@ -6921,7 +6924,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /*VK_USE_PLATFORM_SCI*/
 
   //=== VK_KHR_vertex_attribute_divisor ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVertexAttributeDivisorPropertiesKHR, PhysicalDeviceProperties2>
   {
     enum
@@ -6930,7 +6933,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineVertexInputDivisorStateCreateInfoKHR, PipelineVertexInputStateCreateInfo>
   {
     enum
@@ -6939,7 +6942,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVertexAttributeDivisorFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -6948,7 +6951,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceVertexAttributeDivisorFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -6959,7 +6962,7 @@ namespace VULKAN_HPP_NAMESPACE
 
 #  if defined( VK_USE_PLATFORM_SCREEN_QNX )
   //=== VK_QNX_external_memory_screen_buffer ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ScreenBufferFormatPropertiesQNX, ScreenBufferPropertiesQNX>
   {
     enum
@@ -6968,7 +6971,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ImportScreenBufferInfoQNX, MemoryAllocateInfo>
   {
     enum
@@ -6977,7 +6980,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExternalFormatQNX, ImageCreateInfo>
   {
     enum
@@ -6986,7 +6989,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<ExternalFormatQNX, SamplerYcbcrConversionCreateInfo>
   {
     enum
@@ -6995,7 +6998,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX, PhysicalDeviceFeatures2>
   {
     enum
@@ -7004,7 +7007,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX, DeviceCreateInfo>
   {
     enum
@@ -7015,7 +7018,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
   //=== VK_KHR_index_type_uint8 ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceIndexTypeUint8FeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -7024,7 +7027,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceIndexTypeUint8FeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -7034,7 +7037,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   //=== VK_KHR_line_rasterization ===
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceLineRasterizationFeaturesKHR, PhysicalDeviceFeatures2>
   {
     enum
@@ -7043,7 +7046,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceLineRasterizationFeaturesKHR, DeviceCreateInfo>
   {
     enum
@@ -7052,7 +7055,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PhysicalDeviceLineRasterizationPropertiesKHR, PhysicalDeviceProperties2>
   {
     enum
@@ -7061,7 +7064,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct StructExtends<PipelineRasterizationLineStateCreateInfoKHR, PipelineRasterizationStateCreateInfo>
   {
     enum
@@ -7073,7 +7076,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif  // VULKAN_HPP_DISABLE_ENHANCED_MODE
 
 #if VULKAN_HPP_ENABLE_DYNAMIC_LOADER_TOOL
-  class DynamicLoader
+  VULKAN_HPP_EXPORT class DynamicLoader
   {
   public:
 #  ifdef VULKAN_HPP_NO_EXCEPTIONS
@@ -7181,7 +7184,7 @@ namespace VULKAN_HPP_NAMESPACE
 
   using PFN_dummy = void ( * )();
 
-  class DispatchLoaderDynamic : public DispatchLoaderBase
+  VULKAN_HPP_EXPORT class DispatchLoaderDynamic : public DispatchLoaderBase
   {
   public:
     //=== VK_VERSION_1_0 ===
@@ -7548,8 +7551,8 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkAcquireWinrtDisplayNV vkAcquireWinrtDisplayNV = 0;
     PFN_vkGetWinrtDisplayNV     vkGetWinrtDisplayNV     = 0;
 #else
-    PFN_dummy vkAcquireWinrtDisplayNV_placeholder                             = 0;
-    PFN_dummy vkGetWinrtDisplayNV_placeholder                                 = 0;
+    PFN_dummy vkAcquireWinrtDisplayNV_placeholder = 0;
+    PFN_dummy vkGetWinrtDisplayNV_placeholder     = 0;
 #endif /*VK_USE_PLATFORM_WIN32_KHR*/
 
     //=== VK_EXT_vertex_input_dynamic_state ===
@@ -7565,13 +7568,13 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkGetSemaphoreSciSyncObjNV             vkGetSemaphoreSciSyncObjNV             = 0;
     PFN_vkImportSemaphoreSciSyncObjNV          vkImportSemaphoreSciSyncObjNV          = 0;
 #else
-    PFN_dummy vkGetFenceSciSyncFenceNV_placeholder                            = 0;
-    PFN_dummy vkGetFenceSciSyncObjNV_placeholder                              = 0;
-    PFN_dummy vkImportFenceSciSyncFenceNV_placeholder                         = 0;
-    PFN_dummy vkImportFenceSciSyncObjNV_placeholder                           = 0;
-    PFN_dummy vkGetPhysicalDeviceSciSyncAttributesNV_placeholder              = 0;
-    PFN_dummy vkGetSemaphoreSciSyncObjNV_placeholder                          = 0;
-    PFN_dummy vkImportSemaphoreSciSyncObjNV_placeholder                       = 0;
+    PFN_dummy vkGetFenceSciSyncFenceNV_placeholder               = 0;
+    PFN_dummy vkGetFenceSciSyncObjNV_placeholder                 = 0;
+    PFN_dummy vkImportFenceSciSyncFenceNV_placeholder            = 0;
+    PFN_dummy vkImportFenceSciSyncObjNV_placeholder              = 0;
+    PFN_dummy vkGetPhysicalDeviceSciSyncAttributesNV_placeholder = 0;
+    PFN_dummy vkGetSemaphoreSciSyncObjNV_placeholder             = 0;
+    PFN_dummy vkImportSemaphoreSciSyncObjNV_placeholder          = 0;
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCI )
@@ -7599,14 +7602,14 @@ namespace VULKAN_HPP_NAMESPACE
     //=== VK_NV_external_sci_sync2 ===
     PFN_vkCreateSemaphoreSciSyncPoolNV vkCreateSemaphoreSciSyncPoolNV = 0;
 #else
-    PFN_dummy vkCreateSemaphoreSciSyncPoolNV_placeholder                      = 0;
+    PFN_dummy vkCreateSemaphoreSciSyncPoolNV_placeholder = 0;
 #endif /*VK_USE_PLATFORM_SCI*/
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
     //=== VK_QNX_external_memory_screen_buffer ===
     PFN_vkGetScreenBufferPropertiesQNX vkGetScreenBufferPropertiesQNX = 0;
 #else
-    PFN_dummy vkGetScreenBufferPropertiesQNX_placeholder                      = 0;
+    PFN_dummy vkGetScreenBufferPropertiesQNX_placeholder = 0;
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
 
     //=== VK_KHR_line_rasterization ===

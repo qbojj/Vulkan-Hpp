@@ -1,4 +1,4 @@
-  class DispatchLoaderBase
+  VULKAN_HPP_EXPORT class DispatchLoaderBase
   {
   public:
     DispatchLoaderBase() = default;

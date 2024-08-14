@@ -1,11 +1,11 @@
 
-enum class SwapchainOwns
+VULKAN_HPP_EXPORT enum class SwapchainOwns
 {
   no,
   yes,
 };
 
-struct ImageHeader : SharedHeader<DestructorTypeOf<VULKAN_HPP_NAMESPACE::Image>, typename SharedHandleTraits<VULKAN_HPP_NAMESPACE::Image>::deleter>
+VULKAN_HPP_EXPORT struct ImageHeader : SharedHeader<DestructorTypeOf<VULKAN_HPP_NAMESPACE::Image>, typename SharedHandleTraits<VULKAN_HPP_NAMESPACE::Image>::deleter>
 {
   ImageHeader( SharedHandle<DestructorTypeOf<VULKAN_HPP_NAMESPACE::Image>>       parent,
                typename SharedHandleTraits<VULKAN_HPP_NAMESPACE::Image>::deleter deleter = typename SharedHandleTraits<VULKAN_HPP_NAMESPACE::Image>::deleter(),
@@ -19,7 +19,7 @@ struct ImageHeader : SharedHeader<DestructorTypeOf<VULKAN_HPP_NAMESPACE::Image>,
   SwapchainOwns swapchainOwned = SwapchainOwns::no;
 };
 
-template <>
+VULKAN_HPP_EXPORT template <>
 class SharedHandle<VULKAN_HPP_NAMESPACE::Image> : public SharedHandleBase<VULKAN_HPP_NAMESPACE::Image, ImageHeader>
 {
   using BaseType    = SharedHandleBase<VULKAN_HPP_NAMESPACE::Image, ImageHeader>;
@@ -47,7 +47,7 @@ protected:
   }
 };
 
-struct SwapchainHeader
+VULKAN_HPP_EXPORT struct SwapchainHeader
 {
   SwapchainHeader( SharedHandle<VULKAN_HPP_NAMESPACE::SurfaceKHR>                           surface,
                    SharedHandle<DestructorTypeOf<VULKAN_HPP_NAMESPACE::SwapchainKHR>>       parent,

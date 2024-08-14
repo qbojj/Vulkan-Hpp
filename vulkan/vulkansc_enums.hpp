@@ -10,13 +10,13 @@
 
 namespace VULKAN_HPP_NAMESPACE
 {
-  template <typename FlagBitsType>
+  VULKAN_HPP_EXPORT template <typename FlagBitsType>
   struct FlagTraits
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool isBitmask = false;
   };
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   class Flags
   {
   public:
@@ -135,37 +135,37 @@ namespace VULKAN_HPP_NAMESPACE
 
 #if !defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
   // relational operators only needed for pre C++20
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator<( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator>( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator<=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator>=( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator>( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator<( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator>=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator<=( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator==( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator==( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator!=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator!=( bit );
@@ -173,44 +173,44 @@ namespace VULKAN_HPP_NAMESPACE
 #endif
 
   // bitwise operators
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator&( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator&( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator|( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator|( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator^( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator^( bit );
   }
 
   // bitwise operators on BitType
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator&( BitType lhs, BitType rhs ) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) & rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator|( BitType lhs, BitType rhs ) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) | rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator^( BitType lhs, BitType rhs ) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) ^ rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator~( BitType bit ) VULKAN_HPP_NOEXCEPT
   {
     return ~( Flags<BitType>( bit ) );
@@ -1011,9 +1011,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFragmentShadingRateAttachmentKHR = VK_FORMAT_FEATURE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR
   };
 
-  using FormatFeatureFlags = Flags<FormatFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using FormatFeatureFlags = Flags<FormatFeatureFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<FormatFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool               isBitmask = true;
@@ -1048,9 +1048,9 @@ namespace VULKAN_HPP_NAMESPACE
     eSampleLocationsCompatibleDepthEXT = VK_IMAGE_CREATE_SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_BIT_EXT
   };
 
-  using ImageCreateFlags = Flags<ImageCreateFlagBits>;
+  VULKAN_HPP_EXPORT using ImageCreateFlags = Flags<ImageCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ImageCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1088,9 +1088,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFragmentShadingRateAttachmentKHR = VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR
   };
 
-  using ImageUsageFlags = Flags<ImageUsageFlagBits>;
+  VULKAN_HPP_EXPORT using ImageUsageFlags = Flags<ImageUsageFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ImageUsageFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool            isBitmask = true;
@@ -1104,9 +1104,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using InstanceCreateFlags = Flags<InstanceCreateFlagBits>;
+  VULKAN_HPP_EXPORT using InstanceCreateFlags = Flags<InstanceCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<InstanceCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -1125,9 +1125,9 @@ namespace VULKAN_HPP_NAMESPACE
     eSeuSafe       = VK_MEMORY_HEAP_SEU_SAFE_BIT
   };
 
-  using MemoryHeapFlags = Flags<MemoryHeapFlagBits>;
+  VULKAN_HPP_EXPORT using MemoryHeapFlags = Flags<MemoryHeapFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<MemoryHeapFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool            isBitmask = true;
@@ -1145,9 +1145,9 @@ namespace VULKAN_HPP_NAMESPACE
     eProtected       = VK_MEMORY_PROPERTY_PROTECTED_BIT
   };
 
-  using MemoryPropertyFlags = Flags<MemoryPropertyFlagBits>;
+  VULKAN_HPP_EXPORT using MemoryPropertyFlags = Flags<MemoryPropertyFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<MemoryPropertyFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -1173,9 +1173,9 @@ namespace VULKAN_HPP_NAMESPACE
     eProtected = VK_QUEUE_PROTECTED_BIT
   };
 
-  using QueueFlags = Flags<QueueFlagBits>;
+  VULKAN_HPP_EXPORT using QueueFlags = Flags<QueueFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<QueueFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool       isBitmask = true;
@@ -1194,9 +1194,9 @@ namespace VULKAN_HPP_NAMESPACE
     e64 = VK_SAMPLE_COUNT_64_BIT
   };
 
-  using SampleCountFlags = Flags<SampleCountFlagBits>;
+  VULKAN_HPP_EXPORT using SampleCountFlags = Flags<SampleCountFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SampleCountFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1218,9 +1218,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DeviceCreateFlags = Flags<DeviceCreateFlagBits>;
+  VULKAN_HPP_EXPORT using DeviceCreateFlags = Flags<DeviceCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DeviceCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool              isBitmask = true;
@@ -1232,9 +1232,9 @@ namespace VULKAN_HPP_NAMESPACE
     eProtected = VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT
   };
 
-  using DeviceQueueCreateFlags = Flags<DeviceQueueCreateFlagBits>;
+  VULKAN_HPP_EXPORT using DeviceQueueCreateFlags = Flags<DeviceQueueCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DeviceQueueCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -1265,9 +1265,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFragmentShadingRateAttachmentKHR = VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR
   };
 
-  using PipelineStageFlags = Flags<PipelineStageFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineStageFlags = Flags<PipelineStageFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineStageFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool               isBitmask = true;
@@ -1284,9 +1284,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using MemoryMapFlags = Flags<MemoryMapFlagBits>;
+  VULKAN_HPP_EXPORT using MemoryMapFlags = Flags<MemoryMapFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<MemoryMapFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool           isBitmask = true;
@@ -1309,9 +1309,9 @@ namespace VULKAN_HPP_NAMESPACE
     eMemoryPlane3EXT = VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT
   };
 
-  using ImageAspectFlags = Flags<ImageAspectFlagBits>;
+  VULKAN_HPP_EXPORT using ImageAspectFlags = Flags<ImageAspectFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ImageAspectFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1327,9 +1327,9 @@ namespace VULKAN_HPP_NAMESPACE
     eSignaled = VK_FENCE_CREATE_SIGNALED_BIT
   };
 
-  using FenceCreateFlags = Flags<FenceCreateFlagBits>;
+  VULKAN_HPP_EXPORT using FenceCreateFlags = Flags<FenceCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<FenceCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1340,9 +1340,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using SemaphoreCreateFlags = Flags<SemaphoreCreateFlagBits>;
+  VULKAN_HPP_EXPORT using SemaphoreCreateFlags = Flags<SemaphoreCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SemaphoreCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                 isBitmask = true;
@@ -1355,9 +1355,9 @@ namespace VULKAN_HPP_NAMESPACE
     eDeviceOnlyKHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR
   };
 
-  using EventCreateFlags = Flags<EventCreateFlagBits>;
+  VULKAN_HPP_EXPORT using EventCreateFlags = Flags<EventCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<EventCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1379,9 +1379,9 @@ namespace VULKAN_HPP_NAMESPACE
     eComputeShaderInvocations                = VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT
   };
 
-  using QueryPipelineStatisticFlags = Flags<QueryPipelineStatisticFlagBits>;
+  VULKAN_HPP_EXPORT using QueryPipelineStatisticFlags = Flags<QueryPipelineStatisticFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<QueryPipelineStatisticFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                        isBitmask = true;
@@ -1402,9 +1402,9 @@ namespace VULKAN_HPP_NAMESPACE
     ePartial          = VK_QUERY_RESULT_PARTIAL_BIT
   };
 
-  using QueryResultFlags = Flags<QueryResultFlagBits>;
+  VULKAN_HPP_EXPORT using QueryResultFlags = Flags<QueryResultFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<QueryResultFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1424,9 +1424,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using QueryPoolCreateFlags = Flags<QueryPoolCreateFlagBits>;
+  VULKAN_HPP_EXPORT using QueryPoolCreateFlags = Flags<QueryPoolCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<QueryPoolCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                 isBitmask = true;
@@ -1442,9 +1442,9 @@ namespace VULKAN_HPP_NAMESPACE
     eDeviceAddressCaptureReplay = VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT
   };
 
-  using BufferCreateFlags = Flags<BufferCreateFlagBits>;
+  VULKAN_HPP_EXPORT using BufferCreateFlags = Flags<BufferCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<BufferCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool              isBitmask = true;
@@ -1467,9 +1467,9 @@ namespace VULKAN_HPP_NAMESPACE
     eShaderDeviceAddress = VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT
   };
 
-  using BufferUsageFlags = Flags<BufferUsageFlagBits>;
+  VULKAN_HPP_EXPORT using BufferUsageFlags = Flags<BufferUsageFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<BufferUsageFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1489,9 +1489,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using BufferViewCreateFlags = Flags<BufferViewCreateFlagBits>;
+  VULKAN_HPP_EXPORT using BufferViewCreateFlags = Flags<BufferViewCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<BufferViewCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                  isBitmask = true;
@@ -1539,9 +1539,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using ImageViewCreateFlags = Flags<ImageViewCreateFlagBits>;
+  VULKAN_HPP_EXPORT using ImageViewCreateFlags = Flags<ImageViewCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ImageViewCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                 isBitmask = true;
@@ -1566,9 +1566,9 @@ namespace VULKAN_HPP_NAMESPACE
     eUseApplicationStorage  = VK_PIPELINE_CACHE_CREATE_USE_APPLICATION_STORAGE_BIT
   };
 
-  using PipelineCacheCreateFlags = Flags<PipelineCacheCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineCacheCreateFlags = Flags<PipelineCacheCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineCacheCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                     isBitmask = true;
@@ -1662,9 +1662,9 @@ namespace VULKAN_HPP_NAMESPACE
     eA = VK_COLOR_COMPONENT_A_BIT
   };
 
-  using ColorComponentFlags = Flags<ColorComponentFlagBits>;
+  VULKAN_HPP_EXPORT using ColorComponentFlags = Flags<ColorComponentFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ColorComponentFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -1692,9 +1692,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFrontAndBack = VK_CULL_MODE_FRONT_AND_BACK
   };
 
-  using CullModeFlags = Flags<CullModeFlagBits>;
+  VULKAN_HPP_EXPORT using CullModeFlags = Flags<CullModeFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CullModeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool          isBitmask = true;
@@ -1791,9 +1791,9 @@ namespace VULKAN_HPP_NAMESPACE
     eEarlyReturnOnFailure          = VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT
   };
 
-  using PipelineCreateFlags = Flags<PipelineCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineCreateFlags = Flags<PipelineCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -1810,9 +1810,9 @@ namespace VULKAN_HPP_NAMESPACE
     eRequireFullSubgroupsEXT     = VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT
   };
 
-  using PipelineShaderStageCreateFlags = Flags<PipelineShaderStageCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineShaderStageCreateFlags = Flags<PipelineShaderStageCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineShaderStageCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                           isBitmask = true;
@@ -1854,9 +1854,9 @@ namespace VULKAN_HPP_NAMESPACE
     eAll                    = VK_SHADER_STAGE_ALL
   };
 
-  using ShaderStageFlags = Flags<ShaderStageFlagBits>;
+  VULKAN_HPP_EXPORT using ShaderStageFlags = Flags<ShaderStageFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ShaderStageFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -1887,9 +1887,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineColorBlendStateCreateFlags = Flags<PipelineColorBlendStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineColorBlendStateCreateFlags = Flags<PipelineColorBlendStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineColorBlendStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                               isBitmask = true;
@@ -1900,9 +1900,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineDepthStencilStateCreateFlags = Flags<PipelineDepthStencilStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineDepthStencilStateCreateFlags = Flags<PipelineDepthStencilStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineDepthStencilStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                 isBitmask = true;
@@ -1913,9 +1913,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineDynamicStateCreateFlags = Flags<PipelineDynamicStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineDynamicStateCreateFlags = Flags<PipelineDynamicStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineDynamicStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                            isBitmask = true;
@@ -1926,9 +1926,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineInputAssemblyStateCreateFlags = Flags<PipelineInputAssemblyStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineInputAssemblyStateCreateFlags = Flags<PipelineInputAssemblyStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineInputAssemblyStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                  isBitmask = true;
@@ -1939,9 +1939,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineLayoutCreateFlags = Flags<PipelineLayoutCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineLayoutCreateFlags = Flags<PipelineLayoutCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineLayoutCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                      isBitmask = true;
@@ -1952,9 +1952,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineMultisampleStateCreateFlags = Flags<PipelineMultisampleStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineMultisampleStateCreateFlags = Flags<PipelineMultisampleStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineMultisampleStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                isBitmask = true;
@@ -1965,9 +1965,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineRasterizationStateCreateFlags = Flags<PipelineRasterizationStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineRasterizationStateCreateFlags = Flags<PipelineRasterizationStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineRasterizationStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                  isBitmask = true;
@@ -1978,9 +1978,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineTessellationStateCreateFlags = Flags<PipelineTessellationStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineTessellationStateCreateFlags = Flags<PipelineTessellationStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineTessellationStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                 isBitmask = true;
@@ -1991,9 +1991,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineVertexInputStateCreateFlags = Flags<PipelineVertexInputStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineVertexInputStateCreateFlags = Flags<PipelineVertexInputStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineVertexInputStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                isBitmask = true;
@@ -2004,9 +2004,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineViewportStateCreateFlags = Flags<PipelineViewportStateCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineViewportStateCreateFlags = Flags<PipelineViewportStateCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineViewportStateCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                             isBitmask = true;
@@ -2045,9 +2045,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using SamplerCreateFlags = Flags<SamplerCreateFlagBits>;
+  VULKAN_HPP_EXPORT using SamplerCreateFlags = Flags<SamplerCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SamplerCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool               isBitmask = true;
@@ -2066,9 +2066,9 @@ namespace VULKAN_HPP_NAMESPACE
     eUpdateAfterBind   = VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT
   };
 
-  using DescriptorPoolCreateFlags = Flags<DescriptorPoolCreateFlagBits>;
+  VULKAN_HPP_EXPORT using DescriptorPoolCreateFlags = Flags<DescriptorPoolCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DescriptorPoolCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                      isBitmask = true;
@@ -2081,9 +2081,9 @@ namespace VULKAN_HPP_NAMESPACE
     eUpdateAfterBindPool = VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT
   };
 
-  using DescriptorSetLayoutCreateFlags = Flags<DescriptorSetLayoutCreateFlagBits>;
+  VULKAN_HPP_EXPORT using DescriptorSetLayoutCreateFlags = Flags<DescriptorSetLayoutCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DescriptorSetLayoutCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                           isBitmask = true;
@@ -2110,9 +2110,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DescriptorPoolResetFlags = Flags<DescriptorPoolResetFlagBits>;
+  VULKAN_HPP_EXPORT using DescriptorPoolResetFlags = Flags<DescriptorPoolResetFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DescriptorPoolResetFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                     isBitmask = true;
@@ -2144,9 +2144,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFragmentShadingRateAttachmentReadKHR = VK_ACCESS_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR
   };
 
-  using AccessFlags = Flags<AccessFlagBits>;
+  VULKAN_HPP_EXPORT using AccessFlags = Flags<AccessFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<AccessFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool        isBitmask = true;
@@ -2164,9 +2164,9 @@ namespace VULKAN_HPP_NAMESPACE
     eMayAlias = VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT
   };
 
-  using AttachmentDescriptionFlags = Flags<AttachmentDescriptionFlagBits>;
+  VULKAN_HPP_EXPORT using AttachmentDescriptionFlags = Flags<AttachmentDescriptionFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<AttachmentDescriptionFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                       isBitmask = true;
@@ -2194,9 +2194,9 @@ namespace VULKAN_HPP_NAMESPACE
     eViewLocal   = VK_DEPENDENCY_VIEW_LOCAL_BIT
   };
 
-  using DependencyFlags = Flags<DependencyFlagBits>;
+  VULKAN_HPP_EXPORT using DependencyFlags = Flags<DependencyFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DependencyFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool            isBitmask = true;
@@ -2209,9 +2209,9 @@ namespace VULKAN_HPP_NAMESPACE
     eImageless = VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT
   };
 
-  using FramebufferCreateFlags = Flags<FramebufferCreateFlagBits>;
+  VULKAN_HPP_EXPORT using FramebufferCreateFlags = Flags<FramebufferCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<FramebufferCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -2228,9 +2228,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using RenderPassCreateFlags = Flags<RenderPassCreateFlagBits>;
+  VULKAN_HPP_EXPORT using RenderPassCreateFlags = Flags<RenderPassCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<RenderPassCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                  isBitmask = true;
@@ -2241,9 +2241,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using SubpassDescriptionFlags = Flags<SubpassDescriptionFlagBits>;
+  VULKAN_HPP_EXPORT using SubpassDescriptionFlags = Flags<SubpassDescriptionFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SubpassDescriptionFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                    isBitmask = true;
@@ -2257,9 +2257,9 @@ namespace VULKAN_HPP_NAMESPACE
     eProtected          = VK_COMMAND_POOL_CREATE_PROTECTED_BIT
   };
 
-  using CommandPoolCreateFlags = Flags<CommandPoolCreateFlagBits>;
+  VULKAN_HPP_EXPORT using CommandPoolCreateFlags = Flags<CommandPoolCreateFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CommandPoolCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -2271,9 +2271,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using CommandPoolResetFlags = Flags<CommandPoolResetFlagBits>;
+  VULKAN_HPP_EXPORT using CommandPoolResetFlags = Flags<CommandPoolResetFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CommandPoolResetFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                  isBitmask = true;
@@ -2291,9 +2291,9 @@ namespace VULKAN_HPP_NAMESPACE
     eReleaseResources = VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT
   };
 
-  using CommandBufferResetFlags = Flags<CommandBufferResetFlagBits>;
+  VULKAN_HPP_EXPORT using CommandBufferResetFlags = Flags<CommandBufferResetFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CommandBufferResetFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                    isBitmask = true;
@@ -2307,9 +2307,9 @@ namespace VULKAN_HPP_NAMESPACE
     eSimultaneousUse    = VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT
   };
 
-  using CommandBufferUsageFlags = Flags<CommandBufferUsageFlagBits>;
+  VULKAN_HPP_EXPORT using CommandBufferUsageFlags = Flags<CommandBufferUsageFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CommandBufferUsageFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                    isBitmask = true;
@@ -2322,9 +2322,9 @@ namespace VULKAN_HPP_NAMESPACE
     ePrecise = VK_QUERY_CONTROL_PRECISE_BIT
   };
 
-  using QueryControlFlags = Flags<QueryControlFlagBits>;
+  VULKAN_HPP_EXPORT using QueryControlFlags = Flags<QueryControlFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<QueryControlFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool              isBitmask = true;
@@ -2343,42 +2343,42 @@ namespace VULKAN_HPP_NAMESPACE
   //=== Index Type Traits ===
   //=========================
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   struct IndexTypeValue
   {
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct IndexTypeValue<uint16_t>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR IndexType value = IndexType::eUint16;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<IndexType, IndexType::eUint16>
   {
     using Type = uint16_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct IndexTypeValue<uint32_t>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR IndexType value = IndexType::eUint32;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<IndexType, IndexType::eUint32>
   {
     using Type = uint32_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct IndexTypeValue<uint8_t>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR IndexType value = IndexType::eUint8KHR;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<IndexType, IndexType::eUint8KHR>
   {
     using Type = uint8_t;
@@ -2391,9 +2391,9 @@ namespace VULKAN_HPP_NAMESPACE
     eFrontAndBack = VK_STENCIL_FACE_FRONT_AND_BACK
   };
 
-  using StencilFaceFlags = Flags<StencilFaceFlagBits>;
+  VULKAN_HPP_EXPORT using StencilFaceFlags = Flags<StencilFaceFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<StencilFaceFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -2421,9 +2421,9 @@ namespace VULKAN_HPP_NAMESPACE
     eQuad            = VK_SUBGROUP_FEATURE_QUAD_BIT
   };
 
-  using SubgroupFeatureFlags = Flags<SubgroupFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using SubgroupFeatureFlags = Flags<SubgroupFeatureFlagBits>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SubgroupFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                 isBitmask = true;
@@ -2439,12 +2439,12 @@ namespace VULKAN_HPP_NAMESPACE
     eGenericSrc = VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT,
     eGenericDst = VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT
   };
-  using PeerMemoryFeatureFlagBitsKHR = PeerMemoryFeatureFlagBits;
+  VULKAN_HPP_EXPORT using PeerMemoryFeatureFlagBitsKHR = PeerMemoryFeatureFlagBits;
 
-  using PeerMemoryFeatureFlags    = Flags<PeerMemoryFeatureFlagBits>;
-  using PeerMemoryFeatureFlagsKHR = PeerMemoryFeatureFlags;
+  VULKAN_HPP_EXPORT using PeerMemoryFeatureFlags    = Flags<PeerMemoryFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using PeerMemoryFeatureFlagsKHR = PeerMemoryFeatureFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PeerMemoryFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -2458,12 +2458,12 @@ namespace VULKAN_HPP_NAMESPACE
     eDeviceAddress              = VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT,
     eDeviceAddressCaptureReplay = VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT
   };
-  using MemoryAllocateFlagBitsKHR = MemoryAllocateFlagBits;
+  VULKAN_HPP_EXPORT using MemoryAllocateFlagBitsKHR = MemoryAllocateFlagBits;
 
-  using MemoryAllocateFlags    = Flags<MemoryAllocateFlagBits>;
-  using MemoryAllocateFlagsKHR = MemoryAllocateFlags;
+  VULKAN_HPP_EXPORT using MemoryAllocateFlags    = Flags<MemoryAllocateFlagBits>;
+  VULKAN_HPP_EXPORT using MemoryAllocateFlagsKHR = MemoryAllocateFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<MemoryAllocateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -2476,14 +2476,14 @@ namespace VULKAN_HPP_NAMESPACE
     eAllClipPlanes      = VK_POINT_CLIPPING_BEHAVIOR_ALL_CLIP_PLANES,
     eUserClipPlanesOnly = VK_POINT_CLIPPING_BEHAVIOR_USER_CLIP_PLANES_ONLY
   };
-  using PointClippingBehaviorKHR = PointClippingBehavior;
+  VULKAN_HPP_EXPORT using PointClippingBehaviorKHR = PointClippingBehavior;
 
   enum class TessellationDomainOrigin
   {
     eUpperLeft = VK_TESSELLATION_DOMAIN_ORIGIN_UPPER_LEFT,
     eLowerLeft = VK_TESSELLATION_DOMAIN_ORIGIN_LOWER_LEFT
   };
-  using TessellationDomainOriginKHR = TessellationDomainOrigin;
+  VULKAN_HPP_EXPORT using TessellationDomainOriginKHR = TessellationDomainOrigin;
 
   enum class SamplerYcbcrModelConversion
   {
@@ -2493,21 +2493,21 @@ namespace VULKAN_HPP_NAMESPACE
     eYcbcr601      = VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_601,
     eYcbcr2020     = VK_SAMPLER_YCBCR_MODEL_CONVERSION_YCBCR_2020
   };
-  using SamplerYcbcrModelConversionKHR = SamplerYcbcrModelConversion;
+  VULKAN_HPP_EXPORT using SamplerYcbcrModelConversionKHR = SamplerYcbcrModelConversion;
 
   enum class SamplerYcbcrRange
   {
     eItuFull   = VK_SAMPLER_YCBCR_RANGE_ITU_FULL,
     eItuNarrow = VK_SAMPLER_YCBCR_RANGE_ITU_NARROW
   };
-  using SamplerYcbcrRangeKHR = SamplerYcbcrRange;
+  VULKAN_HPP_EXPORT using SamplerYcbcrRangeKHR = SamplerYcbcrRange;
 
   enum class ChromaLocation
   {
     eCositedEven = VK_CHROMA_LOCATION_COSITED_EVEN,
     eMidpoint    = VK_CHROMA_LOCATION_MIDPOINT
   };
-  using ChromaLocationKHR = ChromaLocation;
+  VULKAN_HPP_EXPORT using ChromaLocationKHR = ChromaLocation;
 
   enum class ExternalMemoryHandleTypeFlagBits : VkExternalMemoryHandleTypeFlags
   {
@@ -2528,12 +2528,12 @@ namespace VULKAN_HPP_NAMESPACE
     eScreenBufferQNX = VK_EXTERNAL_MEMORY_HANDLE_TYPE_SCREEN_BUFFER_BIT_QNX
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
   };
-  using ExternalMemoryHandleTypeFlagBitsKHR = ExternalMemoryHandleTypeFlagBits;
+  VULKAN_HPP_EXPORT using ExternalMemoryHandleTypeFlagBitsKHR = ExternalMemoryHandleTypeFlagBits;
 
-  using ExternalMemoryHandleTypeFlags    = Flags<ExternalMemoryHandleTypeFlagBits>;
-  using ExternalMemoryHandleTypeFlagsKHR = ExternalMemoryHandleTypeFlags;
+  VULKAN_HPP_EXPORT using ExternalMemoryHandleTypeFlags    = Flags<ExternalMemoryHandleTypeFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalMemoryHandleTypeFlagsKHR = ExternalMemoryHandleTypeFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalMemoryHandleTypeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                          isBitmask = true;
@@ -2557,12 +2557,12 @@ namespace VULKAN_HPP_NAMESPACE
     eExportable    = VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT,
     eImportable    = VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT
   };
-  using ExternalMemoryFeatureFlagBitsKHR = ExternalMemoryFeatureFlagBits;
+  VULKAN_HPP_EXPORT using ExternalMemoryFeatureFlagBitsKHR = ExternalMemoryFeatureFlagBits;
 
-  using ExternalMemoryFeatureFlags    = Flags<ExternalMemoryFeatureFlagBits>;
-  using ExternalMemoryFeatureFlagsKHR = ExternalMemoryFeatureFlags;
+  VULKAN_HPP_EXPORT using ExternalMemoryFeatureFlags    = Flags<ExternalMemoryFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalMemoryFeatureFlagsKHR = ExternalMemoryFeatureFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalMemoryFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                       isBitmask = true;
@@ -2581,12 +2581,12 @@ namespace VULKAN_HPP_NAMESPACE
     eSciSyncFenceNV = VK_EXTERNAL_FENCE_HANDLE_TYPE_SCI_SYNC_FENCE_BIT_NV
 #endif /*VK_USE_PLATFORM_SCI*/
   };
-  using ExternalFenceHandleTypeFlagBitsKHR = ExternalFenceHandleTypeFlagBits;
+  VULKAN_HPP_EXPORT using ExternalFenceHandleTypeFlagBitsKHR = ExternalFenceHandleTypeFlagBits;
 
-  using ExternalFenceHandleTypeFlags    = Flags<ExternalFenceHandleTypeFlagBits>;
-  using ExternalFenceHandleTypeFlagsKHR = ExternalFenceHandleTypeFlags;
+  VULKAN_HPP_EXPORT using ExternalFenceHandleTypeFlags    = Flags<ExternalFenceHandleTypeFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalFenceHandleTypeFlagsKHR = ExternalFenceHandleTypeFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalFenceHandleTypeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                         isBitmask = true;
@@ -2604,12 +2604,12 @@ namespace VULKAN_HPP_NAMESPACE
     eExportable = VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT,
     eImportable = VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT
   };
-  using ExternalFenceFeatureFlagBitsKHR = ExternalFenceFeatureFlagBits;
+  VULKAN_HPP_EXPORT using ExternalFenceFeatureFlagBitsKHR = ExternalFenceFeatureFlagBits;
 
-  using ExternalFenceFeatureFlags    = Flags<ExternalFenceFeatureFlagBits>;
-  using ExternalFenceFeatureFlagsKHR = ExternalFenceFeatureFlags;
+  VULKAN_HPP_EXPORT using ExternalFenceFeatureFlags    = Flags<ExternalFenceFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalFenceFeatureFlagsKHR = ExternalFenceFeatureFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalFenceFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                      isBitmask = true;
@@ -2621,12 +2621,12 @@ namespace VULKAN_HPP_NAMESPACE
   {
     eTemporary = VK_FENCE_IMPORT_TEMPORARY_BIT
   };
-  using FenceImportFlagBitsKHR = FenceImportFlagBits;
+  VULKAN_HPP_EXPORT using FenceImportFlagBitsKHR = FenceImportFlagBits;
 
-  using FenceImportFlags    = Flags<FenceImportFlagBits>;
-  using FenceImportFlagsKHR = FenceImportFlags;
+  VULKAN_HPP_EXPORT using FenceImportFlags    = Flags<FenceImportFlagBits>;
+  VULKAN_HPP_EXPORT using FenceImportFlagsKHR = FenceImportFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<FenceImportFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -2637,12 +2637,12 @@ namespace VULKAN_HPP_NAMESPACE
   {
     eTemporary = VK_SEMAPHORE_IMPORT_TEMPORARY_BIT
   };
-  using SemaphoreImportFlagBitsKHR = SemaphoreImportFlagBits;
+  VULKAN_HPP_EXPORT using SemaphoreImportFlagBitsKHR = SemaphoreImportFlagBits;
 
-  using SemaphoreImportFlags    = Flags<SemaphoreImportFlagBits>;
-  using SemaphoreImportFlagsKHR = SemaphoreImportFlags;
+  VULKAN_HPP_EXPORT using SemaphoreImportFlags    = Flags<SemaphoreImportFlagBits>;
+  VULKAN_HPP_EXPORT using SemaphoreImportFlagsKHR = SemaphoreImportFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SemaphoreImportFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                 isBitmask = true;
@@ -2661,12 +2661,12 @@ namespace VULKAN_HPP_NAMESPACE
     eSciSyncObjNV = VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SCI_SYNC_OBJ_BIT_NV
 #endif /*VK_USE_PLATFORM_SCI*/
   };
-  using ExternalSemaphoreHandleTypeFlagBitsKHR = ExternalSemaphoreHandleTypeFlagBits;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreHandleTypeFlagBitsKHR = ExternalSemaphoreHandleTypeFlagBits;
 
-  using ExternalSemaphoreHandleTypeFlags    = Flags<ExternalSemaphoreHandleTypeFlagBits>;
-  using ExternalSemaphoreHandleTypeFlagsKHR = ExternalSemaphoreHandleTypeFlags;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreHandleTypeFlags    = Flags<ExternalSemaphoreHandleTypeFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreHandleTypeFlagsKHR = ExternalSemaphoreHandleTypeFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalSemaphoreHandleTypeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                             isBitmask = true;
@@ -2684,12 +2684,12 @@ namespace VULKAN_HPP_NAMESPACE
     eExportable = VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT,
     eImportable = VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT
   };
-  using ExternalSemaphoreFeatureFlagBitsKHR = ExternalSemaphoreFeatureFlagBits;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreFeatureFlagBitsKHR = ExternalSemaphoreFeatureFlagBits;
 
-  using ExternalSemaphoreFeatureFlags    = Flags<ExternalSemaphoreFeatureFlagBits>;
-  using ExternalSemaphoreFeatureFlagsKHR = ExternalSemaphoreFeatureFlags;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreFeatureFlags    = Flags<ExternalSemaphoreFeatureFlagBits>;
+  VULKAN_HPP_EXPORT using ExternalSemaphoreFeatureFlagsKHR = ExternalSemaphoreFeatureFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ExternalSemaphoreFeatureFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                          isBitmask = true;
@@ -2729,7 +2729,7 @@ namespace VULKAN_HPP_NAMESPACE
     eMesaHoneykrisp            = VK_DRIVER_ID_MESA_HONEYKRISP,
     eReserved27                = VK_DRIVER_ID_RESERVED_27
   };
-  using DriverIdKHR = DriverId;
+  VULKAN_HPP_EXPORT using DriverIdKHR = DriverId;
 
   enum class ShaderFloatControlsIndependence
   {
@@ -2737,7 +2737,7 @@ namespace VULKAN_HPP_NAMESPACE
     eAll       = VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_ALL,
     eNone      = VK_SHADER_FLOAT_CONTROLS_INDEPENDENCE_NONE
   };
-  using ShaderFloatControlsIndependenceKHR = ShaderFloatControlsIndependence;
+  VULKAN_HPP_EXPORT using ShaderFloatControlsIndependenceKHR = ShaderFloatControlsIndependence;
 
   enum class DescriptorBindingFlagBits : VkDescriptorBindingFlags
   {
@@ -2746,12 +2746,12 @@ namespace VULKAN_HPP_NAMESPACE
     ePartiallyBound           = VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT,
     eVariableDescriptorCount  = VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT
   };
-  using DescriptorBindingFlagBitsEXT = DescriptorBindingFlagBits;
+  VULKAN_HPP_EXPORT using DescriptorBindingFlagBitsEXT = DescriptorBindingFlagBits;
 
-  using DescriptorBindingFlags    = Flags<DescriptorBindingFlagBits>;
-  using DescriptorBindingFlagsEXT = DescriptorBindingFlags;
+  VULKAN_HPP_EXPORT using DescriptorBindingFlags    = Flags<DescriptorBindingFlagBits>;
+  VULKAN_HPP_EXPORT using DescriptorBindingFlagsEXT = DescriptorBindingFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DescriptorBindingFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -2768,12 +2768,12 @@ namespace VULKAN_HPP_NAMESPACE
     eMin        = VK_RESOLVE_MODE_MIN_BIT,
     eMax        = VK_RESOLVE_MODE_MAX_BIT
   };
-  using ResolveModeFlagBitsKHR = ResolveModeFlagBits;
+  VULKAN_HPP_EXPORT using ResolveModeFlagBitsKHR = ResolveModeFlagBits;
 
-  using ResolveModeFlags    = Flags<ResolveModeFlagBits>;
-  using ResolveModeFlagsKHR = ResolveModeFlags;
+  VULKAN_HPP_EXPORT using ResolveModeFlags    = Flags<ResolveModeFlagBits>;
+  VULKAN_HPP_EXPORT using ResolveModeFlagsKHR = ResolveModeFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ResolveModeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -2787,25 +2787,25 @@ namespace VULKAN_HPP_NAMESPACE
     eMin             = VK_SAMPLER_REDUCTION_MODE_MIN,
     eMax             = VK_SAMPLER_REDUCTION_MODE_MAX
   };
-  using SamplerReductionModeEXT = SamplerReductionMode;
+  VULKAN_HPP_EXPORT using SamplerReductionModeEXT = SamplerReductionMode;
 
   enum class SemaphoreType
   {
     eBinary   = VK_SEMAPHORE_TYPE_BINARY,
     eTimeline = VK_SEMAPHORE_TYPE_TIMELINE
   };
-  using SemaphoreTypeKHR = SemaphoreType;
+  VULKAN_HPP_EXPORT using SemaphoreTypeKHR = SemaphoreType;
 
   enum class SemaphoreWaitFlagBits : VkSemaphoreWaitFlags
   {
     eAny = VK_SEMAPHORE_WAIT_ANY_BIT
   };
-  using SemaphoreWaitFlagBitsKHR = SemaphoreWaitFlagBits;
+  VULKAN_HPP_EXPORT using SemaphoreWaitFlagBitsKHR = SemaphoreWaitFlagBits;
 
-  using SemaphoreWaitFlags    = Flags<SemaphoreWaitFlagBits>;
-  using SemaphoreWaitFlagsKHR = SemaphoreWaitFlags;
+  VULKAN_HPP_EXPORT using SemaphoreWaitFlags    = Flags<SemaphoreWaitFlagBits>;
+  VULKAN_HPP_EXPORT using SemaphoreWaitFlagsKHR = SemaphoreWaitFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SemaphoreWaitFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool               isBitmask = true;
@@ -2820,12 +2820,12 @@ namespace VULKAN_HPP_NAMESPACE
     eApplicationPipelineCacheHit = VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BIT,
     eBasePipelineAcceleration    = VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BIT
   };
-  using PipelineCreationFeedbackFlagBitsEXT = PipelineCreationFeedbackFlagBits;
+  VULKAN_HPP_EXPORT using PipelineCreationFeedbackFlagBitsEXT = PipelineCreationFeedbackFlagBits;
 
-  using PipelineCreationFeedbackFlags    = Flags<PipelineCreationFeedbackFlagBits>;
-  using PipelineCreationFeedbackFlagsEXT = PipelineCreationFeedbackFlags;
+  VULKAN_HPP_EXPORT using PipelineCreationFeedbackFlags    = Flags<PipelineCreationFeedbackFlagBits>;
+  VULKAN_HPP_EXPORT using PipelineCreationFeedbackFlagsEXT = PipelineCreationFeedbackFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineCreationFeedbackFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                          isBitmask = true;
@@ -2842,12 +2842,12 @@ namespace VULKAN_HPP_NAMESPACE
     eAdditionalFeatures = VK_TOOL_PURPOSE_ADDITIONAL_FEATURES_BIT,
     eModifyingFeatures  = VK_TOOL_PURPOSE_MODIFYING_FEATURES_BIT
   };
-  using ToolPurposeFlagBitsEXT = ToolPurposeFlagBits;
+  VULKAN_HPP_EXPORT using ToolPurposeFlagBitsEXT = ToolPurposeFlagBits;
 
-  using ToolPurposeFlags    = Flags<ToolPurposeFlagBits>;
-  using ToolPurposeFlagsEXT = ToolPurposeFlags;
+  VULKAN_HPP_EXPORT using ToolPurposeFlags    = Flags<ToolPurposeFlagBits>;
+  VULKAN_HPP_EXPORT using ToolPurposeFlagsEXT = ToolPurposeFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<ToolPurposeFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool             isBitmask = true;
@@ -2859,12 +2859,12 @@ namespace VULKAN_HPP_NAMESPACE
   enum class PrivateDataSlotCreateFlagBits : VkPrivateDataSlotCreateFlags
   {
   };
-  using PrivateDataSlotCreateFlagBitsEXT = PrivateDataSlotCreateFlagBits;
+  VULKAN_HPP_EXPORT using PrivateDataSlotCreateFlagBitsEXT = PrivateDataSlotCreateFlagBits;
 
-  using PrivateDataSlotCreateFlags    = Flags<PrivateDataSlotCreateFlagBits>;
-  using PrivateDataSlotCreateFlagsEXT = PrivateDataSlotCreateFlags;
+  VULKAN_HPP_EXPORT using PrivateDataSlotCreateFlags    = Flags<PrivateDataSlotCreateFlagBits>;
+  VULKAN_HPP_EXPORT using PrivateDataSlotCreateFlagsEXT = PrivateDataSlotCreateFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PrivateDataSlotCreateFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                       isBitmask = true;
@@ -2914,12 +2914,12 @@ namespace VULKAN_HPP_NAMESPACE
     eMeshShaderEXT                    = VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT,
     eMeshShaderNV                     = VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV
   };
-  using PipelineStageFlagBits2KHR = PipelineStageFlagBits2;
+  VULKAN_HPP_EXPORT using PipelineStageFlagBits2KHR = PipelineStageFlagBits2;
 
-  using PipelineStageFlags2    = Flags<PipelineStageFlagBits2>;
-  using PipelineStageFlags2KHR = PipelineStageFlags2;
+  VULKAN_HPP_EXPORT using PipelineStageFlags2    = Flags<PipelineStageFlagBits2>;
+  VULKAN_HPP_EXPORT using PipelineStageFlags2KHR = PipelineStageFlags2;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineStageFlagBits2>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -2975,12 +2975,12 @@ namespace VULKAN_HPP_NAMESPACE
     eFragmentDensityMapReadEXT            = VK_ACCESS_2_FRAGMENT_DENSITY_MAP_READ_BIT_EXT,
     eColorAttachmentReadNoncoherentEXT    = VK_ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT
   };
-  using AccessFlagBits2KHR = AccessFlagBits2;
+  VULKAN_HPP_EXPORT using AccessFlagBits2KHR = AccessFlagBits2;
 
-  using AccessFlags2    = Flags<AccessFlagBits2>;
-  using AccessFlags2KHR = AccessFlags2;
+  VULKAN_HPP_EXPORT using AccessFlags2    = Flags<AccessFlagBits2>;
+  VULKAN_HPP_EXPORT using AccessFlags2KHR = AccessFlags2;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<AccessFlagBits2>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool         isBitmask = true;
@@ -3001,12 +3001,12 @@ namespace VULKAN_HPP_NAMESPACE
   {
     eProtected = VK_SUBMIT_PROTECTED_BIT
   };
-  using SubmitFlagBitsKHR = SubmitFlagBits;
+  VULKAN_HPP_EXPORT using SubmitFlagBitsKHR = SubmitFlagBits;
 
-  using SubmitFlags    = Flags<SubmitFlagBits>;
-  using SubmitFlagsKHR = SubmitFlags;
+  VULKAN_HPP_EXPORT using SubmitFlags    = Flags<SubmitFlagBits>;
+  VULKAN_HPP_EXPORT using SubmitFlagsKHR = SubmitFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SubmitFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool        isBitmask = true;
@@ -3019,12 +3019,12 @@ namespace VULKAN_HPP_NAMESPACE
     eSuspending                      = VK_RENDERING_SUSPENDING_BIT,
     eResuming                        = VK_RENDERING_RESUMING_BIT
   };
-  using RenderingFlagBitsKHR = RenderingFlagBits;
+  VULKAN_HPP_EXPORT using RenderingFlagBitsKHR = RenderingFlagBits;
 
-  using RenderingFlags    = Flags<RenderingFlagBits>;
-  using RenderingFlagsKHR = RenderingFlags;
+  VULKAN_HPP_EXPORT using RenderingFlags    = Flags<RenderingFlagBits>;
+  VULKAN_HPP_EXPORT using RenderingFlagsKHR = RenderingFlags;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<RenderingFlagBits>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool           isBitmask = true;
@@ -3065,12 +3065,12 @@ namespace VULKAN_HPP_NAMESPACE
     eSampledImageDepthComparison      = VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT,
     eFragmentShadingRateAttachmentKHR = VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR
   };
-  using FormatFeatureFlagBits2KHR = FormatFeatureFlagBits2;
+  VULKAN_HPP_EXPORT using FormatFeatureFlagBits2KHR = FormatFeatureFlagBits2;
 
-  using FormatFeatureFlags2    = Flags<FormatFeatureFlagBits2>;
-  using FormatFeatureFlags2KHR = FormatFeatureFlags2;
+  VULKAN_HPP_EXPORT using FormatFeatureFlags2    = Flags<FormatFeatureFlagBits2>;
+  VULKAN_HPP_EXPORT using FormatFeatureFlags2KHR = FormatFeatureFlags2;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<FormatFeatureFlagBits2>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                isBitmask = true;
@@ -3139,9 +3139,9 @@ namespace VULKAN_HPP_NAMESPACE
     eInherit                   = VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR
   };
 
-  using SurfaceTransformFlagsKHR = Flags<SurfaceTransformFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using SurfaceTransformFlagsKHR = Flags<SurfaceTransformFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SurfaceTransformFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                     isBitmask = true;
@@ -3188,9 +3188,9 @@ namespace VULKAN_HPP_NAMESPACE
     eInherit        = VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR
   };
 
-  using CompositeAlphaFlagsKHR = Flags<CompositeAlphaFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using CompositeAlphaFlagsKHR = Flags<CompositeAlphaFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<CompositeAlphaFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -3207,9 +3207,9 @@ namespace VULKAN_HPP_NAMESPACE
     eMutableFormat            = VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR
   };
 
-  using SwapchainCreateFlagsKHR = Flags<SwapchainCreateFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using SwapchainCreateFlagsKHR = Flags<SwapchainCreateFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SwapchainCreateFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                    isBitmask = true;
@@ -3225,9 +3225,9 @@ namespace VULKAN_HPP_NAMESPACE
     eLocalMultiDevice = VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_MULTI_DEVICE_BIT_KHR
   };
 
-  using DeviceGroupPresentModeFlagsKHR = Flags<DeviceGroupPresentModeFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using DeviceGroupPresentModeFlagsKHR = Flags<DeviceGroupPresentModeFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DeviceGroupPresentModeFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                           isBitmask = true;
@@ -3246,9 +3246,9 @@ namespace VULKAN_HPP_NAMESPACE
     ePerPixelPremultiplied = VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR
   };
 
-  using DisplayPlaneAlphaFlagsKHR = Flags<DisplayPlaneAlphaFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using DisplayPlaneAlphaFlagsKHR = Flags<DisplayPlaneAlphaFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DisplayPlaneAlphaFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                      isBitmask = true;
@@ -3261,9 +3261,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DisplayModeCreateFlagsKHR = Flags<DisplayModeCreateFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using DisplayModeCreateFlagsKHR = Flags<DisplayModeCreateFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DisplayModeCreateFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                      isBitmask = true;
@@ -3274,9 +3274,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DisplaySurfaceCreateFlagsKHR = Flags<DisplaySurfaceCreateFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using DisplaySurfaceCreateFlagsKHR = Flags<DisplaySurfaceCreateFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DisplaySurfaceCreateFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                         isBitmask = true;
@@ -3290,9 +3290,9 @@ namespace VULKAN_HPP_NAMESPACE
     eVblank = VK_SURFACE_COUNTER_VBLANK_BIT_EXT
   };
 
-  using SurfaceCounterFlagsEXT = Flags<SurfaceCounterFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using SurfaceCounterFlagsEXT = Flags<SurfaceCounterFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<SurfaceCounterFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                   isBitmask = true;
@@ -3330,9 +3330,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineDiscardRectangleStateCreateFlagsEXT = Flags<PipelineDiscardRectangleStateCreateFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using PipelineDiscardRectangleStateCreateFlagsEXT = Flags<PipelineDiscardRectangleStateCreateFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineDiscardRectangleStateCreateFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                        isBitmask = true;
@@ -3352,9 +3352,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineRasterizationConservativeStateCreateFlagsEXT = Flags<PipelineRasterizationConservativeStateCreateFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using PipelineRasterizationConservativeStateCreateFlagsEXT = Flags<PipelineRasterizationConservativeStateCreateFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineRasterizationConservativeStateCreateFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                                 isBitmask = true;
@@ -3367,9 +3367,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using PipelineRasterizationDepthClipStateCreateFlagsEXT = Flags<PipelineRasterizationDepthClipStateCreateFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using PipelineRasterizationDepthClipStateCreateFlagsEXT = Flags<PipelineRasterizationDepthClipStateCreateFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PipelineRasterizationDepthClipStateCreateFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                              isBitmask = true;
@@ -3384,9 +3384,9 @@ namespace VULKAN_HPP_NAMESPACE
     eConcurrentlyImpacted = VK_PERFORMANCE_COUNTER_DESCRIPTION_CONCURRENTLY_IMPACTED_BIT_KHR
   };
 
-  using PerformanceCounterDescriptionFlagsKHR = Flags<PerformanceCounterDescriptionFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using PerformanceCounterDescriptionFlagsKHR = Flags<PerformanceCounterDescriptionFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<PerformanceCounterDescriptionFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                  isBitmask = true;
@@ -3433,9 +3433,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using AcquireProfilingLockFlagsKHR = Flags<AcquireProfilingLockFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using AcquireProfilingLockFlagsKHR = Flags<AcquireProfilingLockFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<AcquireProfilingLockFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                         isBitmask = true;
@@ -3452,9 +3452,9 @@ namespace VULKAN_HPP_NAMESPACE
     eError   = VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT
   };
 
-  using DebugUtilsMessageSeverityFlagsEXT = Flags<DebugUtilsMessageSeverityFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using DebugUtilsMessageSeverityFlagsEXT = Flags<DebugUtilsMessageSeverityFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DebugUtilsMessageSeverityFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                              isBitmask = true;
@@ -3470,9 +3470,9 @@ namespace VULKAN_HPP_NAMESPACE
     ePerformance = VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT
   };
 
-  using DebugUtilsMessageTypeFlagsEXT = Flags<DebugUtilsMessageTypeFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using DebugUtilsMessageTypeFlagsEXT = Flags<DebugUtilsMessageTypeFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DebugUtilsMessageTypeFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                          isBitmask = true;
@@ -3484,9 +3484,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DebugUtilsMessengerCallbackDataFlagsEXT = Flags<DebugUtilsMessengerCallbackDataFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using DebugUtilsMessengerCallbackDataFlagsEXT = Flags<DebugUtilsMessengerCallbackDataFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DebugUtilsMessengerCallbackDataFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                                    isBitmask = true;
@@ -3497,9 +3497,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using DebugUtilsMessengerCreateFlagsEXT = Flags<DebugUtilsMessengerCreateFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using DebugUtilsMessengerCreateFlagsEXT = Flags<DebugUtilsMessengerCreateFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<DebugUtilsMessengerCreateFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                              isBitmask = true;
@@ -3524,7 +3524,7 @@ namespace VULKAN_HPP_NAMESPACE
     eHigh     = VK_QUEUE_GLOBAL_PRIORITY_HIGH_KHR,
     eRealtime = VK_QUEUE_GLOBAL_PRIORITY_REALTIME_KHR
   };
-  using QueueGlobalPriorityEXT = QueueGlobalPriorityKHR;
+  VULKAN_HPP_EXPORT using QueueGlobalPriorityEXT = QueueGlobalPriorityKHR;
 
   //=== VK_KHR_fragment_shading_rate ===
 
@@ -3566,9 +3566,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using HeadlessSurfaceCreateFlagsEXT = Flags<HeadlessSurfaceCreateFlagBitsEXT>;
+  VULKAN_HPP_EXPORT using HeadlessSurfaceCreateFlagsEXT = Flags<HeadlessSurfaceCreateFlagBitsEXT>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<HeadlessSurfaceCreateFlagBitsEXT>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                          isBitmask = true;
@@ -3581,9 +3581,9 @@ namespace VULKAN_HPP_NAMESPACE
   {
   };
 
-  using RefreshObjectFlagsKHR = Flags<RefreshObjectFlagBitsKHR>;
+  VULKAN_HPP_EXPORT using RefreshObjectFlagsKHR = Flags<RefreshObjectFlagBitsKHR>;
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct FlagTraits<RefreshObjectFlagBitsKHR>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool                  isBitmask = true;
@@ -3616,7 +3616,7 @@ namespace VULKAN_HPP_NAMESPACE
     eBresenham         = VK_LINE_RASTERIZATION_MODE_BRESENHAM_KHR,
     eRectangularSmooth = VK_LINE_RASTERIZATION_MODE_RECTANGULAR_SMOOTH_KHR
   };
-  using LineRasterizationModeEXT = LineRasterizationModeKHR;
+  VULKAN_HPP_EXPORT using LineRasterizationModeEXT = LineRasterizationModeKHR;
 
   //=== VK_KHR_calibrated_timestamps ===
 
@@ -3627,7 +3627,7 @@ namespace VULKAN_HPP_NAMESPACE
     eClockMonotonicRaw       = VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_KHR,
     eQueryPerformanceCounter = VK_TIME_DOMAIN_QUERY_PERFORMANCE_COUNTER_KHR
   };
-  using TimeDomainEXT = TimeDomainKHR;
+  VULKAN_HPP_EXPORT using TimeDomainEXT = TimeDomainKHR;
 
   //===========================================================
   //=== Mapping from ObjectType to DebugReportObjectTypeEXT ===

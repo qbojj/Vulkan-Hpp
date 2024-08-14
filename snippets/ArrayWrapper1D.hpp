@@ -1,4 +1,4 @@
-template <typename T, size_t N>
+VULKAN_HPP_EXPORT template <typename T, size_t N>
 class ArrayWrapper1D : public std::array<T, N>
 {
 public:
@@ -71,45 +71,45 @@ private:
 
 // relational operators between ArrayWrapper1D of chars with potentially different sizes
 #if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 std::strong_ordering operator<=>( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   int result = strcmp( lhs.data(), rhs.data() );
   return ( result < 0 ) ? std::strong_ordering::less : ( ( result > 0 ) ? std::strong_ordering::greater : std::strong_ordering::equal );
 }
 #else
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator<( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) < 0;
 }
 
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator<=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) <= 0;
 }
 
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator>( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) > 0;
 }
 
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator>=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) >= 0;
 }
 #endif
 
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator==( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) == 0;
 }
 
-template <size_t N, size_t M>
+VULKAN_HPP_EXPORT template <size_t N, size_t M>
 bool operator!=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return strcmp( lhs.data(), rhs.data() ) != 0;
@@ -117,44 +117,44 @@ bool operator!=( ArrayWrapper1D<char, N> const & lhs, ArrayWrapper1D<char, M> co
 
 // specialization of relational operators between std::string and arrays of chars
 #if defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 std::strong_ordering operator<=>( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs <=> rhs.data();
 }
 #else
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator<( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs < rhs.data();
 }
 
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator<=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs <= rhs.data();
 }
 
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator>( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs > rhs.data();
 }
 
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator>=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs >= rhs.data();
 }
 #endif
 
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator==( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs == rhs.data();
 }
 
-template <size_t N>
+VULKAN_HPP_EXPORT template <size_t N>
 bool operator!=( std::string const & lhs, ArrayWrapper1D<char, N> const & rhs ) VULKAN_HPP_NOEXCEPT
 {
   return lhs != rhs.data();

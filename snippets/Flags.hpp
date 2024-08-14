@@ -1,10 +1,10 @@
-  template <typename FlagBitsType>
+  VULKAN_HPP_EXPORT template <typename FlagBitsType>
   struct FlagTraits
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool isBitmask = false;
   };
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   class Flags
   {
   public:
@@ -129,37 +129,37 @@
 
 #if !defined( VULKAN_HPP_HAS_SPACESHIP_OPERATOR )
   // relational operators only needed for pre C++20
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator<( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator>( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator<=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator>=( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator>( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator<( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator>=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator<=( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator==( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator==( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR bool operator!=( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator!=( bit );
@@ -167,44 +167,44 @@
 #endif
 
   // bitwise operators
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator&( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator&( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator|( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator|( bit );
   }
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   VULKAN_HPP_CONSTEXPR Flags<BitType> operator^( BitType bit, Flags<BitType> const & flags ) VULKAN_HPP_NOEXCEPT
   {
     return flags.operator^( bit );
   }
 
   // bitwise operators on BitType
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator&(BitType lhs, BitType rhs) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) & rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator|(BitType lhs, BitType rhs) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) | rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator^(BitType lhs, BitType rhs) VULKAN_HPP_NOEXCEPT
   {
     return Flags<BitType>( lhs ) ^ rhs;
   }
 
-  template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
+  VULKAN_HPP_EXPORT template <typename BitType, typename std::enable_if<FlagTraits<BitType>::isBitmask, bool>::type = true>
   VULKAN_HPP_INLINE VULKAN_HPP_CONSTEXPR Flags<BitType> operator~( BitType bit ) VULKAN_HPP_NOEXCEPT
   {
     return ~( Flags<BitType>( bit ) );

@@ -1,4 +1,4 @@
-  class ErrorCategoryImpl : public std::error_category
+  VULKAN_HPP_EXPORT class ErrorCategoryImpl : public std::error_category
   {
     public:
     virtual const char* name() const VULKAN_HPP_NOEXCEPT override { return VULKAN_HPP_NAMESPACE_STRING"::Result"; }
@@ -12,7 +12,7 @@
     }
   };
 
-  class Error
+  VULKAN_HPP_EXPORT class Error
   {
     public:
     Error() VULKAN_HPP_NOEXCEPT = default;
@@ -22,7 +22,7 @@
     virtual const char* what() const VULKAN_HPP_NOEXCEPT = 0;
   };
 
-  class LogicError : public Error, public std::logic_error
+  VULKAN_HPP_EXPORT class LogicError : public Error, public std::logic_error
   {
     public:
     explicit LogicError( const std::string& what )
@@ -33,7 +33,7 @@
     virtual const char* what() const VULKAN_HPP_NOEXCEPT { return std::logic_error::what(); }
   };
 
-  class SystemError : public Error, public std::system_error
+  VULKAN_HPP_EXPORT class SystemError : public Error, public std::system_error
   {
     public:
     SystemError( std::error_code ec )
@@ -52,18 +52,18 @@
     virtual const char* what() const VULKAN_HPP_NOEXCEPT { return std::system_error::what(); }
   };
 
-  VULKAN_HPP_INLINE const std::error_category& errorCategory() VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE const std::error_category& errorCategory() VULKAN_HPP_NOEXCEPT
   {
     static ErrorCategoryImpl instance;
     return instance;
   }
 
-  VULKAN_HPP_INLINE std::error_code make_error_code(Result e) VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::error_code make_error_code(Result e) VULKAN_HPP_NOEXCEPT
   {
     return std::error_code(static_cast<int>(e), errorCategory());
   }
 
-  VULKAN_HPP_INLINE std::error_condition make_error_condition(Result e) VULKAN_HPP_NOEXCEPT
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::error_condition make_error_condition(Result e) VULKAN_HPP_NOEXCEPT
   {
     return std::error_condition(static_cast<int>(e), errorCategory());
   }

@@ -1,4 +1,4 @@
-  template <typename X, typename Y>
+  VULKAN_HPP_EXPORT template <typename X, typename Y>
   struct StructExtends
   {
     enum
@@ -47,7 +47,7 @@
     static const bool valid = true;
   };
 
-  template <typename... ChainElements>
+  VULKAN_HPP_EXPORT template <typename... ChainElements>
   class StructureChain : public std::tuple<ChainElements...>
   {
   public:
@@ -247,7 +247,7 @@
   // interupt the VULKAN_HPP_NAMESPACE for a moment to add specializations of std::tuple_size and std::tuple_element for the StructureChain!
 }
 
-namespace std
+VULKAN_HPP_EXPORT namespace std
 {
   template <typename... Elements>
   struct tuple_size<VULKAN_HPP_NAMESPACE::StructureChain<Elements...>>

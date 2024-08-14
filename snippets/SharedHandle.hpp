@@ -1,47 +1,47 @@
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class SharedHandleTraits;
 
 class NoDestructor
 {
 };
 
-template <typename HandleType, typename = void>
+VULKAN_HPP_EXPORT template <typename HandleType, typename = void>
 struct HasDestructorType : std::false_type
 {
 };
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 struct HasDestructorType<HandleType, decltype( (void)typename SharedHandleTraits<HandleType>::DestructorType() )> : std::true_type
 {
 };
 
-template <typename HandleType, typename Enable = void>
+VULKAN_HPP_EXPORT template <typename HandleType, typename Enable = void>
 struct GetDestructorType
 {
   using type = NoDestructor;
 };
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 struct GetDestructorType<HandleType, typename std::enable_if<HasDestructorType<HandleType>::value>::type>
 {
   using type = typename SharedHandleTraits<HandleType>::DestructorType;
 };
 
-template <class HandleType>
+VULKAN_HPP_EXPORT template <class HandleType>
 using DestructorTypeOf = typename GetDestructorType<HandleType>::type;
 
-template <class HandleType>
+VULKAN_HPP_EXPORT template <class HandleType>
 struct HasDestructor : std::integral_constant<bool, !std::is_same<DestructorTypeOf<HandleType>, NoDestructor>::value>
 {
 };
 
 //=====================================================================================================================
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class SharedHandle;
 
-template <typename DestructorType, typename Deleter>
+VULKAN_HPP_EXPORT template <typename DestructorType, typename Deleter>
 struct SharedHeader
 {
   SharedHeader( SharedHandle<DestructorType> parent, Deleter deleter = Deleter() ) VULKAN_HPP_NOEXCEPT
@@ -54,7 +54,7 @@ struct SharedHeader
   Deleter                      deleter;
 };
 
-template <typename Deleter>
+VULKAN_HPP_EXPORT template <typename Deleter>
 struct SharedHeader<NoDestructor, Deleter>
 {
   SharedHeader( Deleter deleter = Deleter() ) VULKAN_HPP_NOEXCEPT : deleter( std::move( deleter ) ) {}
@@ -64,7 +64,7 @@ struct SharedHeader<NoDestructor, Deleter>
 
 //=====================================================================================================================
 
-template <typename HeaderType>
+VULKAN_HPP_EXPORT template <typename HeaderType>
 class ReferenceCounter
 {
 public:
@@ -96,7 +96,7 @@ public:
 
 //=====================================================================================================================
 
-template <typename HandleType, typename HeaderType, typename ForwardType = SharedHandle<HandleType>>
+VULKAN_HPP_EXPORT template <typename HandleType, typename HeaderType, typename ForwardType = SharedHandle<HandleType>>
 class SharedHandleBase
 {
 public:
@@ -230,7 +230,7 @@ protected:
   HandleType                     m_handle{};
 };
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class SharedHandle : public SharedHandleBase<HandleType, SharedHeader<DestructorTypeOf<HandleType>, typename SharedHandleTraits<HandleType>::deleter>>
 {
 private:

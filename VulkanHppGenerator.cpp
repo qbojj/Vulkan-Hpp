@@ -127,15 +127,16 @@ void VulkanHppGenerator::generateExtensionInspectionFile() const
 #ifndef VULKAN_EXTENSION_INSPECTION_HPP
 #  define VULKAN_EXTENSION_INSPECTION_HPP
 
-#if !defined( VULKAN_HPP_STD_MODULE )
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 #  include <map>
 #  include <set>
 #  include <string>
 #  include <vector>
-#  include <vulkan/${api}.hpp>
 #endif
 
-namespace VULKAN_HPP_NAMESPACE
+#include <vulkan/${api}.hpp>
+
+VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 {
   //======================================
   //=== Extension inspection functions ===
@@ -350,25 +351,25 @@ ${handles}
 }   // namespace VULKAN_HPP_NAMESPACE
 
 // operators to compare vk::-handles with nullptr
-template <typename T>
+VULKAN_HPP_EXPORT template <typename T>
 typename std::enable_if<VULKAN_HPP_NAMESPACE::isVulkanHandleType<T>::value, bool>::type operator==( const T & v, std::nullptr_t )
 {
   return !v;
 }
 
-template <typename T>
+VULKAN_HPP_EXPORT template <typename T>
 typename std::enable_if<VULKAN_HPP_NAMESPACE::isVulkanHandleType<T>::value, bool>::type operator==( std::nullptr_t, const T & v )
 {
   return !v;
 }
 
-template <typename T>
+VULKAN_HPP_EXPORT template <typename T>
 typename std::enable_if<VULKAN_HPP_NAMESPACE::isVulkanHandleType<T>::value, bool>::type operator!=( const T & v, std::nullptr_t )
 {
   return v;
 }
 
-template <typename T>
+VULKAN_HPP_EXPORT template <typename T>
 typename std::enable_if<VULKAN_HPP_NAMESPACE::isVulkanHandleType<T>::value, bool>::type operator!=( std::nullptr_t, const T & v )
 {
   return v;
@@ -405,7 +406,7 @@ namespace std
   //=== HASH structures for Flags types ===
   //=======================================
 
-  template <typename BitType>
+  VULKAN_HPP_EXPORT template <typename BitType>
   struct hash<VULKAN_HPP_NAMESPACE::Flags<BitType>>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::Flags<BitType> const & flags ) const VULKAN_HPP_NOEXCEPT
@@ -439,7 +440,11 @@ void VulkanHppGenerator::generateHppFile() const
 #ifndef VULKAN_HPP
 #  define VULKAN_HPP
 
+#include <vulkan/${vulkan_h}>
+
+#if !defined(VULKAN_HPP_BUILD_MODULE)
 ${includes}
+#endif
 
 static_assert( VK_HEADER_VERSION == ${headerVersion}, "Wrong VK_HEADER_VERSION!" );
 
@@ -469,7 +474,7 @@ ${PoolFree}
 #endif // !VULKAN_HPP_NO_SMART_HANDLE
 ${baseTypes}
 
-  template <typename Type, Type value = Type{}>
+  VULKAN_HPP_EXPORT template <typename Type, Type value = Type{}>
   struct CppType
   {};
 } // namespace VULKAN_HPP_NAMESPACE
@@ -482,7 +487,7 @@ ${baseTypes}
 #ifndef VULKAN_HPP_NO_EXCEPTIONS
 namespace std
 {
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct is_error_code_enum<VULKAN_HPP_NAMESPACE::Result> : public true_type
   {};
 }  // namespace std
@@ -537,7 +542,8 @@ ${DispatchLoaderDynamic}
       { "Exceptions", readSnippet( "Exceptions.hpp" ) },
       { "Exchange", readSnippet( "Exchange.hpp" ) },
       { "headerVersion", m_version },
-      { "includes", replaceWithMap( readSnippet( "includes.hpp" ), { { "vulkan_h", ( m_api == "vulkan" ) ? "vulkan.h" : "vulkan_sc_core.h" } } ) },
+      { "includes", readSnippet( "includes.hpp" ) }, 
+      { "vulkan_h", ( m_api == "vulkan" ) ? "vulkan.h" : "vulkan_sc_core.h" },
       { "licenseHeader", m_vulkanLicenseHeader },
       { "ObjectDestroy", readSnippet( "ObjectDestroy.hpp" ) },
       { "ObjectFree", readSnippet( "ObjectFree.hpp" ) },
@@ -585,7 +591,7 @@ void VulkanHppGenerator::generateRAIIHppFile() const
 #ifndef VULKAN_RAII_HPP
 #define VULKAN_RAII_HPP
 
-#if !defined( VULKAN_HPP_STD_MODULE )
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 #  include <memory>   // std::unique_ptr
 #  include <utility>  // std::forward
 #endif
@@ -615,7 +621,7 @@ ${RAIICommandDefinitions}
     //=== RAII Helpers ===
     //====================
 
-    template <typename RAIIType>
+    VULKAN_HPP_EXPORT template <typename RAIIType>
     std::vector<typename RAIIType::CppType> filterCppTypes( std::vector<RAIIType> const & raiiTypes )
     {
       std::vector<typename RAIIType::CppType> cppTypes( raiiTypes.size() );
@@ -623,7 +629,7 @@ ${RAIICommandDefinitions}
       return cppTypes;
     }
 
-    template <typename RAIIType, class UnaryPredicate>
+    VULKAN_HPP_EXPORT template <typename RAIIType, class UnaryPredicate>
     std::vector<typename RAIIType::CppType> filterCppTypes( std::vector<RAIIType> const & raiiTypes, UnaryPredicate p)
     {
       std::vector<typename RAIIType::CppType> cppTypes;
@@ -664,7 +670,7 @@ void VulkanHppGenerator::generateSharedHppFile() const
 
 #include <vulkan/${api}.hpp>
 
-#if !defined( VULKAN_HPP_STD_MODULE )
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 #include <atomic>  // std::atomic_size_t
 #endif
 
@@ -729,7 +735,9 @@ void VulkanHppGenerator::generateStructsHppFile() const
 #ifndef VULKAN_STRUCTS_HPP
 #  define VULKAN_STRUCTS_HPP
 
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 #include <cstring>  // strcmp
+#endif
 
 namespace VULKAN_HPP_NAMESPACE
 {
@@ -754,15 +762,12 @@ void VulkanHppGenerator::generateToStringHppFile() const
 
 #include <vulkan/${api}_enums.hpp>
 
-#if !defined( VULKAN_HPP_STD_MODULE )
+#if !defined( VULKAN_HPP_BUILD_MODULE )
 #  if __cpp_lib_format
 #    include <format>   // std::format
 #  else
 #    include <sstream>  // std::stringstream
 #  endif
-#else
-import VULKAN_HPP_STD_MODULE;
-import VULKAN_HPP_STD_COMPAT_MODULE;
 #endif
 
 namespace VULKAN_HPP_NAMESPACE
@@ -794,33 +799,64 @@ void VulkanHppGenerator::generateCppModuleFile() const
 
 module;
 
+#define VULKAN_HPP_BUILD_MODULE
+#include <vulkan/${api}_hpp_macros.hpp>
+
+#include <vulkan/${vulkan_h}>
+
+#if !defined( VULKAN_HPP_STD_MODULE )
+${includes}
+ 
+#include <memory>   // std::unique_ptr
+#include <utility>  // std::forward
+
+#include <map>
+#include <set>
+#include <string>
+#include <vector>
+
+#include <atomic> // std::atomic_size_t
+#include <cstring> // strcmp
+
+#include <expected>
+
+#if __cpp_lib_format
+#  include <format>   // std::format
+#else
+#  include <sstream>  // std::stringstream
+#endif
+#endif
+
+export module ${api}_hpp;
+
+#if defined( VULKAN_HPP_STD_MODULE )
+import VULKAN_HPP_STD_MODULE;
+import VULKAN_HPP_STD_COMPAT_MODULE;
+#endif
+
+namespace VULKAN_HPP_NAMESPACE
+{
+  VULKAN_HPP_EXPORT class DispatchLoaderDynamic;
+#if defined( VULKAN_HPP_DYNAMIC_DEFAULT_DISPATCHER )
+  extern "C++" VULKAN_HPP_STORAGE_API VULKAN_HPP_NAMESPACE::DispatchLoaderDynamic defaultDispatchLoaderDynamic;
+#endif
+}  // namespace VULKAN_HPP_NAMESPACE
+
+
 #include <vulkan/${api}.hpp>
 #include <vulkan/${api}_extension_inspection.hpp>
 #include <vulkan/${api}_format_traits.hpp>
 #include <vulkan/${api}_hash.hpp>
 #include <vulkan/${api}_raii.hpp>
 #include <vulkan/${api}_shared.hpp>
-
-export module ${api}_hpp;
-
-export namespace VULKAN_HPP_NAMESPACE
-{
-  ${usings}
-
-#if !defined( VULKAN_HPP_DISABLE_ENHANCED_MODE )
-  namespace VULKAN_HPP_RAII_NAMESPACE
-  {
-    ${raiiUsings}
-  } // namespace VULKAN_HPP_RAII_NAMESPACE
-#endif
-} // namespace VULKAN_HPP_NAMESPACE
 )";
 
   auto const str = replaceWithMap( vulkanCppmTemplate,
                                    { { "api", m_api },
                                      { "licenseHeader", m_vulkanLicenseHeader },
-                                     { "raiiUsings", generateCppModuleRaiiUsings() },
-                                     { "usings", generateCppModuleUsings() } } );
+                                     { "includes", readSnippet( "includes.hpp" ) }, 
+                                     { "vulkan_h", ( m_api == "vulkan" ) ? "vulkan.h" : "vulkan_sc_core.h" }
+                                      } );
 
   writeToFile( str, vulkan_cppm );
 }
@@ -2561,7 +2597,7 @@ ${basetypes}
     // filter out VkFlags and VkFlags64, as they are mapped to our own Flags class, and basetypes without any type information
     if ( ( baseType.first != "VkFlags" ) && ( baseType.first != "VkFlags64" ) && !baseType.second.typeInfo.type.empty() )
     {
-      basetypes += "  using " + stripPrefix( baseType.first, "Vk" ) + " = " + baseType.second.typeInfo.compose( "VULKAN_HPP_NAMESPACE" ) + ";\n";
+      basetypes += "  VULKAN_HPP_EXPORT using " + stripPrefix( baseType.first, "Vk" ) + " = " + baseType.second.typeInfo.compose( "VULKAN_HPP_NAMESPACE" ) + ";\n";
     }
   }
 
@@ -2614,14 +2650,14 @@ std::string VulkanHppGenerator::generateBitmask( std::map<std::string, BitmaskDa
   std::string aliases;
   for ( auto const & a : bitmaskIt->second.aliases )
   {
-    aliases += "  using " + stripPrefix( a.first, "Vk" ) + " = " + bitmaskName + ";\n";
+    aliases += "  VULKAN_HPP_EXPORT using " + stripPrefix( a.first, "Vk" ) + " = " + bitmaskName + ";\n";
   }
 
   static const std::string bitmaskTemplate = R"(
-  using ${bitmaskName} = Flags<${enumName}>;
+  VULKAN_HPP_EXPORT using ${bitmaskName} = Flags<${enumName}>;
 ${aliases}
 
-  template <> struct FlagTraits<${enumName}>
+  VULKAN_HPP_EXPORT template <> struct FlagTraits<${enumName}>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool isBitmask = true;
     static VULKAN_HPP_CONST_OR_CONSTEXPR ${bitmaskName} allFlags = ${allFlags}
@@ -2688,7 +2724,7 @@ std::string VulkanHppGenerator::generateBitmaskToString( std::map<std::string, B
        std::none_of( bitmaskBitsIt->second.values.begin(), bitmaskBitsIt->second.values.end(), []( auto const & evd ) { return evd.supported; } ) )
   {
     static std::string bitmaskToStringTemplate = R"(
-  VULKAN_HPP_INLINE std::string to_string( ${bitmaskName} )
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::string to_string( ${bitmaskName} )
   {
     return "{}";
   }
@@ -2698,7 +2734,7 @@ std::string VulkanHppGenerator::generateBitmaskToString( std::map<std::string, B
   else
   {
     static const std::string bitmaskToStringTemplate = R"(
-  VULKAN_HPP_INLINE std::string to_string( ${bitmaskName} value )
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::string to_string( ${bitmaskName} value )
   {
     if ( !value )
       return "${emptyValue}";
@@ -3475,7 +3511,7 @@ std::string VulkanHppGenerator::generateCommandDefinitions( std::string const & 
   auto commandIt = findByNameOrAlias( m_commands, command );
   assert( commandIt != m_commands.end() );
 
-  std::string str = "\n" + generateCommand( command, commandIt->second, handle.empty() ? 0 : 1, true, false );
+  std::string str = "\nVULKAN_HPP_EXPORT " + generateCommand( command, commandIt->second, handle.empty() ? 0 : 1, true, false );
 
   // special handling for destroy functions, filter out alias functions
   std::string commandName = generateCommandName( command, commandIt->second.params, 1 );
@@ -4746,7 +4782,7 @@ std::string
     }
 
     std::string const functionTemplate =
-      R"(  template <typename Dispatch>
+      R"(  VULKAN_HPP_EXPORT template <typename Dispatch>
   ${nodiscard}VULKAN_HPP_INLINE ${returnType} ${className}${classSeparator}${commandName}( ${argumentList} )${const} VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -4766,7 +4802,7 @@ std::string
   else
   {
     std::string const functionTemplate =
-      R"(    template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
+      R"(    VULKAN_HPP_EXPORT template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
     ${nodiscard}${returnType} ${commandName}( ${argumentList} VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT )${const} VULKAN_HPP_NOEXCEPT;)";
 
     return replaceWithMap( functionTemplate,
@@ -5081,7 +5117,7 @@ std::string VulkanHppGenerator::generateConstexprString( std::string const & str
 
 std::string VulkanHppGenerator::generateConstexprDefines() const
 {
-  auto const constexprFunctionTemplate = std::string{ R"(  template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
+  auto const constexprFunctionTemplate = std::string{ R"(  VULKAN_HPP_EXPORT template <typename T, typename = typename std::enable_if<std::is_integral<T>::value>::type>
   ${deprecated}VULKAN_HPP_CONSTEXPR uint32_t ${constName}( ${arguments} )
   {
     return ${implementation};
@@ -5310,7 +5346,7 @@ std::string VulkanHppGenerator::generateConstexprUsings() const
   //===========================
 )" };
 
-  auto const constexprUsingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${constName};
+  auto const constexprUsingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${constName};
 )" };
 
   auto const pascalCasePrefixStrip = []( std::string const & macro ) { return stripPrefix( toCamelCase( macro ), "Vk" ); };
@@ -5408,7 +5444,7 @@ std::string VulkanHppGenerator::generateConstexprUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleHandleUsings() const
 {
-  auto const usingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${className};
+  auto const usingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${className};
 )" };
 
   auto handleUsings = std::string{ R"(
@@ -5416,7 +5452,7 @@ std::string VulkanHppGenerator::generateCppModuleHandleUsings() const
   //=== HANDLEs ===
   //===============
 
-  using VULKAN_HPP_NAMESPACE::isVulkanHandleType;
+  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::isVulkanHandleType;
 )" };
 
   auto const generateUsingsAndProtection = [&usingTemplate, this]( std::vector<RequireData> const & requireData, std::string const & title )
@@ -5450,7 +5486,7 @@ std::string VulkanHppGenerator::generateCppModuleHandleUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleStructUsings() const
 {
-  auto const usingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${structName};
+  auto const usingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${structName};
 )" };
 
   auto structUsings  = std::string{ R"(
@@ -5497,7 +5533,7 @@ std::string VulkanHppGenerator::generateCppModuleStructUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleSharedHandleUsings() const
 {
-  auto const usingTemplate                        = std::string{ R"(  using VULKAN_HPP_NAMESPACE::Shared${handleName};
+  auto const usingTemplate                        = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::Shared${handleName};
 )" };
   auto       sharedHandleUsings                   = std::string{ R"(
   //======================
@@ -5534,7 +5570,7 @@ std::string VulkanHppGenerator::generateCppModuleSharedHandleUsings() const
     sharedHandleUsings += generateUsingsAndProtection( extension.requireData, extension.name );
   }
 
-  sharedHandleUsings += R"(  using VULKAN_HPP_NAMESPACE::SharedHandleTraits;
+  sharedHandleUsings += R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::SharedHandleTraits;
 )";
 
   sharedHandleUsings += smartHandleLeave + "\n";
@@ -5544,7 +5580,7 @@ std::string VulkanHppGenerator::generateCppModuleSharedHandleUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleUniqueHandleUsings() const
 {
-  auto const usingTemplate                        = std::string{ R"(  using VULKAN_HPP_NAMESPACE::Unique${handleName};
+  auto const usingTemplate                        = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::Unique${handleName};
 )" };
   auto       uniqueHandleUsings                   = std::string{ R"(
   //======================
@@ -5581,7 +5617,7 @@ std::string VulkanHppGenerator::generateCppModuleUniqueHandleUsings() const
     uniqueHandleUsings += generateUsingsAndProtection( extension.requireData, extension.name );
   }
 
-  uniqueHandleUsings += R"(  using VULKAN_HPP_NAMESPACE::UniqueHandleTraits;
+  uniqueHandleUsings += R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::UniqueHandleTraits;
 )";
 
   uniqueHandleUsings += smartHandleLeave + "\n";
@@ -5591,7 +5627,7 @@ std::string VulkanHppGenerator::generateCppModuleUniqueHandleUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleFuncsUsings() const
 {
-  auto const usingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${funcName};
+  auto const usingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${funcName};
 )" };
 
   auto funcUsings = std::string{ R"(
@@ -5613,7 +5649,7 @@ std::string VulkanHppGenerator::generateCppModuleFuncsUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleEnumUsings() const
 {
-  auto const usingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${enumName};
+  auto const usingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${enumName};
 )" };
 
   auto enumUsings  = std::string{ R"(
@@ -5691,7 +5727,7 @@ std::string VulkanHppGenerator::generateCppModuleFormatTraitsUsings() const
   //=====================
 )" };
 
-  auto const usingTemplate        = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${function};
+  auto const usingTemplate        = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${function};
 )" };
   auto const formatTraitFunctions = std::array{ "blockExtent",
                                                 "blockSize",
@@ -5721,7 +5757,7 @@ std::string VulkanHppGenerator::generateCppModuleFormatTraitsUsings() const
 
 std::string VulkanHppGenerator::generateCppModuleExtensionInspectionUsings() const
 {
-  auto const usingTemplate = std::string{ R"(  using VULKAN_HPP_NAMESPACE::${function};
+  auto const usingTemplate = std::string{ R"(  VULKAN_HPP_EXPORT using VULKAN_HPP_NAMESPACE::${function};
 )" };
 
   auto extensionInspectionsUsings = std::string{ R"(
@@ -6537,7 +6573,7 @@ std::string VulkanHppGenerator::generateDispatchLoaderDynamic() const
   const std::string dispatchLoaderDynamicTemplate = R"(
   using PFN_dummy = void ( * )();
 
-  class DispatchLoaderDynamic : public DispatchLoaderBase
+  VULKAN_HPP_EXPORT class DispatchLoaderDynamic : public DispatchLoaderBase
   {
   public:
 ${commandMembers}
@@ -6887,7 +6923,7 @@ std::string VulkanHppGenerator::generateEnum( std::pair<std::string, EnumData> c
   std::string enumUsing;
   for ( auto const & alias : enumData.second.aliases )
   {
-    enumUsing += "  using " + stripPrefix( alias.first, "Vk" ) + " = " + stripPrefix( enumData.first, "Vk" ) + ";\n";
+    enumUsing += "  VULKAN_HPP_EXPORT using " + stripPrefix( alias.first, "Vk" ) + " = " + stripPrefix( enumData.first, "Vk" ) + ";\n";
   }
 
   std::string typeTraits;
@@ -7092,7 +7128,7 @@ ${cases}      default: return "invalid ( " + VULKAN_HPP_NAMESPACE::toHexString( 
   }
 
   const std::string enumToStringTemplate = R"(
-  VULKAN_HPP_INLINE std::string to_string( ${enumName}${argument} )
+  VULKAN_HPP_EXPORT VULKAN_HPP_INLINE std::string to_string( ${enumName}${argument} )
   {
 ${functionBody}
   }
@@ -7789,7 +7825,7 @@ std::string VulkanHppGenerator::generateHandle( std::pair<std::string, HandleDat
     if ( debugReportObjectType != "eUnknown" )
     {
       static const std::string cppTypeFromDebugReportObjectTypeEXTTemplate = R"(
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<VULKAN_HPP_NAMESPACE::DebugReportObjectTypeEXT, VULKAN_HPP_NAMESPACE::DebugReportObjectTypeEXT::e${className}>
   {
     using Type = VULKAN_HPP_NAMESPACE::${className};
@@ -7808,7 +7844,7 @@ std::string VulkanHppGenerator::generateHandle( std::pair<std::string, HandleDat
     std::string usingAlias;
     for ( auto const & alias : handleData.second.aliases )
     {
-      usingAlias += "  using " + stripPrefix( alias.first, "Vk" ) + " = " + stripPrefix( handleData.first, "Vk" ) + ";\n";
+      usingAlias += "  VULKAN_HPP_EXPORT using " + stripPrefix( alias.first, "Vk" ) + " = " + stripPrefix( handleData.first, "Vk" ) + ";\n";
     }
 
     const std::string typesafeExplicitKeyword          = handleData.second.isDispatchable ? "" : "VULKAN_HPP_TYPESAFE_EXPLICIT ";
@@ -7816,7 +7852,7 @@ std::string VulkanHppGenerator::generateHandle( std::pair<std::string, HandleDat
     const std::string typesafeConversionConditionalEnd = handleData.second.isDispatchable ? "" : "#endif\n";
 
     static const std::string templateString = R"(
-${enter}  class ${className}
+${enter}  VULKAN_HPP_EXPORT class ${className}
   {
   public:
     using CType = Vk${className};
@@ -7900,7 +7936,7 @@ ${commands}
     Vk${className} m_${memberName} = {};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<VULKAN_HPP_NAMESPACE::ObjectType, VULKAN_HPP_NAMESPACE::ObjectType::${objTypeEnum}>
   {
     using Type = VULKAN_HPP_NAMESPACE::${className};
@@ -7909,14 +7945,14 @@ ${commands}
 ${CppType}
 
 #if ( VK_USE_64_BIT_PTR_DEFINES == 1 )
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<Vk${className}, VK_NULL_HANDLE>
   {
     using Type = VULKAN_HPP_NAMESPACE::${className};
   };
 #endif
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct isVulkanHandleType<VULKAN_HPP_NAMESPACE::${className}>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = true;
@@ -8076,7 +8112,7 @@ std::string VulkanHppGenerator::generateHandleForwardDeclarations( std::vector<R
 std::string VulkanHppGenerator::generateHandleHashStructures( std::vector<RequireData> const & requireData, std::string const & title ) const
 {
   const std::string hashTemplate = R"(
-  template <> struct hash<VULKAN_HPP_NAMESPACE::${type}>
+  VULKAN_HPP_EXPORT template <> struct hash<VULKAN_HPP_NAMESPACE::${type}>
   {
     std::size_t operator()(VULKAN_HPP_NAMESPACE::${type} const & ${name}) const VULKAN_HPP_NOEXCEPT
     {
@@ -8132,7 +8168,7 @@ std::string VulkanHppGenerator::generateHandles() const
   //=== HANDLEs ===
   //===============
 
-  template <typename Type>
+  VULKAN_HPP_EXPORT template <typename Type>
   struct isVulkanHandleType
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR bool value = false;
@@ -8172,13 +8208,13 @@ std::string VulkanHppGenerator::generateIndexTypeTraits( std::pair<std::string, 
       std::string valueName = generateEnumValueName( "VkIndexType", value.name, false );
       std::string cppType   = "uint" + type.substr( pos, count ) + "_t";
 
-      const std::string typeTraitTemplate = R"(  template <>
+      const std::string typeTraitTemplate = R"(  VULKAN_HPP_EXPORT template <>
   struct IndexTypeValue<${cppType}>
   {
     static VULKAN_HPP_CONST_OR_CONSTEXPR IndexType value = IndexType::${valueName};
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<IndexType, IndexType::${valueName}>
   {
     using Type = ${cppType};
@@ -8194,7 +8230,7 @@ std::string VulkanHppGenerator::generateIndexTypeTraits( std::pair<std::string, 
   //=== Index Type Traits ===
   //=========================
 
-  template<typename T>
+  VULKAN_HPP_EXPORT template<typename T>
   struct IndexTypeValue
   {};
 
@@ -8220,55 +8256,55 @@ std::string VulkanHppGenerator::generateLayerSettingTypeTraits() const
   //=== Layer Setting Type Traits ===
   //=================================
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eBool32>
   {
     using Type = vk::Bool32;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eInt32>
   {
     using Type = int32_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eInt64>
   {
     using Type = int64_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eUint32>
   {
     using Type = uint32_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eUint64>
   {
     using Type = uint64_t;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eFloat32>
   {
     using Type = float;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eFloat64>
   {
     using Type = double;
   };
 
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<LayerSettingTypeEXT, LayerSettingTypeEXT::eString>
   {
     using Type = char *;
   };
 
-  template <typename T>
+  VULKAN_HPP_EXPORT template <typename T>
   bool isSameType( LayerSettingTypeEXT layerSettingType )
   {
     switch ( layerSettingType )
@@ -8540,7 +8576,7 @@ std::string VulkanHppGenerator::generateRAIIDispatchers() const
   }
 
   std::string contextDispatcherTemplate = R"(
-    class ContextDispatcher : public DispatchLoaderBase
+    VULKAN_HPP_EXPORT class ContextDispatcher : public DispatchLoaderBase
     {
     public:
       ContextDispatcher( PFN_vkGetInstanceProcAddr getProcAddr )
@@ -8556,7 +8592,7 @@ ${contextMembers}
   std::string str = replaceWithMap( contextDispatcherTemplate, { { "contextInitializers", contextInitializers }, { "contextMembers", contextMembers } } );
 
   std::string instanceDispatcherTemplate = R"(
-    class InstanceDispatcher : public DispatchLoaderBase
+    VULKAN_HPP_EXPORT class InstanceDispatcher : public DispatchLoaderBase
     {
     public:
       InstanceDispatcher( PFN_vkGetInstanceProcAddr getProcAddr, VkInstance instance )
@@ -8576,7 +8612,7 @@ ${instanceMembers}
   str += replaceWithMap( instanceDispatcherTemplate, { { "instanceAssignments", instanceAssignments }, { "instanceMembers", instanceMembers } } );
 
   std::string deviceDispatcherTemplate = R"(
-    class DeviceDispatcher : public DispatchLoaderBase
+    VULKAN_HPP_EXPORT class DeviceDispatcher : public DispatchLoaderBase
     {
     public:
       DeviceDispatcher( PFN_vkGetDeviceProcAddr getProcAddr, VkDevice device ) : vkGetDeviceProcAddr( getProcAddr )
@@ -8715,7 +8751,7 @@ std::string VulkanHppGenerator::generateRAIIHandle( std::pair<std::string, Handl
     }
 
     const std::string handleTemplate = R"(
-${enter}  class ${handleType}
+${enter}  VULKAN_HPP_EXPORT class ${handleType}
   {
   public:
     using CType = Vk${handleType};
@@ -8814,7 +8850,7 @@ ${leave})";
     {
       // it's a handle class with a friendly handles class
       const std::string handlesTemplate = R"(
-${enter}  class ${handleType}s : public std::vector<VULKAN_HPP_NAMESPACE::VULKAN_HPP_RAII_NAMESPACE::${handleType}>
+${enter}  VULKAN_HPP_EXPORT class ${handleType}s : public std::vector<VULKAN_HPP_NAMESPACE::VULKAN_HPP_RAII_NAMESPACE::${handleType}>
   {
   public:
     ${arrayConstructors}
@@ -8996,7 +9032,7 @@ std::string VulkanHppGenerator::generateRAIIHandleCommandEnhanced( std::string c
     std::string const definitionTemplate =
       R"(
   ${argumentTemplates}
-  ${nodiscard} VULKAN_HPP_INLINE ${returnType} ${className}::${commandName}( ${argumentList} ) const ${noexcept}
+  ${nodiscard} VULKAN_HPP_INLINE VULKAN_HPP_EXPORT ${returnType} ${className}::${commandName}( ${argumentList} ) const ${noexcept}
   {
 ${functionPointerCheck}
 ${vectorSizeCheck}
@@ -9138,7 +9174,7 @@ std::string VulkanHppGenerator::generateRAIIHandleCommandFactory( std::string co
 
     std::string const definitionTemplate =
       R"(
-  VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE VULKAN_HPP_NAMESPACE::VULKAN_HPP_RAII_NAMESPACE::CreateReturnType<${returnType}>::Type ${className}::${commandName}( ${argumentList} ) const ${noexcept}
+  VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE VULKAN_HPP_EXPORT VULKAN_HPP_NAMESPACE::VULKAN_HPP_RAII_NAMESPACE::CreateReturnType<${returnType}>::Type ${className}::${commandName}( ${argumentList} ) const ${noexcept}
   {
     ${dataDeclarations}
     ${callSequence}
@@ -9785,7 +9821,7 @@ std::string VulkanHppGenerator::generateRAIIHandleContext( std::pair<std::string
                                                            std::set<std::string> const &              specialFunctions ) const
 {
   const std::string contextTemplate = R"(
-    class Context
+    VULKAN_HPP_EXPORT class Context
     {
     public:
 #if VULKAN_HPP_ENABLE_DYNAMIC_LOADER_TOOL
@@ -10257,7 +10293,7 @@ std::string VulkanHppGenerator::generateResultCheckExpected( std::vector<std::st
 std::string VulkanHppGenerator::generateResultExceptions() const
 {
   const std::string templateString = R"(
-${enter}  class ${className} : public SystemError
+${enter}  VULKAN_HPP_EXPORT class ${className} : public SystemError
   {
   public:
     ${className}( std::string const & message )
@@ -11235,7 +11271,7 @@ std::string VulkanHppGenerator::generateStructHashStructure( std::pair<std::stri
   if ( !containsUnion( structure.first ) )
   {
     static const std::string hashTemplate = R"(
-  ${enter}template <> struct hash<VULKAN_HPP_NAMESPACE::${structureType}>
+  ${enter}VULKAN_HPP_EXPORT template <> struct hash<VULKAN_HPP_NAMESPACE::${structureType}>
   {
     std::size_t operator()(VULKAN_HPP_NAMESPACE::${structureType} const & ${structureName}) const VULKAN_HPP_NOEXCEPT
     {
@@ -11519,7 +11555,7 @@ ${subConstructors}
     compareOperators += generateStructCompareOperators( structure );
   }
 
-  static const std::string structureTemplate = R"(  struct ${structureType}
+  static const std::string structureTemplate = R"(  VULKAN_HPP_EXPORT struct ${structureType}
   {
     using NativeType = Vk${structureType};
 
@@ -11561,7 +11597,7 @@ ${members}
   if ( !sTypeValue.empty() )
   {
     std::string cppTypeTemplate = R"(
-  template <>
+  VULKAN_HPP_EXPORT template <>
   struct CppType<StructureType, StructureType::${sTypeValue}>
   {
     using Type = ${structureType};
@@ -11572,7 +11608,7 @@ ${members}
 
   for ( auto const & alias : structure.second.aliases )
   {
-    str += "  using " + stripPrefix( alias.first, "Vk" ) + " = " + structureType + ";\n";
+    str += "  VULKAN_HPP_EXPORT using " + stripPrefix( alias.first, "Vk" ) + " = " + structureType + ";\n";
   }
 
   str += leave;
@@ -11627,7 +11663,7 @@ std::string VulkanHppGenerator::generateStructExtendsStructs( std::vector<Requir
             str += subEnter;
           }
 
-          str += "  template <> struct StructExtends<" + stripPrefix( structIt->first, "Vk" ) + ", " + stripPrefix( extendName, "Vk" ) +
+          str += "  VULKAN_HPP_EXPORT template <> struct StructExtends<" + stripPrefix( structIt->first, "Vk" ) + ", " + stripPrefix( extendName, "Vk" ) +
                  ">{ enum { value = true }; };\n";
 
           if ( leave != subLeave )
@@ -11682,7 +11718,7 @@ std::string VulkanHppGenerator::generateStructForwardDeclarations( std::vector<R
 
         for ( auto const & alias : structIt->second.aliases )
         {
-          str += "  using " + stripPrefix( alias.first, "Vk" ) + " = " + structureType + ";\n";
+          str += "  VULKAN_HPP_EXPORT using " + stripPrefix( alias.first, "Vk" ) + " = " + structureType + ";\n";
         }
       }
     }
@@ -12254,7 +12290,7 @@ std::string VulkanHppGenerator::generateUnion( std::pair<std::string, StructureD
   }
 
   static const std::string unionTemplate = R"(
-${enter}  union ${unionName}
+${enter}  VULKAN_HPP_EXPORT union ${unionName}
   {
     using NativeType = Vk${unionName};
 #if !defined( VULKAN_HPP_NO_UNION_CONSTRUCTORS )
@@ -12292,18 +12328,18 @@ std::string VulkanHppGenerator::generateUniqueHandle( std::pair<std::string, Han
     std::string aliasHandle;
     for ( auto const & alias : handleData.second.aliases )
     {
-      static const std::string aliasHandleTemplate = R"(  using Unique${aliasType} = UniqueHandle<${type}, VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>;)";
+      static const std::string aliasHandleTemplate = R"(  VULKAN_HPP_EXPORT using Unique${aliasType} = UniqueHandle<${type}, VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>;)";
 
       aliasHandle += replaceWithMap( aliasHandleTemplate, { { "aliasType", stripPrefix( alias.first, "Vk" ) }, { "type", type } } );
     }
 
     static const std::string uniqueHandleTemplate = R"(  template <typename Dispatch>
-  class UniqueHandleTraits<${type}, Dispatch>
+  VULKAN_HPP_EXPORT class UniqueHandleTraits<${type}, Dispatch>
   {
   public:
     using deleter = ${deleterType}${deleterAction}<${deleterParent}${deleterPool}, Dispatch>;
   };
-  using Unique${type} = UniqueHandle<${type}, VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>;
+  VULKAN_HPP_EXPORT using Unique${type} = UniqueHandle<${type}, VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>;
 ${aliasHandle})";
 
     return replaceWithMap( uniqueHandleTemplate,
@@ -12368,19 +12404,19 @@ std::string VulkanHppGenerator::generateSharedHandle( std::pair<std::string, Han
     std::string aliasHandle;
     for ( auto const & alias : handleData.second.aliases )
     {
-      static const std::string aliasHandleTemplate = R"(  using Shared${aliasType} = SharedHandle<${type}>;)";
+      static const std::string aliasHandleTemplate = R"(  VULKAN_HPP_EXPORT using Shared${aliasType} = SharedHandle<${type}>;)";
 
       aliasHandle += replaceWithMap( aliasHandleTemplate, { { "aliasType", stripPrefix( alias.first, "Vk" ) }, { "type", type } } );
     }
 
     static const std::string sharedHandleTemplate = R"(  template <>
-  class SharedHandleTraits<${type}>
+  VULKAN_HPP_EXPORT class SharedHandleTraits<${type}>
   {
   public:
     using DestructorType = ${destructor};
     using deleter = ${deleterType}${deleterAction}Shared<${type}${deleterPool}>;
   };
-  using Shared${type} = SharedHandle<${type}>;
+  VULKAN_HPP_EXPORT using Shared${type} = SharedHandle<${type}>;
 ${aliasHandle})";
 
     return replaceWithMap(
@@ -12403,13 +12439,13 @@ std::string VulkanHppGenerator::generateSharedHandleNoDestroy( std::pair<std::st
     std::string aliasHandle;
     for ( auto const & alias : handleData.second.aliases )
     {
-      static const std::string aliasHandleTemplate = R"(  using Shared${aliasType} = SharedHandle<${type}>;)";
+      static const std::string aliasHandleTemplate = R"(  VULKAN_HPP_EXPORT using Shared${aliasType} = SharedHandle<${type}>;)";
 
       aliasHandle += replaceWithMap( aliasHandleTemplate, { { "aliasType", stripPrefix( alias.first, "Vk" ) }, { "type", type } } );
     }
 
     static const std::string sharedHandleTemplate = R"(
-template <>
+VULKAN_HPP_EXPORT template <>
 class SharedHandle<${type}> : public SharedHandleBaseNoDestroy<${type}, ${parent}>
 {
   friend SharedHandleBase<${type}, ${parent}>;
@@ -12420,7 +12456,7 @@ public:
     : SharedHandleBaseNoDestroy<${type}, ${parent}>(handle, std::move(parent))
   {}
 };
-using Shared${type} = SharedHandle<${type}>;
+VULKAN_HPP_EXPORT using Shared${type} = SharedHandle<${type}>;
 ${aliasHandle})";
 
     return replaceWithMap( sharedHandleTemplate,

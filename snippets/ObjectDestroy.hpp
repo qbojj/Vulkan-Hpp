@@ -1,6 +1,6 @@
   struct AllocationCallbacks;
 
-  template <typename OwnerType, typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename OwnerType, typename Dispatch>
   class ObjectDestroy
   {
   public:
@@ -33,9 +33,9 @@
     Dispatch const *                    m_dispatch            = nullptr;
   };
 
-  class NoParent;
+  VULKAN_HPP_EXPORT class NoParent;
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   class ObjectDestroy<NoParent, Dispatch>
   {
   public:

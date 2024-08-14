@@ -17,7 +17,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_VERSION_1_0 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result createInstance( const VULKAN_HPP_NAMESPACE::InstanceCreateInfo *  pCreateInfo,
                                                                 const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                 VULKAN_HPP_NAMESPACE::Instance *                  pInstance,
@@ -72,7 +73,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroy( const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -93,7 +95,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::enumeratePhysicalDevices( uint32_t *                             pPhysicalDeviceCount,
                                                                                     VULKAN_HPP_NAMESPACE::PhysicalDevice * pPhysicalDevices,
                                                                                     Dispatch const &                       d ) const VULKAN_HPP_NOEXCEPT
@@ -168,7 +171,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFeatures( VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures * pFeatures, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -192,7 +196,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFormatProperties( VULKAN_HPP_NAMESPACE::Format             format,
                                                               VULKAN_HPP_NAMESPACE::FormatProperties * pFormatProperties,
                                                               Dispatch const &                         d ) const VULKAN_HPP_NOEXCEPT
@@ -218,7 +223,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getImageFormatProperties( VULKAN_HPP_NAMESPACE::Format                  format,
                                                                                           VULKAN_HPP_NAMESPACE::ImageType               type,
                                                                                           VULKAN_HPP_NAMESPACE::ImageTiling             tiling,
@@ -267,7 +273,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getProperties( VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties * pProperties,
                                                         Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -292,7 +299,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getQueueFamilyProperties( uint32_t *                                    pQueueFamilyPropertyCount,
                                                                    VULKAN_HPP_NAMESPACE::QueueFamilyProperties * pQueueFamilyProperties,
                                                                    Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
@@ -355,7 +363,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getMemoryProperties( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties * pMemoryProperties,
                                                               Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -380,7 +389,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE PFN_vkVoidFunction Instance::getProcAddr( const char * pName, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -402,7 +412,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE PFN_vkVoidFunction Device::getProcAddr( const char * pName, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -424,7 +435,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::createDevice( const VULKAN_HPP_NAMESPACE::DeviceCreateInfo *    pCreateInfo,
                                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                               VULKAN_HPP_NAMESPACE::Device *                    pDevice,
@@ -484,7 +496,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -505,7 +518,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result enumerateInstanceExtensionProperties( const char *                                pLayerName,
                                                                                       uint32_t *                                  pPropertyCount,
                                                                                       VULKAN_HPP_NAMESPACE::ExtensionProperties * pProperties,
@@ -587,7 +601,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::enumerateDeviceExtensionProperties( const char *                                pLayerName,
                                                                                                     uint32_t *                                  pPropertyCount,
                                                                                                     VULKAN_HPP_NAMESPACE::ExtensionProperties * pProperties,
@@ -669,7 +684,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result enumerateInstanceLayerProperties( uint32_t *                              pPropertyCount,
                                                                                   VULKAN_HPP_NAMESPACE::LayerProperties * pProperties,
                                                                                   Dispatch const &                        d ) VULKAN_HPP_NOEXCEPT
@@ -744,7 +760,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::enumerateDeviceLayerProperties( uint32_t *                              pPropertyCount,
                                                                                                 VULKAN_HPP_NAMESPACE::LayerProperties * pProperties,
                                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -819,7 +836,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     Device::getQueue( uint32_t queueFamilyIndex, uint32_t queueIndex, VULKAN_HPP_NAMESPACE::Queue * pQueue, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -844,7 +862,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::submit( uint32_t                                 submitCount,
                                                                const VULKAN_HPP_NAMESPACE::SubmitInfo * pSubmits,
                                                                VULKAN_HPP_NAMESPACE::Fence              fence,
@@ -872,8 +891,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::waitIdle( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -895,8 +915,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitIdle( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -918,7 +939,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::allocateMemory( const VULKAN_HPP_NAMESPACE::MemoryAllocateInfo *  pAllocateInfo,
                                                                         const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                         VULKAN_HPP_NAMESPACE::DeviceMemory *              pMemory,
@@ -980,7 +1002,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::freeMemory( VULKAN_HPP_NAMESPACE::DeviceMemory                memory,
                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                              Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1006,7 +1029,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void( Device::free )( VULKAN_HPP_NAMESPACE::DeviceMemory                memory,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1032,7 +1055,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::mapMemory( VULKAN_HPP_NAMESPACE::DeviceMemory   memory,
                                                                    VULKAN_HPP_NAMESPACE::DeviceSize     offset,
                                                                    VULKAN_HPP_NAMESPACE::DeviceSize     size,
@@ -1075,14 +1099,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::unmapMemory( VULKAN_HPP_NAMESPACE::DeviceMemory memory, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkUnmapMemory( m_device, static_cast<VkDeviceMemory>( memory ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::flushMappedMemoryRanges( uint32_t                                        memoryRangeCount,
                                                                                  const VULKAN_HPP_NAMESPACE::MappedMemoryRange * pMemoryRanges,
                                                                                  Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
@@ -1110,7 +1136,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::invalidateMappedMemoryRanges( uint32_t                                        memoryRangeCount,
                                                                                       const VULKAN_HPP_NAMESPACE::MappedMemoryRange * pMemoryRanges,
                                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -1139,7 +1166,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getMemoryCommitment( VULKAN_HPP_NAMESPACE::DeviceMemory memory,
                                                       VULKAN_HPP_NAMESPACE::DeviceSize * pCommittedMemoryInBytes,
                                                       Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
@@ -1165,8 +1193,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindBufferMemory( VULKAN_HPP_NAMESPACE::Buffer       buffer,
                                                                           VULKAN_HPP_NAMESPACE::DeviceMemory memory,
                                                                           VULKAN_HPP_NAMESPACE::DeviceSize   memoryOffset,
@@ -1194,8 +1223,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindImageMemory( VULKAN_HPP_NAMESPACE::Image        image,
                                                                          VULKAN_HPP_NAMESPACE::DeviceMemory memory,
                                                                          VULKAN_HPP_NAMESPACE::DeviceSize   memoryOffset,
@@ -1223,7 +1253,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getBufferMemoryRequirements( VULKAN_HPP_NAMESPACE::Buffer               buffer,
                                                               VULKAN_HPP_NAMESPACE::MemoryRequirements * pMemoryRequirements,
                                                               Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
@@ -1249,7 +1280,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageMemoryRequirements( VULKAN_HPP_NAMESPACE::Image                image,
                                                              VULKAN_HPP_NAMESPACE::MemoryRequirements * pMemoryRequirements,
                                                              Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
@@ -1275,7 +1307,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSparseMemoryRequirements( VULKAN_HPP_NAMESPACE::Image                           image,
                                                                    uint32_t *                                            pSparseMemoryRequirementCount,
                                                                    VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements * pSparseMemoryRequirements,
@@ -1349,7 +1382,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getSparseImageFormatProperties( VULKAN_HPP_NAMESPACE::Format                        format,
                                                                          VULKAN_HPP_NAMESPACE::ImageType                     type,
                                                                          VULKAN_HPP_NAMESPACE::SampleCountFlagBits           samples,
@@ -1463,7 +1497,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::bindSparse( uint32_t                                     bindInfoCount,
                                                                    const VULKAN_HPP_NAMESPACE::BindSparseInfo * pBindInfo,
                                                                    VULKAN_HPP_NAMESPACE::Fence                  fence,
@@ -1492,7 +1527,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createFence( const VULKAN_HPP_NAMESPACE::FenceCreateInfo *     pCreateInfo,
                                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                      VULKAN_HPP_NAMESPACE::Fence *                     pFence,
@@ -1550,7 +1586,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyFence( VULKAN_HPP_NAMESPACE::Fence                       fence,
                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1576,7 +1613,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Fence                       fence,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1602,7 +1639,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::resetFences( uint32_t                            fenceCount,
                                                                      const VULKAN_HPP_NAMESPACE::Fence * pFences,
                                                                      Dispatch const &                    d ) const VULKAN_HPP_NOEXCEPT
@@ -1629,8 +1667,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getFenceStatus( VULKAN_HPP_NAMESPACE::Fence fence, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -1653,7 +1692,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitForFences( uint32_t                            fenceCount,
                                                                        const VULKAN_HPP_NAMESPACE::Fence * pFences,
                                                                        VULKAN_HPP_NAMESPACE::Bool32        waitAll,
@@ -1687,7 +1727,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createSemaphore( const VULKAN_HPP_NAMESPACE::SemaphoreCreateInfo * pCreateInfo,
                                                                          const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                          VULKAN_HPP_NAMESPACE::Semaphore *                 pSemaphore,
@@ -1749,7 +1790,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroySemaphore( VULKAN_HPP_NAMESPACE::Semaphore                   semaphore,
                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1775,7 +1817,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Semaphore                   semaphore,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1801,7 +1843,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createEvent( const VULKAN_HPP_NAMESPACE::EventCreateInfo *     pCreateInfo,
                                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                      VULKAN_HPP_NAMESPACE::Event *                     pEvent,
@@ -1859,7 +1902,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyEvent( VULKAN_HPP_NAMESPACE::Event                       event,
                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1885,7 +1929,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Event                       event,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -1911,8 +1955,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getEventStatus( VULKAN_HPP_NAMESPACE::Event event, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -1935,8 +1980,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setEvent( VULKAN_HPP_NAMESPACE::Event event, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -1959,8 +2005,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::resetEvent( VULKAN_HPP_NAMESPACE::Event event, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -1982,7 +2029,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createQueryPool( const VULKAN_HPP_NAMESPACE::QueryPoolCreateInfo * pCreateInfo,
                                                                          const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                          VULKAN_HPP_NAMESPACE::QueryPool *                 pQueryPool,
@@ -2044,7 +2092,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyQueryPool( VULKAN_HPP_NAMESPACE::QueryPool                   queryPool,
                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2070,7 +2119,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::QueryPool                   queryPool,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2096,7 +2145,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getQueryPoolResults( VULKAN_HPP_NAMESPACE::QueryPool        queryPool,
                                                                              uint32_t                               firstQuery,
                                                                              uint32_t                               queryCount,
@@ -2179,7 +2229,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createBuffer( const VULKAN_HPP_NAMESPACE::BufferCreateInfo *    pCreateInfo,
                                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                       VULKAN_HPP_NAMESPACE::Buffer *                    pBuffer,
@@ -2237,7 +2288,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyBuffer( VULKAN_HPP_NAMESPACE::Buffer                      buffer,
                                                 const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                 Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2263,7 +2315,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Buffer                      buffer,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2289,7 +2341,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createBufferView( const VULKAN_HPP_NAMESPACE::BufferViewCreateInfo * pCreateInfo,
                                                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks *  pAllocator,
                                                                           VULKAN_HPP_NAMESPACE::BufferView *                 pView,
@@ -2351,7 +2404,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyBufferView( VULKAN_HPP_NAMESPACE::BufferView                  bufferView,
                                                     const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                     Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2377,7 +2431,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::BufferView                  bufferView,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2403,7 +2457,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createImage( const VULKAN_HPP_NAMESPACE::ImageCreateInfo *     pCreateInfo,
                                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                      VULKAN_HPP_NAMESPACE::Image *                     pImage,
@@ -2461,7 +2516,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyImage( VULKAN_HPP_NAMESPACE::Image                       image,
                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2487,7 +2543,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Image                       image,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2513,7 +2569,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSubresourceLayout( VULKAN_HPP_NAMESPACE::Image                    image,
                                                             const VULKAN_HPP_NAMESPACE::ImageSubresource * pSubresource,
                                                             VULKAN_HPP_NAMESPACE::SubresourceLayout *      pLayout,
@@ -2546,7 +2603,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createImageView( const VULKAN_HPP_NAMESPACE::ImageViewCreateInfo * pCreateInfo,
                                                                          const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                          VULKAN_HPP_NAMESPACE::ImageView *                 pView,
@@ -2608,7 +2666,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyImageView( VULKAN_HPP_NAMESPACE::ImageView                   imageView,
                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2634,7 +2693,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::ImageView                   imageView,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2660,7 +2719,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createShaderModule( const VULKAN_HPP_NAMESPACE::ShaderModuleCreateInfo * pCreateInfo,
                                                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *    pAllocator,
                                                                             VULKAN_HPP_NAMESPACE::ShaderModule *                 pShaderModule,
@@ -2722,7 +2782,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyShaderModule( VULKAN_HPP_NAMESPACE::ShaderModule                shaderModule,
                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                       Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2748,7 +2809,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::ShaderModule                shaderModule,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2774,7 +2835,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createPipelineCache( const VULKAN_HPP_NAMESPACE::PipelineCacheCreateInfo * pCreateInfo,
                                                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *     pAllocator,
                                                                              VULKAN_HPP_NAMESPACE::PipelineCache *                 pPipelineCache,
@@ -2836,7 +2898,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyPipelineCache( VULKAN_HPP_NAMESPACE::PipelineCache               pipelineCache,
                                                        const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                        Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2862,7 +2925,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::PipelineCache               pipelineCache,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -2888,7 +2951,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getPipelineCacheData( VULKAN_HPP_NAMESPACE::PipelineCache pipelineCache,
                                                                               size_t *                            pDataSize,
                                                                               void *                              pData,
@@ -2966,7 +3030,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::mergePipelineCaches( VULKAN_HPP_NAMESPACE::PipelineCache         dstCache,
                                                                              uint32_t                                    srcCacheCount,
                                                                              const VULKAN_HPP_NAMESPACE::PipelineCache * pSrcCaches,
@@ -2997,7 +3062,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createGraphicsPipelines( VULKAN_HPP_NAMESPACE::PipelineCache                      pipelineCache,
                                                                                  uint32_t                                                 createInfoCount,
                                                                                  const VULKAN_HPP_NAMESPACE::GraphicsPipelineCreateInfo * pCreateInfos,
@@ -3200,7 +3266,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createComputePipelines( VULKAN_HPP_NAMESPACE::PipelineCache                     pipelineCache,
                                                                                 uint32_t                                                createInfoCount,
                                                                                 const VULKAN_HPP_NAMESPACE::ComputePipelineCreateInfo * pCreateInfos,
@@ -3403,7 +3470,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyPipeline( VULKAN_HPP_NAMESPACE::Pipeline                    pipeline,
                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3429,7 +3497,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Pipeline                    pipeline,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3455,7 +3523,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createPipelineLayout( const VULKAN_HPP_NAMESPACE::PipelineLayoutCreateInfo * pCreateInfo,
                                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks *      pAllocator,
                                                                               VULKAN_HPP_NAMESPACE::PipelineLayout *                 pPipelineLayout,
@@ -3517,7 +3586,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyPipelineLayout( VULKAN_HPP_NAMESPACE::PipelineLayout              pipelineLayout,
                                                         const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                         Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3543,7 +3613,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::PipelineLayout              pipelineLayout,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3569,7 +3639,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createSampler( const VULKAN_HPP_NAMESPACE::SamplerCreateInfo *   pCreateInfo,
                                                                        const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                        VULKAN_HPP_NAMESPACE::Sampler *                   pSampler,
@@ -3627,7 +3698,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroySampler( VULKAN_HPP_NAMESPACE::Sampler                     sampler,
                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                  Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3653,7 +3725,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Sampler                     sampler,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3679,7 +3751,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createDescriptorSetLayout( const VULKAN_HPP_NAMESPACE::DescriptorSetLayoutCreateInfo * pCreateInfo,
                                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks *           pAllocator,
                                                                                    VULKAN_HPP_NAMESPACE::DescriptorSetLayout *                 pSetLayout,
@@ -3741,7 +3814,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyDescriptorSetLayout( VULKAN_HPP_NAMESPACE::DescriptorSetLayout         descriptorSetLayout,
                                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                              Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3769,7 +3843,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::DescriptorSetLayout         descriptorSetLayout,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3797,7 +3871,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createDescriptorPool( const VULKAN_HPP_NAMESPACE::DescriptorPoolCreateInfo * pCreateInfo,
                                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks *      pAllocator,
                                                                               VULKAN_HPP_NAMESPACE::DescriptorPool *                 pDescriptorPool,
@@ -3859,7 +3934,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyDescriptorPool( VULKAN_HPP_NAMESPACE::DescriptorPool              descriptorPool,
                                                         const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                         Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3885,7 +3961,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::DescriptorPool              descriptorPool,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -3911,8 +3987,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result Device::resetDescriptorPool( VULKAN_HPP_NAMESPACE::DescriptorPool           descriptorPool,
                                                         VULKAN_HPP_NAMESPACE::DescriptorPoolResetFlags flags,
                                                         Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -3936,7 +4013,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::allocateDescriptorSets( const VULKAN_HPP_NAMESPACE::DescriptorSetAllocateInfo * pAllocateInfo,
                                                                                 VULKAN_HPP_NAMESPACE::DescriptorSet *                   pDescriptorSets,
                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -4042,7 +4120,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result Device::freeDescriptorSets( VULKAN_HPP_NAMESPACE::DescriptorPool        descriptorPool,
                                                        uint32_t                                    descriptorSetCount,
                                                        const VULKAN_HPP_NAMESPACE::DescriptorSet * pDescriptorSets,
@@ -4069,7 +4148,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result( Device::free )( VULKAN_HPP_NAMESPACE::DescriptorPool        descriptorPool,
                                             uint32_t                                    descriptorSetCount,
                                             const VULKAN_HPP_NAMESPACE::DescriptorSet * pDescriptorSets,
@@ -4096,7 +4175,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::updateDescriptorSets( uint32_t                                         descriptorWriteCount,
                                                        const VULKAN_HPP_NAMESPACE::WriteDescriptorSet * pDescriptorWrites,
                                                        uint32_t                                         descriptorCopyCount,
@@ -4131,7 +4211,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createFramebuffer( const VULKAN_HPP_NAMESPACE::FramebufferCreateInfo * pCreateInfo,
                                                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                            VULKAN_HPP_NAMESPACE::Framebuffer *                 pFramebuffer,
@@ -4193,7 +4274,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyFramebuffer( VULKAN_HPP_NAMESPACE::Framebuffer                 framebuffer,
                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                      Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4219,7 +4301,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::Framebuffer                 framebuffer,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4245,7 +4327,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createRenderPass( const VULKAN_HPP_NAMESPACE::RenderPassCreateInfo * pCreateInfo,
                                                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks *  pAllocator,
                                                                           VULKAN_HPP_NAMESPACE::RenderPass *                 pRenderPass,
@@ -4307,7 +4390,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyRenderPass( VULKAN_HPP_NAMESPACE::RenderPass                  renderPass,
                                                     const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                     Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4333,7 +4417,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::RenderPass                  renderPass,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4359,7 +4443,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getRenderAreaGranularity( VULKAN_HPP_NAMESPACE::RenderPass renderPass,
                                                            VULKAN_HPP_NAMESPACE::Extent2D * pGranularity,
                                                            Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -4385,7 +4470,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createCommandPool( const VULKAN_HPP_NAMESPACE::CommandPoolCreateInfo * pCreateInfo,
                                                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                            VULKAN_HPP_NAMESPACE::CommandPool *                 pCommandPool,
@@ -4447,7 +4533,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyCommandPool( VULKAN_HPP_NAMESPACE::CommandPool                 commandPool,
                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                      Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4473,7 +4560,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::CommandPool                 commandPool,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -4499,8 +4586,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::resetCommandPool( VULKAN_HPP_NAMESPACE::CommandPool           commandPool,
                                                                           VULKAN_HPP_NAMESPACE::CommandPoolResetFlags flags,
                                                                           Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
@@ -4526,7 +4614,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::allocateCommandBuffers( const VULKAN_HPP_NAMESPACE::CommandBufferAllocateInfo * pAllocateInfo,
                                                                                 VULKAN_HPP_NAMESPACE::CommandBuffer *                   pCommandBuffers,
                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -4632,7 +4721,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::freeCommandBuffers( VULKAN_HPP_NAMESPACE::CommandPool           commandPool,
                                                      uint32_t                                    commandBufferCount,
                                                      const VULKAN_HPP_NAMESPACE::CommandBuffer * pCommandBuffers,
@@ -4659,7 +4749,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void( Device::free )( VULKAN_HPP_NAMESPACE::CommandPool           commandPool,
                                           uint32_t                                    commandBufferCount,
                                           const VULKAN_HPP_NAMESPACE::CommandBuffer * pCommandBuffers,
@@ -4686,7 +4776,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::begin( const VULKAN_HPP_NAMESPACE::CommandBufferBeginInfo * pBeginInfo,
                                                                       Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4712,8 +4803,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::end( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -4735,8 +4827,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::reset( VULKAN_HPP_NAMESPACE::CommandBufferResetFlags flags,
                                                                       Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4760,7 +4853,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindPipeline( VULKAN_HPP_NAMESPACE::PipelineBindPoint pipelineBindPoint,
                                                       VULKAN_HPP_NAMESPACE::Pipeline          pipeline,
                                                       Dispatch const &                        d ) const VULKAN_HPP_NOEXCEPT
@@ -4769,7 +4863,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBindPipeline( m_commandBuffer, static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipeline>( pipeline ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewport( uint32_t                               firstViewport,
                                                      uint32_t                               viewportCount,
                                                      const VULKAN_HPP_NAMESPACE::Viewport * pViewports,
@@ -4794,7 +4889,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setScissor( uint32_t                             firstScissor,
                                                     uint32_t                             scissorCount,
                                                     const VULKAN_HPP_NAMESPACE::Rect2D * pScissors,
@@ -4819,14 +4915,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setLineWidth( float lineWidth, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetLineWidth( m_commandBuffer, lineWidth );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setDepthBias( float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4834,21 +4932,24 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetDepthBias( m_commandBuffer, depthBiasConstantFactor, depthBiasClamp, depthBiasSlopeFactor );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setBlendConstants( const float blendConstants[4], Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetBlendConstants( m_commandBuffer, blendConstants );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBounds( float minDepthBounds, float maxDepthBounds, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthBounds( m_commandBuffer, minDepthBounds, maxDepthBounds );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setStencilCompareMask( VULKAN_HPP_NAMESPACE::StencilFaceFlags faceMask, uint32_t compareMask, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4856,7 +4957,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetStencilCompareMask( m_commandBuffer, static_cast<VkStencilFaceFlags>( faceMask ), compareMask );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setStencilWriteMask( VULKAN_HPP_NAMESPACE::StencilFaceFlags faceMask, uint32_t writeMask, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4864,7 +4966,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetStencilWriteMask( m_commandBuffer, static_cast<VkStencilFaceFlags>( faceMask ), writeMask );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setStencilReference( VULKAN_HPP_NAMESPACE::StencilFaceFlags faceMask, uint32_t reference, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4872,7 +4975,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetStencilReference( m_commandBuffer, static_cast<VkStencilFaceFlags>( faceMask ), reference );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets( VULKAN_HPP_NAMESPACE::PipelineBindPoint     pipelineBindPoint,
                                                             VULKAN_HPP_NAMESPACE::PipelineLayout        layout,
                                                             uint32_t                                    firstSet,
@@ -4918,7 +5022,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindIndexBuffer( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                          VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                          VULKAN_HPP_NAMESPACE::IndexType  indexType,
@@ -4928,7 +5033,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBindIndexBuffer( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), static_cast<VkIndexType>( indexType ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindVertexBuffers( uint32_t                                 firstBinding,
                                                            uint32_t                                 bindingCount,
                                                            const VULKAN_HPP_NAMESPACE::Buffer *     pBuffers,
@@ -4968,7 +5074,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::draw(
     uint32_t vertexCount, uint32_t instanceCount, uint32_t firstVertex, uint32_t firstInstance, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -4976,7 +5083,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDraw( m_commandBuffer, vertexCount, instanceCount, firstVertex, firstInstance );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndexed( uint32_t         indexCount,
                                                      uint32_t         instanceCount,
                                                      uint32_t         firstIndex,
@@ -4988,7 +5096,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawIndexed( m_commandBuffer, indexCount, instanceCount, firstIndex, vertexOffset, firstInstance );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndirect( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                       VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                       uint32_t                         drawCount,
@@ -4999,7 +5108,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawIndirect( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), drawCount, stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndexedIndirect( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                              VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                              uint32_t                         drawCount,
@@ -5010,7 +5120,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawIndexedIndirect( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), drawCount, stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::dispatch( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -5018,7 +5129,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDispatch( m_commandBuffer, groupCountX, groupCountY, groupCountZ );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchIndirect( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                           VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                           Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -5027,7 +5139,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDispatchIndirect( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBuffer( VULKAN_HPP_NAMESPACE::Buffer             srcBuffer,
                                                     VULKAN_HPP_NAMESPACE::Buffer             dstBuffer,
                                                     uint32_t                                 regionCount,
@@ -5062,7 +5175,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImage( VULKAN_HPP_NAMESPACE::Image             srcImage,
                                                    VULKAN_HPP_NAMESPACE::ImageLayout       srcImageLayout,
                                                    VULKAN_HPP_NAMESPACE::Image             dstImage,
@@ -5105,7 +5219,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::blitImage( VULKAN_HPP_NAMESPACE::Image             srcImage,
                                                    VULKAN_HPP_NAMESPACE::ImageLayout       srcImageLayout,
                                                    VULKAN_HPP_NAMESPACE::Image             dstImage,
@@ -5152,7 +5267,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBufferToImage( VULKAN_HPP_NAMESPACE::Buffer                  srcBuffer,
                                                            VULKAN_HPP_NAMESPACE::Image                   dstImage,
                                                            VULKAN_HPP_NAMESPACE::ImageLayout             dstImageLayout,
@@ -5191,7 +5307,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImageToBuffer( VULKAN_HPP_NAMESPACE::Image                   srcImage,
                                                            VULKAN_HPP_NAMESPACE::ImageLayout             srcImageLayout,
                                                            VULKAN_HPP_NAMESPACE::Buffer                  dstBuffer,
@@ -5230,7 +5347,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::updateBuffer( VULKAN_HPP_NAMESPACE::Buffer     dstBuffer,
                                                       VULKAN_HPP_NAMESPACE::DeviceSize dstOffset,
                                                       VULKAN_HPP_NAMESPACE::DeviceSize dataSize,
@@ -5262,7 +5380,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::fillBuffer( VULKAN_HPP_NAMESPACE::Buffer     dstBuffer,
                                                     VULKAN_HPP_NAMESPACE::DeviceSize dstOffset,
                                                     VULKAN_HPP_NAMESPACE::DeviceSize size,
@@ -5273,7 +5392,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdFillBuffer( m_commandBuffer, static_cast<VkBuffer>( dstBuffer ), static_cast<VkDeviceSize>( dstOffset ), static_cast<VkDeviceSize>( size ), data );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::clearColorImage( VULKAN_HPP_NAMESPACE::Image                         image,
                                                          VULKAN_HPP_NAMESPACE::ImageLayout                   imageLayout,
                                                          const VULKAN_HPP_NAMESPACE::ClearColorValue *       pColor,
@@ -5312,7 +5432,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::clearDepthStencilImage( VULKAN_HPP_NAMESPACE::Image                          image,
                                                                 VULKAN_HPP_NAMESPACE::ImageLayout                    imageLayout,
                                                                 const VULKAN_HPP_NAMESPACE::ClearDepthStencilValue * pDepthStencil,
@@ -5352,7 +5473,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::clearAttachments( uint32_t                                      attachmentCount,
                                                           const VULKAN_HPP_NAMESPACE::ClearAttachment * pAttachments,
                                                           uint32_t                                      rectCount,
@@ -5386,7 +5508,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resolveImage( VULKAN_HPP_NAMESPACE::Image                srcImage,
                                                       VULKAN_HPP_NAMESPACE::ImageLayout          srcImageLayout,
                                                       VULKAN_HPP_NAMESPACE::Image                dstImage,
@@ -5429,7 +5552,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setEvent( VULKAN_HPP_NAMESPACE::Event              event,
                                                   VULKAN_HPP_NAMESPACE::PipelineStageFlags stageMask,
                                                   Dispatch const &                         d ) const VULKAN_HPP_NOEXCEPT
@@ -5438,7 +5562,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetEvent( m_commandBuffer, static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resetEvent( VULKAN_HPP_NAMESPACE::Event              event,
                                                     VULKAN_HPP_NAMESPACE::PipelineStageFlags stageMask,
                                                     Dispatch const &                         d ) const VULKAN_HPP_NOEXCEPT
@@ -5447,7 +5572,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdResetEvent( m_commandBuffer, static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags>( stageMask ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::waitEvents( uint32_t                                          eventCount,
                                                     const VULKAN_HPP_NAMESPACE::Event *               pEvents,
                                                     VULKAN_HPP_NAMESPACE::PipelineStageFlags          srcStageMask,
@@ -5504,7 +5630,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier( VULKAN_HPP_NAMESPACE::PipelineStageFlags          srcStageMask,
                                                          VULKAN_HPP_NAMESPACE::PipelineStageFlags          dstStageMask,
                                                          VULKAN_HPP_NAMESPACE::DependencyFlags             dependencyFlags,
@@ -5558,7 +5685,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginQuery( VULKAN_HPP_NAMESPACE::QueryPool         queryPool,
                                                     uint32_t                                query,
                                                     VULKAN_HPP_NAMESPACE::QueryControlFlags flags,
@@ -5568,14 +5696,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBeginQuery( m_commandBuffer, static_cast<VkQueryPool>( queryPool ), query, static_cast<VkQueryControlFlags>( flags ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endQuery( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdEndQuery( m_commandBuffer, static_cast<VkQueryPool>( queryPool ), query );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resetQueryPool( VULKAN_HPP_NAMESPACE::QueryPool queryPool,
                                                         uint32_t                        firstQuery,
                                                         uint32_t                        queryCount,
@@ -5585,7 +5715,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdResetQueryPool( m_commandBuffer, static_cast<VkQueryPool>( queryPool ), firstQuery, queryCount );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeTimestamp( VULKAN_HPP_NAMESPACE::PipelineStageFlagBits pipelineStage,
                                                         VULKAN_HPP_NAMESPACE::QueryPool             queryPool,
                                                         uint32_t                                    query,
@@ -5595,7 +5726,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdWriteTimestamp( m_commandBuffer, static_cast<VkPipelineStageFlagBits>( pipelineStage ), static_cast<VkQueryPool>( queryPool ), query );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyQueryPoolResults( VULKAN_HPP_NAMESPACE::QueryPool        queryPool,
                                                               uint32_t                               firstQuery,
                                                               uint32_t                               queryCount,
@@ -5616,7 +5748,8 @@ namespace VULKAN_HPP_NAMESPACE
                                  static_cast<VkQueryResultFlags>( flags ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pushConstants( VULKAN_HPP_NAMESPACE::PipelineLayout   layout,
                                                        VULKAN_HPP_NAMESPACE::ShaderStageFlags stageFlags,
                                                        uint32_t                               offset,
@@ -5650,7 +5783,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginRenderPass( const VULKAN_HPP_NAMESPACE::RenderPassBeginInfo * pRenderPassBegin,
                                                          VULKAN_HPP_NAMESPACE::SubpassContents             contents,
                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -5674,21 +5808,24 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::nextSubpass( VULKAN_HPP_NAMESPACE::SubpassContents contents, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdNextSubpass( m_commandBuffer, static_cast<VkSubpassContents>( contents ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endRenderPass( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdEndRenderPass( m_commandBuffer );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::executeCommands( uint32_t                                    commandBufferCount,
                                                          const VULKAN_HPP_NAMESPACE::CommandBuffer * pCommandBuffers,
                                                          Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
@@ -5713,7 +5850,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_VERSION_1_1 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result enumerateInstanceVersion( uint32_t * pApiVersion, Dispatch const & d ) VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -5737,7 +5875,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindBufferMemory2( uint32_t                                           bindInfoCount,
                                                                            const VULKAN_HPP_NAMESPACE::BindBufferMemoryInfo * pBindInfos,
                                                                            Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -5764,7 +5903,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindImageMemory2( uint32_t                                          bindInfoCount,
                                                                           const VULKAN_HPP_NAMESPACE::BindImageMemoryInfo * pBindInfos,
                                                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -5791,7 +5931,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getGroupPeerMemoryFeatures( uint32_t                                       heapIndex,
                                                              uint32_t                                       localDeviceIndex,
                                                              uint32_t                                       remoteDeviceIndex,
@@ -5822,14 +5963,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDeviceMask( uint32_t deviceMask, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDeviceMask( m_commandBuffer, deviceMask );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchBase( uint32_t         baseGroupX,
                                                       uint32_t         baseGroupY,
                                                       uint32_t         baseGroupZ,
@@ -5842,7 +5985,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDispatchBase( m_commandBuffer, baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::enumeratePhysicalDeviceGroups( uint32_t *                                            pPhysicalDeviceGroupCount,
                                              VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties * pPhysicalDeviceGroupProperties,
@@ -5926,7 +6070,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageMemoryRequirements2( const VULKAN_HPP_NAMESPACE::ImageMemoryRequirementsInfo2 * pInfo,
                                                               VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                pMemoryRequirements,
                                                               Dispatch const &                                           d ) const VULKAN_HPP_NOEXCEPT
@@ -5973,7 +6118,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getBufferMemoryRequirements2( const VULKAN_HPP_NAMESPACE::BufferMemoryRequirementsInfo2 * pInfo,
                                                                VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                 pMemoryRequirements,
                                                                Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -6020,7 +6166,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSparseMemoryRequirements2( const VULKAN_HPP_NAMESPACE::ImageSparseMemoryRequirementsInfo2 * pInfo,
                                                                     uint32_t *                                             pSparseMemoryRequirementCount,
                                                                     VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2 * pSparseMemoryRequirements,
@@ -6098,7 +6245,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFeatures2( VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures2 * pFeatures, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -6140,7 +6288,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getProperties2( VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties2 * pProperties,
                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -6183,7 +6332,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFormatProperties2( VULKAN_HPP_NAMESPACE::Format              format,
                                                                VULKAN_HPP_NAMESPACE::FormatProperties2 * pFormatProperties,
                                                                Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -6227,7 +6377,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
                                                VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
@@ -6282,7 +6433,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getQueueFamilyProperties2( uint32_t *                                     pQueueFamilyPropertyCount,
                                                                     VULKAN_HPP_NAMESPACE::QueueFamilyProperties2 * pQueueFamilyProperties,
                                                                     Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -6420,7 +6572,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getMemoryProperties2( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties2 * pMemoryProperties,
                                                                Dispatch const &                                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -6464,7 +6617,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getSparseImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseImageFormatInfo2 * pFormatInfo,
                                                                           uint32_t *                                                         pPropertyCount,
                                                                           VULKAN_HPP_NAMESPACE::SparseImageFormatProperties2 *               pProperties,
@@ -6541,7 +6695,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::trimCommandPool( VULKAN_HPP_NAMESPACE::CommandPool          commandPool,
                                                   VULKAN_HPP_NAMESPACE::CommandPoolTrimFlags flags,
                                                   Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
@@ -6550,7 +6705,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkTrimCommandPool( m_device, static_cast<VkCommandPool>( commandPool ), static_cast<VkCommandPoolTrimFlags>( flags ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getQueue2( const VULKAN_HPP_NAMESPACE::DeviceQueueInfo2 * pQueueInfo,
                                             VULKAN_HPP_NAMESPACE::Queue *                  pQueue,
                                             Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -6576,7 +6732,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createSamplerYcbcrConversion( const VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionCreateInfo * pCreateInfo,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks *              pAllocator,
@@ -6641,7 +6798,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroySamplerYcbcrConversion( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion      ycbcrConversion,
                                                                 const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                 Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -6670,7 +6828,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion      ycbcrConversion,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -6699,7 +6857,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createDescriptorUpdateTemplate( const VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateCreateInfo * pCreateInfo,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                pAllocator,
@@ -6765,7 +6924,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyDescriptorUpdateTemplate( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate    descriptorUpdateTemplate,
                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -6794,7 +6954,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate    descriptorUpdateTemplate,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -6823,7 +6983,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::updateDescriptorSetWithTemplate( VULKAN_HPP_NAMESPACE::DescriptorSet            descriptorSet,
                                                                   VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
                                                                   const void *                                   pData,
@@ -6854,7 +7015,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getExternalBufferProperties( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalBufferInfo * pExternalBufferInfo,
                                                                       VULKAN_HPP_NAMESPACE::ExternalBufferProperties *               pExternalBufferProperties,
                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -6886,7 +7048,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getExternalFenceProperties( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFenceInfo * pExternalFenceInfo,
                                                                      VULKAN_HPP_NAMESPACE::ExternalFenceProperties *               pExternalFenceProperties,
                                                                      Dispatch const &                                              d ) const VULKAN_HPP_NOEXCEPT
@@ -6918,7 +7081,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     PhysicalDevice::getExternalSemaphoreProperties( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalSemaphoreInfo * pExternalSemaphoreInfo,
                                                     VULKAN_HPP_NAMESPACE::ExternalSemaphoreProperties *               pExternalSemaphoreProperties,
@@ -6951,7 +7115,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorSetLayoutSupport( const VULKAN_HPP_NAMESPACE::DescriptorSetLayoutCreateInfo * pCreateInfo,
                                                                 VULKAN_HPP_NAMESPACE::DescriptorSetLayoutSupport *          pSupport,
                                                                 Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -7000,7 +7165,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_VERSION_1_2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndirectCount( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                            VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                            VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -7019,7 +7185,8 @@ namespace VULKAN_HPP_NAMESPACE
                               stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndexedIndirectCount( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                   VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                   VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -7038,7 +7205,8 @@ namespace VULKAN_HPP_NAMESPACE
                                      stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createRenderPass2( const VULKAN_HPP_NAMESPACE::RenderPassCreateInfo2 * pCreateInfo,
                                                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                            VULKAN_HPP_NAMESPACE::RenderPass *                  pRenderPass,
@@ -7100,7 +7268,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginRenderPass2( const VULKAN_HPP_NAMESPACE::RenderPassBeginInfo * pRenderPassBegin,
                                                           const VULKAN_HPP_NAMESPACE::SubpassBeginInfo *    pSubpassBeginInfo,
                                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -7126,7 +7295,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::nextSubpass2( const VULKAN_HPP_NAMESPACE::SubpassBeginInfo * pSubpassBeginInfo,
                                                       const VULKAN_HPP_NAMESPACE::SubpassEndInfo *   pSubpassEndInfo,
                                                       Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -7152,7 +7322,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endRenderPass2( const VULKAN_HPP_NAMESPACE::SubpassEndInfo * pSubpassEndInfo,
                                                         Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7174,7 +7345,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     Device::resetQueryPool( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t firstQuery, uint32_t queryCount, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7182,7 +7354,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkResetQueryPool( m_device, static_cast<VkQueryPool>( queryPool ), firstQuery, queryCount );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSemaphoreCounterValue( VULKAN_HPP_NAMESPACE::Semaphore semaphore,
                                                                                   uint64_t *                      pValue,
                                                                                   Dispatch const &                d ) const VULKAN_HPP_NOEXCEPT
@@ -7210,7 +7383,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitSemaphores( const VULKAN_HPP_NAMESPACE::SemaphoreWaitInfo * pWaitInfo,
                                                                         uint64_t                                        timeout,
                                                                         Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
@@ -7238,7 +7412,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::signalSemaphore( const VULKAN_HPP_NAMESPACE::SemaphoreSignalInfo * pSignalInfo,
                                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7264,7 +7439,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceAddress Device::getBufferAddress( const VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo * pInfo,
                                                             Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7289,7 +7465,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint64_t Device::getBufferOpaqueCaptureAddress( const VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo * pInfo,
                                                                     Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7314,7 +7491,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint64_t Device::getMemoryOpaqueCaptureAddress( const VULKAN_HPP_NAMESPACE::DeviceMemoryOpaqueCaptureAddressInfo * pInfo,
                                                                     Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7341,7 +7519,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_VERSION_1_3 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getToolProperties( uint32_t *                                           pToolCount,
                                                                                    VULKAN_HPP_NAMESPACE::PhysicalDeviceToolProperties * pToolProperties,
                                                                                    Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -7424,7 +7603,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createPrivateDataSlot( const VULKAN_HPP_NAMESPACE::PrivateDataSlotCreateInfo * pCreateInfo,
                                                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                VULKAN_HPP_NAMESPACE::PrivateDataSlot *                 pPrivateDataSlot,
@@ -7486,7 +7666,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyPrivateDataSlot( VULKAN_HPP_NAMESPACE::PrivateDataSlot             privateDataSlot,
                                                          const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -7513,7 +7694,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::PrivateDataSlot             privateDataSlot,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -7540,8 +7721,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setPrivateData( VULKAN_HPP_NAMESPACE::ObjectType      objectType_,
                                                                         uint64_t                              objectHandle,
                                                                         VULKAN_HPP_NAMESPACE::PrivateDataSlot privateDataSlot,
@@ -7573,7 +7755,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getPrivateData( VULKAN_HPP_NAMESPACE::ObjectType      objectType_,
                                                  uint64_t                              objectHandle,
                                                  VULKAN_HPP_NAMESPACE::PrivateDataSlot privateDataSlot,
@@ -7603,7 +7786,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setEvent2( VULKAN_HPP_NAMESPACE::Event                  event,
                                                    const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfo,
                                                    Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
@@ -7627,7 +7811,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resetEvent2( VULKAN_HPP_NAMESPACE::Event               event,
                                                      VULKAN_HPP_NAMESPACE::PipelineStageFlags2 stageMask,
                                                      Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -7636,7 +7821,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdResetEvent2( m_commandBuffer, static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags2>( stageMask ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::waitEvents2( uint32_t                                     eventCount,
                                                      const VULKAN_HPP_NAMESPACE::Event *          pEvents,
                                                      const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfos,
@@ -7673,7 +7859,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier2( const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfo,
                                                           Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7695,7 +7882,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeTimestamp2( VULKAN_HPP_NAMESPACE::PipelineStageFlags2 stage,
                                                          VULKAN_HPP_NAMESPACE::QueryPool           queryPool,
                                                          uint32_t                                  query,
@@ -7705,7 +7893,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdWriteTimestamp2( m_commandBuffer, static_cast<VkPipelineStageFlags2>( stage ), static_cast<VkQueryPool>( queryPool ), query );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::submit2( uint32_t                                  submitCount,
                                                                 const VULKAN_HPP_NAMESPACE::SubmitInfo2 * pSubmits,
                                                                 VULKAN_HPP_NAMESPACE::Fence               fence,
@@ -7733,7 +7922,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBuffer2( const VULKAN_HPP_NAMESPACE::CopyBufferInfo2 * pCopyBufferInfo,
                                                      Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7755,7 +7945,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImage2( const VULKAN_HPP_NAMESPACE::CopyImageInfo2 * pCopyImageInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -7775,7 +7966,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBufferToImage2( const VULKAN_HPP_NAMESPACE::CopyBufferToImageInfo2 * pCopyBufferToImageInfo,
                                                             Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7797,7 +7989,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImageToBuffer2( const VULKAN_HPP_NAMESPACE::CopyImageToBufferInfo2 * pCopyImageToBufferInfo,
                                                             Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7819,7 +8012,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::blitImage2( const VULKAN_HPP_NAMESPACE::BlitImageInfo2 * pBlitImageInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -7839,7 +8033,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resolveImage2( const VULKAN_HPP_NAMESPACE::ResolveImageInfo2 * pResolveImageInfo,
                                                        Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7861,7 +8056,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginRendering( const VULKAN_HPP_NAMESPACE::RenderingInfo * pRenderingInfo,
                                                         Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7883,28 +8079,32 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endRendering( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdEndRendering( m_commandBuffer );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCullMode( VULKAN_HPP_NAMESPACE::CullModeFlags cullMode, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetCullMode( m_commandBuffer, static_cast<VkCullModeFlags>( cullMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setFrontFace( VULKAN_HPP_NAMESPACE::FrontFace frontFace, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetFrontFace( m_commandBuffer, static_cast<VkFrontFace>( frontFace ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPrimitiveTopology( VULKAN_HPP_NAMESPACE::PrimitiveTopology primitiveTopology,
                                                               Dispatch const &                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7912,7 +8112,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetPrimitiveTopology( m_commandBuffer, static_cast<VkPrimitiveTopology>( primitiveTopology ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportWithCount( uint32_t                               viewportCount,
                                                               const VULKAN_HPP_NAMESPACE::Viewport * pViewports,
                                                               Dispatch const &                       d ) const VULKAN_HPP_NOEXCEPT
@@ -7936,7 +8137,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setScissorWithCount( uint32_t scissorCount, const VULKAN_HPP_NAMESPACE::Rect2D * pScissors, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -7959,7 +8161,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindVertexBuffers2( uint32_t                                 firstBinding,
                                                             uint32_t                                 bindingCount,
                                                             const VULKAN_HPP_NAMESPACE::Buffer *     pBuffers,
@@ -8021,28 +8224,32 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthTestEnable( VULKAN_HPP_NAMESPACE::Bool32 depthTestEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthTestEnable( m_commandBuffer, static_cast<VkBool32>( depthTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthWriteEnable( VULKAN_HPP_NAMESPACE::Bool32 depthWriteEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthWriteEnable( m_commandBuffer, static_cast<VkBool32>( depthWriteEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthCompareOp( VULKAN_HPP_NAMESPACE::CompareOp depthCompareOp, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthCompareOp( m_commandBuffer, static_cast<VkCompareOp>( depthCompareOp ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBoundsTestEnable( VULKAN_HPP_NAMESPACE::Bool32 depthBoundsTestEnable,
                                                                   Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -8050,14 +8257,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetDepthBoundsTestEnable( m_commandBuffer, static_cast<VkBool32>( depthBoundsTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setStencilTestEnable( VULKAN_HPP_NAMESPACE::Bool32 stencilTestEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetStencilTestEnable( m_commandBuffer, static_cast<VkBool32>( stencilTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setStencilOp( VULKAN_HPP_NAMESPACE::StencilFaceFlags faceMask,
                                                       VULKAN_HPP_NAMESPACE::StencilOp        failOp,
                                                       VULKAN_HPP_NAMESPACE::StencilOp        passOp,
@@ -8074,7 +8283,8 @@ namespace VULKAN_HPP_NAMESPACE
                          static_cast<VkCompareOp>( compareOp ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRasterizerDiscardEnable( VULKAN_HPP_NAMESPACE::Bool32 rasterizerDiscardEnable,
                                                                     Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -8082,14 +8292,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetRasterizerDiscardEnable( m_commandBuffer, static_cast<VkBool32>( rasterizerDiscardEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBiasEnable( VULKAN_HPP_NAMESPACE::Bool32 depthBiasEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthBiasEnable( m_commandBuffer, static_cast<VkBool32>( depthBiasEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPrimitiveRestartEnable( VULKAN_HPP_NAMESPACE::Bool32 primitiveRestartEnable,
                                                                    Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -8097,7 +8309,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetPrimitiveRestartEnable( m_commandBuffer, static_cast<VkBool32>( primitiveRestartEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getBufferMemoryRequirements( const VULKAN_HPP_NAMESPACE::DeviceBufferMemoryRequirements * pInfo,
                                                               VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                  pMemoryRequirements,
                                                               Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
@@ -8144,7 +8357,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageMemoryRequirements( const VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements * pInfo,
                                                              VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                 pMemoryRequirements,
                                                              Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -8191,7 +8405,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSparseMemoryRequirements( const VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements * pInfo,
                                                                    uint32_t *                                                  pSparseMemoryRequirementCount,
                                                                    VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2 *      pSparseMemoryRequirements,
@@ -8271,7 +8486,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroySurfaceKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR                  surface,
                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                       Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -8297,7 +8513,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroy( VULKAN_HPP_NAMESPACE::SurfaceKHR                  surface,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -8323,7 +8539,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfaceSupportKHR( uint32_t                         queueFamilyIndex,
                                                                                       VULKAN_HPP_NAMESPACE::SurfaceKHR surface,
                                                                                       VULKAN_HPP_NAMESPACE::Bool32 *   pSupported,
@@ -8353,7 +8570,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfaceCapabilitiesKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR               surface,
                                                                                            VULKAN_HPP_NAMESPACE::SurfaceCapabilitiesKHR * pSurfaceCapabilities,
                                                                                            Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -8382,7 +8600,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfaceFormatsKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR         surface,
                                                                                       uint32_t *                               pSurfaceFormatCount,
                                                                                       VULKAN_HPP_NAMESPACE::SurfaceFormatKHR * pSurfaceFormats,
@@ -8463,7 +8682,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfacePresentModesKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR       surface,
                                                                                            uint32_t *                             pPresentModeCount,
                                                                                            VULKAN_HPP_NAMESPACE::PresentModeKHR * pPresentModes,
@@ -8546,7 +8766,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_swapchain ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createSwapchainKHR( const VULKAN_HPP_NAMESPACE::SwapchainCreateInfoKHR * pCreateInfo,
                                                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *    pAllocator,
                                                                             VULKAN_HPP_NAMESPACE::SwapchainKHR *                 pSwapchain,
@@ -8608,7 +8829,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroySwapchainKHR( VULKAN_HPP_NAMESPACE::SwapchainKHR                swapchain,
                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                       Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -8634,7 +8856,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::SwapchainKHR                swapchain,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -8660,7 +8882,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSwapchainImagesKHR( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                                uint32_t *                         pSwapchainImageCount,
                                                                                VULKAN_HPP_NAMESPACE::Image *      pSwapchainImages,
@@ -8739,7 +8962,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::acquireNextImageKHR( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                              uint64_t                           timeout,
                                                                              VULKAN_HPP_NAMESPACE::Semaphore    semaphore,
@@ -8779,7 +9003,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::presentKHR( const VULKAN_HPP_NAMESPACE::PresentInfoKHR * pPresentInfo,
                                                                    Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -8806,7 +9031,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getGroupPresentCapabilitiesKHR(
     VULKAN_HPP_NAMESPACE::DeviceGroupPresentCapabilitiesKHR * pDeviceGroupPresentCapabilities, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -8835,7 +9061,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getGroupSurfacePresentModesKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR                       surface,
                                                                                         VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagsKHR * pModes,
                                                                                         Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -8865,7 +9092,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getPresentRectanglesKHR( VULKAN_HPP_NAMESPACE::SurfaceKHR surface,
                                                                                          uint32_t *                       pRectCount,
                                                                                          VULKAN_HPP_NAMESPACE::Rect2D *   pRects,
@@ -8946,7 +9174,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::acquireNextImage2KHR( const VULKAN_HPP_NAMESPACE::AcquireNextImageInfoKHR * pAcquireInfo,
                                                                               uint32_t *                                            pImageIndex,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -8981,7 +9210,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_display ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayPropertiesKHR( uint32_t *                                   pPropertyCount,
                                                                                          VULKAN_HPP_NAMESPACE::DisplayPropertiesKHR * pProperties,
                                                                                          Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -9058,7 +9288,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayPlanePropertiesKHR( uint32_t *                                        pPropertyCount,
                                                                                               VULKAN_HPP_NAMESPACE::DisplayPlanePropertiesKHR * pProperties,
                                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -9138,7 +9369,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayPlaneSupportedDisplaysKHR( uint32_t                           planeIndex,
                                                                                                      uint32_t *                         pDisplayCount,
                                                                                                      VULKAN_HPP_NAMESPACE::DisplayKHR * pDisplays,
@@ -9215,7 +9447,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayModePropertiesKHR( VULKAN_HPP_NAMESPACE::DisplayKHR                 display,
                                                                                              uint32_t *                                       pPropertyCount,
                                                                                              VULKAN_HPP_NAMESPACE::DisplayModePropertiesKHR * pProperties,
@@ -9299,7 +9532,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::createDisplayModeKHR( VULKAN_HPP_NAMESPACE::DisplayKHR                       display,
                                                                                       const VULKAN_HPP_NAMESPACE::DisplayModeCreateInfoKHR * pCreateInfo,
                                                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks *      pAllocator,
@@ -9367,7 +9601,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getDisplayPlaneCapabilitiesKHR( VULKAN_HPP_NAMESPACE::DisplayModeKHR                mode,
                                                     uint32_t                                            planeIndex,
@@ -9398,7 +9633,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createDisplayPlaneSurfaceKHR( const VULKAN_HPP_NAMESPACE::DisplaySurfaceCreateInfoKHR * pCreateInfo,
                                                                                         const VULKAN_HPP_NAMESPACE::AllocationCallbacks *         pAllocator,
                                                                                         VULKAN_HPP_NAMESPACE::SurfaceKHR *                        pSurface,
@@ -9462,7 +9698,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_display_swapchain ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createSharedSwapchainsKHR( uint32_t                                             swapchainCount,
                                                                                    const VULKAN_HPP_NAMESPACE::SwapchainCreateInfoKHR * pCreateInfos,
                                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks *    pAllocator,
@@ -9644,7 +9881,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_XLIB_KHR )
   //=== VK_KHR_xlib_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createXlibSurfaceKHR( const VULKAN_HPP_NAMESPACE::XlibSurfaceCreateInfoKHR * pCreateInfo,
                                                                                 const VULKAN_HPP_NAMESPACE::AllocationCallbacks *      pAllocator,
                                                                                 VULKAN_HPP_NAMESPACE::SurfaceKHR *                     pSurface,
@@ -9706,7 +9944,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32
     PhysicalDevice::getXlibPresentationSupportKHR( uint32_t queueFamilyIndex, Display * dpy, VisualID visualID, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -9735,7 +9974,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_XCB_KHR )
   //=== VK_KHR_xcb_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createXcbSurfaceKHR( const VULKAN_HPP_NAMESPACE::XcbSurfaceCreateInfoKHR * pCreateInfo,
                                                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks *     pAllocator,
                                                                                VULKAN_HPP_NAMESPACE::SurfaceKHR *                    pSurface,
@@ -9797,7 +10037,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32 PhysicalDevice::getXcbPresentationSupportKHR( uint32_t           queueFamilyIndex,
                                                                          xcb_connection_t * connection,
                                                                          xcb_visualid_t     visual_id,
@@ -9830,7 +10071,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WAYLAND_KHR )
   //=== VK_KHR_wayland_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createWaylandSurfaceKHR( const VULKAN_HPP_NAMESPACE::WaylandSurfaceCreateInfoKHR * pCreateInfo,
                                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks *         pAllocator,
                                                                                    VULKAN_HPP_NAMESPACE::SurfaceKHR *                        pSurface,
@@ -9892,7 +10134,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32 PhysicalDevice::getWaylandPresentationSupportKHR( uint32_t            queueFamilyIndex,
                                                                              struct wl_display * display,
                                                                              Dispatch const &    d ) const VULKAN_HPP_NOEXCEPT
@@ -9922,7 +10165,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_ANDROID_KHR )
   //=== VK_KHR_android_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createAndroidSurfaceKHR( const VULKAN_HPP_NAMESPACE::AndroidSurfaceCreateInfoKHR * pCreateInfo,
                                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks *         pAllocator,
                                                                                    VULKAN_HPP_NAMESPACE::SurfaceKHR *                        pSurface,
@@ -9988,7 +10232,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_KHR_win32_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createWin32SurfaceKHR( const VULKAN_HPP_NAMESPACE::Win32SurfaceCreateInfoKHR * pCreateInfo,
                                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                  VULKAN_HPP_NAMESPACE::SurfaceKHR *                      pSurface,
@@ -10050,7 +10295,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32 PhysicalDevice::getWin32PresentationSupportKHR( uint32_t queueFamilyIndex, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -10060,7 +10306,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_debug_report ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::createDebugReportCallbackEXT( const VULKAN_HPP_NAMESPACE::DebugReportCallbackCreateInfoEXT * pCreateInfo,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *              pAllocator,
@@ -10123,7 +10370,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroyDebugReportCallbackEXT( VULKAN_HPP_NAMESPACE::DebugReportCallbackEXT      callback,
                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10151,7 +10399,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroy( VULKAN_HPP_NAMESPACE::DebugReportCallbackEXT      callback,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10179,7 +10427,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::debugReportMessageEXT( VULKAN_HPP_NAMESPACE::DebugReportFlagsEXT      flags,
                                                           VULKAN_HPP_NAMESPACE::DebugReportObjectTypeEXT objectType_,
                                                           uint64_t                                       object,
@@ -10229,7 +10478,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_debug_marker ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::debugMarkerSetObjectTagEXT( const VULKAN_HPP_NAMESPACE::DebugMarkerObjectTagInfoEXT * pTagInfo,
                                                                                     Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10255,7 +10505,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::debugMarkerSetObjectNameEXT( const VULKAN_HPP_NAMESPACE::DebugMarkerObjectNameInfoEXT * pNameInfo,
                                                                                      Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10281,7 +10532,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::debugMarkerBeginEXT( const VULKAN_HPP_NAMESPACE::DebugMarkerMarkerInfoEXT * pMarkerInfo,
                                                              Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10303,14 +10555,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::debugMarkerEndEXT( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdDebugMarkerEndEXT( m_commandBuffer );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::debugMarkerInsertEXT( const VULKAN_HPP_NAMESPACE::DebugMarkerMarkerInfoEXT * pMarkerInfo,
                                                               Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10334,7 +10588,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_video_queue ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getVideoCapabilitiesKHR( const VULKAN_HPP_NAMESPACE::VideoProfileInfoKHR * pVideoProfile,
                                                                                          VULKAN_HPP_NAMESPACE::VideoCapabilitiesKHR *      pCapabilities,
                                                                                          Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -10381,7 +10636,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getVideoFormatPropertiesKHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoFormatInfoKHR * pVideoFormatInfo,
                                                  uint32_t *                                                     pVideoFormatPropertyCount,
@@ -10476,7 +10732,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createVideoSessionKHR( const VULKAN_HPP_NAMESPACE::VideoSessionCreateInfoKHR * pCreateInfo,
                                                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                VULKAN_HPP_NAMESPACE::VideoSessionKHR *                 pVideoSession,
@@ -10538,7 +10795,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyVideoSessionKHR( VULKAN_HPP_NAMESPACE::VideoSessionKHR             videoSession,
                                                          const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10565,7 +10823,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::VideoSessionKHR             videoSession,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10592,7 +10850,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getVideoSessionMemoryRequirementsKHR( VULKAN_HPP_NAMESPACE::VideoSessionKHR                     videoSession,
                                                   uint32_t *                                                pMemoryRequirementsCount,
@@ -10687,7 +10946,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::bindVideoSessionMemoryKHR( VULKAN_HPP_NAMESPACE::VideoSessionKHR                       videoSession,
                                        uint32_t                                                    bindSessionMemoryInfoCount,
@@ -10724,7 +10984,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createVideoSessionParametersKHR( const VULKAN_HPP_NAMESPACE::VideoSessionParametersCreateInfoKHR * pCreateInfo,
                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                 pAllocator,
@@ -10788,7 +11049,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::updateVideoSessionParametersKHR( VULKAN_HPP_NAMESPACE::VideoSessionParametersKHR                   videoSessionParameters,
                                              const VULKAN_HPP_NAMESPACE::VideoSessionParametersUpdateInfoKHR * pUpdateInfo,
@@ -10822,7 +11084,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyVideoSessionParametersKHR( VULKAN_HPP_NAMESPACE::VideoSessionParametersKHR   videoSessionParameters,
                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10850,7 +11113,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::VideoSessionParametersKHR   videoSessionParameters,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -10878,7 +11141,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginVideoCodingKHR( const VULKAN_HPP_NAMESPACE::VideoBeginCodingInfoKHR * pBeginInfo,
                                                              Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10900,7 +11164,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endVideoCodingKHR( const VULKAN_HPP_NAMESPACE::VideoEndCodingInfoKHR * pEndCodingInfo,
                                                            Dispatch const &                                    d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10922,7 +11187,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::controlVideoCodingKHR( const VULKAN_HPP_NAMESPACE::VideoCodingControlInfoKHR * pCodingControlInfo,
                                                                Dispatch const &                                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10946,7 +11212,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_video_decode_queue ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::decodeVideoKHR( const VULKAN_HPP_NAMESPACE::VideoDecodeInfoKHR * pDecodeInfo,
                                                         Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -10970,7 +11237,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_transform_feedback ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindTransformFeedbackBuffersEXT( uint32_t                                 firstBinding,
                                                                          uint32_t                                 bindingCount,
                                                                          const VULKAN_HPP_NAMESPACE::Buffer *     pBuffers,
@@ -11023,7 +11291,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginTransformFeedbackEXT( uint32_t                                 firstCounterBuffer,
                                                                    uint32_t                                 counterBufferCount,
                                                                    const VULKAN_HPP_NAMESPACE::Buffer *     pCounterBuffers,
@@ -11067,7 +11336,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endTransformFeedbackEXT( uint32_t                                 firstCounterBuffer,
                                                                  uint32_t                                 counterBufferCount,
                                                                  const VULKAN_HPP_NAMESPACE::Buffer *     pCounterBuffers,
@@ -11111,7 +11381,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginQueryIndexedEXT( VULKAN_HPP_NAMESPACE::QueryPool         queryPool,
                                                               uint32_t                                query,
                                                               VULKAN_HPP_NAMESPACE::QueryControlFlags flags,
@@ -11122,7 +11393,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBeginQueryIndexedEXT( m_commandBuffer, static_cast<VkQueryPool>( queryPool ), query, static_cast<VkQueryControlFlags>( flags ), index );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::endQueryIndexedEXT( VULKAN_HPP_NAMESPACE::QueryPool queryPool, uint32_t query, uint32_t index, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11130,7 +11402,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdEndQueryIndexedEXT( m_commandBuffer, static_cast<VkQueryPool>( queryPool ), query, index );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndirectByteCountEXT( uint32_t                         instanceCount,
                                                                   uint32_t                         firstInstance,
                                                                   VULKAN_HPP_NAMESPACE::Buffer     counterBuffer,
@@ -11151,7 +11424,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NVX_binary_import ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createCuModuleNVX( const VULKAN_HPP_NAMESPACE::CuModuleCreateInfoNVX * pCreateInfo,
                                                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                            VULKAN_HPP_NAMESPACE::CuModuleNVX *                 pModule,
@@ -11213,7 +11487,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createCuFunctionNVX( const VULKAN_HPP_NAMESPACE::CuFunctionCreateInfoNVX * pCreateInfo,
                                                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *     pAllocator,
                                                                              VULKAN_HPP_NAMESPACE::CuFunctionNVX *                 pFunction,
@@ -11275,7 +11550,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyCuModuleNVX( VULKAN_HPP_NAMESPACE::CuModuleNVX                 module,
                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                      Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -11301,7 +11577,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::CuModuleNVX                 module,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -11327,7 +11603,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyCuFunctionNVX( VULKAN_HPP_NAMESPACE::CuFunctionNVX               function,
                                                        const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                        Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -11353,7 +11630,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::CuFunctionNVX               function,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -11379,7 +11656,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::cuLaunchKernelNVX( const VULKAN_HPP_NAMESPACE::CuLaunchInfoNVX * pLaunchInfo,
                                                            Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11403,7 +11681,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NVX_image_view_handle ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint32_t Device::getImageViewHandleNVX( const VULKAN_HPP_NAMESPACE::ImageViewHandleInfoNVX * pInfo,
                                                             Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11427,7 +11706,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getImageViewAddressNVX( VULKAN_HPP_NAMESPACE::ImageView                       imageView,
                                                                                 VULKAN_HPP_NAMESPACE::ImageViewAddressPropertiesNVX * pProperties,
                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -11458,7 +11738,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_AMD_draw_indirect_count ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndirectCountAMD( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                               VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                               VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -11477,7 +11758,8 @@ namespace VULKAN_HPP_NAMESPACE
                                  stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndexedIndirectCountAMD( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                      VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                      VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -11498,7 +11780,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_AMD_shader_info ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getShaderInfoAMD( VULKAN_HPP_NAMESPACE::Pipeline            pipeline,
                                                                           VULKAN_HPP_NAMESPACE::ShaderStageFlagBits shaderStage,
                                                                           VULKAN_HPP_NAMESPACE::ShaderInfoTypeAMD   infoType,
@@ -11608,7 +11891,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_dynamic_rendering ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginRenderingKHR( const VULKAN_HPP_NAMESPACE::RenderingInfo * pRenderingInfo,
                                                            Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11630,7 +11914,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endRenderingKHR( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -11640,7 +11925,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_GGP )
   //=== VK_GGP_stream_descriptor_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::createStreamDescriptorSurfaceGGP( const VULKAN_HPP_NAMESPACE::StreamDescriptorSurfaceCreateInfoGGP * pCreateInfo,
                                                 const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                  pAllocator,
@@ -11706,7 +11992,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_external_memory_capabilities ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getExternalImageFormatPropertiesNV( VULKAN_HPP_NAMESPACE::Format                            format,
                                                         VULKAN_HPP_NAMESPACE::ImageType                         type,
@@ -11765,7 +12052,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_NV_external_memory_win32 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getMemoryWin32HandleNV( VULKAN_HPP_NAMESPACE::DeviceMemory                    memory,
                                                                                 VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagsNV handleType,
                                                                                 HANDLE *                                              pHandle,
@@ -11798,7 +12086,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_get_physical_device_properties2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFeatures2KHR( VULKAN_HPP_NAMESPACE::PhysicalDeviceFeatures2 * pFeatures,
                                                           Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11841,7 +12130,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getProperties2KHR( VULKAN_HPP_NAMESPACE::PhysicalDeviceProperties2 * pProperties,
                                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -11884,7 +12174,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getFormatProperties2KHR( VULKAN_HPP_NAMESPACE::Format              format,
                                                                   VULKAN_HPP_NAMESPACE::FormatProperties2 * pFormatProperties,
                                                                   Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -11931,7 +12222,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
                                                   VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
@@ -11986,7 +12278,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getQueueFamilyProperties2KHR( uint32_t *                                     pQueueFamilyPropertyCount,
                                                                        VULKAN_HPP_NAMESPACE::QueueFamilyProperties2 * pQueueFamilyProperties,
                                                                        Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -12124,7 +12417,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getMemoryProperties2KHR( VULKAN_HPP_NAMESPACE::PhysicalDeviceMemoryProperties2 * pMemoryProperties,
                                                                   Dispatch const &                                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -12168,7 +12462,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getSparseImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSparseImageFormatInfo2 * pFormatInfo,
                                                                              uint32_t *                                                         pPropertyCount,
                                                                              VULKAN_HPP_NAMESPACE::SparseImageFormatProperties2 *               pProperties,
@@ -12248,7 +12543,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_device_group ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getGroupPeerMemoryFeaturesKHR( uint32_t                                       heapIndex,
                                                                 uint32_t                                       localDeviceIndex,
                                                                 uint32_t                                       remoteDeviceIndex,
@@ -12279,14 +12575,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDeviceMaskKHR( uint32_t deviceMask, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDeviceMaskKHR( m_commandBuffer, deviceMask );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchBaseKHR( uint32_t         baseGroupX,
                                                          uint32_t         baseGroupY,
                                                          uint32_t         baseGroupZ,
@@ -12302,7 +12600,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_VI_NN )
   //=== VK_NN_vi_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createViSurfaceNN( const VULKAN_HPP_NAMESPACE::ViSurfaceCreateInfoNN * pCreateInfo,
                                                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                              VULKAN_HPP_NAMESPACE::SurfaceKHR *                  pSurface,
@@ -12367,7 +12666,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_maintenance1 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::trimCommandPoolKHR( VULKAN_HPP_NAMESPACE::CommandPool          commandPool,
                                                      VULKAN_HPP_NAMESPACE::CommandPoolTrimFlags flags,
                                                      Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
@@ -12378,7 +12678,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_device_group_creation ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::enumeratePhysicalDeviceGroupsKHR( uint32_t *                                            pPhysicalDeviceGroupCount,
                                                 VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties * pPhysicalDeviceGroupProperties,
@@ -12464,7 +12765,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_memory_capabilities ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getExternalBufferPropertiesKHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalBufferInfo * pExternalBufferInfo,
                                                                          VULKAN_HPP_NAMESPACE::ExternalBufferProperties * pExternalBufferProperties,
                                                                          Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
@@ -12499,7 +12801,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_KHR_external_memory_win32 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getMemoryWin32HandleKHR( const VULKAN_HPP_NAMESPACE::MemoryGetWin32HandleInfoKHR * pGetWin32HandleInfo,
                                                                                  HANDLE *                                                  pHandle,
                                                                                  Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -12528,7 +12831,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryWin32HandlePropertiesKHR( VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType,
                                                HANDLE                                                 handle,
@@ -12567,7 +12871,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_memory_fd ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getMemoryFdKHR( const VULKAN_HPP_NAMESPACE::MemoryGetFdInfoKHR * pGetFdInfo,
                                                                         int *                                            pFd,
                                                                         Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
@@ -12595,7 +12900,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getMemoryFdPropertiesKHR( VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType,
                                                                                   int                                                    fd,
                                                                                   VULKAN_HPP_NAMESPACE::MemoryFdPropertiesKHR *          pMemoryFdProperties,
@@ -12627,7 +12933,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_semaphore_capabilities ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     PhysicalDevice::getExternalSemaphorePropertiesKHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalSemaphoreInfo * pExternalSemaphoreInfo,
                                                        VULKAN_HPP_NAMESPACE::ExternalSemaphoreProperties *               pExternalSemaphoreProperties,
@@ -12663,7 +12970,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_KHR_external_semaphore_win32 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::importSemaphoreWin32HandleKHR(
     const VULKAN_HPP_NAMESPACE::ImportSemaphoreWin32HandleInfoKHR * pImportSemaphoreWin32HandleInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -12691,7 +12999,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSemaphoreWin32HandleKHR(
     const VULKAN_HPP_NAMESPACE::SemaphoreGetWin32HandleInfoKHR * pGetWin32HandleInfo, HANDLE * pHandle, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -12722,7 +13031,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_semaphore_fd ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::importSemaphoreFdKHR( const VULKAN_HPP_NAMESPACE::ImportSemaphoreFdInfoKHR * pImportSemaphoreFdInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -12748,7 +13058,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSemaphoreFdKHR( const VULKAN_HPP_NAMESPACE::SemaphoreGetFdInfoKHR * pGetFdInfo,
                                                                            int *                                               pFd,
                                                                            Dispatch const &                                    d ) const VULKAN_HPP_NOEXCEPT
@@ -12778,7 +13089,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_push_descriptor ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSetKHR( VULKAN_HPP_NAMESPACE::PipelineBindPoint          pipelineBindPoint,
                                                               VULKAN_HPP_NAMESPACE::PipelineLayout             layout,
                                                               uint32_t                                         set,
@@ -12818,7 +13130,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSetWithTemplateKHR( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
                                                                           VULKAN_HPP_NAMESPACE::PipelineLayout           layout,
                                                                           uint32_t                                       set,
@@ -12854,7 +13167,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_conditional_rendering ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginConditionalRenderingEXT( const VULKAN_HPP_NAMESPACE::ConditionalRenderingBeginInfoEXT * pConditionalRenderingBegin,
                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -12876,7 +13190,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endConditionalRenderingEXT( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -12885,7 +13200,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_descriptor_update_template ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createDescriptorUpdateTemplateKHR( const VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplateCreateInfo * pCreateInfo,
                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                pAllocator,
@@ -12951,7 +13267,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyDescriptorUpdateTemplateKHR( VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate    descriptorUpdateTemplate,
                                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                      Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -12980,7 +13297,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::updateDescriptorSetWithTemplateKHR( VULKAN_HPP_NAMESPACE::DescriptorSet            descriptorSet,
                                                                      VULKAN_HPP_NAMESPACE::DescriptorUpdateTemplate descriptorUpdateTemplate,
                                                                      const void *                                   pData,
@@ -13013,7 +13331,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_clip_space_w_scaling ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportWScalingNV( uint32_t                                         firstViewport,
                                                                uint32_t                                         viewportCount,
                                                                const VULKAN_HPP_NAMESPACE::ViewportWScalingNV * pViewportWScalings,
@@ -13042,8 +13361,9 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_direct_mode_display ===
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result PhysicalDevice::releaseDisplayEXT( VULKAN_HPP_NAMESPACE::DisplayKHR display, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -13065,7 +13385,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_XLIB_XRANDR_EXT )
   //=== VK_EXT_acquire_xlib_display ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::acquireXlibDisplayEXT( Display *                        dpy,
                                                                                        VULKAN_HPP_NAMESPACE::DisplayKHR display,
                                                                                        Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -13092,7 +13413,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getRandROutputDisplayEXT( Display *                          dpy,
                                                                                           RROutput                           rrOutput,
                                                                                           VULKAN_HPP_NAMESPACE::DisplayKHR * pDisplay,
@@ -13144,7 +13466,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_display_surface_counter ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getSurfaceCapabilities2EXT( VULKAN_HPP_NAMESPACE::SurfaceKHR                surface,
                                                 VULKAN_HPP_NAMESPACE::SurfaceCapabilities2EXT * pSurfaceCapabilities,
@@ -13177,7 +13500,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_display_control ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::displayPowerControlEXT( VULKAN_HPP_NAMESPACE::DisplayKHR                  display,
                                                                                 const VULKAN_HPP_NAMESPACE::DisplayPowerInfoEXT * pDisplayPowerInfo,
                                                                                 Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -13206,7 +13530,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::registerEventEXT( const VULKAN_HPP_NAMESPACE::DeviceEventInfoEXT *  pDeviceEventInfo,
                                                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                           VULKAN_HPP_NAMESPACE::Fence *                     pFence,
@@ -13268,7 +13593,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::registerDisplayEventEXT( VULKAN_HPP_NAMESPACE::DisplayKHR                  display,
                                                                                  const VULKAN_HPP_NAMESPACE::DisplayEventInfoEXT * pDisplayEventInfo,
                                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
@@ -13336,7 +13662,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSwapchainCounterEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR              swapchain,
                                                                                 VULKAN_HPP_NAMESPACE::SurfaceCounterFlagBitsEXT counter,
                                                                                 uint64_t *                                      pCounterValue,
@@ -13368,7 +13695,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_GOOGLE_display_timing ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getRefreshCycleDurationGOOGLE( VULKAN_HPP_NAMESPACE::SwapchainKHR                 swapchain,
                                            VULKAN_HPP_NAMESPACE::RefreshCycleDurationGOOGLE * pDisplayTimingProperties,
@@ -13398,7 +13726,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getPastPresentationTimingGOOGLE( VULKAN_HPP_NAMESPACE::SwapchainKHR                   swapchain,
                                              uint32_t *                                           pPresentationTimingCount,
@@ -13495,7 +13824,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_discard_rectangles ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDiscardRectangleEXT( uint32_t                             firstDiscardRectangle,
                                                                 uint32_t                             discardRectangleCount,
                                                                 const VULKAN_HPP_NAMESPACE::Rect2D * pDiscardRectangles,
@@ -13521,7 +13851,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDiscardRectangleEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 discardRectangleEnable,
                                                                       Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13529,7 +13860,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetDiscardRectangleEnableEXT( m_commandBuffer, static_cast<VkBool32>( discardRectangleEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDiscardRectangleModeEXT( VULKAN_HPP_NAMESPACE::DiscardRectangleModeEXT discardRectangleMode,
                                                                     Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13539,7 +13871,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_hdr_metadata ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::setHdrMetadataEXT( uint32_t                                     swapchainCount,
                                                     const VULKAN_HPP_NAMESPACE::SwapchainKHR *   pSwapchains,
                                                     const VULKAN_HPP_NAMESPACE::HdrMetadataEXT * pMetadata,
@@ -13578,7 +13911,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_create_renderpass2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createRenderPass2KHR( const VULKAN_HPP_NAMESPACE::RenderPassCreateInfo2 * pCreateInfo,
                                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                               VULKAN_HPP_NAMESPACE::RenderPass *                  pRenderPass,
@@ -13640,7 +13974,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginRenderPass2KHR( const VULKAN_HPP_NAMESPACE::RenderPassBeginInfo * pRenderPassBegin,
                                                              const VULKAN_HPP_NAMESPACE::SubpassBeginInfo *    pSubpassBeginInfo,
                                                              Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -13666,7 +14001,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::nextSubpass2KHR( const VULKAN_HPP_NAMESPACE::SubpassBeginInfo * pSubpassBeginInfo,
                                                          const VULKAN_HPP_NAMESPACE::SubpassEndInfo *   pSubpassEndInfo,
                                                          Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -13692,7 +14028,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endRenderPass2KHR( const VULKAN_HPP_NAMESPACE::SubpassEndInfo * pSubpassEndInfo,
                                                            Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13716,8 +14053,9 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_shared_presentable_image ===
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSwapchainStatusKHR( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                                Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13746,7 +14084,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_fence_capabilities ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getExternalFencePropertiesKHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFenceInfo * pExternalFenceInfo,
                                                                         VULKAN_HPP_NAMESPACE::ExternalFenceProperties *               pExternalFenceProperties,
                                                                         Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -13781,7 +14120,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_KHR_external_fence_win32 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::importFenceWin32HandleKHR(
     const VULKAN_HPP_NAMESPACE::ImportFenceWin32HandleInfoKHR * pImportFenceWin32HandleInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13808,7 +14148,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getFenceWin32HandleKHR( const VULKAN_HPP_NAMESPACE::FenceGetWin32HandleInfoKHR * pGetWin32HandleInfo,
                                                                                 HANDLE *                                                 pHandle,
                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -13840,7 +14181,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_external_fence_fd ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::importFenceFdKHR( const VULKAN_HPP_NAMESPACE::ImportFenceFdInfoKHR * pImportFenceFdInfo,
                                                                           Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -13866,7 +14208,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getFenceFdKHR( const VULKAN_HPP_NAMESPACE::FenceGetFdInfoKHR * pGetFdInfo,
                                                                        int *                                           pFd,
                                                                        Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
@@ -13896,7 +14239,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_performance_query ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::enumerateQueueFamilyPerformanceQueryCountersKHR( uint32_t                                                 queueFamilyIndex,
                                                                      uint32_t *                                               pCounterCount,
@@ -14015,7 +14359,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     PhysicalDevice::getQueueFamilyPerformanceQueryPassesKHR( const VULKAN_HPP_NAMESPACE::QueryPoolPerformanceCreateInfoKHR * pPerformanceQueryCreateInfo,
                                                              uint32_t *                                                      pNumPasses,
@@ -14045,7 +14390,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::acquireProfilingLockKHR( const VULKAN_HPP_NAMESPACE::AcquireProfilingLockInfoKHR * pInfo,
                                                                                  Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14071,7 +14417,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::releaseProfilingLockKHR( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -14080,7 +14427,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_get_surface_capabilities2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getSurfaceCapabilities2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR * pSurfaceInfo,
                                                 VULKAN_HPP_NAMESPACE::SurfaceCapabilities2KHR *             pSurfaceCapabilities,
@@ -14135,7 +14483,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSurfaceFormats2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR * pSurfaceInfo,
                                                                                        uint32_t *                                pSurfaceFormatCount,
                                                                                        VULKAN_HPP_NAMESPACE::SurfaceFormat2KHR * pSurfaceFormats,
@@ -14325,7 +14674,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_get_display_properties2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayProperties2KHR( uint32_t *                                    pPropertyCount,
                                                                                           VULKAN_HPP_NAMESPACE::DisplayProperties2KHR * pProperties,
                                                                                           Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -14406,7 +14756,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayPlaneProperties2KHR( uint32_t * pPropertyCount,
                                                                                                VULKAN_HPP_NAMESPACE::DisplayPlaneProperties2KHR * pProperties,
                                                                                                Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -14488,7 +14839,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDisplayModeProperties2KHR( VULKAN_HPP_NAMESPACE::DisplayKHR                  display,
                                                                                               uint32_t *                                        pPropertyCount,
                                                                                               VULKAN_HPP_NAMESPACE::DisplayModeProperties2KHR * pProperties,
@@ -14573,7 +14925,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getDisplayPlaneCapabilities2KHR( const VULKAN_HPP_NAMESPACE::DisplayPlaneInfo2KHR *   pDisplayPlaneInfo,
                                                      VULKAN_HPP_NAMESPACE::DisplayPlaneCapabilities2KHR * pCapabilities,
@@ -14609,7 +14962,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_IOS_MVK )
   //=== VK_MVK_ios_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createIOSSurfaceMVK( const VULKAN_HPP_NAMESPACE::IOSSurfaceCreateInfoMVK * pCreateInfo,
                                                                                const VULKAN_HPP_NAMESPACE::AllocationCallbacks *     pAllocator,
                                                                                VULKAN_HPP_NAMESPACE::SurfaceKHR *                    pSurface,
@@ -14675,7 +15029,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_MACOS_MVK )
   //=== VK_MVK_macos_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createMacOSSurfaceMVK( const VULKAN_HPP_NAMESPACE::MacOSSurfaceCreateInfoMVK * pCreateInfo,
                                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                  VULKAN_HPP_NAMESPACE::SurfaceKHR *                      pSurface,
@@ -14740,7 +15095,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_debug_utils ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setDebugUtilsObjectNameEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsObjectNameInfoEXT * pNameInfo,
                                                                                     Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14766,7 +15122,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setDebugUtilsObjectTagEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsObjectTagInfoEXT * pTagInfo,
                                                                                    Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14792,7 +15149,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::beginDebugUtilsLabelEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT * pLabelInfo,
                                                          Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14814,14 +15172,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::endDebugUtilsLabelEXT( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkQueueEndDebugUtilsLabelEXT( m_queue );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::insertDebugUtilsLabelEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT * pLabelInfo,
                                                           Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14843,7 +15203,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::beginDebugUtilsLabelEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT * pLabelInfo,
                                                                  Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14865,14 +15226,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::endDebugUtilsLabelEXT( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdEndDebugUtilsLabelEXT( m_commandBuffer );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::insertDebugUtilsLabelEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsLabelEXT * pLabelInfo,
                                                                   Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -14894,7 +15257,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::createDebugUtilsMessengerEXT( const VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCreateInfoEXT * pCreateInfo,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *              pAllocator,
@@ -14957,7 +15321,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroyDebugUtilsMessengerEXT( VULKAN_HPP_NAMESPACE::DebugUtilsMessengerEXT      messenger,
                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -14985,7 +15350,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::destroy( VULKAN_HPP_NAMESPACE::DebugUtilsMessengerEXT      messenger,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -15013,7 +15378,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Instance::submitDebugUtilsMessageEXT( VULKAN_HPP_NAMESPACE::DebugUtilsMessageSeverityFlagBitsEXT       messageSeverity,
                                                                VULKAN_HPP_NAMESPACE::DebugUtilsMessageTypeFlagsEXT              messageTypes,
                                                                const VULKAN_HPP_NAMESPACE::DebugUtilsMessengerCallbackDataEXT * pCallbackData,
@@ -15048,7 +15414,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_ANDROID_KHR )
   //=== VK_ANDROID_external_memory_android_hardware_buffer ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getAndroidHardwareBufferPropertiesANDROID( const struct AHardwareBuffer *                                 buffer,
                                                        VULKAN_HPP_NAMESPACE::AndroidHardwareBufferPropertiesANDROID * pProperties,
@@ -15099,7 +15466,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryAndroidHardwareBufferANDROID( const VULKAN_HPP_NAMESPACE::MemoryGetAndroidHardwareBufferInfoANDROID * pInfo,
                                                    struct AHardwareBuffer **                                               pBuffer,
@@ -15134,7 +15502,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_ENABLE_BETA_EXTENSIONS )
   //=== VK_AMDX_shader_enqueue ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createExecutionGraphPipelinesAMDX( VULKAN_HPP_NAMESPACE::PipelineCache                                pipelineCache,
                                                uint32_t                                                           createInfoCount,
@@ -15340,7 +15709,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getExecutionGraphPipelineScratchSizeAMDX( VULKAN_HPP_NAMESPACE::Pipeline                                executionGraph,
                                                       VULKAN_HPP_NAMESPACE::ExecutionGraphPipelineScratchSizeAMDX * pSizeInfo,
@@ -15371,7 +15741,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getExecutionGraphPipelineNodeIndexAMDX( VULKAN_HPP_NAMESPACE::Pipeline                                      executionGraph,
                                                     const VULKAN_HPP_NAMESPACE::PipelineShaderStageNodeCreateInfoAMDX * pNodeInfo,
@@ -15402,7 +15773,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::initializeGraphScratchMemoryAMDX( VULKAN_HPP_NAMESPACE::DeviceAddress scratch,
                                                                           Dispatch const &                    d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -15410,7 +15782,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdInitializeGraphScratchMemoryAMDX( m_commandBuffer, static_cast<VkDeviceAddress>( scratch ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphAMDX( VULKAN_HPP_NAMESPACE::DeviceAddress                      scratch,
                                                            const VULKAN_HPP_NAMESPACE::DispatchGraphCountInfoAMDX * pCountInfo,
                                                            Dispatch const &                                         d ) const VULKAN_HPP_NOEXCEPT
@@ -15434,7 +15807,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphIndirectAMDX( VULKAN_HPP_NAMESPACE::DeviceAddress                      scratch,
                                                                    const VULKAN_HPP_NAMESPACE::DispatchGraphCountInfoAMDX * pCountInfo,
                                                                    Dispatch const &                                         d ) const VULKAN_HPP_NOEXCEPT
@@ -15460,7 +15834,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::dispatchGraphIndirectCountAMDX( VULKAN_HPP_NAMESPACE::DeviceAddress scratch,
                                                                         VULKAN_HPP_NAMESPACE::DeviceAddress countInfo,
                                                                         Dispatch const &                    d ) const VULKAN_HPP_NOEXCEPT
@@ -15472,7 +15847,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_sample_locations ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setSampleLocationsEXT( const VULKAN_HPP_NAMESPACE::SampleLocationsInfoEXT * pSampleLocationsInfo,
                                                                Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -15494,7 +15870,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void PhysicalDevice::getMultisamplePropertiesEXT( VULKAN_HPP_NAMESPACE::SampleCountFlagBits        samples,
                                                                       VULKAN_HPP_NAMESPACE::MultisamplePropertiesEXT * pMultisampleProperties,
                                                                       Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
@@ -15525,7 +15902,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_get_memory_requirements2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageMemoryRequirements2KHR( const VULKAN_HPP_NAMESPACE::ImageMemoryRequirementsInfo2 * pInfo,
                                                                  VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                pMemoryRequirements,
                                                                  Dispatch const &                                           d ) const VULKAN_HPP_NOEXCEPT
@@ -15572,7 +15950,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getBufferMemoryRequirements2KHR( const VULKAN_HPP_NAMESPACE::BufferMemoryRequirementsInfo2 * pInfo,
                                                                   VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                 pMemoryRequirements,
                                                                   Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -15619,7 +15998,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSparseMemoryRequirements2KHR( const VULKAN_HPP_NAMESPACE::ImageSparseMemoryRequirementsInfo2 * pInfo,
                                                                        uint32_t *                                             pSparseMemoryRequirementCount,
                                                                        VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2 * pSparseMemoryRequirements,
@@ -15699,7 +16079,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_acceleration_structure ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createAccelerationStructureKHR( const VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoKHR * pCreateInfo,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                pAllocator,
@@ -15763,7 +16144,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyAccelerationStructureKHR( VULKAN_HPP_NAMESPACE::AccelerationStructureKHR    accelerationStructure,
                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -15791,7 +16173,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::AccelerationStructureKHR    accelerationStructure,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -15819,7 +16201,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::buildAccelerationStructuresKHR( uint32_t                                                                     infoCount,
                                                    const VULKAN_HPP_NAMESPACE::AccelerationStructureBuildGeometryInfoKHR *      pInfos,
@@ -15860,7 +16243,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::buildAccelerationStructuresIndirectKHR( uint32_t infoCount,
                                                                                 const VULKAN_HPP_NAMESPACE::AccelerationStructureBuildGeometryInfoKHR * pInfos,
                                                                                 const VULKAN_HPP_NAMESPACE::DeviceAddress * pIndirectDeviceAddresses,
@@ -15919,7 +16303,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::buildAccelerationStructuresKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                                   deferredOperation,
                                             uint32_t                                                                     infoCount,
@@ -15972,7 +16357,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyAccelerationStructureKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR deferredOperation,
                                                                                       const VULKAN_HPP_NAMESPACE::CopyAccelerationStructureInfoKHR * pInfo,
                                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -16005,7 +16391,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::copyAccelerationStructureToMemoryKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                             deferredOperation,
                                                   const VULKAN_HPP_NAMESPACE::CopyAccelerationStructureToMemoryInfoKHR * pInfo,
@@ -16040,7 +16427,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::copyMemoryToAccelerationStructureKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                             deferredOperation,
                                                   const VULKAN_HPP_NAMESPACE::CopyMemoryToAccelerationStructureInfoKHR * pInfo,
@@ -16075,7 +16463,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::writeAccelerationStructuresPropertiesKHR( uint32_t                                               accelerationStructureCount,
                                                       const VULKAN_HPP_NAMESPACE::AccelerationStructureKHR * pAccelerationStructures,
@@ -16154,7 +16543,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyAccelerationStructureKHR( const VULKAN_HPP_NAMESPACE::CopyAccelerationStructureInfoKHR * pInfo,
                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -16176,7 +16566,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyAccelerationStructureToMemoryKHR( const VULKAN_HPP_NAMESPACE::CopyAccelerationStructureToMemoryInfoKHR * pInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -16199,7 +16590,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMemoryToAccelerationStructureKHR( const VULKAN_HPP_NAMESPACE::CopyMemoryToAccelerationStructureInfoKHR * pInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -16222,7 +16614,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceAddress Device::getAccelerationStructureAddressKHR( const VULKAN_HPP_NAMESPACE::AccelerationStructureDeviceAddressInfoKHR * pInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -16250,7 +16643,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::writeAccelerationStructuresPropertiesKHR( uint32_t                                               accelerationStructureCount,
                                                              const VULKAN_HPP_NAMESPACE::AccelerationStructureKHR * pAccelerationStructures,
@@ -16292,7 +16686,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getAccelerationStructureCompatibilityKHR( const VULKAN_HPP_NAMESPACE::AccelerationStructureVersionInfoKHR * pVersionInfo,
                                                                            VULKAN_HPP_NAMESPACE::AccelerationStructureCompatibilityKHR *     pCompatibility,
                                                                            Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -16324,7 +16719,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getAccelerationStructureBuildSizesKHR( VULKAN_HPP_NAMESPACE::AccelerationStructureBuildTypeKHR                 buildType,
                                                                         const VULKAN_HPP_NAMESPACE::AccelerationStructureBuildGeometryInfoKHR * pBuildInfo,
                                                                         const uint32_t *                                               pMaxPrimitiveCounts,
@@ -16374,7 +16770,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_ray_tracing_pipeline ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::traceRaysKHR( const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pRaygenShaderBindingTable,
                                                       const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pMissShaderBindingTable,
                                                       const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pHitShaderBindingTable,
@@ -16422,7 +16819,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createRayTracingPipelinesKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                    deferredOperation,
                                           VULKAN_HPP_NAMESPACE::PipelineCache                           pipelineCache,
@@ -16660,7 +17058,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getRayTracingShaderGroupHandlesKHR( VULKAN_HPP_NAMESPACE::Pipeline pipeline,
                                                                                             uint32_t                       firstGroup,
                                                                                             uint32_t                       groupCount,
@@ -16712,7 +17111,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getRayTracingCaptureReplayShaderGroupHandlesKHR( VULKAN_HPP_NAMESPACE::Pipeline pipeline,
                                                                                                          uint32_t                       firstGroup,
                                                                                                          uint32_t                       groupCount,
@@ -16765,7 +17165,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::traceRaysIndirectKHR( const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pRaygenShaderBindingTable,
                                                               const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pMissShaderBindingTable,
                                                               const VULKAN_HPP_NAMESPACE::StridedDeviceAddressRegionKHR * pHitShaderBindingTable,
@@ -16805,7 +17206,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceSize Device::getRayTracingShaderGroupStackSizeKHR( VULKAN_HPP_NAMESPACE::Pipeline             pipeline,
                                                                              uint32_t                                   group,
                                                                              VULKAN_HPP_NAMESPACE::ShaderGroupShaderKHR groupShader,
@@ -16816,7 +17218,8 @@ namespace VULKAN_HPP_NAMESPACE
       d.vkGetRayTracingShaderGroupStackSizeKHR( m_device, static_cast<VkPipeline>( pipeline ), group, static_cast<VkShaderGroupShaderKHR>( groupShader ) ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRayTracingPipelineStackSizeKHR( uint32_t pipelineStackSize, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -16825,7 +17228,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_sampler_ycbcr_conversion ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createSamplerYcbcrConversionKHR( const VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionCreateInfo * pCreateInfo,
                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *              pAllocator,
@@ -16890,7 +17294,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroySamplerYcbcrConversionKHR( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversion      ycbcrConversion,
                                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -16921,7 +17326,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_bind_memory2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindBufferMemory2KHR( uint32_t                                           bindInfoCount,
                                                                               const VULKAN_HPP_NAMESPACE::BindBufferMemoryInfo * pBindInfos,
                                                                               Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -16949,7 +17355,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindImageMemory2KHR( uint32_t                                          bindInfoCount,
                                                                              const VULKAN_HPP_NAMESPACE::BindImageMemoryInfo * pBindInfos,
                                                                              Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -16978,7 +17385,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_image_drm_format_modifier ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getImageDrmFormatModifierPropertiesEXT(
     VULKAN_HPP_NAMESPACE::Image image, VULKAN_HPP_NAMESPACE::ImageDrmFormatModifierPropertiesEXT * pProperties, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -17009,7 +17417,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_validation_cache ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createValidationCacheEXT( const VULKAN_HPP_NAMESPACE::ValidationCacheCreateInfoEXT * pCreateInfo,
                                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks *          pAllocator,
                                                                                   VULKAN_HPP_NAMESPACE::ValidationCacheEXT *                 pValidationCache,
@@ -17071,7 +17480,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyValidationCacheEXT( VULKAN_HPP_NAMESPACE::ValidationCacheEXT          validationCache,
                                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -17099,7 +17509,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::ValidationCacheEXT          validationCache,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -17127,7 +17537,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::mergeValidationCachesEXT( VULKAN_HPP_NAMESPACE::ValidationCacheEXT         dstCache,
                                                                                   uint32_t                                         srcCacheCount,
                                                                                   const VULKAN_HPP_NAMESPACE::ValidationCacheEXT * pSrcCaches,
@@ -17158,7 +17569,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getValidationCacheDataEXT( VULKAN_HPP_NAMESPACE::ValidationCacheEXT validationCache,
                                                                                    size_t *                                 pDataSize,
                                                                                    void *                                   pData,
@@ -17238,7 +17650,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_shading_rate_image ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindShadingRateImageNV( VULKAN_HPP_NAMESPACE::ImageView   imageView,
                                                                 VULKAN_HPP_NAMESPACE::ImageLayout imageLayout,
                                                                 Dispatch const &                  d ) const VULKAN_HPP_NOEXCEPT
@@ -17247,7 +17660,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBindShadingRateImageNV( m_commandBuffer, static_cast<VkImageView>( imageView ), static_cast<VkImageLayout>( imageLayout ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportShadingRatePaletteNV( uint32_t                                           firstViewport,
                                                                          uint32_t                                           viewportCount,
                                                                          const VULKAN_HPP_NAMESPACE::ShadingRatePaletteNV * pShadingRatePalettes,
@@ -17275,7 +17689,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoarseSampleOrderNV( VULKAN_HPP_NAMESPACE::CoarseSampleOrderTypeNV           sampleOrderType,
                                                                 uint32_t                                                customSampleOrderCount,
                                                                 const VULKAN_HPP_NAMESPACE::CoarseSampleOrderCustomNV * pCustomSampleOrders,
@@ -17309,7 +17724,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_ray_tracing ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createAccelerationStructureNV( const VULKAN_HPP_NAMESPACE::AccelerationStructureCreateInfoNV * pCreateInfo,
                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *               pAllocator,
@@ -17373,7 +17789,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyAccelerationStructureNV( VULKAN_HPP_NAMESPACE::AccelerationStructureNV     accelerationStructure,
                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                  Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -17401,7 +17818,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::AccelerationStructureNV     accelerationStructure,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -17429,7 +17846,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     Device::getAccelerationStructureMemoryRequirementsNV( const VULKAN_HPP_NAMESPACE::AccelerationStructureMemoryRequirementsInfoNV * pInfo,
                                                           VULKAN_HPP_NAMESPACE::MemoryRequirements2KHR *                              pMemoryRequirements,
@@ -17482,7 +17900,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindAccelerationStructureMemoryNV(
     uint32_t bindInfoCount, const VULKAN_HPP_NAMESPACE::BindAccelerationStructureMemoryInfoNV * pBindInfos, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -17509,7 +17928,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::buildAccelerationStructureNV( const VULKAN_HPP_NAMESPACE::AccelerationStructureInfoNV * pInfo,
                                                                       VULKAN_HPP_NAMESPACE::Buffer                              instanceData,
                                                                       VULKAN_HPP_NAMESPACE::DeviceSize                          instanceOffset,
@@ -17561,7 +17981,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyAccelerationStructureNV( VULKAN_HPP_NAMESPACE::AccelerationStructureNV          dst,
                                                                      VULKAN_HPP_NAMESPACE::AccelerationStructureNV          src,
                                                                      VULKAN_HPP_NAMESPACE::CopyAccelerationStructureModeKHR mode,
@@ -17574,7 +17995,8 @@ namespace VULKAN_HPP_NAMESPACE
                                         static_cast<VkCopyAccelerationStructureModeKHR>( mode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::traceRaysNV( VULKAN_HPP_NAMESPACE::Buffer     raygenShaderBindingTableBuffer,
                                                      VULKAN_HPP_NAMESPACE::DeviceSize raygenShaderBindingOffset,
                                                      VULKAN_HPP_NAMESPACE::Buffer     missShaderBindingTableBuffer,
@@ -17609,7 +18031,8 @@ namespace VULKAN_HPP_NAMESPACE
                         depth );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createRayTracingPipelinesNV( VULKAN_HPP_NAMESPACE::PipelineCache pipelineCache,
                                                                                      uint32_t                            createInfoCount,
                                                                                      const VULKAN_HPP_NAMESPACE::RayTracingPipelineCreateInfoNV * pCreateInfos,
@@ -17812,7 +18235,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getRayTracingShaderGroupHandlesNV( VULKAN_HPP_NAMESPACE::Pipeline pipeline,
                                                                                            uint32_t                       firstGroup,
                                                                                            uint32_t                       groupCount,
@@ -17864,7 +18288,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getAccelerationStructureHandleNV( VULKAN_HPP_NAMESPACE::AccelerationStructureNV accelerationStructure,
                                                                                           size_t                                        dataSize,
                                                                                           void *                                        pData,
@@ -17912,7 +18337,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeAccelerationStructuresPropertiesNV( uint32_t accelerationStructureCount,
                                                                                  const VULKAN_HPP_NAMESPACE::AccelerationStructureNV * pAccelerationStructures,
                                                                                  VULKAN_HPP_NAMESPACE::QueryType                       queryType,
@@ -17953,8 +18379,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::compileDeferredNV( VULKAN_HPP_NAMESPACE::Pipeline pipeline,
                                                                            uint32_t                       shader,
                                                                            Dispatch const &               d ) const VULKAN_HPP_NOEXCEPT
@@ -17982,7 +18409,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_maintenance3 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorSetLayoutSupportKHR( const VULKAN_HPP_NAMESPACE::DescriptorSetLayoutCreateInfo * pCreateInfo,
                                                                    VULKAN_HPP_NAMESPACE::DescriptorSetLayoutSupport *          pSupport,
                                                                    Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -18033,7 +18461,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_draw_indirect_count ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndirectCountKHR( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                               VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                               VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -18052,7 +18481,8 @@ namespace VULKAN_HPP_NAMESPACE
                                  stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawIndexedIndirectCountKHR( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                      VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                      VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -18073,7 +18503,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_external_memory_host ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryHostPointerPropertiesEXT( VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits handleType,
                                                const void *                                           pHostPointer,
@@ -18113,7 +18544,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_AMD_buffer_marker ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeBufferMarkerAMD( VULKAN_HPP_NAMESPACE::PipelineStageFlagBits pipelineStage,
                                                               VULKAN_HPP_NAMESPACE::Buffer                dstBuffer,
                                                               VULKAN_HPP_NAMESPACE::DeviceSize            dstOffset,
@@ -18130,7 +18562,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_calibrated_timestamps ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getCalibrateableTimeDomainsEXT( uint32_t *                            pTimeDomainCount,
                                                                                                 VULKAN_HPP_NAMESPACE::TimeDomainKHR * pTimeDomains,
                                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -18208,7 +18641,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getCalibratedTimestampsEXT( uint32_t                                                 timestampCount,
                                                                                     const VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR * pTimestampInfos,
                                                                                     uint64_t *                                               pTimestamps,
@@ -18291,14 +18725,16 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_mesh_shader ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMeshTasksNV( uint32_t taskCount, uint32_t firstTask, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdDrawMeshTasksNV( m_commandBuffer, taskCount, firstTask );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMeshTasksIndirectNV( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                  VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                  uint32_t                         drawCount,
@@ -18309,7 +18745,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawMeshTasksIndirectNV( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), drawCount, stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMeshTasksIndirectCountNV( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                       VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                       VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -18330,7 +18767,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_scissor_exclusive ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setExclusiveScissorEnableNV( uint32_t                             firstExclusiveScissor,
                                                                      uint32_t                             exclusiveScissorCount,
                                                                      const VULKAN_HPP_NAMESPACE::Bool32 * pExclusiveScissorEnables,
@@ -18358,7 +18796,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setExclusiveScissorNV( uint32_t                             firstExclusiveScissor,
                                                                uint32_t                             exclusiveScissorCount,
                                                                const VULKAN_HPP_NAMESPACE::Rect2D * pExclusiveScissors,
@@ -18386,7 +18825,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_device_diagnostic_checkpoints ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCheckpointNV( const void * pCheckpointMarker, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -18406,7 +18846,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::getCheckpointDataNV( uint32_t *                               pCheckpointDataCount,
                                                      VULKAN_HPP_NAMESPACE::CheckpointDataNV * pCheckpointData,
                                                      Dispatch const &                         d ) const VULKAN_HPP_NOEXCEPT
@@ -18467,7 +18908,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_timeline_semaphore ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSemaphoreCounterValueKHR( VULKAN_HPP_NAMESPACE::Semaphore semaphore,
                                                                                      uint64_t *                      pValue,
                                                                                      Dispatch const &                d ) const VULKAN_HPP_NOEXCEPT
@@ -18495,7 +18937,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitSemaphoresKHR( const VULKAN_HPP_NAMESPACE::SemaphoreWaitInfo * pWaitInfo,
                                                                            uint64_t                                        timeout,
                                                                            Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
@@ -18523,7 +18966,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::signalSemaphoreKHR( const VULKAN_HPP_NAMESPACE::SemaphoreSignalInfo * pSignalInfo,
                                                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18551,7 +18995,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_INTEL_performance_query ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::initializePerformanceApiINTEL(
     const VULKAN_HPP_NAMESPACE::InitializePerformanceApiInfoINTEL * pInitializeInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18578,14 +19023,16 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::uninitializePerformanceApiINTEL( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkUninitializePerformanceApiINTEL( m_device );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::setPerformanceMarkerINTEL( const VULKAN_HPP_NAMESPACE::PerformanceMarkerInfoINTEL * pMarkerInfo,
                                                                                           Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18611,7 +19058,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::setPerformanceStreamMarkerINTEL(
     const VULKAN_HPP_NAMESPACE::PerformanceStreamMarkerInfoINTEL * pMarkerInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18638,7 +19086,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result CommandBuffer::setPerformanceOverrideINTEL(
     const VULKAN_HPP_NAMESPACE::PerformanceOverrideInfoINTEL * pOverrideInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18665,7 +19114,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::acquirePerformanceConfigurationINTEL( const VULKAN_HPP_NAMESPACE::PerformanceConfigurationAcquireInfoINTEL * pAcquireInfo,
                                                   VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL *                  pConfiguration,
@@ -18721,8 +19171,9 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::releasePerformanceConfigurationINTEL( VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL configuration,
                                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18748,7 +19199,7 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::release( VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL configuration,
                                                                  Dispatch const &                                    d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18773,8 +19224,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::setPerformanceConfigurationINTEL( VULKAN_HPP_NAMESPACE::PerformanceConfigurationINTEL configuration,
                                                                                          Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -18800,7 +19252,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getPerformanceParameterINTEL( VULKAN_HPP_NAMESPACE::PerformanceParameterTypeINTEL parameter,
                                                                                       VULKAN_HPP_NAMESPACE::PerformanceValueINTEL *       pValue,
                                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -18831,7 +19284,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_AMD_display_native_hdr ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::setLocalDimmingAMD( VULKAN_HPP_NAMESPACE::SwapchainKHR swapChain,
                                                      VULKAN_HPP_NAMESPACE::Bool32       localDimmingEnable,
                                                      Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
@@ -18843,7 +19297,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_FUCHSIA )
   //=== VK_FUCHSIA_imagepipe_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Instance::createImagePipeSurfaceFUCHSIA( const VULKAN_HPP_NAMESPACE::ImagePipeSurfaceCreateInfoFUCHSIA * pCreateInfo,
                                              const VULKAN_HPP_NAMESPACE::AllocationCallbacks *               pAllocator,
@@ -18910,7 +19365,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_METAL_EXT )
   //=== VK_EXT_metal_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createMetalSurfaceEXT( const VULKAN_HPP_NAMESPACE::MetalSurfaceCreateInfoEXT * pCreateInfo,
                                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                  VULKAN_HPP_NAMESPACE::SurfaceKHR *                      pSurface,
@@ -18975,7 +19431,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_fragment_shading_rate ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getFragmentShadingRatesKHR( uint32_t *                                                   pFragmentShadingRateCount,
                                                 VULKAN_HPP_NAMESPACE::PhysicalDeviceFragmentShadingRateKHR * pFragmentShadingRates,
@@ -19062,7 +19519,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setFragmentShadingRateKHR( const VULKAN_HPP_NAMESPACE::Extent2D *                       pFragmentSize,
                                                                    const VULKAN_HPP_NAMESPACE::FragmentShadingRateCombinerOpKHR combinerOps[2],
                                                                    Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
@@ -19090,7 +19548,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_dynamic_rendering_local_read ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRenderingAttachmentLocationsKHR( const VULKAN_HPP_NAMESPACE::RenderingAttachmentLocationInfoKHR * pLocationInfo,
                                                                             Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19113,7 +19572,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setRenderingInputAttachmentIndicesKHR( const VULKAN_HPP_NAMESPACE::RenderingInputAttachmentIndexInfoKHR * pInputAttachmentIndexInfo,
                                                           Dispatch const &                                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -19142,7 +19602,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_buffer_device_address ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceAddress Device::getBufferAddressEXT( const VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo * pInfo,
                                                                Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19169,7 +19630,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_tooling_info ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getToolPropertiesEXT( uint32_t *                                           pToolCount,
                                                                                       VULKAN_HPP_NAMESPACE::PhysicalDeviceToolProperties * pToolProperties,
                                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -19254,8 +19716,9 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_present_wait ===
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::waitForPresentKHR( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                            uint64_t                           presentId,
                                                                            uint64_t                           timeout,
@@ -19287,7 +19750,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_cooperative_matrix ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getCooperativeMatrixPropertiesNV(
     uint32_t * pPropertyCount, VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesNV * pProperties, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19372,7 +19836,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_coverage_reduction_mode ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getSupportedFramebufferMixedSamplesCombinationsNV(
     uint32_t * pCombinationCount, VULKAN_HPP_NAMESPACE::FramebufferMixedSamplesCombinationNV * pCombinations, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19460,7 +19925,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_EXT_full_screen_exclusive ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getSurfacePresentModes2EXT( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR * pSurfaceInfo,
                                                 uint32_t *                                                  pPresentModeCount,
@@ -19552,8 +20018,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #  ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::acquireFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                                            Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19563,7 +20030,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  else
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD_WHEN_NO_EXCEPTIONS VULKAN_HPP_INLINE typename ResultValueType<void>::type
-    Device::acquireFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain, Dispatch const & d ) const
+                                          Device::acquireFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 #    if ( VULKAN_HPP_DISPATCH_LOADER_DYNAMIC == 1 )
@@ -19578,8 +20045,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #  ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::releaseFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain,
                                                                                            Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19589,7 +20057,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  else
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD_WHEN_NO_EXCEPTIONS VULKAN_HPP_INLINE typename ResultValueType<void>::type
-    Device::releaseFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain, Dispatch const & d ) const
+                                          Device::releaseFullScreenExclusiveModeEXT( VULKAN_HPP_NAMESPACE::SwapchainKHR swapchain, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 #    if ( VULKAN_HPP_DISPATCH_LOADER_DYNAMIC == 1 )
@@ -19604,7 +20072,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getGroupSurfacePresentModes2EXT( const VULKAN_HPP_NAMESPACE::PhysicalDeviceSurfaceInfo2KHR * pSurfaceInfo,
                                              VULKAN_HPP_NAMESPACE::DeviceGroupPresentModeFlagsKHR *      pModes,
@@ -19638,7 +20107,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_headless_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createHeadlessSurfaceEXT( const VULKAN_HPP_NAMESPACE::HeadlessSurfaceCreateInfoEXT * pCreateInfo,
                                                                                     const VULKAN_HPP_NAMESPACE::AllocationCallbacks *          pAllocator,
                                                                                     VULKAN_HPP_NAMESPACE::SurfaceKHR *                         pSurface,
@@ -19702,7 +20172,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_buffer_device_address ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceAddress Device::getBufferAddressKHR( const VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo * pInfo,
                                                                Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19727,7 +20198,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint64_t Device::getBufferOpaqueCaptureAddressKHR( const VULKAN_HPP_NAMESPACE::BufferDeviceAddressInfo * pInfo,
                                                                        Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19752,7 +20224,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint64_t Device::getMemoryOpaqueCaptureAddressKHR( const VULKAN_HPP_NAMESPACE::DeviceMemoryOpaqueCaptureAddressInfo * pInfo,
                                                                        Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19779,7 +20252,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_line_rasterization ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setLineStippleEXT( uint32_t lineStippleFactor, uint16_t lineStipplePattern, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19789,7 +20263,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_host_query_reset ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::resetQueryPoolEXT( VULKAN_HPP_NAMESPACE::QueryPool queryPool,
                                                     uint32_t                        firstQuery,
                                                     uint32_t                        queryCount,
@@ -19801,21 +20276,24 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_extended_dynamic_state ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCullModeEXT( VULKAN_HPP_NAMESPACE::CullModeFlags cullMode, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetCullModeEXT( m_commandBuffer, static_cast<VkCullModeFlags>( cullMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setFrontFaceEXT( VULKAN_HPP_NAMESPACE::FrontFace frontFace, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetFrontFaceEXT( m_commandBuffer, static_cast<VkFrontFace>( frontFace ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPrimitiveTopologyEXT( VULKAN_HPP_NAMESPACE::PrimitiveTopology primitiveTopology,
                                                                  Dispatch const &                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19823,7 +20301,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetPrimitiveTopologyEXT( m_commandBuffer, static_cast<VkPrimitiveTopology>( primitiveTopology ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportWithCountEXT( uint32_t                               viewportCount,
                                                                  const VULKAN_HPP_NAMESPACE::Viewport * pViewports,
                                                                  Dispatch const &                       d ) const VULKAN_HPP_NOEXCEPT
@@ -19847,7 +20326,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setScissorWithCountEXT( uint32_t scissorCount, const VULKAN_HPP_NAMESPACE::Rect2D * pScissors, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19870,7 +20350,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindVertexBuffers2EXT( uint32_t                                 firstBinding,
                                                                uint32_t                                 bindingCount,
                                                                const VULKAN_HPP_NAMESPACE::Buffer *     pBuffers,
@@ -19932,28 +20413,32 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthTestEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthTestEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthTestEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthWriteEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthWriteEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthWriteEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthWriteEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthCompareOpEXT( VULKAN_HPP_NAMESPACE::CompareOp depthCompareOp, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthCompareOpEXT( m_commandBuffer, static_cast<VkCompareOp>( depthCompareOp ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBoundsTestEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthBoundsTestEnable,
                                                                      Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -19961,14 +20446,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetDepthBoundsTestEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthBoundsTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setStencilTestEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 stencilTestEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetStencilTestEnableEXT( m_commandBuffer, static_cast<VkBool32>( stencilTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setStencilOpEXT( VULKAN_HPP_NAMESPACE::StencilFaceFlags faceMask,
                                                          VULKAN_HPP_NAMESPACE::StencilOp        failOp,
                                                          VULKAN_HPP_NAMESPACE::StencilOp        passOp,
@@ -19987,7 +20474,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_deferred_host_operations ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createDeferredOperationKHR( const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                                     VULKAN_HPP_NAMESPACE::DeferredOperationKHR *      pDeferredOperation,
                                                                                     Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -20040,7 +20528,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyDeferredOperationKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR        operation,
                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                               Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -20068,7 +20557,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::DeferredOperationKHR        operation,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -20096,7 +20585,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE uint32_t Device::getDeferredOperationMaxConcurrencyKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR operation,
                                                                             Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20104,8 +20594,9 @@ namespace VULKAN_HPP_NAMESPACE
     return d.vkGetDeferredOperationMaxConcurrencyKHR( m_device, static_cast<VkDeferredOperationKHR>( operation ) );
   }
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getDeferredOperationResultKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR operation,
                                                                                        Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20129,8 +20620,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::deferredOperationJoinKHR( VULKAN_HPP_NAMESPACE::DeferredOperationKHR operation,
                                                                                   Dispatch const &                           d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20160,7 +20652,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_pipeline_executable_properties ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getPipelineExecutablePropertiesKHR( const VULKAN_HPP_NAMESPACE::PipelineInfoKHR * pPipelineInfo,
                                                                                             uint32_t *                                    pExecutableCount,
                                                                                             VULKAN_HPP_NAMESPACE::PipelineExecutablePropertiesKHR * pProperties,
@@ -20256,7 +20749,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getPipelineExecutableStatisticsKHR( const VULKAN_HPP_NAMESPACE::PipelineExecutableInfoKHR * pExecutableInfo,
                                                 uint32_t *                                              pStatisticCount,
@@ -20353,7 +20847,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getPipelineExecutableInternalRepresentationsKHR( const VULKAN_HPP_NAMESPACE::PipelineExecutableInfoKHR *             pExecutableInfo,
                                                              uint32_t *                                                          pInternalRepresentationCount,
@@ -20455,7 +20950,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_host_image_copy ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyMemoryToImageEXT( const VULKAN_HPP_NAMESPACE::CopyMemoryToImageInfoEXT * pCopyMemoryToImageInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20481,7 +20977,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyImageToMemoryEXT( const VULKAN_HPP_NAMESPACE::CopyImageToMemoryInfoEXT * pCopyImageToMemoryInfo,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20507,7 +21004,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyImageToImageEXT( const VULKAN_HPP_NAMESPACE::CopyImageToImageInfoEXT * pCopyImageToImageInfo,
                                                                              Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20533,7 +21031,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::transitionImageLayoutEXT( uint32_t transitionCount,
                                                                                   const VULKAN_HPP_NAMESPACE::HostImageLayoutTransitionInfoEXT * pTransitions,
                                                                                   Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -20562,7 +21061,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSubresourceLayout2EXT( VULKAN_HPP_NAMESPACE::Image                        image,
                                                                 const VULKAN_HPP_NAMESPACE::ImageSubresource2KHR * pSubresource,
                                                                 VULKAN_HPP_NAMESPACE::SubresourceLayout2KHR *      pLayout,
@@ -20620,7 +21120,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_map_memory2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::mapMemory2KHR( const VULKAN_HPP_NAMESPACE::MemoryMapInfoKHR * pMemoryMapInfo,
                                                                        void **                                        ppData,
                                                                        Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -20648,7 +21149,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::unmapMemory2KHR( const VULKAN_HPP_NAMESPACE::MemoryUnmapInfoKHR * pMemoryUnmapInfo,
                                                                          Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20676,7 +21178,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_swapchain_maintenance1 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::releaseSwapchainImagesEXT( const VULKAN_HPP_NAMESPACE::ReleaseSwapchainImagesInfoEXT * pReleaseInfo,
                                                                                    Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20704,7 +21207,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_device_generated_commands ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getGeneratedCommandsMemoryRequirementsNV( const VULKAN_HPP_NAMESPACE::GeneratedCommandsMemoryRequirementsInfoNV * pInfo,
                                                                            VULKAN_HPP_NAMESPACE::MemoryRequirements2 * pMemoryRequirements,
                                                                            Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
@@ -20756,7 +21260,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::preprocessGeneratedCommandsNV( const VULKAN_HPP_NAMESPACE::GeneratedCommandsInfoNV * pGeneratedCommandsInfo,
                                                                        Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20778,7 +21283,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::executeGeneratedCommandsNV( VULKAN_HPP_NAMESPACE::Bool32                          isPreprocessed,
                                                                     const VULKAN_HPP_NAMESPACE::GeneratedCommandsInfoNV * pGeneratedCommandsInfo,
                                                                     Dispatch const &                                      d ) const VULKAN_HPP_NOEXCEPT
@@ -20804,7 +21310,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindPipelineShaderGroupNV( VULKAN_HPP_NAMESPACE::PipelineBindPoint pipelineBindPoint,
                                                                    VULKAN_HPP_NAMESPACE::Pipeline          pipeline,
                                                                    uint32_t                                groupIndex,
@@ -20814,7 +21321,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdBindPipelineShaderGroupNV( m_commandBuffer, static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipeline>( pipeline ), groupIndex );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createIndirectCommandsLayoutNV( const VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutCreateInfoNV * pCreateInfo,
                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *                pAllocator,
@@ -20878,7 +21386,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyIndirectCommandsLayoutNV( VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutNV    indirectCommandsLayout,
                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                   Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -20906,7 +21415,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::IndirectCommandsLayoutNV    indirectCommandsLayout,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -20936,7 +21445,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_depth_bias_control ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBias2EXT( const VULKAN_HPP_NAMESPACE::DepthBiasInfoEXT * pDepthBiasInfo,
                                                           Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -20960,8 +21470,9 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_acquire_drm_display ===
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::acquireDrmDisplayEXT( int32_t                          drmFd,
                                                                                       VULKAN_HPP_NAMESPACE::DisplayKHR display,
                                                                                       Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -20987,7 +21498,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getDrmDisplayEXT( int32_t                            drmFd,
                                                                                   uint32_t                           connectorId,
                                                                                   VULKAN_HPP_NAMESPACE::DisplayKHR * display,
@@ -21038,7 +21550,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_private_data ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createPrivateDataSlotEXT( const VULKAN_HPP_NAMESPACE::PrivateDataSlotCreateInfo * pCreateInfo,
                                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks *       pAllocator,
                                                                                   VULKAN_HPP_NAMESPACE::PrivateDataSlot *                 pPrivateDataSlot,
@@ -21100,7 +21613,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyPrivateDataSlotEXT( VULKAN_HPP_NAMESPACE::PrivateDataSlot             privateDataSlot,
                                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                             Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -21127,8 +21641,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setPrivateDataEXT( VULKAN_HPP_NAMESPACE::ObjectType      objectType_,
                                                                            uint64_t                              objectHandle,
                                                                            VULKAN_HPP_NAMESPACE::PrivateDataSlot privateDataSlot,
@@ -21160,7 +21675,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getPrivateDataEXT( VULKAN_HPP_NAMESPACE::ObjectType      objectType_,
                                                     uint64_t                              objectHandle,
                                                     VULKAN_HPP_NAMESPACE::PrivateDataSlot privateDataSlot,
@@ -21192,7 +21708,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_video_encode_queue ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getVideoEncodeQualityLevelPropertiesKHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceVideoEncodeQualityLevelInfoKHR * pQualityLevelInfo,
                                                              VULKAN_HPP_NAMESPACE::VideoEncodeQualityLevelPropertiesKHR *               pQualityLevelProperties,
@@ -21251,7 +21768,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getEncodedVideoSessionParametersKHR( const VULKAN_HPP_NAMESPACE::VideoEncodeSessionParametersGetInfoKHR * pVideoSessionParametersInfo,
                                                  VULKAN_HPP_NAMESPACE::VideoEncodeSessionParametersFeedbackInfoKHR *  pFeedbackInfo,
@@ -21443,7 +21961,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::encodeVideoKHR( const VULKAN_HPP_NAMESPACE::VideoEncodeInfoKHR * pEncodeInfo,
                                                         Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -21468,7 +21987,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_ENABLE_BETA_EXTENSIONS )
   //=== VK_NV_cuda_kernel_launch ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createCudaModuleNV( const VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV * pCreateInfo,
                                                                             const VULKAN_HPP_NAMESPACE::AllocationCallbacks *    pAllocator,
                                                                             VULKAN_HPP_NAMESPACE::CudaModuleNV *                 pModule,
@@ -21530,7 +22050,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getCudaModuleCacheNV( VULKAN_HPP_NAMESPACE::CudaModuleNV module,
                                                                               size_t *                           pCacheSize,
                                                                               void *                             pCacheData,
@@ -21606,7 +22127,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createCudaFunctionNV( const VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV * pCreateInfo,
                                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks *      pAllocator,
                                                                               VULKAN_HPP_NAMESPACE::CudaFunctionNV *                 pFunction,
@@ -21668,7 +22190,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyCudaModuleNV( VULKAN_HPP_NAMESPACE::CudaModuleNV                module,
                                                       const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                       Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -21694,7 +22217,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::CudaModuleNV                module,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -21720,7 +22243,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyCudaFunctionNV( VULKAN_HPP_NAMESPACE::CudaFunctionNV              function,
                                                         const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                         Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -21746,7 +22270,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::CudaFunctionNV              function,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -21772,7 +22296,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::cudaLaunchKernelNV( const VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV * pLaunchInfo,
                                                             Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -21798,7 +22323,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_METAL_EXT )
   //=== VK_EXT_metal_objects ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::exportMetalObjectsEXT( VULKAN_HPP_NAMESPACE::ExportMetalObjectsInfoEXT * pMetalObjectsInfo,
                                                         Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -21842,7 +22368,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_synchronization2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setEvent2KHR( VULKAN_HPP_NAMESPACE::Event                  event,
                                                       const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfo,
                                                       Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
@@ -21866,7 +22393,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resetEvent2KHR( VULKAN_HPP_NAMESPACE::Event               event,
                                                         VULKAN_HPP_NAMESPACE::PipelineStageFlags2 stageMask,
                                                         Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -21875,7 +22403,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdResetEvent2KHR( m_commandBuffer, static_cast<VkEvent>( event ), static_cast<VkPipelineStageFlags2>( stageMask ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::waitEvents2KHR( uint32_t                                     eventCount,
                                                         const VULKAN_HPP_NAMESPACE::Event *          pEvents,
                                                         const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfos,
@@ -21912,7 +22441,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pipelineBarrier2KHR( const VULKAN_HPP_NAMESPACE::DependencyInfo * pDependencyInfo,
                                                              Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -21934,7 +22464,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeTimestamp2KHR( VULKAN_HPP_NAMESPACE::PipelineStageFlags2 stage,
                                                             VULKAN_HPP_NAMESPACE::QueryPool           queryPool,
                                                             uint32_t                                  query,
@@ -21944,7 +22475,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdWriteTimestamp2KHR( m_commandBuffer, static_cast<VkPipelineStageFlags2>( stage ), static_cast<VkQueryPool>( queryPool ), query );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Queue::submit2KHR( uint32_t                                  submitCount,
                                                                    const VULKAN_HPP_NAMESPACE::SubmitInfo2 * pSubmits,
                                                                    VULKAN_HPP_NAMESPACE::Fence               fence,
@@ -21973,7 +22505,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeBufferMarker2AMD( VULKAN_HPP_NAMESPACE::PipelineStageFlags2 stage,
                                                                VULKAN_HPP_NAMESPACE::Buffer              dstBuffer,
                                                                VULKAN_HPP_NAMESPACE::DeviceSize          dstOffset,
@@ -21985,7 +22518,8 @@ namespace VULKAN_HPP_NAMESPACE
       m_commandBuffer, static_cast<VkPipelineStageFlags2>( stage ), static_cast<VkBuffer>( dstBuffer ), static_cast<VkDeviceSize>( dstOffset ), marker );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::getCheckpointData2NV( uint32_t *                                pCheckpointDataCount,
                                                       VULKAN_HPP_NAMESPACE::CheckpointData2NV * pCheckpointData,
                                                       Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -22046,7 +22580,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_descriptor_buffer ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorSetLayoutSizeEXT( VULKAN_HPP_NAMESPACE::DescriptorSetLayout layout,
                                                                 VULKAN_HPP_NAMESPACE::DeviceSize *        pLayoutSizeInBytes,
                                                                 Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -22072,7 +22607,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorSetLayoutBindingOffsetEXT( VULKAN_HPP_NAMESPACE::DescriptorSetLayout layout,
                                                                          uint32_t                                  binding,
                                                                          VULKAN_HPP_NAMESPACE::DeviceSize *        pOffset,
@@ -22100,7 +22636,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorEXT( const VULKAN_HPP_NAMESPACE::DescriptorGetInfoEXT * pDescriptorInfo,
                                                    size_t                                             dataSize,
                                                    void *                                             pDescriptor,
@@ -22142,7 +22679,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorBuffersEXT( uint32_t                                                     bufferCount,
                                                                   const VULKAN_HPP_NAMESPACE::DescriptorBufferBindingInfoEXT * pBindingInfos,
                                                                   Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
@@ -22166,7 +22704,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDescriptorBufferOffsetsEXT( VULKAN_HPP_NAMESPACE::PipelineBindPoint  pipelineBindPoint,
                                                                        VULKAN_HPP_NAMESPACE::PipelineLayout     layout,
                                                                        uint32_t                                 firstSet,
@@ -22217,7 +22756,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorBufferEmbeddedSamplersEXT( VULKAN_HPP_NAMESPACE::PipelineBindPoint pipelineBindPoint,
                                                                                  VULKAN_HPP_NAMESPACE::PipelineLayout    layout,
                                                                                  uint32_t                                set,
@@ -22228,7 +22768,8 @@ namespace VULKAN_HPP_NAMESPACE
       m_commandBuffer, static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipelineLayout>( layout ), set );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getBufferOpaqueCaptureDescriptorDataEXT(
     const VULKAN_HPP_NAMESPACE::BufferCaptureDescriptorDataInfoEXT * pInfo, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22257,7 +22798,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getImageOpaqueCaptureDescriptorDataEXT(
     const VULKAN_HPP_NAMESPACE::ImageCaptureDescriptorDataInfoEXT * pInfo, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22286,7 +22828,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getImageViewOpaqueCaptureDescriptorDataEXT(
     const VULKAN_HPP_NAMESPACE::ImageViewCaptureDescriptorDataInfoEXT * pInfo, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22315,7 +22858,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSamplerOpaqueCaptureDescriptorDataEXT(
     const VULKAN_HPP_NAMESPACE::SamplerCaptureDescriptorDataInfoEXT * pInfo, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22344,7 +22888,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getAccelerationStructureOpaqueCaptureDescriptorDataEXT(
     const VULKAN_HPP_NAMESPACE::AccelerationStructureCaptureDescriptorDataInfoEXT * pInfo, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22376,7 +22921,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_fragment_shading_rate_enums ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setFragmentShadingRateEnumNV( VULKAN_HPP_NAMESPACE::FragmentShadingRateNV                  shadingRate,
                                                                       const VULKAN_HPP_NAMESPACE::FragmentShadingRateCombinerOpKHR combinerOps[2],
                                                                       Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
@@ -22388,7 +22934,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_mesh_shader ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::drawMeshTasksEXT( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22396,7 +22943,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawMeshTasksEXT( m_commandBuffer, groupCountX, groupCountY, groupCountZ );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMeshTasksIndirectEXT( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                   VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                   uint32_t                         drawCount,
@@ -22407,7 +22955,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawMeshTasksIndirectEXT( m_commandBuffer, static_cast<VkBuffer>( buffer ), static_cast<VkDeviceSize>( offset ), drawCount, stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMeshTasksIndirectCountEXT( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                        VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                        VULKAN_HPP_NAMESPACE::Buffer     countBuffer,
@@ -22428,7 +22977,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_copy_commands2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBuffer2KHR( const VULKAN_HPP_NAMESPACE::CopyBufferInfo2 * pCopyBufferInfo,
                                                         Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22450,7 +23000,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImage2KHR( const VULKAN_HPP_NAMESPACE::CopyImageInfo2 * pCopyImageInfo,
                                                        Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22472,7 +23023,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyBufferToImage2KHR( const VULKAN_HPP_NAMESPACE::CopyBufferToImageInfo2 * pCopyBufferToImageInfo,
                                                                Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22494,7 +23046,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyImageToBuffer2KHR( const VULKAN_HPP_NAMESPACE::CopyImageToBufferInfo2 * pCopyImageToBufferInfo,
                                                                Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22516,7 +23069,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::blitImage2KHR( const VULKAN_HPP_NAMESPACE::BlitImageInfo2 * pBlitImageInfo,
                                                        Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22538,7 +23092,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::resolveImage2KHR( const VULKAN_HPP_NAMESPACE::ResolveImageInfo2 * pResolveImageInfo,
                                                           Dispatch const &                                d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22562,7 +23117,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_device_fault ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getFaultInfoEXT( VULKAN_HPP_NAMESPACE::DeviceFaultCountsEXT * pFaultCounts,
                                                                          VULKAN_HPP_NAMESPACE::DeviceFaultInfoEXT *   pFaultInfo,
                                                                          Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
@@ -22624,8 +23180,9 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
   //=== VK_NV_acquire_winrt_display ===
 
+  VULKAN_HPP_EXPORT
 #  ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::acquireWinrtDisplayNV( VULKAN_HPP_NAMESPACE::DisplayKHR display,
                                                                                        Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22635,7 +23192,7 @@ namespace VULKAN_HPP_NAMESPACE
 #  else
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD_WHEN_NO_EXCEPTIONS VULKAN_HPP_INLINE typename ResultValueType<void>::type
-    PhysicalDevice::acquireWinrtDisplayNV( VULKAN_HPP_NAMESPACE::DisplayKHR display, Dispatch const & d ) const
+                                          PhysicalDevice::acquireWinrtDisplayNV( VULKAN_HPP_NAMESPACE::DisplayKHR display, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 #    if ( VULKAN_HPP_DISPATCH_LOADER_DYNAMIC == 1 )
@@ -22650,7 +23207,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getWinrtDisplayNV( uint32_t                           deviceRelativeId,
                                                                                    VULKAN_HPP_NAMESPACE::DisplayKHR * pDisplay,
                                                                                    Dispatch const &                   d ) const VULKAN_HPP_NOEXCEPT
@@ -22702,7 +23260,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_DIRECTFB_EXT )
   //=== VK_EXT_directfb_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createDirectFBSurfaceEXT( const VULKAN_HPP_NAMESPACE::DirectFBSurfaceCreateInfoEXT * pCreateInfo,
                                                                                     const VULKAN_HPP_NAMESPACE::AllocationCallbacks *          pAllocator,
                                                                                     VULKAN_HPP_NAMESPACE::SurfaceKHR *                         pSurface,
@@ -22764,7 +23323,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32 PhysicalDevice::getDirectFBPresentationSupportEXT( uint32_t         queueFamilyIndex,
                                                                               IDirectFB *      dfb,
                                                                               Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -22793,7 +23353,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_vertex_input_dynamic_state ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setVertexInputEXT( uint32_t                                                          vertexBindingDescriptionCount,
                                                            const VULKAN_HPP_NAMESPACE::VertexInputBindingDescription2EXT *   pVertexBindingDescriptions,
                                                            uint32_t                                                          vertexAttributeDescriptionCount,
@@ -22831,7 +23392,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_FUCHSIA )
   //=== VK_FUCHSIA_external_memory ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryZirconHandleFUCHSIA( const VULKAN_HPP_NAMESPACE::MemoryGetZirconHandleInfoFUCHSIA * pGetZirconHandleInfo,
                                           zx_handle_t *                                                  pZirconHandle,
@@ -22861,7 +23423,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryZirconHandlePropertiesFUCHSIA( VULKAN_HPP_NAMESPACE::ExternalMemoryHandleTypeFlagBits      handleType,
                                                     zx_handle_t                                                 zirconHandle,
@@ -22905,7 +23468,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_FUCHSIA )
   //=== VK_FUCHSIA_external_semaphore ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::importSemaphoreZirconHandleFUCHSIA(
     const VULKAN_HPP_NAMESPACE::ImportSemaphoreZirconHandleInfoFUCHSIA * pImportSemaphoreZirconHandleInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -22933,7 +23497,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getSemaphoreZirconHandleFUCHSIA( const VULKAN_HPP_NAMESPACE::SemaphoreGetZirconHandleInfoFUCHSIA * pGetZirconHandleInfo,
                                              zx_handle_t *                                                     pZirconHandle,
@@ -22967,7 +23532,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_FUCHSIA )
   //=== VK_FUCHSIA_buffer_collection ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::createBufferCollectionFUCHSIA( const VULKAN_HPP_NAMESPACE::BufferCollectionCreateInfoFUCHSIA * pCreateInfo,
                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *               pAllocator,
@@ -23030,7 +23596,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::setBufferCollectionImageConstraintsFUCHSIA( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA             collection,
                                                         const VULKAN_HPP_NAMESPACE::ImageConstraintsInfoFUCHSIA * pImageConstraintsInfo,
@@ -23062,7 +23629,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::setBufferCollectionBufferConstraintsFUCHSIA( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA              collection,
                                                          const VULKAN_HPP_NAMESPACE::BufferConstraintsInfoFUCHSIA * pBufferConstraintsInfo,
@@ -23094,7 +23662,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyBufferCollectionFUCHSIA( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA     collection,
                                                                  const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                                  Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23122,7 +23691,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA     collection,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23150,7 +23719,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #  endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getBufferCollectionPropertiesFUCHSIA( VULKAN_HPP_NAMESPACE::BufferCollectionFUCHSIA             collection,
                                                   VULKAN_HPP_NAMESPACE::BufferCollectionPropertiesFUCHSIA * pProperties,
@@ -23184,7 +23754,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_HUAWEI_subpass_shading ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getSubpassShadingMaxWorkgroupSizeHUAWEI( VULKAN_HPP_NAMESPACE::RenderPass renderpass,
                                                                                                  VULKAN_HPP_NAMESPACE::Extent2D * pMaxWorkgroupSize,
                                                                                                  Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -23214,7 +23785,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::subpassShadingHUAWEI( Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -23223,7 +23795,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_HUAWEI_invocation_mask ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindInvocationMaskHUAWEI( VULKAN_HPP_NAMESPACE::ImageView   imageView,
                                                                   VULKAN_HPP_NAMESPACE::ImageLayout imageLayout,
                                                                   Dispatch const &                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23234,7 +23807,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_external_memory_rdma ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getMemoryRemoteAddressNV( const VULKAN_HPP_NAMESPACE::MemoryGetRemoteAddressInfoNV * pMemoryGetRemoteAddressInfo,
                                       VULKAN_HPP_NAMESPACE::RemoteAddressNV *                    pAddress,
@@ -23266,7 +23840,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_pipeline_properties ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getPipelinePropertiesEXT( const VULKAN_HPP_NAMESPACE::PipelineInfoEXT * pPipelineInfo,
                                                                                   VULKAN_HPP_NAMESPACE::BaseOutStructure *      pPipelineProperties,
                                                                                   Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
@@ -23297,14 +23872,16 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_extended_dynamic_state2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPatchControlPointsEXT( uint32_t patchControlPoints, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetPatchControlPointsEXT( m_commandBuffer, patchControlPoints );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRasterizerDiscardEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 rasterizerDiscardEnable,
                                                                        Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -23312,21 +23889,24 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetRasterizerDiscardEnableEXT( m_commandBuffer, static_cast<VkBool32>( rasterizerDiscardEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthBiasEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthBiasEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthBiasEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthBiasEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setLogicOpEXT( VULKAN_HPP_NAMESPACE::LogicOp logicOp, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetLogicOpEXT( m_commandBuffer, static_cast<VkLogicOp>( logicOp ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPrimitiveRestartEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 primitiveRestartEnable,
                                                                       Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -23337,7 +23917,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
   //=== VK_QNX_screen_surface ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Instance::createScreenSurfaceQNX( const VULKAN_HPP_NAMESPACE::ScreenSurfaceCreateInfoQNX * pCreateInfo,
                                                                                   const VULKAN_HPP_NAMESPACE::AllocationCallbacks *        pAllocator,
                                                                                   VULKAN_HPP_NAMESPACE::SurfaceKHR *                       pSurface,
@@ -23399,7 +23980,8 @@ namespace VULKAN_HPP_NAMESPACE
 #    endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #  endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Bool32 PhysicalDevice::getScreenPresentationSupportQNX( uint32_t                queueFamilyIndex,
                                                                             struct _screen_window * window,
                                                                             Dispatch const &        d ) const VULKAN_HPP_NOEXCEPT
@@ -23428,7 +24010,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_color_write_enable ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setColorWriteEnableEXT( uint32_t                             attachmentCount,
                                                                 const VULKAN_HPP_NAMESPACE::Bool32 * pColorWriteEnables,
                                                                 Dispatch const &                     d ) const VULKAN_HPP_NOEXCEPT
@@ -23453,7 +24036,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_ray_tracing_maintenance1 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::traceRaysIndirect2KHR( VULKAN_HPP_NAMESPACE::DeviceAddress indirectDeviceAddress,
                                                                Dispatch const &                    d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -23463,7 +24047,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_multi_draw ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMultiEXT( uint32_t                                       drawCount,
                                                       const VULKAN_HPP_NAMESPACE::MultiDrawInfoEXT * pVertexInfo,
                                                       uint32_t                                       instanceCount,
@@ -23496,7 +24081,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawMultiIndexedEXT( uint32_t                                              drawCount,
                                                              const VULKAN_HPP_NAMESPACE::MultiDrawIndexedInfoEXT * pIndexInfo,
                                                              uint32_t                                              instanceCount,
@@ -23536,7 +24122,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_opacity_micromap ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createMicromapEXT( const VULKAN_HPP_NAMESPACE::MicromapCreateInfoEXT * pCreateInfo,
                                                                            const VULKAN_HPP_NAMESPACE::AllocationCallbacks *   pAllocator,
                                                                            VULKAN_HPP_NAMESPACE::MicromapEXT *                 pMicromap,
@@ -23598,7 +24185,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyMicromapEXT( VULKAN_HPP_NAMESPACE::MicromapEXT                 micromap,
                                                      const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                      Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23624,7 +24212,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::MicromapEXT                 micromap,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23650,7 +24238,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::buildMicromapsEXT( uint32_t                                           infoCount,
                                                            const VULKAN_HPP_NAMESPACE::MicromapBuildInfoEXT * pInfos,
                                                            Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -23673,7 +24262,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::buildMicromapsEXT( VULKAN_HPP_NAMESPACE::DeferredOperationKHR         deferredOperation,
                                                                            uint32_t                                           infoCount,
                                                                            const VULKAN_HPP_NAMESPACE::MicromapBuildInfoEXT * pInfos,
@@ -23707,7 +24297,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyMicromapEXT( VULKAN_HPP_NAMESPACE::DeferredOperationKHR        deferredOperation,
                                                                          const VULKAN_HPP_NAMESPACE::CopyMicromapInfoEXT * pInfo,
                                                                          Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -23739,7 +24330,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyMicromapToMemoryEXT( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                deferredOperation,
                                                                                  const VULKAN_HPP_NAMESPACE::CopyMicromapToMemoryInfoEXT * pInfo,
                                                                                  Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -23770,7 +24362,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::copyMemoryToMicromapEXT( VULKAN_HPP_NAMESPACE::DeferredOperationKHR                deferredOperation,
                                                                                  const VULKAN_HPP_NAMESPACE::CopyMemoryToMicromapInfoEXT * pInfo,
                                                                                  Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -23801,7 +24394,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::writeMicromapsPropertiesEXT( uint32_t                                  micromapCount,
                                                                                      const VULKAN_HPP_NAMESPACE::MicromapEXT * pMicromaps,
                                                                                      VULKAN_HPP_NAMESPACE::QueryType           queryType,
@@ -23871,7 +24465,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMicromapEXT( const VULKAN_HPP_NAMESPACE::CopyMicromapInfoEXT * pInfo, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -23891,7 +24486,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMicromapToMemoryEXT( const VULKAN_HPP_NAMESPACE::CopyMicromapToMemoryInfoEXT * pInfo,
                                                                  Dispatch const &                                          d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -23913,7 +24509,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMemoryToMicromapEXT( const VULKAN_HPP_NAMESPACE::CopyMemoryToMicromapInfoEXT * pInfo,
                                                                  Dispatch const &                                          d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -23935,7 +24532,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::writeMicromapsPropertiesEXT( uint32_t                                  micromapCount,
                                                                      const VULKAN_HPP_NAMESPACE::MicromapEXT * pMicromaps,
                                                                      VULKAN_HPP_NAMESPACE::QueryType           queryType,
@@ -23975,7 +24573,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getMicromapCompatibilityEXT( const VULKAN_HPP_NAMESPACE::MicromapVersionInfoEXT *          pVersionInfo,
                                                               VULKAN_HPP_NAMESPACE::AccelerationStructureCompatibilityKHR * pCompatibility,
                                                               Dispatch const &                                              d ) const VULKAN_HPP_NOEXCEPT
@@ -24005,7 +24604,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getMicromapBuildSizesEXT( VULKAN_HPP_NAMESPACE::AccelerationStructureBuildTypeKHR buildType,
                                                            const VULKAN_HPP_NAMESPACE::MicromapBuildInfoEXT *      pBuildInfo,
                                                            VULKAN_HPP_NAMESPACE::MicromapBuildSizesInfoEXT *       pSizeInfo,
@@ -24042,7 +24642,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_HUAWEI_cluster_culling_shader ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::drawClusterHUAWEI( uint32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24050,7 +24651,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdDrawClusterHUAWEI( m_commandBuffer, groupCountX, groupCountY, groupCountZ );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::drawClusterIndirectHUAWEI( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                                    VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                                    Dispatch const &                 d ) const VULKAN_HPP_NOEXCEPT
@@ -24061,7 +24663,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_pageable_device_local_memory ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::setMemoryPriorityEXT( VULKAN_HPP_NAMESPACE::DeviceMemory memory, float priority, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -24070,7 +24673,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_maintenance4 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getBufferMemoryRequirementsKHR( const VULKAN_HPP_NAMESPACE::DeviceBufferMemoryRequirements * pInfo,
                                                                  VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                  pMemoryRequirements,
                                                                  Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
@@ -24117,7 +24721,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageMemoryRequirementsKHR( const VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements * pInfo,
                                                                 VULKAN_HPP_NAMESPACE::MemoryRequirements2 *                 pMemoryRequirements,
                                                                 Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -24164,7 +24769,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSparseMemoryRequirementsKHR( const VULKAN_HPP_NAMESPACE::DeviceImageMemoryRequirements * pInfo,
                                                                       uint32_t *                                                  pSparseMemoryRequirementCount,
                                                                       VULKAN_HPP_NAMESPACE::SparseImageMemoryRequirements2 *      pSparseMemoryRequirements,
@@ -24244,7 +24850,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_VALVE_descriptor_set_host_mapping ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getDescriptorSetLayoutHostMappingInfoVALVE( const VULKAN_HPP_NAMESPACE::DescriptorSetBindingReferenceVALVE * pBindingReference,
                                                                              VULKAN_HPP_NAMESPACE::DescriptorSetLayoutHostMappingInfoVALVE *  pHostMapping,
                                                                              Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -24276,7 +24883,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     Device::getDescriptorSetHostMappingVALVE( VULKAN_HPP_NAMESPACE::DescriptorSet descriptorSet, void ** ppData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24304,7 +24912,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_copy_memory_indirect ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMemoryIndirectNV( VULKAN_HPP_NAMESPACE::DeviceAddress copyBufferAddress,
                                                               uint32_t                            copyCount,
                                                               uint32_t                            stride,
@@ -24314,7 +24923,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdCopyMemoryIndirectNV( m_commandBuffer, static_cast<VkDeviceAddress>( copyBufferAddress ), copyCount, stride );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::copyMemoryToImageIndirectNV( VULKAN_HPP_NAMESPACE::DeviceAddress                  copyBufferAddress,
                                                                      uint32_t                                             copyCount,
                                                                      uint32_t                                             stride,
@@ -24360,7 +24970,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_memory_decompression ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::decompressMemoryNV( uint32_t                                               decompressRegionCount,
                                                             const VULKAN_HPP_NAMESPACE::DecompressMemoryRegionNV * pDecompressMemoryRegions,
                                                             Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
@@ -24385,7 +24996,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::decompressMemoryIndirectCountNV( VULKAN_HPP_NAMESPACE::DeviceAddress indirectCommandsAddress,
                                                                          VULKAN_HPP_NAMESPACE::DeviceAddress indirectCommandsCountAddress,
                                                                          uint32_t                            stride,
@@ -24398,7 +25010,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_device_generated_commands_compute ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getPipelineIndirectMemoryRequirementsNV( const VULKAN_HPP_NAMESPACE::ComputePipelineCreateInfo * pCreateInfo,
                                                                           VULKAN_HPP_NAMESPACE::MemoryRequirements2 *             pMemoryRequirements,
                                                                           Dispatch const &                                        d ) const VULKAN_HPP_NOEXCEPT
@@ -24447,7 +25060,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::updatePipelineIndirectBufferNV( VULKAN_HPP_NAMESPACE::PipelineBindPoint pipelineBindPoint,
                                                                         VULKAN_HPP_NAMESPACE::Pipeline          pipeline,
                                                                         Dispatch const &                        d ) const VULKAN_HPP_NOEXCEPT
@@ -24456,7 +25070,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdUpdatePipelineIndirectBufferNV( m_commandBuffer, static_cast<VkPipelineBindPoint>( pipelineBindPoint ), static_cast<VkPipeline>( pipeline ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE DeviceAddress Device::getPipelineIndirectAddressNV( const VULKAN_HPP_NAMESPACE::PipelineIndirectDeviceAddressInfoNV * pInfo,
                                                                         Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24484,21 +25099,24 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_extended_dynamic_state3 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthClampEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthClampEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthClampEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthClampEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setPolygonModeEXT( VULKAN_HPP_NAMESPACE::PolygonMode polygonMode, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetPolygonModeEXT( m_commandBuffer, static_cast<VkPolygonMode>( polygonMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRasterizationSamplesEXT( VULKAN_HPP_NAMESPACE::SampleCountFlagBits rasterizationSamples,
                                                                     Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24506,7 +25124,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetRasterizationSamplesEXT( m_commandBuffer, static_cast<VkSampleCountFlagBits>( rasterizationSamples ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setSampleMaskEXT( VULKAN_HPP_NAMESPACE::SampleCountFlagBits samples,
                                                           const VULKAN_HPP_NAMESPACE::SampleMask *  pSampleMask,
                                                           Dispatch const &                          d ) const VULKAN_HPP_NOEXCEPT
@@ -24538,7 +25157,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setAlphaToCoverageEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 alphaToCoverageEnable,
                                                                      Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24546,21 +25166,24 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetAlphaToCoverageEnableEXT( m_commandBuffer, static_cast<VkBool32>( alphaToCoverageEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setAlphaToOneEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 alphaToOneEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetAlphaToOneEnableEXT( m_commandBuffer, static_cast<VkBool32>( alphaToOneEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setLogicOpEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 logicOpEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetLogicOpEnableEXT( m_commandBuffer, static_cast<VkBool32>( logicOpEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setColorBlendEnableEXT( uint32_t                             firstAttachment,
                                                                 uint32_t                             attachmentCount,
                                                                 const VULKAN_HPP_NAMESPACE::Bool32 * pColorBlendEnables,
@@ -24586,7 +25209,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setColorBlendEquationEXT( uint32_t                                            firstAttachment,
                                                                   uint32_t                                            attachmentCount,
                                                                   const VULKAN_HPP_NAMESPACE::ColorBlendEquationEXT * pColorBlendEquations,
@@ -24615,7 +25239,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setColorWriteMaskEXT( uint32_t                                          firstAttachment,
                                                               uint32_t                                          attachmentCount,
                                                               const VULKAN_HPP_NAMESPACE::ColorComponentFlags * pColorWriteMasks,
@@ -24643,7 +25268,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setTessellationDomainOriginEXT( VULKAN_HPP_NAMESPACE::TessellationDomainOrigin domainOrigin,
                                                                         Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24651,14 +25277,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetTessellationDomainOriginEXT( m_commandBuffer, static_cast<VkTessellationDomainOrigin>( domainOrigin ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRasterizationStreamEXT( uint32_t rasterizationStream, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetRasterizationStreamEXT( m_commandBuffer, rasterizationStream );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setConservativeRasterizationModeEXT( VULKAN_HPP_NAMESPACE::ConservativeRasterizationModeEXT conservativeRasterizationMode,
                                                         Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
@@ -24667,7 +25295,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetConservativeRasterizationModeEXT( m_commandBuffer, static_cast<VkConservativeRasterizationModeEXT>( conservativeRasterizationMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setExtraPrimitiveOverestimationSizeEXT( float            extraPrimitiveOverestimationSize,
                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24675,14 +25304,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetExtraPrimitiveOverestimationSizeEXT( m_commandBuffer, extraPrimitiveOverestimationSize );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthClipEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 depthClipEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetDepthClipEnableEXT( m_commandBuffer, static_cast<VkBool32>( depthClipEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setSampleLocationsEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 sampleLocationsEnable,
                                                                      Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24690,7 +25321,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetSampleLocationsEnableEXT( m_commandBuffer, static_cast<VkBool32>( sampleLocationsEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setColorBlendAdvancedEXT( uint32_t                                            firstAttachment,
                                                                   uint32_t                                            attachmentCount,
                                                                   const VULKAN_HPP_NAMESPACE::ColorBlendAdvancedEXT * pColorBlendAdvanced,
@@ -24719,7 +25351,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setProvokingVertexModeEXT( VULKAN_HPP_NAMESPACE::ProvokingVertexModeEXT provokingVertexMode,
                                                                    Dispatch const &                             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24727,7 +25360,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetProvokingVertexModeEXT( m_commandBuffer, static_cast<VkProvokingVertexModeEXT>( provokingVertexMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setLineRasterizationModeEXT( VULKAN_HPP_NAMESPACE::LineRasterizationModeEXT lineRasterizationMode,
                                                                      Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24735,14 +25369,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetLineRasterizationModeEXT( m_commandBuffer, static_cast<VkLineRasterizationModeEXT>( lineRasterizationMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setLineStippleEnableEXT( VULKAN_HPP_NAMESPACE::Bool32 stippledLineEnable, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetLineStippleEnableEXT( m_commandBuffer, static_cast<VkBool32>( stippledLineEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setDepthClipNegativeOneToOneEXT( VULKAN_HPP_NAMESPACE::Bool32 negativeOneToOne,
                                                                          Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24750,7 +25386,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetDepthClipNegativeOneToOneEXT( m_commandBuffer, static_cast<VkBool32>( negativeOneToOne ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportWScalingEnableNV( VULKAN_HPP_NAMESPACE::Bool32 viewportWScalingEnable,
                                                                      Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24758,7 +25395,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetViewportWScalingEnableNV( m_commandBuffer, static_cast<VkBool32>( viewportWScalingEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setViewportSwizzleNV( uint32_t                                        firstViewport,
                                                               uint32_t                                        viewportCount,
                                                               const VULKAN_HPP_NAMESPACE::ViewportSwizzleNV * pViewportSwizzles,
@@ -24786,7 +25424,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageToColorEnableNV( VULKAN_HPP_NAMESPACE::Bool32 coverageToColorEnable,
                                                                     Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24794,14 +25433,16 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetCoverageToColorEnableNV( m_commandBuffer, static_cast<VkBool32>( coverageToColorEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageToColorLocationNV( uint32_t coverageToColorLocation, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
     d.vkCmdSetCoverageToColorLocationNV( m_commandBuffer, coverageToColorLocation );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageModulationModeNV( VULKAN_HPP_NAMESPACE::CoverageModulationModeNV coverageModulationMode,
                                                                      Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24809,7 +25450,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetCoverageModulationModeNV( m_commandBuffer, static_cast<VkCoverageModulationModeNV>( coverageModulationMode ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageModulationTableEnableNV( VULKAN_HPP_NAMESPACE::Bool32 coverageModulationTableEnable,
                                                                             Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24817,7 +25459,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetCoverageModulationTableEnableNV( m_commandBuffer, static_cast<VkBool32>( coverageModulationTableEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageModulationTableNV( uint32_t         coverageModulationTableCount,
                                                                       const float *    pCoverageModulationTable,
                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -24841,7 +25484,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setShadingRateImageEnableNV( VULKAN_HPP_NAMESPACE::Bool32 shadingRateImageEnable,
                                                                      Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24849,7 +25493,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetShadingRateImageEnableNV( m_commandBuffer, static_cast<VkBool32>( shadingRateImageEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setRepresentativeFragmentTestEnableNV( VULKAN_HPP_NAMESPACE::Bool32 representativeFragmentTestEnable,
                                                                                Dispatch const &             d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24857,7 +25502,8 @@ namespace VULKAN_HPP_NAMESPACE
     d.vkCmdSetRepresentativeFragmentTestEnableNV( m_commandBuffer, static_cast<VkBool32>( representativeFragmentTestEnable ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setCoverageReductionModeNV( VULKAN_HPP_NAMESPACE::CoverageReductionModeNV coverageReductionMode,
                                                                     Dispatch const &                              d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -24867,7 +25513,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_shader_module_identifier ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getShaderModuleIdentifierEXT( VULKAN_HPP_NAMESPACE::ShaderModule                shaderModule,
                                                                VULKAN_HPP_NAMESPACE::ShaderModuleIdentifierEXT * pIdentifier,
                                                                Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -24893,7 +25540,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getShaderModuleCreateInfoIdentifierEXT( const VULKAN_HPP_NAMESPACE::ShaderModuleCreateInfo * pCreateInfo,
                                                                          VULKAN_HPP_NAMESPACE::ShaderModuleIdentifierEXT *    pIdentifier,
                                                                          Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
@@ -24925,7 +25573,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_optical_flow ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     PhysicalDevice::getOpticalFlowImageFormatsNV( const VULKAN_HPP_NAMESPACE::OpticalFlowImageFormatInfoNV * pOpticalFlowImageFormatInfo,
                                                   uint32_t *                                                 pFormatCount,
@@ -25024,7 +25673,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createOpticalFlowSessionNV( const VULKAN_HPP_NAMESPACE::OpticalFlowSessionCreateInfoNV * pCreateInfo,
                                                                                     const VULKAN_HPP_NAMESPACE::AllocationCallbacks *            pAllocator,
                                                                                     VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV *                 pSession,
@@ -25086,7 +25736,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyOpticalFlowSessionNV( VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV        session,
                                                               const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                               Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -25113,7 +25764,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV        session,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -25140,8 +25791,9 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
+  VULKAN_HPP_EXPORT
 #ifdef VULKAN_HPP_DISABLE_ENHANCED_MODE
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::bindOpticalFlowSessionImageNV( VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV             session,
                                                                                        VULKAN_HPP_NAMESPACE::OpticalFlowSessionBindingPointNV bindingPoint,
                                                                                        VULKAN_HPP_NAMESPACE::ImageView                        view,
@@ -25181,7 +25833,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /*VULKAN_HPP_DISABLE_ENHANCED_MODE*/
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::opticalFlowExecuteNV( VULKAN_HPP_NAMESPACE::OpticalFlowSessionNV             session,
                                                               const VULKAN_HPP_NAMESPACE::OpticalFlowExecuteInfoNV * pExecuteInfo,
                                                               Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
@@ -25209,7 +25862,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_maintenance5 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindIndexBuffer2KHR( VULKAN_HPP_NAMESPACE::Buffer     buffer,
                                                              VULKAN_HPP_NAMESPACE::DeviceSize offset,
                                                              VULKAN_HPP_NAMESPACE::DeviceSize size,
@@ -25224,7 +25878,8 @@ namespace VULKAN_HPP_NAMESPACE
                                 static_cast<VkIndexType>( indexType ) );
   }
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getRenderingAreaGranularityKHR( const VULKAN_HPP_NAMESPACE::RenderingAreaInfoKHR * pRenderingAreaInfo,
                                                                  VULKAN_HPP_NAMESPACE::Extent2D *                   pGranularity,
                                                                  Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -25252,7 +25907,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSubresourceLayoutKHR( const VULKAN_HPP_NAMESPACE::DeviceImageSubresourceInfoKHR * pInfo,
                                                                VULKAN_HPP_NAMESPACE::SubresourceLayout2KHR *               pLayout,
                                                                Dispatch const &                                            d ) const VULKAN_HPP_NOEXCEPT
@@ -25297,7 +25953,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getImageSubresourceLayout2KHR( VULKAN_HPP_NAMESPACE::Image                        image,
                                                                 const VULKAN_HPP_NAMESPACE::ImageSubresource2KHR * pSubresource,
                                                                 VULKAN_HPP_NAMESPACE::SubresourceLayout2KHR *      pLayout,
@@ -25355,7 +26012,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_AMD_anti_lag ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::antiLagUpdateAMD( const VULKAN_HPP_NAMESPACE::AntiLagDataAMD * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
@@ -25377,7 +26035,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_shader_object ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::createShadersEXT( uint32_t                                          createInfoCount,
                                                                           const VULKAN_HPP_NAMESPACE::ShaderCreateInfoEXT * pCreateInfos,
                                                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
@@ -25566,7 +26225,8 @@ namespace VULKAN_HPP_NAMESPACE
 #  endif /* VULKAN_HPP_NO_SMART_HANDLE */
 #endif   /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroyShaderEXT( VULKAN_HPP_NAMESPACE::ShaderEXT                   shader,
                                                    const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                                    Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -25592,7 +26252,7 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::destroy( VULKAN_HPP_NAMESPACE::ShaderEXT                   shader,
                                           const VULKAN_HPP_NAMESPACE::AllocationCallbacks * pAllocator,
                                           Dispatch const &                                  d ) const VULKAN_HPP_NOEXCEPT
@@ -25618,7 +26278,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
     Device::getShaderBinaryDataEXT( VULKAN_HPP_NAMESPACE::ShaderEXT shader, size_t * pDataSize, void * pData, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -25692,7 +26353,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindShadersEXT( uint32_t                                          stageCount,
                                                         const VULKAN_HPP_NAMESPACE::ShaderStageFlagBits * pStages,
                                                         const VULKAN_HPP_NAMESPACE::ShaderEXT *           pShaders,
@@ -25731,7 +26393,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_QCOM_tile_properties ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getFramebufferTilePropertiesQCOM( VULKAN_HPP_NAMESPACE::Framebuffer          framebuffer,
                                                                                           uint32_t *                                 pPropertiesCount,
                                                                                           VULKAN_HPP_NAMESPACE::TilePropertiesQCOM * pProperties,
@@ -25812,7 +26475,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result Device::getDynamicRenderingTilePropertiesQCOM( const VULKAN_HPP_NAMESPACE::RenderingInfo * pRenderingInfo,
                                                                           VULKAN_HPP_NAMESPACE::TilePropertiesQCOM *  pProperties,
                                                                           Dispatch const &                            d ) const VULKAN_HPP_NOEXCEPT
@@ -25842,7 +26506,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_NV_low_latency2 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::setLatencySleepModeNV( VULKAN_HPP_NAMESPACE::SwapchainKHR                   swapchain,
                                                                                const VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV * pSleepModeInfo,
                                                                                Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -25871,7 +26536,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE Result Device::latencySleepNV( VULKAN_HPP_NAMESPACE::SwapchainKHR               swapchain,
                                                    const VULKAN_HPP_NAMESPACE::LatencySleepInfoNV * pSleepInfo,
                                                    Dispatch const &                                 d ) const VULKAN_HPP_NOEXCEPT
@@ -25896,7 +26562,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::setLatencyMarkerNV( VULKAN_HPP_NAMESPACE::SwapchainKHR                   swapchain,
                                                      const VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV * pLatencyMarkerInfo,
                                                      Dispatch const &                                     d ) const VULKAN_HPP_NOEXCEPT
@@ -25920,7 +26587,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Device::getLatencyTimingsNV( VULKAN_HPP_NAMESPACE::SwapchainKHR             swapchain,
                                                       VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV * pLatencyMarkerInfo,
                                                       Dispatch const &                               d ) const VULKAN_HPP_NOEXCEPT
@@ -25975,7 +26643,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void Queue::notifyOutOfBandNV( const VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV * pQueueTypeInfo,
                                                    Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -25999,7 +26668,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_cooperative_matrix ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getCooperativeMatrixPropertiesKHR(
     uint32_t * pPropertyCount, VULKAN_HPP_NAMESPACE::CooperativeMatrixPropertiesKHR * pProperties, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26084,7 +26754,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::setAttachmentFeedbackLoopEnableEXT( VULKAN_HPP_NAMESPACE::ImageAspectFlags aspectMask,
                                                                             Dispatch const &                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26095,7 +26766,8 @@ namespace VULKAN_HPP_NAMESPACE
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
   //=== VK_QNX_external_memory_screen_buffer ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getScreenBufferPropertiesQNX( const struct _screen_buffer *                     buffer,
                                                                                       VULKAN_HPP_NAMESPACE::ScreenBufferPropertiesQNX * pProperties,
                                                                                       Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -26144,7 +26816,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_line_rasterization ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setLineStippleKHR( uint32_t lineStippleFactor, uint16_t lineStipplePattern, Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26154,7 +26827,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_calibrated_timestamps ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result PhysicalDevice::getCalibrateableTimeDomainsKHR( uint32_t *                            pTimeDomainCount,
                                                                                                 VULKAN_HPP_NAMESPACE::TimeDomainKHR * pTimeDomains,
                                                                                                 Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
@@ -26232,7 +26906,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result Device::getCalibratedTimestampsKHR( uint32_t                                                 timestampCount,
                                                                                     const VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR * pTimestampInfos,
                                                                                     uint64_t *                                               pTimestamps,
@@ -26315,7 +26990,8 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_KHR_maintenance6 ===
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorSets2KHR( const VULKAN_HPP_NAMESPACE::BindDescriptorSetsInfoKHR * pBindDescriptorSetsInfo,
                                                                 Dispatch const &                                        d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26337,7 +27013,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pushConstants2KHR( const VULKAN_HPP_NAMESPACE::PushConstantsInfoKHR * pPushConstantsInfo,
                                                            Dispatch const &                                   d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26359,7 +27036,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::pushDescriptorSet2KHR( const VULKAN_HPP_NAMESPACE::PushDescriptorSetInfoKHR * pPushDescriptorSetInfo,
                                                                Dispatch const &                                       d ) const VULKAN_HPP_NOEXCEPT
   {
@@ -26381,7 +27059,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::pushDescriptorSetWithTemplate2KHR( const VULKAN_HPP_NAMESPACE::PushDescriptorSetWithTemplateInfoKHR * pPushDescriptorSetWithTemplateInfo,
                                                       Dispatch const &                                                   d ) const VULKAN_HPP_NOEXCEPT
@@ -26407,7 +27086,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void
     CommandBuffer::setDescriptorBufferOffsets2EXT( const VULKAN_HPP_NAMESPACE::SetDescriptorBufferOffsetsInfoEXT * pSetDescriptorBufferOffsetsInfo,
                                                    Dispatch const &                                                d ) const VULKAN_HPP_NOEXCEPT
@@ -26431,7 +27111,8 @@ namespace VULKAN_HPP_NAMESPACE
   }
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
-  template <typename Dispatch>
+  VULKAN_HPP_EXPORT
+  VULKAN_HPP_EXPORT template <typename Dispatch>
   VULKAN_HPP_INLINE void CommandBuffer::bindDescriptorBufferEmbeddedSamplers2EXT(
     const VULKAN_HPP_NAMESPACE::BindDescriptorBufferEmbeddedSamplersInfoEXT * pBindDescriptorBufferEmbeddedSamplersInfo,
     Dispatch const &                                                          d ) const VULKAN_HPP_NOEXCEPT

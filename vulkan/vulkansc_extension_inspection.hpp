@@ -8,13 +8,16 @@
 #ifndef VULKAN_EXTENSION_INSPECTION_HPP
 #define VULKAN_EXTENSION_INSPECTION_HPP
 
-#include <map>
-#include <set>
-#include <string>
-#include <vector>
+#if !defined( VULKAN_HPP_BUILD_MODULE )
+#  include <map>
+#  include <set>
+#  include <string>
+#  include <vector>
+#endif
+
 #include <vulkan/vulkansc.hpp>
 
-namespace VULKAN_HPP_NAMESPACE
+VULKAN_HPP_EXPORT namespace VULKAN_HPP_NAMESPACE
 {
   //======================================
   //=== Extension inspection functions ===
@@ -42,10 +45,9 @@ namespace VULKAN_HPP_NAMESPACE
 
   VULKAN_HPP_INLINE std::map<std::string, std::string> const & getDeprecatedExtensions()
   {
-    static std::map<std::string, std::string> deprecatedExtensions = {
-      { "VK_EXT_validation_features", "VK_EXT_layer_settings" },
+    static std::map<std::string, std::string> deprecatedExtensions = { { "VK_EXT_validation_features", "VK_EXT_layer_settings" },
 #if defined( VK_USE_PLATFORM_SCI )
-      { "VK_NV_external_sci_sync", "VK_NV_external_sci_sync2" }
+                                                                       { "VK_NV_external_sci_sync", "VK_NV_external_sci_sync2" }
 #endif /*VK_USE_PLATFORM_SCI*/
     };
     return deprecatedExtensions;
@@ -53,79 +55,77 @@ namespace VULKAN_HPP_NAMESPACE
 
   VULKAN_HPP_INLINE std::set<std::string> const & getDeviceExtensions()
   {
-    static std::set<std::string> deviceExtensions = {
-      "VK_KHR_swapchain",
-      "VK_KHR_display_swapchain",
-      "VK_EXT_depth_range_unrestricted",
-      "VK_NV_private_vendor_info",
-      "VK_EXT_texture_compression_astc_hdr",
-      "VK_EXT_astc_decode_mode",
-      "VK_KHR_external_memory_fd",
-      "VK_KHR_external_semaphore_fd",
-      "VK_KHR_incremental_present",
-      "VK_EXT_display_control",
-      "VK_EXT_discard_rectangles",
-      "VK_EXT_conservative_rasterization",
-      "VK_EXT_depth_clip_enable",
-      "VK_EXT_hdr_metadata",
-      "VK_KHR_shared_presentable_image",
-      "VK_KHR_external_fence_fd",
-      "VK_KHR_performance_query",
-      "VK_EXT_external_memory_dma_buf",
-      "VK_EXT_queue_family_foreign",
-      "VK_EXT_shader_stencil_export",
-      "VK_EXT_sample_locations",
-      "VK_EXT_blend_operation_advanced",
-      "VK_EXT_post_depth_coverage",
-      "VK_EXT_image_drm_format_modifier",
-      "VK_EXT_filter_cubic",
-      "VK_EXT_external_memory_host",
-      "VK_KHR_shader_clock",
-      "VK_KHR_global_priority",
-      "VK_KHR_swapchain_mutable_format",
-      "VK_EXT_pci_bus_info",
-      "VK_KHR_shader_terminate_invocation",
-      "VK_EXT_subgroup_size_control",
-      "VK_KHR_fragment_shading_rate",
-      "VK_EXT_shader_image_atomic_int64",
-      "VK_EXT_memory_budget",
-      "VK_EXT_fragment_shader_interlock",
-      "VK_EXT_ycbcr_image_arrays",
-      "VK_EXT_line_rasterization",
-      "VK_EXT_shader_atomic_float",
-      "VK_EXT_index_type_uint8",
-      "VK_EXT_extended_dynamic_state",
-      "VK_EXT_shader_demote_to_helper_invocation",
-      "VK_EXT_texel_buffer_alignment",
-      "VK_EXT_robustness2",
-      "VK_EXT_custom_border_color",
-      "VK_KHR_object_refresh",
-      "VK_KHR_synchronization2",
-      "VK_EXT_ycbcr_2plane_444_formats",
-      "VK_EXT_image_robustness",
-      "VK_KHR_copy_commands2",
-      "VK_EXT_4444_formats",
+    static std::set<std::string> deviceExtensions = { "VK_KHR_swapchain",
+                                                      "VK_KHR_display_swapchain",
+                                                      "VK_EXT_depth_range_unrestricted",
+                                                      "VK_NV_private_vendor_info",
+                                                      "VK_EXT_texture_compression_astc_hdr",
+                                                      "VK_EXT_astc_decode_mode",
+                                                      "VK_KHR_external_memory_fd",
+                                                      "VK_KHR_external_semaphore_fd",
+                                                      "VK_KHR_incremental_present",
+                                                      "VK_EXT_display_control",
+                                                      "VK_EXT_discard_rectangles",
+                                                      "VK_EXT_conservative_rasterization",
+                                                      "VK_EXT_depth_clip_enable",
+                                                      "VK_EXT_hdr_metadata",
+                                                      "VK_KHR_shared_presentable_image",
+                                                      "VK_KHR_external_fence_fd",
+                                                      "VK_KHR_performance_query",
+                                                      "VK_EXT_external_memory_dma_buf",
+                                                      "VK_EXT_queue_family_foreign",
+                                                      "VK_EXT_shader_stencil_export",
+                                                      "VK_EXT_sample_locations",
+                                                      "VK_EXT_blend_operation_advanced",
+                                                      "VK_EXT_post_depth_coverage",
+                                                      "VK_EXT_image_drm_format_modifier",
+                                                      "VK_EXT_filter_cubic",
+                                                      "VK_EXT_external_memory_host",
+                                                      "VK_KHR_shader_clock",
+                                                      "VK_KHR_global_priority",
+                                                      "VK_KHR_swapchain_mutable_format",
+                                                      "VK_EXT_pci_bus_info",
+                                                      "VK_KHR_shader_terminate_invocation",
+                                                      "VK_EXT_subgroup_size_control",
+                                                      "VK_KHR_fragment_shading_rate",
+                                                      "VK_EXT_shader_image_atomic_int64",
+                                                      "VK_EXT_memory_budget",
+                                                      "VK_EXT_fragment_shader_interlock",
+                                                      "VK_EXT_ycbcr_image_arrays",
+                                                      "VK_EXT_line_rasterization",
+                                                      "VK_EXT_shader_atomic_float",
+                                                      "VK_EXT_index_type_uint8",
+                                                      "VK_EXT_extended_dynamic_state",
+                                                      "VK_EXT_shader_demote_to_helper_invocation",
+                                                      "VK_EXT_texel_buffer_alignment",
+                                                      "VK_EXT_robustness2",
+                                                      "VK_EXT_custom_border_color",
+                                                      "VK_KHR_object_refresh",
+                                                      "VK_KHR_synchronization2",
+                                                      "VK_EXT_ycbcr_2plane_444_formats",
+                                                      "VK_EXT_image_robustness",
+                                                      "VK_KHR_copy_commands2",
+                                                      "VK_EXT_4444_formats",
 #if defined( VK_USE_PLATFORM_WIN32_KHR )
-      "VK_NV_acquire_winrt_display",
+                                                      "VK_NV_acquire_winrt_display",
 #endif /*VK_USE_PLATFORM_WIN32_KHR*/
-      "VK_EXT_vertex_input_dynamic_state",
+                                                      "VK_EXT_vertex_input_dynamic_state",
 #if defined( VK_USE_PLATFORM_SCI )
-      "VK_NV_external_sci_sync",
-      "VK_NV_external_memory_sci_buf",
+                                                      "VK_NV_external_sci_sync",
+                                                      "VK_NV_external_memory_sci_buf",
 #endif /*VK_USE_PLATFORM_SCI*/
-      "VK_EXT_extended_dynamic_state2",
-      "VK_EXT_color_write_enable",
+                                                      "VK_EXT_extended_dynamic_state2",
+                                                      "VK_EXT_color_write_enable",
 #if defined( VK_USE_PLATFORM_SCI )
-      "VK_NV_external_sci_sync2",
+                                                      "VK_NV_external_sci_sync2",
 #endif /*VK_USE_PLATFORM_SCI*/
-      "VK_KHR_vertex_attribute_divisor",
+                                                      "VK_KHR_vertex_attribute_divisor",
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
-      "VK_QNX_external_memory_screen_buffer",
+                                                      "VK_QNX_external_memory_screen_buffer",
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
-      "VK_KHR_index_type_uint8",
-      "VK_KHR_line_rasterization",
-      "VK_KHR_calibrated_timestamps"
-    };
+                                                      "VK_KHR_index_type_uint8",
+                                                      "VK_KHR_line_rasterization",
+                                                      "VK_KHR_calibrated_timestamps" };
     return deviceExtensions;
   }
 

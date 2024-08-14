@@ -1,5 +1,5 @@
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class SharedHandleTraits;
 
 // Silence the function cast warnings.
@@ -8,7 +8,7 @@ class SharedHandleTraits;
 #  pragma GCC diagnostic ignored "-Wcast-function-type"
 #endif
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class ObjectDestroyShared
 {
 public:
@@ -51,7 +51,7 @@ private:
   Optional<const AllocationCallbacks>            m_allocationCallbacks = nullptr;
 };
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class ObjectFreeShared
 {
 public:
@@ -82,7 +82,7 @@ private:
   Optional<const AllocationCallbacks>            m_allocationCallbacks = nullptr;
 };
 
-template <typename HandleType>
+VULKAN_HPP_EXPORT template <typename HandleType>
 class ObjectReleaseShared
 {
 public:
@@ -110,7 +110,7 @@ private:
   const DispatchLoaderBase *                     m_dispatch = nullptr;
 };
 
-template <typename HandleType, typename PoolType>
+VULKAN_HPP_EXPORT template <typename HandleType, typename PoolType>
 class PoolFreeShared
 {
 public:
